@@ -38,10 +38,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .back-to-top {
   z-index: 100500;
-  bottom: 10%;
-  right: 15px;
+  bottom: 20px;
+  right: 20px;
   display: block;
-  background-color: rgba(163, 70, 153, 0.7);
+  background-color: rgba(34, 61, 98, 0.3);
   color: #fff;
   position: fixed;
   cursor: pointer;
@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
         padding: 0 10px; } }
 
 .back-to-top:hover {
-  background-color: #a34699; }
+  background-color: rgba(34, 61, 98, 0.8); }
 
 .back-to-top-visible {
   opacity: 1; }

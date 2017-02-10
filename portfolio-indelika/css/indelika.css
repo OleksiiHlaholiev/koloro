@@ -397,7 +397,7 @@ h1, h2, h3, h4, h5, h6 {
     #indelika .contact-us-form .container h1 {
       padding: 70px 0;
       font-size: 60px;
-      font-family: "Roboto";
+      font-family: "Segoe UI";
       color: #8a3b86;
       font-weight: bold;
       text-transform: uppercase;
@@ -419,7 +419,7 @@ h1, h2, h3, h4, h5, h6 {
       opacity: 1; }
     #indelika .contact-us-form .container p {
       font-size: 30px;
-      font-family: "Roboto";
+      font-family: "Segoe UI";
       color: black;
       line-height: 1.6;
       text-align: justify; }
@@ -445,7 +445,7 @@ h1, h2, h3, h4, h5, h6 {
         display: inline-block;
         width: 300px;
         font-size: 30px;
-        font-family: "Roboto";
+        font-family: "Segoe UI";
         text-align: center;
         color: black;
         outline: none;

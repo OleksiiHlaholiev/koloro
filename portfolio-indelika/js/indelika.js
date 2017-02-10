@@ -6,7 +6,7 @@
 window.addEventListener('load', function() {
 
 	// ******************** GLOBAL VARIABLES ****************************
-	var SCROLL_STEP = 100,
+	/*var SCROLL_STEP = 100,
 		scrollFuncTimer,
 		scrollPreviousPosition = 0,
 		userTimoutTimer,
@@ -611,7 +611,7 @@ window.addEventListener('load', function() {
 
 	window.addEventListener('scroll', scrollWindowHandler);
     window.addEventListener('resize', resizeWindowHandler);
-
+*/
 	<!--PRELOADER !!!-->
 	setTimeout(function() {
 		$('#preloader').fadeOut('slow');

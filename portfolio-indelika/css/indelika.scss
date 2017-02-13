@@ -90,9 +90,11 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 20px;
             font-family: "GothamPro";
             color: #f0cf16;
+            background-color: #262626;
             line-height: 1.2;
             text-align: center;
             border: 0;
+            outline: none;
             opacity: 1;
             transition: all 0.4s;
 
@@ -106,6 +108,8 @@ h1, h2, h3, h4, h5, h6 {
         display: inline-block;
         position: relative;
         background-color: rgba(34, 61, 98, 0.3);
+        border: none;
+        outline: none;
         img {
             //display: inline-block;
             padding: 20px;

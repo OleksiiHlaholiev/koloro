@@ -124,8 +124,11 @@ h1, h2, h3, h4, h5, h6 {
   background-attachment: scroll;
   background-image: url("../images/ИНДЕЛИКА-ВИЗ-1.jpg"); }
 #indelika .image-fourth {
-  background-image: url("../images/ИНДЕЛИКА-ВИЗ-2.jpg");
-  background-attachment: scroll; }
+  background-size: auto;
+  background-position: center center;
+  background-color: #000;
+  background-attachment: scroll;
+  background-image: url("../images/ИНДЕЛИКА-ВИЗ-2.jpg"); }
 #indelika .image-container {
   width: 100%;
   position: relative;
@@ -343,6 +346,232 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #000; }
   #indelika .info-history h2, #indelika .info-history p {
     color: #fff !important; }
+#indelika .info-solution {
+  position: relative; }
+  #indelika .info-solution .container {
+    margin-bottom: 35vh; }
+#indelika .stickers-block-container {
+  position: relative;
+  padding: 30vh 0 100px 0;
+  background-image: -moz-linear-gradient(0deg, #232323 0%, #040404 100%);
+  background-image: -webkit-linear-gradient(0deg, #232323 0%, #040404 100%);
+  background-image: -ms-linear-gradient(0deg, #232323 0%, #040404 100%);
+  background-image: linear-gradient(0deg, #232323 0%, #040404 100%); }
+  #indelika .stickers-block-container .image-fifth {
+    position: absolute;
+    left: 10%;
+    top: -35vh;
+    height: 60vh;
+    width: 80%;
+    background-image: url("../images/LABEL-PICTURE.png");
+    background-attachment: scroll; }
+  #indelika .stickers-block-container h2 {
+    padding: 0 0 80px 0;
+    font-size: 48px;
+    font-family: "Segoe UI";
+    color: white;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center; }
+    @media all and (max-width: 1000px) {
+      #indelika .stickers-block-container h2 {
+        font-size: 32px; } }
+    @media all and (max-width: 800px) {
+      #indelika .stickers-block-container h2 {
+        font-size: 26px; } }
+    @media all and (max-width: 600px) {
+      #indelika .stickers-block-container h2 {
+        font-size: 24px; } }
+  #indelika .stickers-block-container .sticker-name {
+    font-size: 36px;
+    font-family: "AFuturaRoundBold";
+    font-weight: bold;
+    color: #cda250;
+    line-height: 1.2;
+    text-align: center; }
+    @media all and (max-width: 1000px) {
+      #indelika .stickers-block-container .sticker-name {
+        font-size: 30px; } }
+    @media all and (max-width: 800px) {
+      #indelika .stickers-block-container .sticker-name {
+        font-size: 24px; } }
+    @media all and (max-width: 600px) {
+      #indelika .stickers-block-container .sticker-name {
+        font-size: 20px; } }
+  #indelika .stickers-block-container .sticker-text {
+    padding: 40px 0 50px 0;
+    font-size: 30px;
+    font-family: "VacansiaC";
+    color: #cda250;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center; }
+    @media all and (max-width: 1000px) {
+      #indelika .stickers-block-container .sticker-text {
+        font-size: 24px; } }
+    @media all and (max-width: 800px) {
+      #indelika .stickers-block-container .sticker-text {
+        font-size: 20px; } }
+    @media all and (max-width: 600px) {
+      #indelika .stickers-block-container .sticker-text {
+        font-size: 16px; } }
+  #indelika .stickers-block-container .sticker-info {
+    font-size: 30px;
+    font-family: "Arial";
+    font-weight: normal;
+    color: #cda250;
+    line-height: 1.2;
+    text-align: center; }
+    @media all and (max-width: 1000px) {
+      #indelika .stickers-block-container .sticker-info {
+        font-size: 24px; } }
+    @media all and (max-width: 800px) {
+      #indelika .stickers-block-container .sticker-info {
+        font-size: 20px; } }
+    @media all and (max-width: 600px) {
+      #indelika .stickers-block-container .sticker-info {
+        font-size: 16px; } }
+#indelika .stickers-colors-container {
+  background-color: #fff;
+  padding: 80px 0; }
+  @media all and (max-width: 600px) {
+    #indelika .stickers-colors-container {
+      padding: 20px 0; } }
+  #indelika .stickers-colors-container .container {
+    width: 80%;
+    margin: 0 auto; }
+    #indelika .stickers-colors-container .container h2 {
+      padding-bottom: 80px;
+      font-size: 48px;
+      font-family: "Segoe UI";
+      color: black;
+      font-weight: bold;
+      line-height: 1.2;
+      text-align: center; }
+      @media all and (max-width: 1200px) {
+        #indelika .stickers-colors-container .container h2 {
+          padding-bottom: 60px;
+          font-size: 40px; } }
+      @media all and (max-width: 1000px) {
+        #indelika .stickers-colors-container .container h2 {
+          padding-bottom: 40px;
+          font-size: 32px; } }
+      @media all and (max-width: 600px) {
+        #indelika .stickers-colors-container .container h2 {
+          padding-bottom: 20px;
+          font-size: 20px; } }
+    #indelika .stickers-colors-container .container .color-left, #indelika .stickers-colors-container .container .color-right {
+      width: 50%;
+      float: left; }
+      @media all and (max-width: 800px) {
+        #indelika .stickers-colors-container .container .color-left, #indelika .stickers-colors-container .container .color-right {
+          width: 100%;
+          float: none; } }
+    #indelika .stickers-colors-container .container .color-container {
+      padding: 50px 0 50px 50px; }
+      @media all and (max-width: 1200px) {
+        #indelika .stickers-colors-container .container .color-container {
+          padding: 40px 0 40px 40px; } }
+      @media all and (max-width: 1000px) {
+        #indelika .stickers-colors-container .container .color-container {
+          padding: 30px 0 30px 30px; } }
+      @media all and (max-width: 600px) {
+        #indelika .stickers-colors-container .container .color-container {
+          padding: 20px 0 20px 20px; } }
+      #indelika .stickers-colors-container .container .color-container h3 {
+        font-size: 30px;
+        font-family: "Segoe UI";
+        color: black;
+        font-weight: bold;
+        line-height: 1.2;
+        text-align: left; }
+        @media all and (max-width: 1200px) {
+          #indelika .stickers-colors-container .container .color-container h3 {
+            font-size: 26px; } }
+        @media all and (max-width: 1000px) {
+          #indelika .stickers-colors-container .container .color-container h3 {
+            font-size: 24px; } }
+        @media all and (max-width: 600px) {
+          #indelika .stickers-colors-container .container .color-container h3 {
+            font-size: 16px; } }
+      #indelika .stickers-colors-container .container .color-container .pointer-container {
+        position: relative;
+        margin: 15px 0; }
+        @media all and (max-width: 600px) {
+          #indelika .stickers-colors-container .container .color-container .pointer-container {
+            margin: 5px 0; } }
+        #indelika .stickers-colors-container .container .color-container .pointer-container .circle {
+          position: absolute;
+          top: 2.5px;
+          z-index: 1;
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%; }
+        #indelika .stickers-colors-container .container .color-container .pointer-container .line {
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+          width: 70%; }
+        #indelika .stickers-colors-container .container .color-container .pointer-container .big-circle {
+          position: absolute;
+          right: 0;
+          top: -70px;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%; }
+          @media all and (max-width: 1200px) {
+            #indelika .stickers-colors-container .container .color-container .pointer-container .big-circle {
+              top: -50px;
+              width: 80px;
+              height: 80px; } }
+          @media all and (max-width: 1000px) {
+            #indelika .stickers-colors-container .container .color-container .pointer-container .big-circle {
+              top: -40px;
+              width: 60px;
+              height: 60px; } }
+      #indelika .stickers-colors-container .container .color-container .black .circle, #indelika .stickers-colors-container .container .color-container .black .big-circle {
+        color: #000;
+        background-color: #000; }
+      #indelika .stickers-colors-container .container .color-container .black .line {
+        border-bottom: 1px solid #000; }
+      #indelika .stickers-colors-container .container .color-container .gold-black .circle, #indelika .stickers-colors-container .container .color-container .gold-black .big-circle {
+        background: -moz-linear-gradient(0deg, #fee37d 0%, #fee98f 12%, #f9c362 23%, #e2b057 28%, #cb9c4c 40%, #a38541 52%, #85632d 60%, #6e5224 65%, #4e3c15 79%, #4c3c18 84%, #2d1f04 92%);
+        background: -webkit-linear-gradient(0deg, #fee37d 0%, #fee98f 12%, #f9c362 23%, #e2b057 28%, #cb9c4c 40%, #a38541 52%, #85632d 60%, #6e5224 65%, #4e3c15 79%, #4c3c18 84%, #2d1f04 92%);
+        background: -ms-linear-gradient(0deg, #fee37d 0%, #fee98f 12%, #f9c362 23%, #e2b057 28%, #cb9c4c 40%, #a38541 52%, #85632d 60%, #6e5224 65%, #4e3c15 79%, #4c3c18 84%, #2d1f04 92%); }
+      #indelika .stickers-colors-container .container .color-container .gold-black .line {
+        border-bottom: 1px solid #cda250; }
+      #indelika .stickers-colors-container .container .color-container .gold .circle, #indelika .stickers-colors-container .container .color-container .gold .big-circle {
+        background-color: #cda250; }
+      #indelika .stickers-colors-container .container .color-container .gold .line {
+        border-bottom: 1px solid #cda250; }
+      #indelika .stickers-colors-container .container .color-container .red .circle, #indelika .stickers-colors-container .container .color-container .red .big-circle {
+        background-color: #a71e23; }
+      #indelika .stickers-colors-container .container .color-container .red .line {
+        border-bottom: 1px solid #a71e23; }
+      #indelika .stickers-colors-container .container .color-container .green .circle, #indelika .stickers-colors-container .container .color-container .green .big-circle {
+        background-color: #0c8243; }
+      #indelika .stickers-colors-container .container .color-container .green .line {
+        border-bottom: 1px solid #0c8243; }
+      #indelika .stickers-colors-container .container .color-container .blue .circle, #indelika .stickers-colors-container .container .color-container .blue .big-circle {
+        background-color: #25509f; }
+      #indelika .stickers-colors-container .container .color-container .blue .line {
+        border-bottom: 1px solid #25509f; }
+      #indelika .stickers-colors-container .container .color-container p {
+        font-size: 24px;
+        font-family: "Segoe UI";
+        color: #969696;
+        line-height: 1.2;
+        text-align: left; }
+        @media all and (max-width: 1200px) {
+          #indelika .stickers-colors-container .container .color-container p {
+            font-size: 20px; } }
+        @media all and (max-width: 1000px) {
+          #indelika .stickers-colors-container .container .color-container p {
+            font-size: 18px; } }
+        @media all and (max-width: 600px) {
+          #indelika .stickers-colors-container .container .color-container p {
+            font-size: 16px; } }
 #indelika .concepts-info::before {
   content: " ";
   position: absolute;

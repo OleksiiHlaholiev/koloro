@@ -166,8 +166,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .image-fourth {
-        background-image: url("../images/ИНДЕЛИКА-ВИЗ-2.jpg");
+        background-size: auto;
+        background-position: center center;
+        background-color: #000;
         background-attachment: scroll;
+        background-image: url("../images/ИНДЕЛИКА-ВИЗ-2.jpg");
     }
 
 	.image-container {
@@ -509,7 +512,307 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 
-	.concepts-info::before {
+    .info-solution {
+        position: relative;
+        .container {
+            margin-bottom: 35vh;
+        }
+    }
+
+	.stickers-block-container {
+		position: relative;
+        padding: 30vh 0 100px 0;
+		background-image: -moz-linear-gradient( 0deg, rgb(35,35,35) 0%, rgb(4,4,4) 100%);
+		background-image: -webkit-linear-gradient( 0deg, rgb(35,35,35) 0%, rgb(4,4,4) 100%);
+		background-image: -ms-linear-gradient( 0deg, rgb(35,35,35) 0%, rgb(4,4,4) 100%);
+		background-image: linear-gradient( 0deg, rgb(35,35,35) 0%, rgb(4,4,4) 100%);
+
+        .image-fifth {
+            position: absolute;
+            left: 10%;
+            top:-35vh;
+            height: 60vh;
+            width: 80%;
+            background-image: url("../images/LABEL-PICTURE.png");
+            background-attachment: scroll;
+            //transition: all 1s;
+        }
+
+        h2 {
+            padding: 0 0 80px 0;
+            font-size: 48px;
+            font-family: "Segoe UI";
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            line-height: 1.2;
+            text-align: center;
+
+            @media all and (max-width: 1000px) {
+                font-size: 32px;
+            }
+            @media all and (max-width: 800px) {
+                font-size: 26px;
+            }
+            @media all and (max-width: 600px) {
+                font-size: 24px;
+            }
+        }
+
+        .sticker-name {
+            font-size: 36px;
+            font-family: "AFuturaRoundBold";
+            font-weight: bold;
+            color: rgb(205, 162, 80);
+            line-height: 1.2;
+            text-align: center;
+
+            @media all and (max-width: 1000px) {
+                font-size: 30px;
+            }
+            @media all and (max-width: 800px) {
+                font-size: 24px;
+            }
+            @media all and (max-width: 600px) {
+                font-size: 20px;
+            }
+        }
+
+        .sticker-text {
+            padding: 40px 0 50px 0;
+            font-size: 30px;
+            font-family: "VacansiaC";
+            color: rgb(205, 162, 80);
+            font-weight: bold;
+            line-height: 1.2;
+            text-align: center;
+
+            @media all and (max-width: 1000px) {
+                font-size: 24px;
+            }
+            @media all and (max-width: 800px) {
+                font-size: 20px;
+            }
+            @media all and (max-width: 600px) {
+                font-size: 16px;
+            }
+        }
+
+        .sticker-info {
+            font-size: 30px;
+            font-family: "Arial";
+            font-weight: normal;
+            color: rgb(205, 162, 80);
+            line-height: 1.2;
+            text-align: center;
+
+            @media all and (max-width: 1000px) {
+                font-size: 24px;
+            }
+            @media all and (max-width: 800px) {
+                font-size: 20px;
+            }
+            @media all and (max-width: 600px) {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .stickers-colors-container {
+        background-color: #fff;
+        padding: 80px 0;
+
+        @media all and (max-width: 600px) {
+            padding: 20px 0;
+        }
+
+        .container {
+            width: $containerWidth;
+            margin: 0 auto;
+
+            h2 {
+                padding-bottom: 80px;
+                font-size: 48px;
+                font-family: "Segoe UI";
+                color: rgb(0, 0, 0);
+                font-weight: bold;
+                line-height: 1.2;
+                text-align: center;
+
+                @media all and (max-width: 1200px){
+                    padding-bottom: 60px;
+                    font-size: 40px;
+                }
+                @media all and (max-width: 1000px) {
+                    padding-bottom: 40px;
+                    font-size: 32px;
+                }
+                @media all and (max-width: 600px) {
+                    padding-bottom: 20px;
+                    font-size: 20px;
+                }
+            }
+
+            .color-left, .color-right {
+                width: 50%;
+                float: left;
+
+                @media all and (max-width: 800px) {
+                    width: 100%;
+                    float: none;
+                }
+
+            }
+
+            .color-container {
+                padding: 50px 0 50px 50px;
+
+                @media all and (max-width: 1200px){
+                    padding: 40px 0 40px 40px;
+                }
+                @media all and (max-width: 1000px) {
+                    padding: 30px 0 30px 30px;
+                }
+                @media all and (max-width: 600px) {
+                    padding: 20px 0 20px 20px;
+                }
+
+                h3 {
+                    font-size: 30px;
+                    font-family: "Segoe UI";
+                    color: rgb(0, 0, 0);
+                    font-weight: bold;
+                    line-height: 1.2;
+                    text-align: left;
+
+                    @media all and (max-width: 1200px){
+                        font-size: 26px;
+                    }
+                    @media all and (max-width: 1000px) {
+                        font-size: 24px;
+                    }
+                    @media all and (max-width: 600px) {
+                        font-size: 16px;
+                    }
+                }
+
+                .pointer-container {
+                    position: relative;
+                    margin: 15px 0;
+
+                    @media all and (max-width: 600px) {
+                        margin: 5px 0;
+                    }
+                    .circle {
+                        position: absolute;
+                        top: 2.5px;
+                        z-index: 1;
+                        display: inline-block;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                    }
+                    .line {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 70%;
+                    }
+                    .big-circle {
+                        position: absolute;
+                        right: 0;
+                        top: -70px;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+
+                        @media all and (max-width: 1200px) {
+                            top: -50px;
+                            width: 80px;
+                            height: 80px;
+                        }
+                        @media all and (max-width: 1000px) {
+                            top: -40px;
+                            width: 60px;
+                            height: 60px;
+                        }
+                    }
+                }
+
+                .black {
+                    .circle, .big-circle {
+                        color: #000;
+                        background-color: #000;
+                    }
+                    .line {
+                        border-bottom: 1px solid #000;
+                    }
+                }
+                .gold-black {
+                    .circle, .big-circle {
+                        background: -moz-linear-gradient( 0deg, rgb(254,227,125) 0%, rgb(254,233,143) 12%, rgb(249,195,98) 23%, rgb(226,176,87) 28%, rgb(203,156,76) 40%, rgb(163,133,65) 52%, rgb(133,99,45) 60%, rgb(110,82,36) 65%, rgb(78,60,21) 79%, rgb(76,60,24) 84%, rgb(45,31,4) 92%);
+                        background: -webkit-linear-gradient( 0deg, rgb(254,227,125) 0%, rgb(254,233,143) 12%, rgb(249,195,98) 23%, rgb(226,176,87) 28%, rgb(203,156,76) 40%, rgb(163,133,65) 52%, rgb(133,99,45) 60%, rgb(110,82,36) 65%, rgb(78,60,21) 79%, rgb(76,60,24) 84%, rgb(45,31,4) 92%);
+                        background: -ms-linear-gradient( 0deg, rgb(254,227,125) 0%, rgb(254,233,143) 12%, rgb(249,195,98) 23%, rgb(226,176,87) 28%, rgb(203,156,76) 40%, rgb(163,133,65) 52%, rgb(133,99,45) 60%, rgb(110,82,36) 65%, rgb(78,60,21) 79%, rgb(76,60,24) 84%, rgb(45,31,4) 92%);;
+                    }
+                    .line {
+                        border-bottom: 1px solid rgb(205, 162, 80);
+                    }
+                }
+                .gold {
+                    .circle, .big-circle {
+                        background-color: rgb(205, 162, 80);
+                    }
+                    .line {
+                        border-bottom: 1px solid rgb(205, 162, 80);
+                    }
+                }
+                .red {
+                    .circle, .big-circle {
+                        background-color: #a71e23;
+                    }
+                    .line {
+                        border-bottom: 1px solid #a71e23;
+                    }
+                }
+                .green {
+                    .circle, .big-circle {
+                        background-color: #0c8243;
+                    }
+                    .line {
+                        border-bottom: 1px solid #0c8243;
+                    }
+                }
+                .blue {
+                    .circle, .big-circle {
+                        background-color: #25509f;
+                    }
+                    .line {
+                        border-bottom: 1px solid #25509f;
+                    }
+                }
+
+                p {
+                    font-size: 24px;
+                    font-family: "Segoe UI";
+                    color: rgb(150, 150, 150);
+                    line-height: 1.2;
+                    text-align: left;
+
+                    @media all and (max-width: 1200px){
+                        font-size: 20px;
+                    }
+                    @media all and (max-width: 1000px) {
+                        font-size: 18px;
+                    }
+                    @media all and (max-width: 600px) {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .concepts-info::before {
 		content: " ";
 		position: absolute;
 		top: 100%;

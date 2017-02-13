@@ -47,34 +47,102 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-to-top {
-    z-index: 100500;
-    bottom: 20px;
-    right: 20px;
     display: block;
+    position: fixed;
+    z-index: 100500;
+    right: 20px;
     background-color: rgba(34, 61, 98, 0.3);
     color: #fff;
-    position: fixed;
     cursor: pointer;
     -webkit-transition: all .35s ease;
     transition: all .35s ease;
-    opacity: 0;
+    opacity: 1;
+}
 
-    .fa-angle-up {
-        font-size: 60px;
-        padding: 0 11px 2px 11px;
+.back-to-top {
+    bottom: 20px;
+    img {
+        padding: 25px 20px;
 
         @media screen and (max-width: 600px) {
-            font-size: 40px;
-            padding: 0 10px;
+            padding: 15px 10px;
         }
     }
 }
 
-.back-to-top:hover {
-    background-color: rgba(34, 61, 98, 0.8);
+.search-container {
+    position: fixed;
+    bottom: 90px;
+    z-index: 100500;
+    right: 20px;
+
+    @media screen and (max-width: 600px) {
+        bottom: 70px;
+    }
+
+    .input-container {
+        input {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            right: 100%;
+            height: 65px;
+            font-size: 20px;
+            font-family: "GothamPro";
+            color: #f0cf16;
+            line-height: 1.2;
+            text-align: center;
+            border: 0;
+            opacity: 1;
+            transition: all 0.4s;
+
+            @media screen and (max-width: 600px) {
+                height: 45px;
+            }
+        }
+    }
+
+    .search-btn {
+        display: inline-block;
+        position: relative;
+        background-color: rgba(34, 61, 98, 0.3);
+        img {
+            //display: inline-block;
+            padding: 20px;
+
+            @media screen and (max-width: 600px) {
+                padding: 10px;
+            }
+        }
+    }
+    //.search-btn:hover {
+    //    input {
+    //        opacity: 1;
+    //    }
+    //}
 }
 
-.back-to-top-visible {
+/*.search-btn {
+    bottom: 90px;
+
+    @media screen and (max-width: 600px) {
+        bottom: 70px;
+    }
+    img {
+        padding: 20px;
+
+        @media screen and (max-width: 600px) {
+            padding: 10px;
+        }
+    }
+}*/
+
+.back-to-top:hover, .search-btn:hover {
+    //background-color: rgba(34, 61, 98, 0.8);
+    background-color: #cac8a1;
+}
+
+.back-to-top-visible, .search-btn-visible {
     //display: block;
     opacity: 1;
 }
@@ -714,7 +782,7 @@ h1, h2, h3, h4, h5, h6 {
                     .line {
                         position: relative;
                         display: inline-block;
-                        vertical-align: middle;
+                        //vertical-align: middle;
                         width: 70%;
                     }
                     .big-circle {
@@ -811,31 +879,10 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 
-
-    .concepts-info::before {
-		content: " ";
-		position: absolute;
-		top: 100%;
-		left: 50%;
-		margin-left: -55px;
-		border: 55px solid transparent;
-		border-top-color: rgb(231, 231, 231);
-		z-index: 2;
-
-		@media all and (max-width: 800px) {
-			margin-left: -40px;
-			border-width: 40px;
-		}
-		@media all and (max-width: 600px) {
-			margin-left: -30px;
-			border-width: 30px;
-		}
-	}
-
 	.concepts-info {
 		position: relative;
-		background-color: rgb(231, 231, 231);
-		padding-bottom: 140px;
+		background-color: rgb(0, 0, 0);
+        padding-bottom: 140px;
 
 		@media all and (max-width: 800px){
 			padding-bottom: 70px
@@ -852,7 +899,7 @@ h1, h2, h3, h4, h5, h6 {
 				padding: 60px 0;
 				font-size: 60px;
 				font-family: "Segoe UI";
-				color: rgb(0, 0, 0);
+				color: rgb(255, 255, 255);
 				font-weight: bold;
 				line-height: 1.2;
 				text-align: center;
@@ -880,8 +927,8 @@ h1, h2, h3, h4, h5, h6 {
 
 			p {
 				font-size: 24px;
-				font-family: "Segoe UI";
-				color: rgb(0, 0, 0);
+				font-family: "Segoe UI Light";
+				color: rgb(255, 255, 255);
 				line-height: 1.2;
 				text-align: justify;
 

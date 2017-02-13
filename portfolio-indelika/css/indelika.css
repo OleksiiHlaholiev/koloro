@@ -37,29 +37,78 @@ h1, h2, h3, h4, h5, h6 {
   background: #ffffff url("../images/preloader.gif") no-repeat center center; }
 
 .back-to-top {
-  z-index: 100500;
-  bottom: 20px;
-  right: 20px;
   display: block;
+  position: fixed;
+  z-index: 100500;
+  right: 20px;
   background-color: rgba(34, 61, 98, 0.3);
   color: #fff;
-  position: fixed;
   cursor: pointer;
   -webkit-transition: all .35s ease;
   transition: all .35s ease;
-  opacity: 0; }
-  .back-to-top .fa-angle-up {
-    font-size: 60px;
-    padding: 0 11px 2px 11px; }
+  opacity: 1; }
+
+.back-to-top {
+  bottom: 20px; }
+  .back-to-top img {
+    padding: 25px 20px; }
     @media screen and (max-width: 600px) {
-      .back-to-top .fa-angle-up {
-        font-size: 40px;
-        padding: 0 10px; } }
+      .back-to-top img {
+        padding: 15px 10px; } }
 
-.back-to-top:hover {
-  background-color: rgba(34, 61, 98, 0.8); }
+.search-container {
+  position: fixed;
+  bottom: 90px;
+  z-index: 100500;
+  right: 20px; }
+  @media screen and (max-width: 600px) {
+    .search-container {
+      bottom: 70px; } }
+  .search-container .input-container input {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    height: 65px;
+    font-size: 20px;
+    font-family: "GothamPro";
+    color: #f0cf16;
+    line-height: 1.2;
+    text-align: center;
+    border: 0;
+    opacity: 1;
+    transition: all 0.4s; }
+    @media screen and (max-width: 600px) {
+      .search-container .input-container input {
+        height: 45px; } }
+  .search-container .search-btn {
+    display: inline-block;
+    position: relative;
+    background-color: rgba(34, 61, 98, 0.3); }
+    .search-container .search-btn img {
+      padding: 20px; }
+      @media screen and (max-width: 600px) {
+        .search-container .search-btn img {
+          padding: 10px; } }
 
-.back-to-top-visible {
+/*.search-btn {
+    bottom: 90px;
+
+    @media screen and (max-width: 600px) {
+        bottom: 70px;
+    }
+    img {
+        padding: 20px;
+
+        @media screen and (max-width: 600px) {
+            padding: 10px;
+        }
+    }
+}*/
+.back-to-top:hover, .search-btn:hover {
+  background-color: #cac8a1; }
+
+.back-to-top-visible, .search-btn-visible {
   opacity: 1; }
 
 #indelika .bg-container {
@@ -511,7 +560,6 @@ h1, h2, h3, h4, h5, h6 {
         #indelika .stickers-colors-container .container .color-container .pointer-container .line {
           position: relative;
           display: inline-block;
-          vertical-align: middle;
           width: 70%; }
         #indelika .stickers-colors-container .container .color-container .pointer-container .big-circle {
           position: absolute;
@@ -572,26 +620,9 @@ h1, h2, h3, h4, h5, h6 {
         @media all and (max-width: 600px) {
           #indelika .stickers-colors-container .container .color-container p {
             font-size: 16px; } }
-#indelika .concepts-info::before {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -55px;
-  border: 55px solid transparent;
-  border-top-color: #e7e7e7;
-  z-index: 2; }
-  @media all and (max-width: 800px) {
-    #indelika .concepts-info::before {
-      margin-left: -40px;
-      border-width: 40px; } }
-  @media all and (max-width: 600px) {
-    #indelika .concepts-info::before {
-      margin-left: -30px;
-      border-width: 30px; } }
 #indelika .concepts-info {
   position: relative;
-  background-color: #e7e7e7;
+  background-color: black;
   padding-bottom: 140px; }
   @media all and (max-width: 800px) {
     #indelika .concepts-info {
@@ -606,7 +637,7 @@ h1, h2, h3, h4, h5, h6 {
       padding: 60px 0;
       font-size: 60px;
       font-family: "Segoe UI";
-      color: black;
+      color: white;
       font-weight: bold;
       line-height: 1.2;
       text-align: center; }
@@ -626,8 +657,8 @@ h1, h2, h3, h4, h5, h6 {
       opacity: 1; }
     #indelika .concepts-info .container p {
       font-size: 24px;
-      font-family: "Segoe UI";
-      color: black;
+      font-family: "Segoe UI Light";
+      color: white;
       line-height: 1.2;
       text-align: justify; }
       @media all and (max-width: 600px) {

@@ -18,21 +18,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="297" column="44" lean-forward="false" selection-start-line="297" selection-start-column="32" selection-end-line="297" selection-end-column="44" />
+            <state relative-caret-position="708">
+              <caret line="294" column="50" lean-forward="false" selection-start-line="294" selection-start-column="37" selection-end-line="294" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indelika.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="indelika.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/indelika.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
-              <caret line="426" column="29" lean-forward="false" selection-start-line="426" selection-start-column="29" selection-end-line="426" selection-end-column="29" />
+            <state relative-caret-position="659">
+              <caret line="447" column="25" lean-forward="false" selection-start-line="447" selection-start-column="25" selection-end-line="447" selection-end-column="25" />
               <folding>
                 <element signature="e#5743#7607#0" expanded="false" />
               </folding>
@@ -59,6 +59,7 @@
       <find>GothamPro</find>
       <find>slider-dark-mask</find>
       <find>span</find>
+      <find>read</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -177,12 +178,12 @@
       <option name="presentableId" value="Default" />
       <updated>1487074017721</updated>
       <workItem from="1487074020177" duration="3537000" />
-      <workItem from="1487080390362" duration="6821000" />
+      <workItem from="1487080390362" duration="7094000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10358000" />
+    <option name="totallyTimeSpent" value="10631000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -258,21 +259,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/indelika.scss">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="426" column="29" lean-forward="false" selection-start-line="426" selection-start-column="29" selection-end-line="426" selection-end-column="29" />
-          <folding>
-            <element signature="e#5743#7607#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="708">
+          <caret line="294" column="50" lean-forward="false" selection-start-line="294" selection-start-column="37" selection-end-line="294" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/css/indelika.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="297" column="44" lean-forward="false" selection-start-line="297" selection-start-column="32" selection-end-line="297" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="659">
+          <caret line="447" column="25" lean-forward="false" selection-start-line="447" selection-start-column="25" selection-end-line="447" selection-end-column="25" />
+          <folding>
+            <element signature="e#5743#7607#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

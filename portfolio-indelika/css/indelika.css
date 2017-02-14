@@ -73,6 +73,7 @@ h1, h2, h3, h4, h5, h6 {
       top: 0;
       right: 100%;
       height: 67px;
+      width: 30vw;
       padding: 0 20px;
       font-size: 20px;
       font-family: "GothamPro";
@@ -82,9 +83,13 @@ h1, h2, h3, h4, h5, h6 {
       text-align: center;
       border: 0;
       outline: none; }
+      @media screen and (max-width: 1000px) {
+        .search-container .input-container input {
+          width: 60vw; } }
       @media screen and (max-width: 600px) {
         .search-container .input-container input {
           height: 47px;
+          width: 80vw;
           padding: 0 2px; } }
   .search-container .search-btn {
     display: inline-block;
@@ -117,7 +122,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }*/
 .back-to-top:hover, .search-btn:hover {
-  background-color: #cac8a1; }
+  background-color: #f0cf16; }
 
 .back-to-top-visible, .search-btn-visible {
   opacity: 1; }
@@ -170,13 +175,6 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1; }
 #indelika .image-top {
   background-image: url("../images/SLIDEMAIN.jpg"); }
-#indelika .image-second {
-  height: 70vh;
-  background-size: auto;
-  background-position: center top;
-  background-color: #000;
-  background-attachment: scroll;
-  background-image: url("../images/LOGO-INDELIKA.png"); }
 #indelika .image-third {
   background-size: auto;
   background-position: center center;
@@ -189,11 +187,20 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #000;
   background-attachment: scroll;
   background-image: url("../images/ИНДЕЛИКА-ВИЗ-2.jpg"); }
+#indelika .image-fifth {
+  background-size: auto;
+  background-position: center center;
+  background-color: #000;
+  background-attachment: scroll;
+  background-image: url("../images/ИНДЕЛИКА-ВИЗ-3.jpg"); }
+#indelika .logo-container {
+  background-color: #000; }
 #indelika .image-container {
   width: 100%;
   position: relative;
   top: 0;
-  left: 0; }
+  left: 0;
+  text-align: center; }
   #indelika .image-container .dark-mask {
     position: absolute;
     top: 0;
@@ -205,6 +212,14 @@ h1, h2, h3, h4, h5, h6 {
   #indelika .image-container .big-image {
     width: 100%;
     position: relative; }
+  #indelika .image-container .image-second {
+    padding: 50px 10px 10px 10px;
+    height: 70vh;
+    width: auto;
+    background-color: #000; }
+    @media all and (max-width: 600px) {
+      #indelika .image-container .image-second {
+        height: 50vh; } }
   #indelika .image-container .third-image .image-cont-left {
     display: inline-block;
     width: 50%; }
@@ -268,10 +283,10 @@ h1, h2, h3, h4, h5, h6 {
         background-color: rgba(60, 60, 60, 0.5); }
     #indelika .slider-cont .slider li:nth-child(1) {
       left: -20%;
-      background-image: url(../images/КОВБАСА-СБОРКА.jpg); }
+      background-image: url(../images/SLIDEMAIN.jpg); }
     #indelika .slider-cont .slider li:nth-child(2) {
       left: 0;
-      background-image: url(../images/SLIDEMAIN.jpg); }
+      background-image: url(../images/ИНДЕЛИКА-КОНЦЕПТ-№1.jpg); }
     #indelika .slider-cont .slider li:nth-child(3) {
       left: 20%;
       background-image: url(../images/ИНДЕЛИКА-ВИЗ-2.jpg); }
@@ -281,27 +296,26 @@ h1, h2, h3, h4, h5, h6 {
     #indelika .slider-cont .slider li:nth-child(5) {
       left: 60%;
       background-image: url(../images/ИНДЕЛИКА-ВИЗ-4.jpg); }
-  #indelika .slider-cont .fa-angle-left, #indelika .slider-cont .fa-angle-right {
+  #indelika .slider-cont .slider_left_btn, #indelika .slider-cont .slider_right_btn {
     position: absolute;
-    color: #fff;
-    background-color: transparent;
-    font-size: 80px;
-    padding: 5px 15px;
+    width: 75px;
+    height: 145px;
+    background-repeat: no-repeat;
     cursor: pointer;
     z-index: 10;
     transition: all 0.4s; }
-    @media screen and (min-height: 550px) {
-      #indelika .slider-cont .fa-angle-left, #indelika .slider-cont .fa-angle-right {
-        font-size: 150px;
-        padding: 10px 25px; } }
-  #indelika .slider-cont .fa-angle-left {
+  #indelika .slider-cont .slider_left_btn {
     bottom: 50%;
-    left: 5%; }
-  #indelika .slider-cont .fa-angle-right {
+    left: 2%;
+    background-image: url("../images/slide_left_black.png"); }
+  #indelika .slider-cont .slider_right_btn {
     bottom: 50%;
-    right: 5%; }
-  #indelika .slider-cont .fa-angle-left:hover, #indelika .slider-cont .fa-angle-right:hover {
-    color: #2ecc71; }
+    right: 2%;
+    background-image: url("../images/slide_right_black.png"); }
+  #indelika .slider-cont .slider_left_btn:hover {
+    background-image: url("../images/slide_left_black_hover.png"); }
+  #indelika .slider-cont .slider_right_btn:hover {
+    background-image: url("../images/slide_right_black_hover.png"); }
   #indelika .slider-cont .slider-nav {
     position: absolute;
     bottom: 10%;
@@ -313,7 +327,7 @@ h1, h2, h3, h4, h5, h6 {
       padding: 10px;
       position: relative; }
       #indelika .slider-cont .slider-nav .slider-nav-list li .pagination-btn .fa {
-        color: #fff;
+        color: #000;
         cursor: pointer; }
       #indelika .slider-cont .slider-nav .slider-nav-list li .pagination-btn .fa-circle-thin {
         font-size: 30px; }

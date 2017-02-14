@@ -91,6 +91,7 @@ h1, h2, h3, h4, h5, h6 {
             top: 0;
             right: 100%;
             height: 67px;
+			width: 30vw;
 			padding: 0 20px;
             font-size: 20px;
             font-family: "GothamPro";
@@ -101,8 +102,13 @@ h1, h2, h3, h4, h5, h6 {
             border: 0;
             outline: none;
 
+
+			@media screen and (max-width: 1000px) {
+				width: 60vw;
+			}
             @media screen and (max-width: 600px) {
                 height: 47px;
+				width: 80vw;
 				padding: 0 2px;
             }
         }
@@ -147,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .back-to-top:hover, .search-btn:hover {
     //background-color: rgba(34, 61, 98, 0.8);
-    background-color: #cac8a1;
+    background-color: #f0cf16;
 }
 
 .back-to-top-visible, .search-btn-visible {
@@ -224,14 +230,15 @@ h1, h2, h3, h4, h5, h6 {
         background-image: url("../images/SLIDEMAIN.jpg");
     }
 
-    .image-second {
-        height: 70vh;
-        background-size: auto;
-        background-position: center top;
-        background-color: #000;
-        background-attachment: scroll;
-        background-image: url("../images/LOGO-INDELIKA.png");
-    }
+    //.image-second {
+    //    margin-top: 50px;
+    //    height: 70vh;
+    //    background-size: auto;
+    //    background-position: center top;
+    //    background-color: #000;
+    //    background-attachment: scroll;
+    //    background-image: url("../images/LOGO-INDELIKA.png");
+    //}
 
     .image-third {
         background-size: auto;
@@ -249,11 +256,24 @@ h1, h2, h3, h4, h5, h6 {
         background-image: url("../images/ИНДЕЛИКА-ВИЗ-2.jpg");
     }
 
+    .image-fifth {
+        background-size: auto;
+        background-position: center center;
+        background-color: #000;
+        background-attachment: scroll;
+        background-image: url("../images/ИНДЕЛИКА-ВИЗ-3.jpg");
+    }
+
+    .logo-container {
+        background-color: #000;
+    }
+
 	.image-container {
 		width: 100%;
 		position: relative;
 		top: 0;
 		left: 0;
+        text-align: center;
 		//background-color: grey; // TEMP
 
 		.dark-mask {
@@ -272,6 +292,18 @@ h1, h2, h3, h4, h5, h6 {
             position: relative;
 			//height: auto;
 		}
+
+        .image-second {
+            padding: 50px 10px 10px 10px;
+            //padding-top: 50px;
+            height: 70vh;
+            width: auto;
+            background-color: #000;
+
+            @media all and (max-width: 600px) {
+                height: 50vh;
+            }
+        }
 
         .third-image {
             .image-cont-left {
@@ -370,11 +402,11 @@ h1, h2, h3, h4, h5, h6 {
 			}
 			li:nth-child(1) {
 				left: -20%;
-				background-image: url(../images/КОВБАСА-СБОРКА.jpg);
+				background-image: url(../images/SLIDEMAIN.jpg);
 			}
 			li:nth-child(2) {
 				left: 0;
-				background-image: url(../images/SLIDEMAIN.jpg);
+				background-image: url(../images/ИНДЕЛИКА-КОНЦЕПТ-№1.jpg);
 			}
 			li:nth-child(3) {
 				left: 20%;
@@ -389,35 +421,41 @@ h1, h2, h3, h4, h5, h6 {
 				background-image: url(../images/ИНДЕЛИКА-ВИЗ-4.jpg);
 			}
 		}
-		.fa-angle-left, .fa-angle-right {
-			position: absolute;
-			//color: #878787;
-			//background-color: #3c4140;
-			color: #fff;
-			background-color: transparent;
-			font-size: 80px;
-			padding: 5px 15px;
-			cursor: pointer;
-			z-index: 10;
-			transition: all 0.4s;
 
-			@media screen and (min-height: 550px) {
-				font-size: 150px;
-				padding: 10px 25px;
-			}
-		}
-		.fa-angle-left {
-			bottom: 50%;
-			left: 5%;
-		}
-		.fa-angle-right {
-			bottom: 50%;
-			right: 5%;
-		}
-		.fa-angle-left:hover, .fa-angle-right:hover {
-			color: $color_green_light;
-			//background-color: $color_green_light;
-		}
+        .slider_left_btn, .slider_right_btn {
+            position: absolute;
+            //color: #878787;
+            //background-color: #3c4140;
+            //padding: 50px;
+            width: 75px;
+            height: 145px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.4s;
+
+            @media screen and (min-height: 550px) {
+
+            }
+        }
+
+        .slider_left_btn {
+            bottom: 50%;
+            left: 2%;
+            background-image: url("../images/slide_left_black.png");
+        }
+        .slider_right_btn {
+            bottom: 50%;
+            right: 2%;
+            background-image: url("../images/slide_right_black.png");
+        }
+
+        .slider_left_btn:hover {
+            background-image: url("../images/slide_left_black_hover.png");
+        }
+        .slider_right_btn:hover {
+            background-image: url("../images/slide_right_black_hover.png");
+        }
 
 		.slider-nav {
 			position: absolute;
@@ -434,7 +472,7 @@ h1, h2, h3, h4, h5, h6 {
 
 					.pagination-btn {
 						.fa {
-							color: #fff;
+							color: #000;
 							//color: rgba(46, 204, 96, 1);
 							cursor: pointer;
 

@@ -1,0 +1,917 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center; }
+
+.verical-align {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.main-wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1920px; }
+
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100500;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #ffffff url("../images/general/preloader.gif") no-repeat center center; }
+
+.container {
+  width: 80%;
+  margin: 0 auto; }
+
+.back-to-top {
+  display: block;
+  position: fixed;
+  z-index: 100500;
+  right: 20px;
+  background-color: rgba(34, 61, 98, 0.3);
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all .35s ease;
+  transition: all .35s ease;
+  opacity: 1;
+  bottom: 20px; }
+  .back-to-top img {
+    padding: 25px 20px; }
+    @media screen and (max-width: 600px) {
+      .back-to-top img {
+        padding: 15px 10px; } }
+
+.search-container {
+  position: fixed;
+  bottom: 90px;
+  z-index: 100500;
+  right: 20px; }
+  @media screen and (max-width: 600px) {
+    .search-container {
+      bottom: 70px; } }
+  .search-container .input-container {
+    display: none;
+    transition: all 0.4s; }
+    .search-container .input-container input {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 100%;
+      height: 67px;
+      width: 30vw;
+      padding: 0 20px;
+      font-size: 20px;
+      font-family: "Segoe UI";
+      color: #f0cf16;
+      background-color: #262626;
+      line-height: 1.2;
+      text-align: center;
+      border: 0;
+      outline: none; }
+      @media screen and (max-width: 1000px) {
+        .search-container .input-container input {
+          width: 60vw; } }
+      @media screen and (max-width: 600px) {
+        .search-container .input-container input {
+          height: 47px;
+          width: 80vw;
+          padding: 0 2px; } }
+  .search-container .search-btn {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    background-color: rgba(34, 61, 98, 0.3);
+    border: none;
+    outline: none;
+    -webkit-transition: all .35s ease;
+    transition: all .35s ease; }
+    .search-container .search-btn img {
+      padding: 20px; }
+      @media screen and (max-width: 600px) {
+        .search-container .search-btn img {
+          padding: 10px; } }
+
+.search-container:hover .input-container {
+  display: block; }
+
+.back-to-top:hover, .search-btn:hover {
+  background-color: #f0cf16; }
+
+.back-to-top-visible, .search-btn-visible {
+  opacity: 1; }
+
+footer {
+  border-bottom: 5px solid #a44699; }
+
+.blue-gradient, #mirovaya-tradicia {
+  background-image: -moz-radial-gradient(50% 50%, circle closest-side, #3f7dca 0%, #215ea2 55%, #214a82 100%);
+  background-image: -webkit-radial-gradient(50% 50%, circle closest-side, #3f7dca 0%, #215ea2 55%, #214a82 100%);
+  background-image: -ms-radial-gradient(50% 50%, circle closest-side, #3f7dca 0%, #215ea2 55%, #214a82 100%); }
+
+#mirovaya-tradicia .bg-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed; }
+  #mirovaya-tradicia .bg-container .dark-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(60, 60, 60, 0.5);
+    z-index: 2; }
+#mirovaya-tradicia .bottles {
+  background-image: url("../images/mirovaya-tradiciya/PICTURE-FINAL-CONCEPT.jpg");
+  background-attachment: scroll; }
+#mirovaya-tradicia .bottles-2 {
+  background-image: url("../images/mirovaya-tradiciya/PHOTO-BOTTLES.jpg");
+  background-attachment: scroll; }
+#mirovaya-tradicia .image-container {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0; }
+  #mirovaya-tradicia .image-container .dark-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(60, 60, 60, 0);
+    z-index: 2; }
+  #mirovaya-tradicia .image-container .big-image {
+    width: 100%;
+    position: relative; }
+  #mirovaya-tradicia .image-container .plane {
+    width: 50%;
+    max-width: 939px;
+    left: 10%; }
+  #mirovaya-tradicia .image-container .cloud-N2 {
+    position: absolute;
+    width: 100%;
+    max-width: 1649px;
+    top: -10%;
+    right: -75%; }
+  #mirovaya-tradicia .image-container .logo-2 {
+    width: 50%;
+    max-width: 856px;
+    padding-bottom: 10vh; }
+  #mirovaya-tradicia .image-container .birds {
+    position: absolute;
+    width: 100%;
+    max-width: 195px; }
+  #mirovaya-tradicia .image-container .ballon-small {
+    width: 30%;
+    max-width: 495px;
+    position: relative;
+    left: 20vw; }
+  #mirovaya-tradicia .image-container .cloud-N4 {
+    position: absolute;
+    right: -20%;
+    top: 0;
+    width: 50%;
+    max-width: 1350px; }
+  #mirovaya-tradicia .image-container .cloud-N5 {
+    position: absolute;
+    z-index: 2;
+    left: -30%;
+    top: 0;
+    width: 50%;
+    max-width: 1350px; }
+  #mirovaya-tradicia .image-container .third-image .image-cont-left {
+    display: inline-block;
+    width: 50%; }
+    #mirovaya-tradicia .image-container .third-image .image-cont-left .image-left {
+      vertical-align: bottom; }
+    #mirovaya-tradicia .image-container .third-image .image-cont-left .image-left-animate {
+      opacity: 0;
+      left: -100%;
+      transition: all 1s; }
+  #mirovaya-tradicia .image-container .third-image .image-cont-right {
+    display: inline-block;
+    width: 50%; }
+    #mirovaya-tradicia .image-container .third-image .image-cont-right .image-right {
+      vertical-align: bottom; }
+    #mirovaya-tradicia .image-container .third-image .image-cont-right .image-right-animate {
+      opacity: 0;
+      left: 100%;
+      transition: all 1.5s; }
+  #mirovaya-tradicia .image-container .top-image-animate {
+    opacity: 0;
+    transition: all 2s; }
+  #mirovaya-tradicia .image-container .second-image-animate {
+    opacity: 0;
+    transition: all 2s; }
+  #mirovaya-tradicia .image-container .fourth-image-animate {
+    opacity: 0;
+    transition: all 2s; }
+  #mirovaya-tradicia .image-container .image-animate-active {
+    opacity: 1 !important;
+    left: 0 !important; }
+#mirovaya-tradicia .top-container {
+  position: relative;
+  height: 100vh; }
+  #mirovaya-tradicia .top-container .logo-image {
+    width: 40%;
+    max-width: 780px;
+    position: absolute;
+    top: 5vh;
+    left: 10vw; }
+    @media all and (max-width: 1000px) {
+      #mirovaya-tradicia .top-container .logo-image {
+        top: 5vh; } }
+  #mirovaya-tradicia .top-container .cloud-back-1 {
+    position: absolute;
+    top: 5vh;
+    right: -5vw;
+    width: 50%;
+    max-width: 1339px;
+    z-index: 2; }
+  #mirovaya-tradicia .top-container .cloud-N1 {
+    position: absolute;
+    top: 70vh;
+    left: -50%;
+    width: 100%;
+    max-width: 1789px;
+    z-index: 2; }
+  #mirovaya-tradicia .top-container .ballon-right {
+    position: absolute;
+    top: 50vh;
+    right: 5%;
+    width: 30%;
+    max-width: 495px;
+    z-index: 3; }
+  #mirovaya-tradicia .top-container h1 {
+    position: relative;
+    font-size: 80px;
+    font-family: "Segoe UI";
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.004);
+    position: absolute;
+    bottom: 10vh;
+    z-index: 60;
+    width: 100%; }
+    @media all and (max-width: 1000px) {
+      #mirovaya-tradicia .top-container h1 {
+        font-size: 60px;
+        bottom: 20vh; } }
+    @media all and (max-width: 700px) {
+      #mirovaya-tradicia .top-container h1 {
+        font-size: 40px;
+        bottom: 20vh; } }
+    @media all and (max-width: 500px) {
+      #mirovaya-tradicia .top-container h1 {
+        font-size: 20px;
+        bottom: 50vh; } }
+  #mirovaya-tradicia .top-container .top-title-animate {
+    opacity: 0;
+    transition: all 2s; }
+  #mirovaya-tradicia .top-container .top-title-animate-active {
+    opacity: 1; }
+#mirovaya-tradicia .company-aims {
+  position: relative;
+  padding-top: 40vh; }
+  @media all and (max-width: 1200px) {
+    #mirovaya-tradicia .company-aims {
+      padding-top: 30vh; } }
+  @media all and (max-width: 1000px) {
+    #mirovaya-tradicia .company-aims {
+      padding-top: 20vh; } }
+  @media all and (max-width: 800px) {
+    #mirovaya-tradicia .company-aims {
+      padding-top: 2vh; } }
+  #mirovaya-tradicia .company-aims .second-image {
+    position: absolute;
+    bottom: 0;
+    left: -20%;
+    width: 50%;
+    z-index: 3; }
+#mirovaya-tradicia .company-aims-2 {
+  position: relative; }
+  #mirovaya-tradicia .company-aims-2 .cloud-N3 {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: -25%;
+    width: 50%;
+    max-width: 1350px; }
+  #mirovaya-tradicia .company-aims-2 .cloud-back-2 {
+    position: absolute;
+    z-index: 2;
+    top: 50vh;
+    right: -25%;
+    width: 50%;
+    max-width: 1339px; }
+  #mirovaya-tradicia .company-aims-2 .image-container {
+    text-align: center; }
+#mirovaya-tradicia .lineage-container {
+  position: relative; }
+  #mirovaya-tradicia .lineage-container .container {
+    width: 80%;
+    margin: 0 auto; }
+    #mirovaya-tradicia .lineage-container .container .lineage-item {
+      display: inline-block;
+      width: 33%;
+      text-align: center; }
+      #mirovaya-tradicia .lineage-container .container .lineage-item img {
+        width: 90%;
+        max-width: 467px; }
+      @media all and (max-width: 768px) {
+        #mirovaya-tradicia .lineage-container .container .lineage-item {
+          padding: 10px 0;
+          width: 100%; }
+          #mirovaya-tradicia .lineage-container .container .lineage-item img {
+            width: 50%; } }
+  #mirovaya-tradicia .lineage-container .cloud-back-3 {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: -25%;
+    width: 50%;
+    max-width: 1331px; }
+#mirovaya-tradicia .company-aims-3 {
+  position: relative; }
+  #mirovaya-tradicia .company-aims-3 .third-image, #mirovaya-tradicia .company-aims-3 .fourth-image {
+    position: absolute;
+    width: 20%;
+    z-index: 3; }
+  #mirovaya-tradicia .company-aims-3 .third-image {
+    bottom: 30%;
+    left: 0; }
+  #mirovaya-tradicia .company-aims-3 .fourth-image {
+    bottom: 30%;
+    right: 0%; }
+#mirovaya-tradicia .header-white {
+  padding: 60px 0;
+  font-size: 36px;
+  font-family: "Segoe UI";
+  color: white;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center; }
+  @media all and (max-width: 1000px) {
+    #mirovaya-tradicia .header-white {
+      padding: 40px 0; } }
+  @media all and (max-width: 800px) {
+    #mirovaya-tradicia .header-white {
+      font-size: 24px;
+      padding: 20px 0; } }
+  @media all and (max-width: 600px) {
+    #mirovaya-tradicia .header-white {
+      font-size: 20px;
+      padding: 20px 0; } }
+#mirovaya-tradicia .header-white-animate {
+  opacity: 0;
+  transition: all 2s; }
+#mirovaya-tradicia .header-white-animate-active {
+  opacity: 1; }
+#mirovaya-tradicia .slider-cont {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 10px);
+  background-color: #747474;
+  overflow-x: hidden; }
+  #mirovaya-tradicia .slider-cont .slider {
+    position: relative;
+    width: 300%;
+    height: calc(100vh - 10px);
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none; }
+    #mirovaya-tradicia .slider-cont .slider li {
+      position: absolute;
+      top: 0;
+      display: inline-block;
+      float: left;
+      width: calc(100% / 3);
+      height: calc(100vh - 10px);
+      font-size: 35px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover; }
+      #mirovaya-tradicia .slider-cont .slider li .slider-dark-mask {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(60, 60, 60, 0); }
+    #mirovaya-tradicia .slider-cont .slider li:nth-child(1) {
+      left: -33.333333%;
+      background-image: url(../images/mirovaya-tradiciya/Bottle-CHASHA.png); }
+    #mirovaya-tradicia .slider-cont .slider li:nth-child(2) {
+      left: 0;
+      background-image: url(../images/mirovaya-tradiciya/Bottle-CHASHA.png); }
+    #mirovaya-tradicia .slider-cont .slider li:nth-child(3) {
+      left: 33.333333%;
+      background-image: url(../images/mirovaya-tradiciya/Bottle-CHASHA.png); }
+  #mirovaya-tradicia .slider-cont .slider_left_btn, #mirovaya-tradicia .slider-cont .slider_right_btn {
+    position: absolute;
+    width: 75px;
+    height: 145px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.4s; }
+    @media screen and (max-width: 800px) {
+      #mirovaya-tradicia .slider-cont .slider_left_btn, #mirovaya-tradicia .slider-cont .slider_right_btn {
+        width: 38px;
+        height: 72px; } }
+  #mirovaya-tradicia .slider-cont .slider_left_btn {
+    bottom: 50%;
+    left: 2%;
+    background-image: url("../images/general/slide_left_black.png"); }
+    @media screen and (max-width: 800px) {
+      #mirovaya-tradicia .slider-cont .slider_left_btn {
+        background-image: url("../images/general/slide_left_black_mob.png"); } }
+  #mirovaya-tradicia .slider-cont .slider_right_btn {
+    bottom: 50%;
+    right: 2%;
+    background-image: url("../images/general/slide_right_black.png"); }
+    @media screen and (max-width: 800px) {
+      #mirovaya-tradicia .slider-cont .slider_right_btn {
+        background-image: url("../images/general/slide_right_black_mob.png"); } }
+  #mirovaya-tradicia .slider-cont .slider_left_btn:hover {
+    background-image: url("../images/general/slide_left_yellow.png"); }
+    @media screen and (max-width: 800px) {
+      #mirovaya-tradicia .slider-cont .slider_left_btn:hover {
+        background-image: url("../images/general/slide_left_yellow_mob.png"); } }
+  #mirovaya-tradicia .slider-cont .slider_right_btn:hover {
+    background-image: url("../images/general/slide_right_yellow.png"); }
+    @media screen and (max-width: 800px) {
+      #mirovaya-tradicia .slider-cont .slider_right_btn:hover {
+        background-image: url("../images/general/slide_right_yellow_mob.png"); } }
+  #mirovaya-tradicia .slider-cont .slider-nav {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    margin-left: -77px;
+    z-index: 10; }
+    #mirovaya-tradicia .slider-cont .slider-nav .slider-nav-list li {
+      display: inline-block;
+      padding: 10px;
+      position: relative; }
+      #mirovaya-tradicia .slider-cont .slider-nav .slider-nav-list li .pagination-btn .fa {
+        color: #000;
+        cursor: pointer; }
+      #mirovaya-tradicia .slider-cont .slider-nav .slider-nav-list li .pagination-btn .fa-circle-thin {
+        font-size: 30px; }
+      #mirovaya-tradicia .slider-cont .slider-nav .slider-nav-list li .pagination-btn .fa-circle {
+        font-size: 15px;
+        opacity: 0;
+        transition: all 0.3s; }
+      #mirovaya-tradicia .slider-cont .slider-nav .slider-nav-list li .active .fa-circle, #mirovaya-tradicia .slider-cont .slider-nav .slider-nav-list li .pagination-btn:hover .fa-circle {
+        opacity: 1; }
+#mirovaya-tradicia .summary-header {
+  width: 100%;
+  background-color: white; }
+  #mirovaya-tradicia .summary-header h2 {
+    padding: 150px 0;
+    font-size: 36px;
+    font-family: "Segoe UI";
+    color: black;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center; }
+    @media all and (max-width: 1000px) {
+      #mirovaya-tradicia .summary-header h2 {
+        padding: 100px 0; } }
+    @media all and (max-width: 800px) {
+      #mirovaya-tradicia .summary-header h2 {
+        font-size: 24px;
+        padding: 50px 0; } }
+    @media all and (max-width: 600px) {
+      #mirovaya-tradicia .summary-header h2 {
+        font-size: 20px;
+        padding: 20px 0; } }
+#mirovaya-tradicia .info-block-container .container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 60px 0; }
+  @media all and (max-width: 600px) {
+    #mirovaya-tradicia .info-block-container .container {
+      padding: 20px 0; } }
+  #mirovaya-tradicia .info-block-container .container .info-left {
+    width: 50%;
+    float: left; }
+    #mirovaya-tradicia .info-block-container .container .info-left h2 {
+      font-size: 36px;
+      font-family: "Segoe UI";
+      color: white;
+      font-weight: bold;
+      line-height: 1.2;
+      text-align: center;
+      margin-bottom: 20px; }
+      @media all and (max-width: 600px) {
+        #mirovaya-tradicia .info-block-container .container .info-left h2 {
+          font-size: 20px; } }
+    #mirovaya-tradicia .info-block-container .container .info-left .info-title-animate {
+      position: relative;
+      opacity: 0;
+      transition: all 1s; }
+    #mirovaya-tradicia .info-block-container .container .info-left .info-title-animate-active {
+      opacity: 1; }
+    @media all and (max-width: 800px) {
+      #mirovaya-tradicia .info-block-container .container .info-left {
+        width: 100%;
+        float: none;
+        margin: 0 auto; } }
+  #mirovaya-tradicia .info-block-container .container .info-right {
+    width: 50%;
+    float: left; }
+    #mirovaya-tradicia .info-block-container .container .info-right p {
+      font-size: 24px;
+      font-family: "Segoe UI";
+      color: white;
+      line-height: 1.2;
+      text-align: justify;
+      text-indent: 40px;
+      opacity: 1; }
+      @media all and (max-width: 600px) {
+        #mirovaya-tradicia .info-block-container .container .info-right p {
+          font-size: 16px; } }
+    #mirovaya-tradicia .info-block-container .container .info-right span {
+      font-size: inherit;
+      font-weight: bold; }
+    #mirovaya-tradicia .info-block-container .container .info-right .for-read-more {
+      display: none; }
+    #mirovaya-tradicia .info-block-container .container .info-right .for-read-more-visible {
+      display: block; }
+    #mirovaya-tradicia .info-block-container .container .info-right .read-more-btn {
+      display: inline-block;
+      font-size: 30px;
+      font-family: "Segoe UI";
+      color: #f0cf16;
+      text-decoration: underline;
+      line-height: 1.2;
+      text-align: center;
+      margin: 30px 0 10px 0;
+      cursor: pointer; }
+      @media all and (max-width: 600px) {
+        #mirovaya-tradicia .info-block-container .container .info-right .read-more-btn {
+          font-size: 20px;
+          margin: 10px 0 0 0; } }
+    #mirovaya-tradicia .info-block-container .container .info-right .info-text-animate {
+      opacity: 0;
+      transition: all 1s; }
+    #mirovaya-tradicia .info-block-container .container .info-right .info-text-animate-active {
+      opacity: 1; }
+    @media all and (max-width: 800px) {
+      #mirovaya-tradicia .info-block-container .container .info-right {
+        width: 100%;
+        float: none;
+        margin: 0 auto; }
+        #mirovaya-tradicia .info-block-container .container .info-right .read-more-btn {
+          display: block; } }
+#mirovaya-tradicia .concepts-info {
+  position: relative;
+  background-color: white; }
+  #mirovaya-tradicia .concepts-info .container {
+    width: 80%;
+    margin: 0 auto; }
+    #mirovaya-tradicia .concepts-info .container h2 {
+      padding: 60px 0;
+      font-size: 60px;
+      font-family: "Segoe UI";
+      color: #f0cf16;
+      font-weight: bold;
+      line-height: 1.2;
+      text-align: center; }
+      @media all and (max-width: 800px) {
+        #mirovaya-tradicia .concepts-info .container h2 {
+          font-size: 36px;
+          padding: 40px 0; } }
+      @media all and (max-width: 600px) {
+        #mirovaya-tradicia .concepts-info .container h2 {
+          font-size: 20px;
+          padding: 20px 0; } }
+    #mirovaya-tradicia .concepts-info .container .concepts-info-title-animate {
+      position: relative;
+      opacity: 0;
+      transition: all 1s; }
+    #mirovaya-tradicia .concepts-info .container .concepts-info-title-animate-active {
+      opacity: 1; }
+    #mirovaya-tradicia .concepts-info .container p {
+      font-size: 24px;
+      font-family: "Segoe UI";
+      color: black;
+      line-height: 1.2;
+      text-align: justify; }
+      @media all and (max-width: 600px) {
+        #mirovaya-tradicia .concepts-info .container p {
+          font-size: 16px; } }
+    #mirovaya-tradicia .concepts-info .container .concepts-info-text-animate {
+      opacity: 0;
+      transition: all 1s; }
+    #mirovaya-tradicia .concepts-info .container .concepts-info-text-animate-active {
+      opacity: 1; }
+#mirovaya-tradicia .contact-us-form {
+  padding-bottom: 10px;
+  position: relative; }
+  #mirovaya-tradicia .contact-us-form .container {
+    width: 80%;
+    margin: 0 auto; }
+    #mirovaya-tradicia .contact-us-form .container h1 {
+      padding: 70px 0;
+      font-size: 60px;
+      font-family: "Segoe UI";
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: center; }
+      @media all and (max-width: 800px) {
+        #mirovaya-tradicia .contact-us-form .container h1 {
+          font-size: 30px;
+          padding: 30px 0; } }
+      @media all and (max-width: 600px) {
+        #mirovaya-tradicia .contact-us-form .container h1 {
+          font-size: 24px;
+          padding: 20px 0; } }
+    #mirovaya-tradicia .contact-us-form .container .contact-us-header-animate {
+      position: relative;
+      opacity: 0;
+      transition: all 2s; }
+    #mirovaya-tradicia .contact-us-form .container .contact-us-header-animate-active {
+      opacity: 1; }
+    #mirovaya-tradicia .contact-us-form .container p {
+      font-size: 30px;
+      font-family: "Segoe UI";
+      color: white;
+      line-height: 1.6;
+      text-align: justify; }
+      @media all and (max-width: 800px) {
+        #mirovaya-tradicia .contact-us-form .container p {
+          font-size: 20px;
+          line-height: 1.2; } }
+      @media all and (max-width: 600px) {
+        #mirovaya-tradicia .contact-us-form .container p {
+          font-size: 16px;
+          line-height: 1.0; } }
+      #mirovaya-tradicia .contact-us-form .container p span {
+        color: #ffcc00;
+        font-size: 30px;
+        font-weight: bold; }
+        @media all and (max-width: 800px) {
+          #mirovaya-tradicia .contact-us-form .container p span {
+            font-size: 20px; } }
+        @media all and (max-width: 600px) {
+          #mirovaya-tradicia .contact-us-form .container p span {
+            font-size: 16px; } }
+      #mirovaya-tradicia .contact-us-form .container p input {
+        display: inline-block;
+        width: 300px;
+        font-size: 30px;
+        font-family: "Segoe UI";
+        text-align: center;
+        color: black;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid #fff; }
+        @media all and (max-width: 800px) {
+          #mirovaya-tradicia .contact-us-form .container p input {
+            width: 200px;
+            font-size: 20px; } }
+        @media all and (max-width: 600px) {
+          #mirovaya-tradicia .contact-us-form .container p input {
+            font-size: 16px; } }
+    #mirovaya-tradicia .contact-us-form .container .contact-us-content-animate {
+      position: relative;
+      opacity: 0;
+      transition: all 2s; }
+    #mirovaya-tradicia .contact-us-form .container .contact-us-content-animate-active {
+      opacity: 1; }
+    #mirovaya-tradicia .contact-us-form .container button {
+      display: block;
+      margin: 90px auto 0 auto;
+      padding: 25px 82px;
+      font-size: 26px;
+      font-family: "Segoe UI";
+      font-weight: 700;
+      color: #8a3b86;
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: center;
+      background-color: #ffcc00;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.4s; }
+      @media all and (max-width: 800px) {
+        #mirovaya-tradicia .contact-us-form .container button {
+          padding: 15px 40px;
+          margin: 40px auto 0 auto; } }
+      @media all and (max-width: 600px) {
+        #mirovaya-tradicia .contact-us-form .container button {
+          padding: 15px 40px;
+          margin: 20px auto 0 auto;
+          font-size: 20px; } }
+    #mirovaya-tradicia .contact-us-form .container .submit-btn-animate {
+      opacity: 0;
+      transition: opacity 1s; }
+    #mirovaya-tradicia .contact-us-form .container .submit-btn-animate-active {
+      opacity: 1; }
+    #mirovaya-tradicia .contact-us-form .container button:hover {
+      color: #ffcc00;
+      box-shadow: 0 100px 0 0 #000 inset; }
+  #mirovaya-tradicia .contact-us-form .projects-btns-container {
+    padding-top: 10px; }
+    #mirovaya-tradicia .contact-us-form .projects-btns-container .left-btn, #mirovaya-tradicia .contact-us-form .projects-btns-container .right-btn {
+      display: inline-block;
+      width: 50%; }
+      #mirovaya-tradicia .contact-us-form .projects-btns-container .left-btn .inner-cont, #mirovaya-tradicia .contact-us-form .projects-btns-container .right-btn .inner-cont {
+        padding: 10px 15px; }
+        #mirovaya-tradicia .contact-us-form .projects-btns-container .left-btn .inner-cont a, #mirovaya-tradicia .contact-us-form .projects-btns-container .right-btn .inner-cont a {
+          display: inline-block;
+          height: 40px;
+          line-height: 20px;
+          text-align: center;
+          background-color: #607378;
+          transition: all 0.4s;
+          text-decoration: none;
+          border-radius: 20px; }
+          #mirovaya-tradicia .contact-us-form .projects-btns-container .left-btn .inner-cont a .fa, #mirovaya-tradicia .contact-us-form .projects-btns-container .right-btn .inner-cont a .fa {
+            display: inline-block;
+            color: white;
+            font-size: 24px;
+            line-height: 35px; }
+          #mirovaya-tradicia .contact-us-form .projects-btns-container .left-btn .inner-cont a span, #mirovaya-tradicia .contact-us-form .projects-btns-container .right-btn .inner-cont a span {
+            display: inline-block;
+            color: #fff;
+            font-size: 20px;
+            line-height: 35px;
+            padding: 0 15px;
+            font-family: "Segoe UI Light"; }
+            @media all and (max-width: 600px) {
+              #mirovaya-tradicia .contact-us-form .projects-btns-container .left-btn .inner-cont a span, #mirovaya-tradicia .contact-us-form .projects-btns-container .right-btn .inner-cont a span {
+                display: none; } }
+          @media all and (max-width: 600px) {
+            #mirovaya-tradicia .contact-us-form .projects-btns-container .left-btn .inner-cont a, #mirovaya-tradicia .contact-us-form .projects-btns-container .right-btn .inner-cont a {
+              width: 40px; } }
+    #mirovaya-tradicia .contact-us-form .projects-btns-container .left-btn:hover .inner-cont a, #mirovaya-tradicia .contact-us-form .projects-btns-container .right-btn:hover .inner-cont a {
+      background-color: #4e5a5d; }
+    #mirovaya-tradicia .contact-us-form .projects-btns-container .left-btn {
+      text-align: left; }
+      #mirovaya-tradicia .contact-us-form .projects-btns-container .left-btn .inner-cont a .fa {
+        padding-left: 15px; }
+        @media all and (max-width: 600px) {
+          #mirovaya-tradicia .contact-us-form .projects-btns-container .left-btn .inner-cont a .fa {
+            padding: 2px 16px 0 14px; } }
+    #mirovaya-tradicia .contact-us-form .projects-btns-container .right-btn {
+      text-align: right; }
+      #mirovaya-tradicia .contact-us-form .projects-btns-container .right-btn .inner-cont a .fa {
+        padding-right: 15px; }
+        @media all and (max-width: 600px) {
+          #mirovaya-tradicia .contact-us-form .projects-btns-container .right-btn .inner-cont a .fa {
+            padding: 2px 14px 0 16px; } }
+#mirovaya-tradicia .get-result-container {
+  background-color: #a44699;
+  padding: 40px 0; }
+  @media all and (max-width: 600px) {
+    #mirovaya-tradicia .get-result-container {
+      padding: 20px 0; } }
+  #mirovaya-tradicia .get-result-container .container {
+    width: 80%;
+    margin: 0 auto; }
+    #mirovaya-tradicia .get-result-container .container .result-left {
+      width: 70%;
+      float: left;
+      text-align: center; }
+      #mirovaya-tradicia .get-result-container .container .result-left h2 {
+        padding-top: 10px;
+        font-size: 30px;
+        font-family: "Segoe UI";
+        color: white;
+        font-weight: bold;
+        line-height: 1.2;
+        text-align: center; }
+        @media all and (max-width: 600px) {
+          #mirovaya-tradicia .get-result-container .container .result-left h2 {
+            font-size: 20px; } }
+      @media all and (max-width: 1000px) {
+        #mirovaya-tradicia .get-result-container .container .result-left {
+          width: 100%;
+          float: none;
+          margin: 0 auto; } }
+    #mirovaya-tradicia .get-result-container .container .result-right {
+      width: 30%;
+      float: left;
+      text-align: center; }
+      #mirovaya-tradicia .get-result-container .container .result-right button {
+        padding: 20px 15px;
+        font-size: 20px;
+        font-family: "Segoe UI";
+        color: #a44699;
+        background-color: #ffcc00;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.4s;
+        -webkit-animation: brifMove 1s 5;
+        /* Safari 4.0 - 8.0 */
+        animation: brifMove 1s 5;
+        animation-fill-mode: both;
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+        @media all and (max-width: 600px) {
+          #mirovaya-tradicia .get-result-container .container .result-right button {
+            padding: 15px 10px;
+            font-size: 16px; } }
+@keyframes brifMove {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1); }
+  40% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9);
+    transform: scale3d(0.9, 0.9, 0.9); }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03); }
+  80% {
+    -webkit-transform: scale3d(0.97, 0.97, 0.97);
+    transform: scale3d(0.97, 0.97, 0.97); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
+      #mirovaya-tradicia .get-result-container .container .result-right button:hover {
+        color: #ffcc00;
+        box-shadow: 0 100px 0 0 #000 inset; }
+      @media all and (max-width: 1000px) {
+        #mirovaya-tradicia .get-result-container .container .result-right {
+          width: 100%;
+          float: none;
+          margin: 30px auto 0 auto; } }
+#mirovaya-tradicia .social-btns-container {
+  background-color: #000; }
+  #mirovaya-tradicia .social-btns-container .container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center; }
+    #mirovaya-tradicia .social-btns-container .container .like {
+      margin: 0 auto;
+      max-width: 60%; }
+      @media only screen and (max-width: 767px) {
+        #mirovaya-tradicia .social-btns-container .container .like {
+          max-width: 100%; } }
+      #mirovaya-tradicia .social-btns-container .container .like a {
+        float: left;
+        text-align: center;
+        width: 20%;
+        background-color: #000;
+        -webkit-transition: all 0.35s ease;
+        -moz-transition: all 0.35s ease;
+        -o-transition: all 0.35s ease;
+        transition: all 0.35s ease; }
+        #mirovaya-tradicia .social-btns-container .container .like a img {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          transition: all 0.35s; }
+      #mirovaya-tradicia .social-btns-container .container .like a:hover img {
+        transform: rotate(360deg); }
+      #mirovaya-tradicia .social-btns-container .container .like .fb:hover {
+        background-color: #6578C6; }
+      #mirovaya-tradicia .social-btns-container .container .like .gp:hover {
+        background-color: #DC4A33; }
+      #mirovaya-tradicia .social-btns-container .container .like .in:hover {
+        background-color: #017EB4; }
+      #mirovaya-tradicia .social-btns-container .container .like .tw:hover {
+        background-color: #49C8F5; }
+      #mirovaya-tradicia .social-btns-container .container .like .ig:hover {
+        background-color: #3E739D; }
+
+/*# sourceMappingURL=mirovaya-tradicia.css.map */

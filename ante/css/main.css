@@ -1,0 +1,285 @@
+/* ---------------------- FONTS ------------------------------*/
+/*font-family: 'Montserrat', sans-serif;*/
+@font-face {
+  font-family: "BebasNeueBold";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/BebasNeueBold.ttf"); }
+@font-face {
+  font-family: "MuseoSansLight";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/MuseoSansLight.ttf"); }
+/*************************************************************/
+* {
+  box-sizing: border-box; }
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #fefefe; }
+
+.container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0; }
+
+.clearfix::after, .container::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.bg-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: scroll;
+  transition: all 1s; }
+  .bg-container .dark-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(60, 60, 60, 0.5);
+    z-index: 2; }
+
+header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background-color: #282e3f; }
+  header .logo-cont {
+    display: inline-block;
+    vertical-align: top;
+    width: 120px;
+    text-align: left; }
+    header .logo-cont a {
+      display: inline-block; }
+      header .logo-cont a img {
+        padding: 10px 0 2px 0; }
+  header .menu-cont, header .menu-mob-btn-cont {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 120px);
+    text-align: right; }
+  header .menu-mob-btn-cont {
+    display: none; }
+    header .menu-mob-btn-cont .menu-mob-btn {
+      display: inline-block;
+      width: 50px;
+      margin: 35px 10px 31px 10px;
+      cursor: pointer; }
+      header .menu-mob-btn-cont .menu-mob-btn div {
+        width: 100%;
+        height: 4px;
+        background: #fff;
+        margin-bottom: 10px;
+        transition: all 0.4s ease-out, opacity 0.2s; }
+  header .menu-cont .site-nav {
+    display: block;
+    width: 100%; }
+    header .menu-cont .site-nav .nav-list {
+      padding: 0; }
+      header .menu-cont .site-nav .nav-list li {
+        display: inline-block; }
+        header .menu-cont .site-nav .nav-list li a {
+          font-size: 30px;
+          font-family: "BebasNeueBold", sans-serif;
+          color: white;
+          text-transform: uppercase;
+          line-height: 1.2;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          padding: 37px 25px;
+          -webkit-transition: all 0.4s;
+          -moz-transition: all 0.4s;
+          transition: all 0.4s; }
+        header .menu-cont .site-nav .nav-list li a:hover, header .menu-cont .site-nav .nav-list li .active {
+          color: #f2c58b; }
+  @media all and (max-width: 768px) {
+    header .menu-cont {
+      display: block;
+      width: 100%; }
+      header .menu-cont .site-nav {
+        display: none;
+        height: 100vh; }
+        header .menu-cont .site-nav .nav-list li {
+          display: block; }
+          header .menu-cont .site-nav .nav-list li a {
+            width: 100%; }
+    header .menu-mob-btn-cont {
+      display: inline-block; } }
+
+.section-header {
+  font-size: 60px;
+  font-family: "BebasNeueBold", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+  padding: 10vh 0 5vh 0;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s; }
+  @media all and (max-width: 1600px) {
+    .section-header {
+      font-size: 48px; } }
+  @media all and (max-width: 1200px) {
+    .section-header {
+      font-size: 42px; } }
+  @media all and (max-width: 768px) {
+    .section-header {
+      font-size: 30px; } }
+
+.callback-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 20px 5px;
+  width: 300px;
+  max-width: 100%;
+  font-size: 30px;
+  font-family: "BebasNeueBold", sans-serif;
+  color: #282e3f;
+  background-color: #f2c58b;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s; }
+
+.callback-btn:hover {
+  color: #fff;
+  background-color: #aeaeae; }
+
+#top-section {
+  position: relative;
+  padding-top: 111px; }
+  #top-section .top-bg-container {
+    height: calc(100vh - 111px);
+    background-position: center top;
+    background-attachment: fixed;
+    background-image: url("../images/slide1.png"); }
+    #top-section .top-bg-container .container {
+      max-width: 1000px;
+      height: 100%; }
+    #top-section .top-bg-container .section-header {
+      color: #fff;
+      text-align: left; }
+    #top-section .top-bg-container .info-container {
+      font-size: 0; }
+      #top-section .top-bg-container .info-container .left-cont, #top-section .top-bg-container .info-container .right-cont {
+        display: inline-block;
+        vertical-align: top; }
+      #top-section .top-bg-container .info-container .left-cont {
+        width: calc(100% - 350px);
+        text-align: left;
+        padding-right: 20px; }
+      #top-section .top-bg-container .info-container .right-cont {
+        width: 350px;
+        text-align: right; }
+    #top-section .top-bg-container .registration-slider .item .registration-title {
+      font-size: 48px;
+      font-family: "BebasNeueBold", sans-serif;
+      color: white;
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: left; }
+    #top-section .top-bg-container .registration-slider .item .registration-text {
+      font-size: 18px;
+      font-family: "MuseoSansLight", sans-serif;
+      color: white;
+      line-height: 1.2;
+      text-align: left; }
+    #top-section .top-bg-container .time-slider-cont {
+      position: absolute;
+      bottom: 5vh;
+      width: 100%; }
+      #top-section .top-bg-container .time-slider-cont .arrow-left-btn, #top-section .top-bg-container .time-slider-cont .arrow-right-btn {
+        display: inline-block;
+        vertical-align: top;
+        cursor: pointer; }
+      #top-section .top-bg-container .time-slider-cont .time-slider {
+        display: inline-block;
+        width: 300px;
+        margin: auto; }
+        #top-section .top-bg-container .time-slider-cont .time-slider .item p {
+          margin: 20px 0; }
+        #top-section .top-bg-container .time-slider-cont .time-slider .item p:first-child {
+          margin-top: 0; }
+        #top-section .top-bg-container .time-slider-cont .time-slider .item .time {
+          font-size: 52px;
+          font-family: "BebasNeueBold", sans-serif;
+          color: white;
+          line-height: 1.2;
+          text-align: center; }
+        #top-section .top-bg-container .time-slider-cont .time-slider .item .location {
+          font-size: 16px;
+          font-family: "MuseoSansLight", sans-serif;
+          color: white;
+          text-transform: uppercase;
+          line-height: 1.2;
+          text-align: center; }
+
+#advantages-section .advantages-bg-container {
+  background-position: left top;
+  background-image: url("../images/slide2.png");
+  min-height: 100vh;
+  height: 100%; }
+  #advantages-section .advantages-bg-container .right-cont {
+    margin-left: 50%; }
+  #advantages-section .advantages-bg-container .section-header {
+    color: #fff;
+    text-align: left;
+    padding: 10vh 0 0 0; }
+  #advantages-section .advantages-bg-container .advantage-item .advantage-title {
+    margin: 20px 0;
+    font-size: 30px;
+    font-family: "BebasNeueBold", sans-serif;
+    color: #fff;
+    line-height: 1.2;
+    text-align: left; }
+  #advantages-section .advantages-bg-container .advantage-item .advantage-text {
+    margin: 10px 0;
+    font-size: 24px;
+    font-family: "MuseoSansLight", sans-serif;
+    color: #fff;
+    line-height: 1.2;
+    text-align: left; }
+
+#services-section .container {
+  max-width: 1000px; }
+#services-section .section-header {
+  color: #000; }
+#services-section .services-items-cont .services-item {
+  display: inline-block;
+  float: left;
+  width: 25%;
+  padding: 10px; }
+  @media all and (max-width: 1200px) {
+    #services-section .services-items-cont .services-item {
+      width: 50%; } }
+  #services-section .services-items-cont .services-item .service-icon img {
+    width: 100%;
+    max-width: 177px; }
+  #services-section .services-items-cont .services-item .icon-text {
+    font-size: 24px;
+    font-family: "BebasNeueBold", sans-serif;
+    color: #282e3f;
+    text-transform: uppercase;
+    line-height: 1.2; }
+    @media all and (max-width: 768px) {
+      #services-section .services-items-cont .services-item .icon-text {
+        font-size: 16px; } }
+
+/*# sourceMappingURL=main.css.map */

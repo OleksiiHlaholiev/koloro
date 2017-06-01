@@ -1,0 +1,393 @@
+@import "fonts";
+@import "mixins";
+
+$mobileWidth: 768px;
+$transitionTime: 0.4s;
+$yellowColor: #f2c58b;
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #fefefe;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0;
+}
+
+.clearfix::after, .container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bg-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+    transition: all 1s;
+
+    .dark-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(60, 60, 60, 0.5);
+        z-index: 2; }
+}
+
+header {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-color: #282e3f;
+
+    .logo-cont {
+        display: inline-block;
+        vertical-align: top;
+        width: 120px;
+        text-align: left;
+
+        a {
+            display: inline-block;
+            img {
+                padding: 10px 0 2px 0;
+            }
+        }
+    }
+
+    .menu-cont, .menu-mob-btn-cont {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 120px);
+        text-align: right;
+    }
+
+    .menu-mob-btn-cont {
+        display: none;
+        .menu-mob-btn {
+            display: inline-block;
+            width: 50px;
+            margin: 35px 10px 31px 10px;
+            cursor: pointer;
+
+            div {
+                width: 100%;
+                height: 4px;
+                background: #fff;
+                margin-bottom: 10px;
+                transition: all 0.4s ease-out, opacity 0.2s;
+            }
+
+            .first-line, .second-line, .third-line {
+
+            }
+        }
+    }
+
+    .menu-cont {
+        .site-nav {
+            display: block;
+            width: 100%;
+
+            .nav-list {
+                padding: 0;
+                li {
+                    display: inline-block;
+
+                    a {
+                        font-size: 30px;
+                        font-family: $BebasNeueBold;
+                        color: rgb(255, 255, 255);
+                        text-transform: uppercase;
+                        line-height: 1.2;
+                        text-align: center;
+                        text-decoration: none;
+
+                        display: inline-block;
+                        padding: 37px 25px;
+
+                        @include transition($transitionTime);
+                    }
+                    a:hover, .active {
+                        color: $yellowColor;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @media all and (max-width: $mobileWidth){
+        .menu-cont {
+            display: block;
+            width: 100%;
+            .site-nav {
+                display: none;
+                height: 100vh;
+                //display: block;
+                .nav-list {
+                    li {
+                        display: block;
+                        a {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .menu-mob-btn-cont {
+            display: inline-block;
+        }
+    }
+}
+
+.section-header {
+    font-size: 60px;
+    font-family: $BebasNeueBold;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+
+    margin: 0;
+    padding: 10vh 0 5vh 0;
+
+    @include transition($transitionTime);
+
+    @include mediaMax(1600px) {
+        font-size: 48px;
+    }
+    @include mediaMax(1200px) {
+        font-size: 42px;
+    }
+    @include mediaMax($mobileWidth) {
+        font-size: 30px;
+    }
+}
+
+.callback-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 20px 5px;
+    width: 300px;
+    max-width: 100%;
+
+    font-size: 30px;
+    font-family: $BebasNeueBold;
+
+    color: rgb(40, 46, 63);
+    background-color: $yellowColor;
+
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+
+    @include transition($transitionTime);
+}
+.callback-btn:hover {
+    color: #fff;
+    background-color: #aeaeae;
+}
+
+// start of top-section
+#top-section {
+    position: relative;
+    padding-top: 111px;
+
+    .top-bg-container {
+        height: calc(100vh - 111px);
+
+        background-position: center top;
+        background-attachment: fixed;
+        background-image: url("../images/slide1.png");
+
+        .container {
+            max-width: 1000px;
+            height: 100%;
+        }
+
+        .section-header {
+            color: #fff;
+            text-align: left;
+        }
+
+        .info-container {
+            font-size: 0;
+            .left-cont, .right-cont {
+                display: inline-block;
+                vertical-align: top;
+            }
+            .left-cont {
+                width: calc(100% - 350px);
+                text-align: left;
+                padding-right: 20px;
+            }
+
+            .right-cont {
+                width: 350px;
+                text-align: right;
+            }
+        }
+
+        .registration-slider {
+            .item {
+                .registration-title {
+                    font-size: 48px;
+                    font-family: $BebasNeueBold;
+                    color: rgb(255, 255, 255);
+                    text-transform: uppercase;
+                    line-height: 1.2;
+                    text-align: left;
+                }
+                .registration-text {
+                    font-size: 18px;
+                    font-family: $MuseoSansLight;
+                    color: rgb(255, 255, 255);
+                    line-height: 1.2;
+                    text-align: left;
+                }
+            }
+        }
+
+        .time-slider-cont {
+            position: absolute;
+            bottom: 5vh;
+            width: 100%;
+
+            .arrow-left-btn, .arrow-right-btn {
+                display: inline-block;
+                vertical-align: top;
+                cursor: pointer;
+            }
+
+            .time-slider {
+                display: inline-block;
+                width: 300px;
+                margin: auto;
+
+                .item {
+                    p {
+                        margin: 20px 0;
+                    }
+                    p:first-child {
+                        margin-top: 0;
+                    }
+                    .time {
+                        font-size: 52px;
+                        font-family: $BebasNeueBold;
+                        color: rgb(255, 255, 255);
+                        line-height: 1.2;
+                        text-align: center;
+                    }
+                    .location {
+                        font-size: 16px;
+                        font-family: $MuseoSansLight;
+                        color: rgb(255, 255, 255);
+                        text-transform: uppercase;
+                        line-height: 1.2;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+    }
+}
+// end of top-section
+
+//start of advantages-section
+#advantages-section {
+    .advantages-bg-container {
+        background-position: left top;
+        background-image: url("../images/slide2.png");
+        min-height: 100vh;
+        height: 100%;
+
+        .right-cont {
+            margin-left: 50%;
+        }
+
+        .section-header {
+            color: #fff;
+            text-align: left;
+            padding: 10vh 0 0 0;
+        }
+
+        .advantage-item {
+            .advantage-title {
+                margin: 20px 0;
+                font-size: 30px;
+                font-family: $BebasNeueBold;
+                color: #fff;
+                line-height: 1.2;
+                text-align: left;
+            }
+            .advantage-text {
+                margin: 10px 0;
+                font-size: 24px;
+                font-family: $MuseoSansLight;
+                color: #fff;
+                line-height: 1.2;
+                text-align: left;
+            }
+        }
+    }
+}
+// end of advantages-section
+
+//
+#services-section {
+    .container {
+        max-width: 1000px;
+    }
+    .section-header {
+        color: #000;
+    }
+    .services-items-cont {
+        .services-item {
+            display: inline-block;
+            float: left;
+            width: 25%;
+            padding: 10px;
+
+            @include mediaMax(1200px) {
+                width: 50%;
+            }
+
+            .service-icon {
+                img {
+                    width: 100%;
+                    max-width: 177px;
+                }
+            }
+            .icon-text {
+                font-size: 24px;
+                font-family: $BebasNeueBold;
+                color: rgb(40, 46, 63);
+                text-transform: uppercase;
+                line-height: 1.2;
+
+                @include mediaMax($mobileWidth) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+

@@ -10,6 +10,11 @@
   font-weight: normal;
   font-style: normal;
   src: url("../fonts/MuseoSansLight.ttf"); }
+@font-face {
+  font-family: "MuseoSansBlack";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/MuseoSansBlack.ttf"); }
 /*************************************************************/
 * {
   box-sizing: border-box; }
@@ -256,6 +261,36 @@ header {
     color: #fff;
     line-height: 1.2;
     text-align: left; }
+
+#tarif-section .section-header {
+  color: #000; }
+#tarif-section .tarif-title {
+  font-size: 20px;
+  font-family: "MuseoSansLight", sans-serif;
+  color: rgba(0, 0, 0, 0.702);
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center; }
+#tarif-section .tarif-items-cont {
+  font-size: 0; }
+  #tarif-section .tarif-items-cont .tarif-item-cont {
+    display: inline-block;
+    padding: 0 25px;
+    width: calc(100% / 3); }
+    #tarif-section .tarif-items-cont .tarif-item-cont .tarif-list {
+      width: 100%; }
+      #tarif-section .tarif-items-cont .tarif-item-cont .tarif-list li {
+        display: block;
+        height: 50px;
+        margin: 1px 0;
+        padding: 0 20px;
+        list-style: none;
+        background-color: #f1f1f1;
+        font-size: 12px;
+        font-family: "MuseoSansBlack", sans-serif;
+        color: black;
+        text-transform: uppercase;
+        line-height: 1.2; }
 
 #services-section .container {
   max-width: 1000px; }

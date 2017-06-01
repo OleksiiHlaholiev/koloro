@@ -351,7 +351,52 @@ header {
 }
 // end of advantages-section
 
-//
+// start of tarif-section
+#tarif-section {
+    .section-header {
+        color: #000;
+    }
+
+    .tarif-title {
+        font-size: 20px;
+        font-family: $MuseoSansLight;
+        color: rgba(0, 0, 0, 0.702);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .tarif-items-cont {
+        font-size: 0;
+        .tarif-item-cont {
+            display: inline-block;
+            padding: 0 25px;
+            width: calc(100% / 3);
+
+            .tarif-list {
+                width: 100%;
+                li {
+                    display: block;
+                    height: 50px;
+                    margin: 1px 0;
+                    padding: 0 20px;
+
+                    list-style: none;
+                    background-color: #f1f1f1;
+
+                    font-size: 12px;
+                    font-family: $MuseoSansBlack;
+                    color: rgb(0, 0, 0);
+                    text-transform: uppercase;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+}
+// end of tarif-section
+
+// start of services-section
 #services-section {
     .container {
         max-width: 1000px;
@@ -390,4 +435,5 @@ header {
         }
     }
 }
+// end of services-section
 

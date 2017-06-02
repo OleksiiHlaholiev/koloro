@@ -4,6 +4,7 @@
 $mobileWidth: 768px;
 $transitionTime: 0.4s;
 $yellowColor: #f2c58b;
+$blueDarkColor: #2b2f32;
 
 * {
     box-sizing: border-box;
@@ -22,6 +23,10 @@ html, body {
     margin: 0 auto;
     text-align: center;
     font-size: 0;
+
+    @include mediaMax($mobileWidth) {
+        width: 90%;
+    }
 }
 
 .clearfix::after, .container::after {
@@ -132,7 +137,7 @@ header {
         }
     }
 
-    @media all and (max-width: $mobileWidth){
+    @include mediaMax($mobileWidth) {
         .menu-cont {
             display: block;
             width: 100%;
@@ -190,7 +195,7 @@ header {
     font-size: 30px;
     font-family: $BebasNeueBold;
 
-    color: rgb(40, 46, 63);
+    color: $blueDarkColor;
     background-color: $yellowColor;
 
     text-transform: uppercase;
@@ -373,8 +378,16 @@ header {
             padding: 0 25px;
             width: calc(100% / 3);
 
+            @include mediaMax(1200px) {
+                width: 50%;
+            }
+            @include mediaMax($mobileWidth) {
+                width: 100%;
+            }
+
             .tarif-list {
                 width: 100%;
+                padding: 20px 0;
                 li {
                     display: block;
                     height: 50px;
@@ -398,6 +411,8 @@ header {
 
 // start of services-section
 #services-section {
+    padding-bottom: 50px;
+
     .container {
         max-width: 1000px;
     }
@@ -436,4 +451,66 @@ header {
     }
 }
 // end of services-section
+
+// start of achiements-section
+#achiements-section {
+    background-color: $blueDarkColor;
+    padding: 80px 0;
+    .container {
+        max-width: 1000px;
+    }
+
+    .achiements-items-cont {
+        text-align: left;
+        .achiement-item {
+            display: inline-block;
+            vertical-align: top;
+            width: 20%;
+            padding: 0 10px;
+
+            @include mediaMax(1200px) {
+                width: calc(100% / 3);
+            }
+            @include mediaMax($mobileWidth) {
+                width: 50%;
+            }
+
+            .achiement-counter {
+                margin: 10px;
+                font-size: 80px;
+                font-family: $BebasNeueBold;
+                color: #fff;
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 1.2;
+                text-align: center;
+
+                @include mediaMax(1400px) {
+                    font-size: 70px;
+                }
+                @include mediaMax(1200px) {
+                    font-size: 60px;
+                }
+                @include mediaMax($mobileWidth) {
+                    font-size: 48px;
+                }
+            }
+            .achiement-text {
+                margin: 10px;
+                font-size: 16px;
+                font-family: $MuseoSansLight;
+                color: rgb(255, 255, 255);
+                text-transform: uppercase;
+                line-height: 1.2;
+                text-align: center;
+
+                @include mediaMax($mobileWidth) {
+                    text-transform: lowercase;
+                }
+            }
+
+        }
+    }
+}
+// end of achiements-section
 

@@ -31,6 +31,9 @@ html, body {
   margin: 0 auto;
   text-align: center;
   font-size: 0; }
+  @media all and (max-width: 768px) {
+    .container {
+      width: 90%; } }
 
 .clearfix::after, .container::after {
   content: "";
@@ -153,7 +156,7 @@ header {
   max-width: 100%;
   font-size: 30px;
   font-family: "BebasNeueBold", sans-serif;
-  color: #282e3f;
+  color: #2b2f32;
   background-color: #f2c58b;
   text-transform: uppercase;
   line-height: 1.2;
@@ -277,8 +280,15 @@ header {
     display: inline-block;
     padding: 0 25px;
     width: calc(100% / 3); }
+    @media all and (max-width: 1200px) {
+      #tarif-section .tarif-items-cont .tarif-item-cont {
+        width: 50%; } }
+    @media all and (max-width: 768px) {
+      #tarif-section .tarif-items-cont .tarif-item-cont {
+        width: 100%; } }
     #tarif-section .tarif-items-cont .tarif-item-cont .tarif-list {
-      width: 100%; }
+      width: 100%;
+      padding: 20px 0; }
       #tarif-section .tarif-items-cont .tarif-item-cont .tarif-list li {
         display: block;
         height: 50px;
@@ -292,29 +302,79 @@ header {
         text-transform: uppercase;
         line-height: 1.2; }
 
-#services-section .container {
-  max-width: 1000px; }
-#services-section .section-header {
-  color: #000; }
-#services-section .services-items-cont .services-item {
-  display: inline-block;
-  float: left;
-  width: 25%;
-  padding: 10px; }
-  @media all and (max-width: 1200px) {
-    #services-section .services-items-cont .services-item {
-      width: 50%; } }
-  #services-section .services-items-cont .services-item .service-icon img {
-    width: 100%;
-    max-width: 177px; }
-  #services-section .services-items-cont .services-item .icon-text {
-    font-size: 24px;
-    font-family: "BebasNeueBold", sans-serif;
-    color: #282e3f;
-    text-transform: uppercase;
-    line-height: 1.2; }
-    @media all and (max-width: 768px) {
-      #services-section .services-items-cont .services-item .icon-text {
-        font-size: 16px; } }
+#services-section {
+  padding-bottom: 50px; }
+  #services-section .container {
+    max-width: 1000px; }
+  #services-section .section-header {
+    color: #000; }
+  #services-section .services-items-cont .services-item {
+    display: inline-block;
+    float: left;
+    width: 25%;
+    padding: 10px; }
+    @media all and (max-width: 1200px) {
+      #services-section .services-items-cont .services-item {
+        width: 50%; } }
+    #services-section .services-items-cont .services-item .service-icon img {
+      width: 100%;
+      max-width: 177px; }
+    #services-section .services-items-cont .services-item .icon-text {
+      font-size: 24px;
+      font-family: "BebasNeueBold", sans-serif;
+      color: #282e3f;
+      text-transform: uppercase;
+      line-height: 1.2; }
+      @media all and (max-width: 768px) {
+        #services-section .services-items-cont .services-item .icon-text {
+          font-size: 16px; } }
+
+#achiements-section {
+  background-color: #2b2f32;
+  padding: 80px 0; }
+  #achiements-section .container {
+    max-width: 1000px; }
+  #achiements-section .achiements-items-cont {
+    text-align: left; }
+    #achiements-section .achiements-items-cont .achiement-item {
+      display: inline-block;
+      vertical-align: top;
+      width: 20%;
+      padding: 0 10px; }
+      @media all and (max-width: 1200px) {
+        #achiements-section .achiements-items-cont .achiement-item {
+          width: calc(100% / 3); } }
+      @media all and (max-width: 768px) {
+        #achiements-section .achiements-items-cont .achiement-item {
+          width: 50%; } }
+      #achiements-section .achiements-items-cont .achiement-item .achiement-counter {
+        margin: 10px;
+        font-size: 80px;
+        font-family: "BebasNeueBold", sans-serif;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center; }
+        @media all and (max-width: 1400px) {
+          #achiements-section .achiements-items-cont .achiement-item .achiement-counter {
+            font-size: 70px; } }
+        @media all and (max-width: 1200px) {
+          #achiements-section .achiements-items-cont .achiement-item .achiement-counter {
+            font-size: 60px; } }
+        @media all and (max-width: 768px) {
+          #achiements-section .achiements-items-cont .achiement-item .achiement-counter {
+            font-size: 48px; } }
+      #achiements-section .achiements-items-cont .achiement-item .achiement-text {
+        margin: 10px;
+        font-size: 16px;
+        font-family: "MuseoSansLight", sans-serif;
+        color: white;
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center; }
+        @media all and (max-width: 768px) {
+          #achiements-section .achiements-items-cont .achiement-item .achiement-text {
+            text-transform: lowercase; } }
 
 /*# sourceMappingURL=main.css.map */

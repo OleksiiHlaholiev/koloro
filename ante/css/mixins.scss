@@ -9,3 +9,9 @@
         @content;
     }
 }
+
+@mixin mediaMin($point) {
+    @media all and (min-width: $point){
+        @content;
+    }
+}

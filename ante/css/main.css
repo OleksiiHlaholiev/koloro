@@ -153,7 +153,7 @@ header {
   margin: 20px auto;
   padding: 20px 5px;
   width: 300px;
-  max-width: 100%;
+  max-width: 95%;
   font-size: 30px;
   font-family: "BebasNeueBold", sans-serif;
   color: #2b2f32;
@@ -165,6 +165,10 @@ header {
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s; }
+  @media all and (max-width: 768px) {
+    .callback-btn {
+      font-size: 18px;
+      padding: 10px 5px; } }
 
 .callback-btn:hover {
   color: #fff;
@@ -196,6 +200,14 @@ header {
       #top-section .top-bg-container .info-container .right-cont {
         width: 350px;
         text-align: right; }
+        @media all and (max-width: 768px) {
+          #top-section .top-bg-container .info-container .right-cont {
+            display: none; } }
+      @media all and (max-width: 768px) {
+        #top-section .top-bg-container .info-container .left-cont, #top-section .top-bg-container .info-container .right-cont {
+          width: 100%; }
+        #top-section .top-bg-container .info-container .right-cont {
+          display: none; } }
     #top-section .top-bg-container .registration-slider .item .registration-title {
       font-size: 48px;
       font-family: "BebasNeueBold", sans-serif;
@@ -219,7 +231,7 @@ header {
         cursor: pointer; }
       #top-section .top-bg-container .time-slider-cont .time-slider {
         display: inline-block;
-        width: 300px;
+        width: 200px;
         margin: auto; }
         #top-section .top-bg-container .time-slider-cont .time-slider .item p {
           margin: 20px 0; }
@@ -231,6 +243,9 @@ header {
           color: white;
           line-height: 1.2;
           text-align: center; }
+          @media all and (max-width: 768px) {
+            #top-section .top-bg-container .time-slider-cont .time-slider .item .time {
+              font-size: 24px; } }
         #top-section .top-bg-container .time-slider-cont .time-slider .item .location {
           font-size: 16px;
           font-family: "MuseoSansLight", sans-serif;
@@ -238,6 +253,9 @@ header {
           text-transform: uppercase;
           line-height: 1.2;
           text-align: center; }
+          @media all and (max-width: 768px) {
+            #top-section .top-bg-container .time-slider-cont .time-slider .item .location {
+              font-size: 12px; } }
 
 #advantages-section .advantages-bg-container {
   background-position: left top;
@@ -246,6 +264,9 @@ header {
   height: 100%; }
   #advantages-section .advantages-bg-container .right-cont {
     margin-left: 50%; }
+    @media all and (max-width: 768px) {
+      #advantages-section .advantages-bg-container .right-cont {
+        margin-left: 0; } }
   #advantages-section .advantages-bg-container .section-header {
     color: #fff;
     text-align: left;
@@ -317,6 +338,9 @@ header {
     @media all and (max-width: 1200px) {
       #services-section .services-items-cont .services-item {
         width: 50%; } }
+    @media all and (max-width: 768px) {
+      #services-section .services-items-cont .services-item {
+        width: 100%; } }
     #services-section .services-items-cont .services-item .service-icon img {
       width: 100%;
       max-width: 177px; }

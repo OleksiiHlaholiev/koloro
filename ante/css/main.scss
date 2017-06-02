@@ -190,7 +190,7 @@ header {
     margin: 20px auto;
     padding: 20px 5px;
     width: 300px;
-    max-width: 100%;
+    max-width: 95%;
 
     font-size: 30px;
     font-family: $BebasNeueBold;
@@ -204,6 +204,11 @@ header {
     text-decoration: none;
 
     @include transition($transitionTime);
+
+    @include mediaMax($mobileWidth) {
+        font-size: 18px;
+        padding: 10px 5px;
+    }
 }
 .callback-btn:hover {
     color: #fff;
@@ -234,6 +239,7 @@ header {
 
         .info-container {
             font-size: 0;
+
             .left-cont, .right-cont {
                 display: inline-block;
                 vertical-align: top;
@@ -247,6 +253,19 @@ header {
             .right-cont {
                 width: 350px;
                 text-align: right;
+
+                @include mediaMax($mobileWidth) {
+                    display: none;
+                }
+            }
+
+            @include mediaMax($mobileWidth) {
+                .left-cont, .right-cont {
+                    width: 100%;
+                }
+                .right-cont {
+                    display: none;
+                }
             }
         }
 
@@ -283,7 +302,7 @@ header {
 
             .time-slider {
                 display: inline-block;
-                width: 300px;
+                width: 200px;
                 margin: auto;
 
                 .item {
@@ -299,6 +318,10 @@ header {
                         color: rgb(255, 255, 255);
                         line-height: 1.2;
                         text-align: center;
+
+                        @include mediaMax($mobileWidth) {
+                            font-size: 24px;
+                        }
                     }
                     .location {
                         font-size: 16px;
@@ -307,6 +330,10 @@ header {
                         text-transform: uppercase;
                         line-height: 1.2;
                         text-align: center;
+
+                        @include mediaMax($mobileWidth) {
+                            font-size: 12px;
+                        }
                     }
                 }
             }
@@ -326,6 +353,10 @@ header {
 
         .right-cont {
             margin-left: 50%;
+
+            @include mediaMax($mobileWidth) {
+                margin-left: 0;
+            }
         }
 
         .section-header {
@@ -429,6 +460,9 @@ header {
 
             @include mediaMax(1200px) {
                 width: 50%;
+            }
+            @include mediaMax($mobileWidth) {
+                width: 100%;
             }
 
             .service-icon {

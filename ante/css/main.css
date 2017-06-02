@@ -228,11 +228,16 @@ header {
       #top-section .top-bg-container .time-slider-cont .arrow-left-btn, #top-section .top-bg-container .time-slider-cont .arrow-right-btn {
         display: inline-block;
         vertical-align: top;
-        cursor: pointer; }
+        cursor: pointer;
+        position: relative;
+        top: 10px; }
       #top-section .top-bg-container .time-slider-cont .time-slider {
         display: inline-block;
-        width: 200px;
+        width: 250px;
         margin: auto; }
+        @media all and (max-width: 768px) {
+          #top-section .top-bg-container .time-slider-cont .time-slider {
+            width: 200px; } }
         #top-section .top-bg-container .time-slider-cont .time-slider .item p {
           margin: 20px 0; }
         #top-section .top-bg-container .time-slider-cont .time-slider .item p:first-child {
@@ -344,6 +349,9 @@ header {
     #services-section .services-items-cont .services-item .service-icon img {
       width: 100%;
       max-width: 177px; }
+      @media all and (max-width: 768px) {
+        #services-section .services-items-cont .services-item .service-icon img {
+          max-width: 100px; } }
     #services-section .services-items-cont .services-item .icon-text {
       font-size: 24px;
       font-family: "BebasNeueBold", sans-serif;
@@ -358,20 +366,25 @@ header {
   background-color: #2b2f32;
   padding: 80px 0; }
   #achiements-section .container {
-    max-width: 1000px; }
+    max-width: 1200px; }
   #achiements-section .achiements-items-cont {
     text-align: left; }
     #achiements-section .achiements-items-cont .achiement-item {
       display: inline-block;
       vertical-align: top;
       width: 20%;
-      padding: 0 10px; }
+      min-height: 200px;
+      padding: 0 10px;
+      margin: 10px 0;
+      border-right: 2px solid #fff; }
       @media all and (max-width: 1200px) {
         #achiements-section .achiements-items-cont .achiement-item {
-          width: calc(100% / 3); } }
+          width: calc(100% / 3);
+          min-height: 160px; } }
       @media all and (max-width: 768px) {
         #achiements-section .achiements-items-cont .achiement-item {
-          width: 50%; } }
+          width: 50%;
+          border-right: none; } }
       #achiements-section .achiements-items-cont .achiement-item .achiement-counter {
         margin: 10px;
         font-size: 80px;
@@ -401,5 +414,82 @@ header {
         @media all and (max-width: 768px) {
           #achiements-section .achiements-items-cont .achiement-item .achiement-text {
             text-transform: lowercase; } }
+
+#reviews-section {
+  background-image: url("../images/slide_reviews.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px 0; }
+  #reviews-section .reviews-slider-cont {
+    position: relative; }
+    #reviews-section .reviews-slider-cont .arrow-left-btn, #reviews-section .reviews-slider-cont .arrow-right-btn {
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      transform: translateY(-50%); }
+    #reviews-section .reviews-slider-cont .arrow-left-btn {
+      left: -50px; }
+    #reviews-section .reviews-slider-cont .arrow-right-btn {
+      right: -50px; }
+    #reviews-section .reviews-slider-cont .reviews-slider {
+      display: inline-block;
+      max-width: 1200px;
+      width: 100%;
+      margin: auto; }
+      #reviews-section .reviews-slider-cont .reviews-slider .item {
+        width: 100%; }
+        #reviews-section .reviews-slider-cont .reviews-slider .item .full-cont {
+          font-size: 0;
+          margin: 50px 0; }
+          #reviews-section .reviews-slider-cont .reviews-slider .item .full-cont .left-cont {
+            display: inline-block;
+            width: 30%; }
+          #reviews-section .reviews-slider-cont .reviews-slider .item .full-cont .right-cont {
+            display: inline-block;
+            width: 70%; }
+        #reviews-section .reviews-slider-cont .reviews-slider .item .review-img {
+          text-align: center; }
+          #reviews-section .reviews-slider-cont .reviews-slider .item .review-img img {
+            display: inline-block;
+            width: 100%;
+            max-width: 200px;
+            border-radius: 50%; }
+        #reviews-section .reviews-slider-cont .reviews-slider .item .review-info {
+          padding: 30px 50px;
+          background-color: #fff; }
+          #reviews-section .reviews-slider-cont .reviews-slider .item .review-info .review-text {
+            font-size: 18px;
+            font-family: "MuseoSansLight", sans-serif;
+            color: black;
+            line-height: 1.2;
+            text-align: left;
+            text-transform: uppercase; }
+          #reviews-section .reviews-slider-cont .reviews-slider .item .review-info .review-author {
+            font-size: 16px;
+            font-family: "MuseoSansLight", sans-serif;
+            color: black;
+            line-height: 1.2;
+            text-align: left;
+            text-transform: capitalize; }
+
+#partners-section {
+  background-color: #2b2f32;
+  padding: 50px 0; }
+  #partners-section .section-header {
+    color: #fff; }
+
+#questions-section {
+  background-image: url("../images/slide_reviews.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px 0; }
+  #questions-section .section-header {
+    color: #000; }
 
 /*# sourceMappingURL=main.css.map */

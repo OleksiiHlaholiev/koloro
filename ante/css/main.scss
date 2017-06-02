@@ -383,6 +383,7 @@ header {
             }
             @include mediaMax($mobileWidth) {
                 width: 100%;
+                padding: 0 5px;
             }
 
             .tarif-list {

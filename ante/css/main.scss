@@ -35,6 +35,17 @@ html, body {
     clear: both;
 }
 
+.vertical-align {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .bg-container {
     position: relative;
     width: 100%;
@@ -161,6 +172,21 @@ header {
     }
 }
 
+footer {
+    background-color: $blueDarkColor;
+    padding: 25px 0;
+
+    .footer-text {
+        margin: 0;
+        font-size: 14px;
+        font-family: $MuseoSansLight;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center;
+    }
+}
+
 .section-header {
     font-size: 60px;
     font-family: $BebasNeueBold;
@@ -185,7 +211,7 @@ header {
     }
 }
 
-.callback-btn {
+.callback-btn, .submit-btn {
     display: block;
     margin: 20px auto;
     padding: 20px 5px;
@@ -210,7 +236,7 @@ header {
         padding: 10px 5px;
     }
 }
-.callback-btn:hover {
+.callback-btn:hover, .submit-btn:hover {
     color: #fff;
     background-color: #aeaeae;
 }
@@ -380,6 +406,10 @@ header {
                 color: #fff;
                 line-height: 1.2;
                 text-align: left;
+
+                @include mediaMax($mobileWidth) {
+                    font-size: 20px;
+                }
             }
             .advantage-text {
                 margin: 10px 0;
@@ -388,6 +418,10 @@ header {
                 color: #fff;
                 line-height: 1.2;
                 text-align: left;
+
+                @include mediaMax($mobileWidth) {
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -424,6 +458,80 @@ header {
                 padding: 0 5px;
             }
 
+            .price-cont {
+                font-size: 0;
+
+                p {
+                    margin: 0;
+                }
+
+                .left-cont, .right-cont {
+                    display: inline-block;
+                    width: 50%;
+                }
+                .left-cont {
+                    text-align: right;
+                    padding-right: 5px;
+                    border-right: 1px solid #000;
+
+                    .price {
+                        font-size: 48px;
+                        font-family: $BebasNeueBold;
+                        color: rgb(0, 0, 0);
+                        text-transform: uppercase;
+                        line-height: 1.2;
+                        text-align: right;
+
+                        @include mediaMax($mobileWidth) {
+                            font-size: 36px;
+                        }
+                    }
+
+                    .currency {
+                        font-size: 14px;
+                        font-family: $MuseoSansBlack;
+                        color: rgb(0, 0, 0);
+                        text-transform: uppercase;
+                        line-height: 1.2;
+                        text-align: right;
+
+                        @include mediaMax($mobileWidth) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .right-cont {
+                    text-align: left;
+                    padding-left: 5px;
+
+                    .tarif-title {
+                        font-size: 24px;
+                        font-family: $MuseoSansLight;
+                        color: rgb(0, 0, 0);
+                        line-height: 1.2;
+                        text-align: left;
+
+                        @include mediaMax($mobileWidth) {
+                            font-size: 18px;
+                        }
+                    }
+                    .tarif-name {
+                        font-size: 34px;
+                        font-family: $MuseoSansLight;
+                        color: rgb(242, 197, 139);
+                        text-transform: uppercase;
+                        line-height: 1.2;
+                        text-align: left;
+
+                        @include mediaMax($mobileWidth) {
+                            font-size: 24px;
+                        }
+                    }
+
+                }
+
+            }
+
             .tarif-list {
                 width: 100%;
                 padding: 20px 0;
@@ -442,6 +550,16 @@ header {
                     text-transform: uppercase;
                     line-height: 1.2;
                 }
+
+                @include mediaMax($mobileWidth) {
+                    li {
+                        font-size: 10px;
+                    }
+                    li.mob-hidden {
+                        display: none;
+                    }
+                }
+
             }
         }
     }
@@ -459,6 +577,7 @@ header {
         color: #000;
     }
     .services-items-cont {
+        font-size: 0;
         .services-item {
             display: inline-block;
             float: left;
@@ -573,6 +692,10 @@ header {
     background-repeat: no-repeat;
     padding: 50px 0;
 
+    @include mediaMax($mobileWidth) {
+        padding: 25px 0;
+    }
+
     .reviews-slider-cont {
         position: relative;
         .arrow-left-btn, .arrow-right-btn {
@@ -588,9 +711,17 @@ header {
         }
         .arrow-left-btn {
             left: -50px;
+
+            @include mediaMax($mobileWidth) {
+                left: 50px;
+            }
         }
         .arrow-right-btn {
             right: -50px;
+
+            @include mediaMax($mobileWidth) {
+                right: 50px;
+            }
         }
 
         .reviews-slider {
@@ -648,6 +779,22 @@ header {
                     }
                 }
 
+                @include mediaMax($mobileWidth) {
+                    .full-cont {
+                        .left-cont, .right-cont {
+                            width: 100%;
+                        }
+                        .left-cont {
+                            display: none;
+                        }
+                    }
+
+                    .review-info {
+                        padding: 10px;
+                    }
+
+                }
+
             }
         }
     }
@@ -657,7 +804,11 @@ header {
 // start of partners-section
 #partners-section {
     background-color: $blueDarkColor;
-    padding: 50px 0;
+    padding-bottom: 50px;
+
+    @include mediaMax($mobileWidth) {
+        padding-bottom: 25px;
+    }
 
     .section-header {
         color: #fff;
@@ -667,15 +818,201 @@ header {
 
 // start of questions-section
 #questions-section {
-    background-image: url("../images/slide_reviews.png");
+    background-image: url("../images/questions_bg.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 50px 0;
+    padding-bottom: 50px;
 
     .section-header {
         color: #000;
     }
 }
-// end of questions-section
+// end of contacts-section
+
+// start of questions-section
+#contacts-section {
+    padding: 50px 0;
+
+    @include mediaMax($mobileWidth) {
+        padding: 25px 0;
+    }
+
+    .full-cont {
+        font-size: 0;
+        .left-cont, .right-cont, .middle-cont {
+            display: inline-block;
+            vertical-align: top;
+            padding: 10px 20px;
+            text-align: left;
+        }
+        .left-cont, .right-cont {
+            width: 30%;
+        }
+        .middle-cont {
+            width: 40%;
+        }
+        @include mediaMax($mobileWidth) {
+            .left-cont, .right-cont, .middle-cont {
+                width: 100%;
+                padding: 10px 0;
+            }
+        }
+    }
+
+    .contacts-header {
+        margin: 0;
+        padding-bottom: 20px;
+        font-size: 36px;
+        font-family: $BebasNeueBold;
+        color: rgb(0, 0, 0);
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    .contact-info, .contact-email, .address-info {
+        margin: 0;
+        font-size: 18px;
+        font-family: $MuseoSansLight;
+        color: rgb(0, 0, 0);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: left;
+    }
+    .contact-email, .work-time {
+        padding: 20px 0;
+    }
+
+    .address-info {
+        text-transform: none;
+    }
+
+    .work-time {
+        margin: 0;
+        font-size: 36px;
+        font-family: $BebasNeueBold;
+        color: rgb(0, 0, 0);
+        line-height: 1.2;
+        text-align: left;
+    }
+    .work-time:before {
+        content: url("../images/icon-clock.png");
+        padding-right: 10px;
+    }
+
+    .map {
+        pointer-events: none;
+        width: 100%;
+        height: 300px;
+    }
+}
+// end of contacts-section
+
+// start of order-form (general container)
+.order-form {
+    display: none;
+    //display: block;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(71, 71, 71, 0.702);
+    overflow: auto;
+
+    .form-wrapper {
+        min-height: 100vh;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: -50px;
+        right: 0;
+        cursor: pointer;
+        transition: all 0.4s;
+    }
+    .close-btn:hover {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    .form-header {
+        margin: 30px 0;
+        font-size: 36px;
+        font-family: $BebasNeueBold;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center;
+
+    }
+
+    .full-cont {
+        font-size: 0;
+        .left-cont, .right-cont {
+            display: inline-block;
+            width: 50%;
+
+            @include mediaMax($mobileWidth) {
+                width: 100%;
+            }
+        }
+        .left-cont {
+            padding-right: 1px;
+        }
+        .right-cont {
+            padding-left: 1px;
+        }
+
+        @include mediaMax($mobileWidth) {
+            .left-cont, .right-cont {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+    }
+
+    .text-field-cont {
+        text-align: left;
+
+        .text-field {
+            height: 150px;
+        }
+    }
+
+    .user-name, .user-contact, .text-field {
+        display: block;
+        width: 100%;
+        margin: 2px;
+        padding: 15px 25px;
+
+        font-size: 18px;
+        font-family: $MuseoSansLight;
+        color: rgb(0, 0, 0);
+        text-transform: none;
+        line-height: 1.2;
+        text-align: left;
+
+    }
+
+    .submit-btn {
+        border: none;
+        outline: none;
+        margin-top: 30px;
+
+        @media all and (max-width: 600px) {
+            margin-top: 15px;
+        }
+    }
+}
+
+input::-moz-placeholder,
+input::-webkit-input-placeholder,
+input:-ms-input-placeholder {
+    color: #9fb9c6;
+}
+
+
+// end of order-form (general container)
 

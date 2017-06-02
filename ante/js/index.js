@@ -71,4 +71,47 @@ $(function () {
     $('.reviews-slider-cont .arrow-right-btn').click(function() {
         $(reviewsSlider).trigger('prev.owl.carousel');
     });
+
+
+    // ****************************************************************
+    // Disable scroll zooming and bind back the click event
+    function onMapMouseleaveHandler() {
+
+        this.addEventListener('click', onMapClickHandler);
+        this.removeEventListener('mouseleave', onMapMouseleaveHandler);
+        this.querySelector('iframe').style.pointerEvents = "none";
+    }
+
+    function onMapClickHandler() {
+
+        // Disable the click handler until the user leaves the map area
+        this.removeEventListener('click', onMapClickHandler);
+
+        // Enable scrolling zoom
+        this.querySelector('.map').style.pointerEvents = "auto";
+
+        // Handle the mouse leave event
+        this.addEventListener('mouseleave', onMapMouseleaveHandler);
+    }
+
+    // ****************************************************************
+    var mapCont = document.querySelector("#contacts-section .map-cont");
+    // Enable map zooming with mouse scroll when the user clicks the map
+    mapCont.addEventListener('click', onMapClickHandler);
+
+
+    // .order-form-btn
+    $(function () {
+        $(".callback-btn").on("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation(); // to avoid inherit click events
+            $(".order-form").fadeIn(400);
+        });
+
+        $(".order-form .close-btn").on("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation(); // to avoid inherit click events
+            $(".order-form").fadeOut(400);
+        });
+    });
 });

@@ -353,6 +353,8 @@ $(function () {
     function resizeWindowHandler(event) {
         if (window.innerWidth < mobileViewWidth) {
             isMobileViewFlag = true;
+
+            $(siteNav).css("display", "none");
         } else {
             isMobileViewFlag = false;
 
@@ -360,7 +362,7 @@ $(function () {
                 $(achievmentCounters).text("0");
             }
 
-            $(siteNav).fadeIn(10);
+            $(siteNav).css("display", "block");
         }
     }
 

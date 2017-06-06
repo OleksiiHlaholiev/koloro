@@ -259,11 +259,15 @@ footer {
       line-height: 1.2;
       text-align: left; }
     #top-section .top-bg-container .registration-slider .item .registration-text {
+      margin: 15px 0;
       font-size: 18px;
       font-family: "MuseoSansLight", sans-serif;
       color: white;
       line-height: 1.2;
       text-align: left; }
+      @media all and (max-width: 768px) {
+        #top-section .top-bg-container .registration-slider .item .registration-text {
+          margin: 5px 0; } }
     #top-section .top-bg-container .registration-slider .owl-dots {
       counter-reset: navCnt;
       padding-bottom: 10px; }
@@ -300,8 +304,12 @@ footer {
         color: #f2c58b; }
     #top-section .top-bg-container .time-slider-cont {
       position: absolute;
+      z-index: 5;
       bottom: 5vh;
       width: 100%; }
+      @media all and (max-height: 550px) {
+        #top-section .top-bg-container .time-slider-cont {
+          display: none; } }
       #top-section .top-bg-container .time-slider-cont .arrow-left-btn, #top-section .top-bg-container .time-slider-cont .arrow-right-btn {
         display: inline-block;
         vertical-align: top;
@@ -321,7 +329,7 @@ footer {
           margin-top: 0; }
         #top-section .top-bg-container .time-slider-cont .time-slider .item .time {
           font-size: 52px;
-          font-family: "BebasNeueBold", sans-serif;
+          font-family: "MuseoSansLight", sans-serif;
           color: white;
           line-height: 1.2;
           text-align: center; }
@@ -423,7 +431,7 @@ footer {
     @media all and (max-width: 1400px) {
       #tarif-section .tarif-items-cont .tarif-item-cont {
         width: 50%; } }
-    @media all and (max-width: 768px) {
+    @media all and (max-width: 1000px) {
       #tarif-section .tarif-items-cont .tarif-item-cont {
         width: 100%;
         padding: 0 5px; } }
@@ -504,15 +512,19 @@ footer {
         @media all and (max-width: 1600px) {
           #tarif-section .tarif-items-cont .tarif-item-cont .tarif-list li {
             height: 70px; } }
+      @media all and (max-width: 1000px) {
+        #tarif-section .tarif-items-cont .tarif-item-cont .tarif-list li.mob-hidden {
+          display: none; } }
       @media all and (max-width: 768px) {
         #tarif-section .tarif-items-cont .tarif-item-cont .tarif-list li {
           font-size: 10px;
-          padding: 0 10px; }
-        #tarif-section .tarif-items-cont .tarif-item-cont .tarif-list li.mob-hidden {
-          display: none; } }
+          padding: 0 10px; } }
 
 #services-section {
   padding-bottom: 50px; }
+  @media all and (max-width: 768px) {
+    #services-section {
+      padding-bottom: 20px; } }
   #services-section .container {
     max-width: 1000px; }
   #services-section .section-header {
@@ -557,20 +569,20 @@ footer {
     -moz-transform: rotate(180deg);
     transform: rotate(180deg); }
 
-#achiements-section {
+#achievments-section {
   background-image: url("../images/statistics-bg.jpg");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 80px 0; }
   @media all and (max-width: 768px) {
-    #achiements-section {
+    #achievments-section {
       padding: 30px 0; } }
-  #achiements-section .container {
+  #achievments-section .container {
     max-width: 1200px; }
-  #achiements-section .achiements-items-cont {
+  #achievments-section .achievments-items-cont {
     text-align: left; }
-    #achiements-section .achiements-items-cont .achiement-item {
+    #achievments-section .achievments-items-cont .achievment-item {
       display: inline-block;
       vertical-align: top;
       width: 20%;
@@ -579,14 +591,14 @@ footer {
       margin: 10px 0;
       border-right: 2px solid #fff; }
       @media all and (max-width: 1200px) {
-        #achiements-section .achiements-items-cont .achiement-item {
+        #achievments-section .achievments-items-cont .achievment-item {
           width: calc(100% / 3);
           min-height: 160px; } }
       @media all and (max-width: 768px) {
-        #achiements-section .achiements-items-cont .achiement-item {
+        #achievments-section .achievments-items-cont .achievment-item {
           width: 50%;
           border-right: none; } }
-      #achiements-section .achiements-items-cont .achiement-item .achiement-counter {
+      #achievments-section .achievments-items-cont .achievment-item .achievment-counter {
         margin: 10px;
         font-size: 80px;
         font-family: "BebasNeueBold", sans-serif;
@@ -596,15 +608,15 @@ footer {
         line-height: 1.2;
         text-align: center; }
         @media all and (max-width: 1400px) {
-          #achiements-section .achiements-items-cont .achiement-item .achiement-counter {
+          #achievments-section .achievments-items-cont .achievment-item .achievment-counter {
             font-size: 70px; } }
         @media all and (max-width: 1200px) {
-          #achiements-section .achiements-items-cont .achiement-item .achiement-counter {
+          #achievments-section .achievments-items-cont .achievment-item .achievment-counter {
             font-size: 60px; } }
         @media all and (max-width: 768px) {
-          #achiements-section .achiements-items-cont .achiement-item .achiement-counter {
+          #achievments-section .achievments-items-cont .achievment-item .achievment-counter {
             font-size: 48px; } }
-      #achiements-section .achiements-items-cont .achiement-item .achiement-text {
+      #achievments-section .achievments-items-cont .achievment-item .achievment-text {
         margin: 10px;
         font-size: 16px;
         font-family: "MuseoSansLight", sans-serif;
@@ -613,7 +625,7 @@ footer {
         line-height: 1.2;
         text-align: center; }
         @media all and (max-width: 768px) {
-          #achiements-section .achiements-items-cont .achiement-item .achiement-text {
+          #achievments-section .achievments-items-cont .achievment-item .achievment-text {
             text-transform: lowercase; } }
 
 #reviews-section {
@@ -698,7 +710,7 @@ footer {
 
 #contacts-section {
   padding: 50px 0; }
-  @media all and (max-width: 768px) {
+  @media all and (max-width: 1000px) {
     #contacts-section {
       padding: 25px 0; } }
   #contacts-section .full-cont {
@@ -712,10 +724,20 @@ footer {
       width: 30%; }
     #contacts-section .full-cont .middle-cont {
       width: 40%; }
-    @media all and (max-width: 768px) {
+    @media all and (max-width: 1000px) {
       #contacts-section .full-cont .left-cont, #contacts-section .full-cont .right-cont, #contacts-section .full-cont .middle-cont {
         width: 100%;
         padding: 10px 0; } }
+    @media all and (max-width: 1000px) {
+      #contacts-section .full-cont .mobile-visible {
+        display: inline-block; }
+      #contacts-section .full-cont .desktop-visible {
+        display: none; } }
+    @media all and (min-width: 1000px) {
+      #contacts-section .full-cont .mobile-visible {
+        display: none; }
+      #contacts-section .full-cont .desktop-visible {
+        display: inline-block; } }
   #contacts-section .contacts-header {
     margin: 0;
     padding-bottom: 20px;

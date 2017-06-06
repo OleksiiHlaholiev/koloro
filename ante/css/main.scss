@@ -330,11 +330,16 @@ footer {
                     text-align: left;
                 }
                 .registration-text {
+                    margin: 15px 0;
                     font-size: 18px;
                     font-family: $MuseoSansLight;
                     color: rgb(255, 255, 255);
                     line-height: 1.2;
                     text-align: left;
+
+                    @include mediaMax($mobileWidth) {
+                        margin: 5px 0;
+                    }
                 }
             }
 
@@ -391,8 +396,13 @@ footer {
 
         .time-slider-cont {
             position: absolute;
+            z-index: 5;
             bottom: 5vh;
             width: 100%;
+
+            @media all and (max-height: 550px) {
+                display: none;
+            }
 
             .arrow-left-btn, .arrow-right-btn {
                 display: inline-block;
@@ -421,7 +431,7 @@ footer {
                     }
                     .time {
                         font-size: 52px;
-                        font-family: $BebasNeueBold;
+                        font-family: $MuseoSansLight;
                         color: rgb(255, 255, 255);
                         line-height: 1.2;
                         text-align: center;
@@ -567,7 +577,7 @@ footer {
             @include mediaMax(1400px) {
                 width: 50%;
             }
-            @include mediaMax($mobileWidth) {
+            @include mediaMax(1000px) {
                 width: 100%;
                 padding: 0 5px;
             }
@@ -678,14 +688,17 @@ footer {
                 }
 
 
+                @include mediaMax(1000px) {
+                    li.mob-hidden {
+                        display: none;
+                    }
+                }
                 @include mediaMax($mobileWidth) {
                     li {
                         font-size: 10px;
                         padding: 0 10px;
                     }
-                    li.mob-hidden {
-                        display: none;
-                    }
+
                 }
 
             }
@@ -697,6 +710,10 @@ footer {
 // start of services-section
 #services-section {
     padding-bottom: 50px;
+
+    @include mediaMax($mobileWidth) {
+        padding-bottom: 20px;
+    }
 
     .container {
         max-width: 1000px;
@@ -766,8 +783,8 @@ footer {
 }
 // end of services-section
 
-// start of achiements-section
-#achiements-section {
+// start of achievments-section
+#achievments-section {
     //background-color: $blueDarkColor;
     background-image: url("../images/statistics-bg.jpg");
     background-position: center top;
@@ -784,9 +801,9 @@ footer {
         max-width: 1200px;
     }
 
-    .achiements-items-cont {
+    .achievments-items-cont {
         text-align: left;
-        .achiement-item {
+        .achievment-item {
             display: inline-block;
             vertical-align: top;
             width: 20%;
@@ -804,7 +821,7 @@ footer {
                 border-right: none;
             }
 
-            .achiement-counter {
+            .achievment-counter {
                 margin: 10px;
                 font-size: 80px;
                 font-family: $BebasNeueBold;
@@ -824,7 +841,7 @@ footer {
                     font-size: 48px;
                 }
             }
-            .achiement-text {
+            .achievment-text {
                 margin: 10px;
                 font-size: 16px;
                 font-family: $MuseoSansLight;
@@ -841,7 +858,7 @@ footer {
         }
     }
 }
-// end of achiements-section
+// end of achievments-section
 
 // start of reviews-section
 #reviews-section {
@@ -1089,7 +1106,7 @@ footer {
 #contacts-section {
     padding: 50px 0;
 
-    @include mediaMax($mobileWidth) {
+    @include mediaMax(1000px) {
         padding: 25px 0;
     }
 
@@ -1107,10 +1124,27 @@ footer {
         .middle-cont {
             width: 40%;
         }
-        @include mediaMax($mobileWidth) {
+        @include mediaMax(1000px) {
             .left-cont, .right-cont, .middle-cont {
                 width: 100%;
                 padding: 10px 0;
+            }
+        }
+
+        @include mediaMax(1000px) {
+            .mobile-visible {
+                display: inline-block;
+            }
+            .desktop-visible {
+                display: none;
+            }
+        }
+        @include mediaMin(1000px) {
+            .mobile-visible {
+                display: none;
+            }
+            .desktop-visible {
+                display: inline-block;
             }
         }
     }

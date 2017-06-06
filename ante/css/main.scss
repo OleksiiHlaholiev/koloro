@@ -407,6 +407,11 @@ footer {
         min-height: 100vh;
         height: 100%;
 
+        @include mediaMax($mobileWidth) {
+            //background-position: center top;
+            background-image: url("../images/slide2-mob.jpg");
+        }
+
         .right-cont {
             margin-left: 50%;
 
@@ -563,6 +568,14 @@ footer {
                     height: 50px;
                     margin: 1px 0;
                     padding: 0 20px;
+                    text-align: left;
+
+                    width: 100%;
+                    display: -webkit-flex;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
 
                     list-style: none;
                     background-color: #f1f1f1;
@@ -577,6 +590,7 @@ footer {
                 @include mediaMax($mobileWidth) {
                     li {
                         font-size: 10px;
+                        padding: 0 10px;
                     }
                     li.mob-hidden {
                         display: none;

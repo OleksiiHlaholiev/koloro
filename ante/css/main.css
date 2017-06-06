@@ -309,6 +309,9 @@ footer {
   background-image: url("../images/slide2.png");
   min-height: 100vh;
   height: 100%; }
+  @media all and (max-width: 768px) {
+    #advantages-section .advantages-bg-container {
+      background-image: url("../images/slide2-mob.jpg"); } }
   #advantages-section .advantages-bg-container .right-cont {
     margin-left: 50%; }
     @media all and (max-width: 768px) {
@@ -422,6 +425,13 @@ footer {
         height: 50px;
         margin: 1px 0;
         padding: 0 20px;
+        text-align: left;
+        width: 100%;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         list-style: none;
         background-color: #f1f1f1;
         font-size: 12px;
@@ -431,7 +441,8 @@ footer {
         line-height: 1.2; }
       @media all and (max-width: 768px) {
         #tarif-section .tarif-items-cont .tarif-item-cont .tarif-list li {
-          font-size: 10px; }
+          font-size: 10px;
+          padding: 0 10px; }
         #tarif-section .tarif-items-cont .tarif-item-cont .tarif-list li.mob-hidden {
           display: none; } }
 

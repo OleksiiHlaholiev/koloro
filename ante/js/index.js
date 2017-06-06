@@ -390,7 +390,7 @@ $(function () {
             prevActiveItem.classList.remove("active");
             siteNavItems[1].classList.add("active");
         } else if ( (currentPosition > contactsSection.offsetTop) &&
-            (currentPosition < ontactsSection.offsetTop + contactsSection.offsetHeight) ) {
+            (currentPosition < contactsSection.offsetTop + contactsSection.offsetHeight) ) {
             prevActiveItem.classList.remove("active");
             siteNavItems[2].classList.add("active");
         }

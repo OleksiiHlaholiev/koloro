@@ -4,6 +4,49 @@
 
 "use strict";
 
+var html = document.documentElement,
+    body = document.body;
+
+var tempScrollTop, currentScrollTop = 0, referTopPoint = 300, distanceTop;
+
+
+$(window).scroll(function(){
+    currentScrollTop = window.pageYOffset;
+    distanceTop = html.scrollTop || body && body.scrollTop || 0;
+    distanceTop -= html.clientTop; // в IE7- <html> смещён относительно (0,0)
+
+    if (tempScrollTop < currentScrollTop ){//scroll down
+        hideMenu();
+    }
+    else if (tempScrollTop > currentScrollTop ){//scroll top
+        showMenu();
+        // default_style();
+    }
+    // console.log("currentScrollTop", currentScrollTop);
+
+    tempScrollTop = currentScrollTop;
+
+});
+
+function hideMenu (){
+    if (distanceTop > referTopPoint){
+        if ($("header").hasClass("menu-hidden")){
+            $("header").removeClass("menu-visible");
+        }
+        else {
+            $("header").addClass("menu-hidden");
+        }
+    }
+}
+function showMenu(){
+    if (distanceTop > referTopPoint){
+        if( !($("header").hasClass("menu-visible")) ){
+            $("header").addClass("menu-visible");
+            // $("header").addClass("change_color");
+        }
+    }
+}
+
 $(function () {
     $(".menu-mob-btn").on("click", function () {
         $(".menu-cont .site-nav").slideToggle(500);

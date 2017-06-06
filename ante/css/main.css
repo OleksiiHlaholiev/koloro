@@ -57,6 +57,8 @@ html, body {
   background-position: center center;
   background-size: cover;
   background-attachment: scroll;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
   transition: all 1s; }
   .bg-container .dark-mask {
     position: absolute;
@@ -67,11 +69,20 @@ html, body {
     background-color: rgba(60, 60, 60, 0.5);
     z-index: 2; }
 
+.menu-hidden {
+  top: -120px; }
+
+.menu-visible {
+  top: 0; }
+
 header {
   position: fixed;
   z-index: 999;
   width: 100%;
-  background-color: #282e3f; }
+  background-color: #282e3f;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s; }
   header .logo-cont {
     display: inline-block;
     vertical-align: top;
@@ -80,7 +91,11 @@ header {
     header .logo-cont a {
       display: inline-block; }
       header .logo-cont a img {
-        padding: 10px 0 2px 0; }
+        padding: 10px 0 2px 0;
+        height: 110px; }
+        @media all and (max-width: 768px) {
+          header .logo-cont a img {
+            height: 80px; } }
   header .menu-cont, header .menu-mob-btn-cont {
     display: inline-block;
     vertical-align: top;
@@ -91,7 +106,7 @@ header {
     header .menu-mob-btn-cont .menu-mob-btn {
       display: inline-block;
       width: 50px;
-      margin: 35px 10px 31px 10px;
+      margin: 25px 10px 15px 10px;
       cursor: pointer; }
       header .menu-mob-btn-cont .menu-mob-btn div {
         width: 100%;
@@ -197,12 +212,18 @@ footer {
 
 #top-section {
   position: relative;
-  padding-top: 111px; }
+  padding-top: 110px; }
+  @media all and (max-width: 768px) {
+    #top-section {
+      padding-top: 80px; } }
   #top-section .top-bg-container {
-    height: calc(100vh - 111px);
+    height: calc(100vh - 110px);
     background-position: center top;
     background-attachment: fixed;
     background-image: url("../images/slide1.png"); }
+    @media all and (max-width: 768px) {
+      #top-section .top-bg-container {
+        height: calc(100vh - 80px); } }
     #top-section .top-bg-container .container {
       max-width: 1000px;
       height: 100%; }

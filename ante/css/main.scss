@@ -54,7 +54,8 @@ html, body {
     background-position: center center;
     background-size: cover;
     background-attachment: scroll;
-    transition: all 1s;
+
+    @include transition(1s);
 
     .dark-mask {
         position: absolute;
@@ -66,11 +67,20 @@ html, body {
         z-index: 2; }
 }
 
+.menu-hidden {
+    top: -120px;
+}
+.menu-visible {
+    top: 0;
+}
+
 header {
     position: fixed;
     z-index: 999;
     width: 100%;
     background-color: #282e3f;
+
+    @include transition($transitionTime);
 
     .logo-cont {
         display: inline-block;
@@ -82,6 +92,11 @@ header {
             display: inline-block;
             img {
                 padding: 10px 0 2px 0;
+                height: 110px;
+
+                @include mediaMax($mobileWidth) {
+                    height: 80px;
+                }
             }
         }
     }
@@ -98,7 +113,7 @@ header {
         .menu-mob-btn {
             display: inline-block;
             width: 50px;
-            margin: 35px 10px 31px 10px;
+            margin: 25px 10px 15px 10px;
             cursor: pointer;
 
             div {
@@ -244,10 +259,18 @@ footer {
 // start of top-section
 #top-section {
     position: relative;
-    padding-top: 111px;
+    padding-top: 110px;
+
+    @include mediaMax($mobileWidth) {
+        padding-top: 80px;
+    }
 
     .top-bg-container {
-        height: calc(100vh - 111px);
+        height: calc(100vh - 110px);
+
+        @include mediaMax($mobileWidth) {
+            height: calc(100vh - 80px);
+        }
 
         background-position: center top;
         background-attachment: fixed;

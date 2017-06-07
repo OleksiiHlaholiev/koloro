@@ -33,7 +33,7 @@ html, body {
   font-size: 0; }
   @media all and (max-width: 768px) {
     .container {
-      width: 90%; } }
+      width: 95%; } }
 
 .clearfix::after, .container::after {
   content: "";
@@ -426,6 +426,9 @@ footer {
 
 #tarif-section .section-header {
   color: #000; }
+@media all and (max-width: 1600px) {
+  #tarif-section .container {
+    width: 95%; } }
 #tarif-section .tarif-title {
   font-size: 20px;
   font-family: "MuseoSansLight", sans-serif;
@@ -442,10 +445,10 @@ footer {
     display: inline-block;
     padding: 0 25px;
     width: calc(100% / 3); }
-    @media all and (max-width: 1400px) {
+    @media all and (max-width: 1300px) {
       #tarif-section .tarif-items-cont .tarif-item-cont {
         width: 50%; } }
-    @media all and (max-width: 1000px) {
+    @media all and (max-width: 1024px) {
       #tarif-section .tarif-items-cont .tarif-item-cont {
         width: 100%;
         padding: 0 5px; } }
@@ -644,16 +647,6 @@ footer {
         @media all and (max-width: 768px) {
           #achievments-section .achievments-items-cont .achievment-item .achievment-text {
             text-transform: lowercase; } }
-
-#reviews-section {
-  background-image: url("../images/slide-reviews.png");
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 50px 0; }
-  @media all and (max-width: 768px) {
-    #reviews-section {
-      padding: 25px 0; } }
 
 #partners-section {
   background-color: #2b2f32;

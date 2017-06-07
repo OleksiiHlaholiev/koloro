@@ -119,30 +119,6 @@ $(function () {
         $(timeSlider).trigger('next.owl.carousel');
     });
 
-    // var reviewsSlider = $(".reviews-slider");
-
-    // $(reviewsSlider).owlCarousel({
-    //     loop:true,
-    //     margin:0,
-    //     items:1,
-    //     nav:false,
-    //     autoplay:false,
-    //
-    //     smartSpeed:1000, //Время движения слайда
-    //     autoplayTimeout:5000, //Время смены слайда
-    //     autoplayHoverPause:false
-    //
-    // });
-    //
-    // // Go to the next item
-    // $('.reviews-slider-cont .arrow-left-btn').click(function() {
-    //     $(reviewsSlider).trigger('next.owl.carousel');
-    // });
-    // // Go to the previous item
-    // $('.reviews-slider-cont .arrow-right-btn').click(function() {
-    //     $(reviewsSlider).trigger('prev.owl.carousel');
-    // });
-
     var  partnersSlider = $(".partners-slider");
 
     $(partnersSlider).owlCarousel({

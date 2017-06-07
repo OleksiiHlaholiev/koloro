@@ -25,7 +25,7 @@ html, body {
     font-size: 0;
 
     @include mediaMaxWidth($mobileWidth) {
-        width: 90%;
+        width: 95%;
     }
 }
 
@@ -569,6 +569,12 @@ footer {
         color: #000;
     }
 
+    .container {
+        @include mediaMaxWidth(1600px) {
+            width: 95%;
+        }
+    }
+
     .tarif-title {
         font-size: 20px;
         font-family: $MuseoSansLight;
@@ -589,10 +595,10 @@ footer {
             padding: 0 25px;
             width: calc(100% / 3);
 
-            @include mediaMaxWidth(1400px) {
+            @include mediaMaxWidth(1300px) {
                 width: 50%;
             }
-            @include mediaMaxWidth(1000px) {
+            @include mediaMaxWidth(1024px) {
                 width: 100%;
                 padding: 0 5px;
             }
@@ -878,123 +884,6 @@ footer {
     }
 }
 // end of achievments-section
-
-// start of reviews-section
-#reviews-section {
-    background-image: url("../images/slide-reviews.png");
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 50px 0;
-
-    @include mediaMaxWidth($mobileWidth) {
-        padding: 25px 0;
-    }
-
-    //.reviews-slider-cont {
-    //    position: relative;
-    //    .arrow-left-btn, .arrow-right-btn {
-    //        display: inline-block;
-    //        vertical-align: top;
-    //        cursor: pointer;
-    //
-    //        position: absolute;
-    //        top: 50%;
-    //        -webkit-transform: translateY(-50%);
-    //        -moz-transform: translateY(-50%);
-    //        transform: translateY(-50%);
-    //    }
-    //    .arrow-left-btn {
-    //        left: -50px;
-    //
-    //        @include mediaMaxWidth($mobileWidth) {
-    //            left: 50px;
-    //        }
-    //    }
-    //    .arrow-right-btn {
-    //        right: -50px;
-    //
-    //        @include mediaMaxWidth($mobileWidth) {
-    //            right: 50px;
-    //        }
-    //    }
-    //
-    //    .reviews-slider {
-    //        display: inline-block;
-    //        max-width: 1200px;
-    //        width: 100%;
-    //        margin: auto;
-    //
-    //        @include mediaMaxWidth($mobileWidth) {
-    //            //width: 200px;
-    //        }
-    //
-    //        .item {
-    //            width: 100%;
-    //            .full-cont {
-    //                font-size: 0;
-    //                margin: 50px 0;
-    //                .left-cont {
-    //                    display: inline-block;
-    //                    width: 30%;
-    //                }
-    //                .right-cont {
-    //                    display: inline-block;
-    //                    width: 70%;
-    //                }
-    //            }
-    //
-    //            .review-img {
-    //                text-align: center;
-    //                img {
-    //                    display: inline-block;
-    //                    width: 100%;
-    //                    max-width: 200px;
-    //                    border-radius: 50%;
-    //                }
-    //            }
-    //            .review-info {
-    //                padding: 30px 50px;
-    //                background-color: #fff;
-    //                .review-text {
-    //                    font-size: 18px;
-    //                    font-family: $MuseoSansLight;
-    //                    color: rgb(0, 0, 0);
-    //                    line-height: 1.2;
-    //                    text-align: left;
-    //                    text-transform: uppercase;
-    //                }
-    //                .review-author {
-    //                    font-size: 16px;
-    //                    font-family: $MuseoSansLight;
-    //                    color: rgb(0, 0, 0);
-    //                    line-height: 1.2;
-    //                    text-align: left;
-    //                    text-transform: capitalize;
-    //                }
-    //            }
-    //
-    //            @include mediaMaxWidth($mobileWidth) {
-    //                .full-cont {
-    //                    .left-cont, .right-cont {
-    //                        width: 100%;
-    //                    }
-    //                    .left-cont {
-    //                        display: none;
-    //                    }
-    //                }
-    //
-    //                .review-info {
-    //                    padding: 10px;
-    //                }
-    //
-    //            }
-    //
-    //        }
-    //    }
-    //}
-}
-// end of reviews-section
 
 // start of partners-section
 #partners-section {

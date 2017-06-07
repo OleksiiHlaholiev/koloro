@@ -422,4 +422,57 @@ $(function () {
 
     // ************************************************************************************
 
+    var countries = ["kiev", "paris", "newYork", "tokio", "london", "dubai"];
+    var timeZones = {
+        kiev: +3,
+        paris: +2,
+        newYork: -4,
+        tokio: +9,
+        london: +1,
+        dubai: +4
+    };
+
+    var sliderTimes = $(".time-slider .item .time");
+
+    function calcTime(timeZone) {
+        var tempDate = new Date();
+        var tempHours, tempMinutes, resultTimeStr;
+
+        tempHours = tempDate.getUTCHours() + timeZone;
+        if (tempHours < 10) {
+            tempHours = "0" + tempHours;
+        }
+        tempMinutes = tempDate.getUTCMinutes();
+        if (tempMinutes < 10) {
+            tempMinutes = "0" + tempMinutes;
+        }
+
+        resultTimeStr = tempHours + " : "  + tempMinutes;
+        // console.log(resultTimeStr);
+
+        return resultTimeStr;
+    }
+
+    // calcTime(timeZones[countries[0]]);
+
+    function updateTimeSlider() {
+        var tempTimeStr;
+
+        // for (var i = 0; i < sliderTimes.length; i++) {
+        //     tempTimeStr = calcTime(timeZones[countries[i]]);
+        //     $(sliderTimes[i]).text(tempTimeStr);
+        // }
+
+        $(".time-slider .kiev .time").text(calcTime(timeZones.kiev));
+        $(".time-slider .paris .time").text(calcTime(timeZones.paris));
+        $(".time-slider .newYork .time").text(calcTime(timeZones.newYork));
+        $(".time-slider .tokio .time").text(calcTime(timeZones.tokio));
+        $(".time-slider .london .time").text(calcTime(timeZones.london));
+        $(".time-slider .dubai .time").text(calcTime(timeZones.dubai));
+    }
+
+    updateTimeSlider();
+
+    setInterval(updateTimeSlider, 500);
+
 });

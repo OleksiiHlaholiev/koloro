@@ -471,6 +471,9 @@ footer {
         @include mediaMaxWidth(1900px) {
             min-height: 140vh;
         }
+        @include mediaMaxWidth(1600px) {
+            background-position: center top;
+        }
         @include mediaMaxWidth(1400px) {
             min-height: 160vh;
         }
@@ -478,6 +481,7 @@ footer {
             //background-position: center top;
             min-height: 100%;
             background-image: url("../images/slide-2-mob.jpg");
+            background-position: left top;
         }
 
         .right-cont {

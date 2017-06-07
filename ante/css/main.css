@@ -355,13 +355,17 @@ footer {
   @media all and (max-width: 1900px) {
     #advantages-section .advantages-bg-container {
       min-height: 140vh; } }
+  @media all and (max-width: 1600px) {
+    #advantages-section .advantages-bg-container {
+      background-position: center top; } }
   @media all and (max-width: 1400px) {
     #advantages-section .advantages-bg-container {
       min-height: 160vh; } }
   @media all and (max-width: 1000px) {
     #advantages-section .advantages-bg-container {
       min-height: 100%;
-      background-image: url("../images/slide-2-mob.jpg"); } }
+      background-image: url("../images/slide-2-mob.jpg");
+      background-position: left top; } }
   #advantages-section .advantages-bg-container .right-cont {
     margin-left: 50%; }
     @media all and (max-width: 1000px) {

@@ -51,13 +51,11 @@ $(function () {
 
     // ******************** GLOBAL VARIABLES ****************************
     var scrollPreviousPosition = 0,
-        SCROLL_STEP = 100,
         isMobileViewFlag = true,
         mobileViewWidth = 768,
         achievmentsSectionFirstScroll = true,
         achievmentCounterBusyFlag = false,
-
-        scrollFuncTimer,
+        
         busyFlag = false;
 
     var topSection = document.querySelector("#top-section"),
@@ -230,90 +228,10 @@ $(function () {
 
     // **************************************************************
 
-    function scrollFunc(startPos, stopPos, step) {
-        var epsilon = 0.1,
-            step_ms = 10,
-            deltaScroll = (stopPos - startPos) / step;
-
-        if (Math.abs(deltaScroll) > epsilon) {
-            scrollFuncTimer = setInterval(
-                function () {
-                    // document.body.scrollTop
-                    if (deltaScroll == 0 ||
-                        (deltaScroll > 0 && pageYOffset >= stopPos) ||
-                        (deltaScroll < 0 && pageYOffset <= stopPos)) {
-                        clearInterval(scrollFuncTimer);
-                        busyFlag = false;
-                    } else {
-                        scrollBy(0, deltaScroll);
-                    }
-                },
-                step_ms
-            );
-        }
-        else {
-            busyFlag = false;
-        }
-    }
-
     function activeSectionHandler(event){
         event.preventDefault();
-        if (!busyFlag) {
-            var prevActiveItem = document.querySelector(".site-nav .active"),
-                stopPos = topSection.offsetTop;
-
-            busyFlag = true;
-            prevActiveItem.classList.remove("active");
-            this.classList.add("active");
-            this.style.textDecoration = "none";
-
-            if (window.innerWidth < mobileViewWidth) {
-                $(siteNav).slideUp("fast");
-            }
-
-            switch (this.getAttribute("href")) {
-                case "#tarif-section":
-                    stopPos = tarifSection.offsetTop;
-                    break;
-                case "#services-section":
-                    stopPos = servicesSection.offsetTop;
-                    break;
-                case "#contacts-section":
-                    stopPos = contactsSection.offsetTop;
-                    break;
-                default:
-                    stopPos = topSection.offsetTop;
-                    break;
-            }
-            // The pageYOffset property is an alias for the scrollY property:
-            // window.pageYOffset == window.scrollY; // always true
-            // For cross-browser compatibility, use window.pageYOffset instead of window.scrollY.
-            // Additionally, older versions of Internet Explorer (< 9) do not support either property
-            if (stopPos == topSection.offsetTop) {
-                scrollFunc(
-                    pageYOffset,
-                    stopPos,
-                    SCROLL_STEP
-                );
-            } else {
-                scrollFunc(
-                    pageYOffset,
-                    stopPos - header.clientHeight,
-                    SCROLL_STEP
-                );
-            }
-        }
-    }
-
-    function logoButtonHandler(event) {
-        event.preventDefault();
-        if (!busyFlag) {
-            busyFlag = true;
-            scrollFunc(
-                pageYOffset,
-                topSection.offsetTop,
-                SCROLL_STEP
-            )
+        if (window.innerWidth < mobileViewWidth) {
+            $(siteNav).slideUp("fast");
         }
     }
 
@@ -418,7 +336,15 @@ $(function () {
     window.addEventListener('resize', resizeWindowHandler);
 
     $(siteNavItems).on("click", activeSectionHandler);
-    $(logoBtn).on("click", logoButtonHandler);
+
+    $('a[href^="#"]').click(function(){
+        var el = $(this).attr('href');
+        $('body').animate({
+            scrollTop: $(el).offset().top}, 1000);
+        return false;
+    });
+
+    // $(logoBtn).on("click", logoButtonHandler);
 
     // ************************************************************************************
 

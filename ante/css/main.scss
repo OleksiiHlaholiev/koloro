@@ -1,0 +1,1334 @@
+@import "fonts";
+@import "mixins";
+
+$mobileWidth: 768px;
+$transitionTime: 0.4s;
+$yellowColor: #f2c58b;
+$blueDarkColor: #2b2f32;
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: #fefefe;
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0;
+
+    @include mediaMaxWidth($mobileWidth) {
+        width: 90%;
+    }
+}
+
+.clearfix::after, .container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.vertical-align {
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bg-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: scroll;
+
+    @include transition(1s);
+
+    .dark-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(60, 60, 60, 0.5);
+        z-index: 2; }
+}
+
+.menu-hidden {
+    top: -120px;
+}
+.menu-visible {
+    top: 0;
+}
+
+header {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-color: #282e3f;
+
+    @include transition($transitionTime);
+
+    .logo-cont {
+        display: inline-block;
+        vertical-align: top;
+        width: 120px;
+        text-align: left;
+
+        a {
+            display: inline-block;
+            img {
+                padding: 10px 0 2px 0;
+                height: 110px;
+
+                @include mediaMaxWidth($mobileWidth) {
+                    height: 80px;
+                }
+            }
+        }
+    }
+
+    .menu-cont, .menu-mob-btn-cont {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 120px);
+        text-align: right;
+    }
+
+    .menu-mob-btn-cont {
+        display: none;
+        .menu-mob-btn {
+            display: inline-block;
+            width: 50px;
+            margin: 25px 10px 15px 10px;
+            cursor: pointer;
+
+            div {
+                width: 100%;
+                height: 4px;
+                background: #fff;
+                margin-bottom: 10px;
+                transition: all 0.4s ease-out, opacity 0.2s;
+            }
+
+            .first-line, .second-line, .third-line {
+
+            }
+        }
+    }
+
+    .menu-cont {
+        .site-nav {
+            display: block;
+            width: 100%;
+
+            .nav-list {
+                padding: 0;
+                li {
+                    display: inline-block;
+
+                    a {
+                        font-size: 30px;
+                        font-family: $BebasNeueBold;
+                        color: rgb(255, 255, 255);
+                        text-transform: uppercase;
+                        line-height: 1.2;
+                        text-align: center;
+                        text-decoration: none;
+
+                        display: inline-block;
+                        padding: 37px 25px;
+
+                        @include transition($transitionTime);
+                    }
+                    a:hover, .active {
+                        color: $yellowColor;
+                    }
+                }
+            }
+
+        }
+    }
+
+    @include mediaMaxWidth($mobileWidth) {
+        .menu-cont {
+            display: block;
+            width: 100%;
+            .site-nav {
+                display: none;
+                height: 100vh;
+                //display: block;
+                .nav-list {
+                    li {
+                        display: block;
+                        a {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .menu-mob-btn-cont {
+            display: inline-block;
+        }
+    }
+}
+
+footer {
+    background-color: $blueDarkColor;
+    padding: 25px 0;
+
+    .footer-text {
+        margin: 0;
+        font-size: 14px;
+        font-family: $MuseoSansLight;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center;
+    }
+}
+
+.section-header {
+    font-size: 60px;
+    font-family: $BebasNeueBold;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+
+    margin: 0;
+    padding: 10vh 0 5vh 0;
+
+    @include transition($transitionTime);
+
+    @include mediaMaxWidth(1600px) {
+        font-size: 48px;
+    }
+    @include mediaMaxWidth(1200px) {
+        font-size: 42px;
+    }
+    @include mediaMaxWidth($mobileWidth) {
+        font-size: 30px;
+        padding: 5vh 0 2vh 0;
+    }
+}
+
+.callback-btn, .submit-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 20px 5px;
+    width: 300px;
+    max-width: 95%;
+
+    font-size: 30px;
+    font-family: $BebasNeueBold;
+
+    color: $blueDarkColor;
+    background-color: $yellowColor;
+
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+
+    @include transition($transitionTime);
+
+    @include mediaMaxWidth($mobileWidth) {
+        font-size: 18px;
+        padding: 10px 5px;
+    }
+}
+.callback-btn:hover, .submit-btn:hover {
+    color: #fff;
+    background-color: #aeaeae;
+}
+
+// start of top-section
+#top-section {
+    position: relative;
+    padding-top: 110px;
+
+    @include mediaMaxWidth($mobileWidth) {
+        padding-top: 80px;
+    }
+
+    .top-bg-container {
+        height: calc(100vh - 110px);
+
+        @include mediaMaxWidth($mobileWidth) {
+            height: calc(100vh - 80px);
+        }
+
+        background-position: center top;
+        background-attachment: fixed;
+        background-image: url("../images/slide-1.png");
+
+        .container {
+            max-width: 1000px;
+            height: 100%;
+        }
+
+        .section-header {
+            color: #fff;
+            text-align: left;
+        }
+
+        .info-container {
+            font-size: 0;
+
+            .left-cont, .right-cont {
+                display: inline-block;
+                vertical-align: top;
+            }
+            .left-cont {
+                width: calc(100% - 350px);
+                text-align: left;
+                padding-right: 20px;
+            }
+
+            .right-cont {
+                width: 350px;
+                text-align: right;
+
+                @include mediaMaxWidth($mobileWidth) {
+                    display: none;
+                }
+            }
+
+            @include mediaMaxWidth($mobileWidth) {
+                .left-cont, .right-cont {
+                    width: 100%;
+                }
+                .right-cont {
+                    display: none;
+                }
+            }
+        }
+
+        .registration-slider {
+            .item {
+                .registration-title {
+                    font-size: 48px;
+                    font-family: $BebasNeueBold;
+                    color: rgb(255, 255, 255);
+                    text-transform: uppercase;
+                    line-height: 1.2;
+                    text-align: left;
+                }
+                .registration-text {
+                    margin: 15px 0;
+                    font-size: 18px;
+                    font-family: $MuseoSansLight;
+                    color: rgb(255, 255, 255);
+                    line-height: 1.2;
+                    text-align: left;
+
+                    @include mediaMaxWidth($mobileWidth) {
+                        margin: 5px 0;
+                    }
+                }
+            }
+
+            .owl-dots {
+                counter-reset: navCnt; //reset counter
+
+                padding-bottom: 10px;
+
+                .owl-dot {
+                    //zoom: 2;
+                    width: calc(100% / 6);
+                    text-align: center;
+                }
+                .owl-dot span {
+                    position: relative;
+                    background: transparent;
+                    display: block;
+                    width: 90%;
+                    margin: 5px 0;
+                    //border: 1px solid $yellowColor;
+                    border-radius: 0;
+                    border-bottom: 1px solid #fff;
+                }
+                .owl-dot span:after {
+                    counter-increment: navCnt;
+                    content: "0"counter(navCnt)".";
+                    display: inline-block;
+
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+
+                    font-size: 14px;
+                    font-family: $BebasNeueBold;
+                    color: #fff;
+                    line-height: 1.2;
+
+                    @include mediaMaxWidth($mobileWidth) {
+                        font-size: 10px;
+                    }
+                }
+
+                .owl-dot.active span, .owl-dot:hover span {
+                    background: transparent;
+
+                    border-radius: 0;
+                    border-bottom: 1px solid $yellowColor;
+                }
+                .owl-dot.active span:after, .owl-dot:hover span:after {
+                    color: $yellowColor;
+                }
+            }
+        }
+
+        .time-slider-cont {
+            position: absolute;
+            z-index: 5;
+            bottom: 5vh;
+            width: 100%;
+
+            @include mediaMaxHeight(550px) {
+                display: none;
+            }
+
+            .arrow-left-btn, .arrow-right-btn {
+                display: inline-block;
+                vertical-align: top;
+                cursor: pointer;
+
+                position: relative;
+                top: 10px;
+            }
+
+            .time-slider {
+                display: inline-block;
+                width: 250px;
+                margin: auto;
+
+                @include mediaMaxWidth($mobileWidth) {
+                    width: 200px;
+                }
+
+                .item {
+                    p {
+                        margin: 20px 0;
+                    }
+                    p:first-child {
+                        margin-top: 0;
+                    }
+                    .time {
+                        font-size: 52px;
+                        font-family: $MuseoSansLight;
+                        color: rgb(255, 255, 255);
+                        line-height: 1.2;
+                        text-align: center;
+
+                        @include mediaMaxWidth($mobileWidth) {
+                            font-size: 24px;
+                        }
+                    }
+                    .location {
+                        font-size: 16px;
+                        font-family: $MuseoSansLight;
+                        color: rgb(255, 255, 255);
+                        text-transform: uppercase;
+                        line-height: 1.2;
+                        text-align: center;
+
+                        @include mediaMaxWidth($mobileWidth) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+// end of top-section
+
+//start of advantages-section
+#advantages-section {
+    .advantages-bg-container {
+        background-position: left top;
+        background-image: url("../images/slide-2.png");
+        min-height: 100vh;
+        height: 100%;
+
+        @include mediaMaxWidth($mobileWidth) {
+            //background-position: center top;
+            background-image: url("../images/slide-2-mob.jpg");
+        }
+
+        .right-cont {
+            margin-left: 50%;
+
+            @include mediaMaxWidth($mobileWidth) {
+                margin-left: 0;
+            }
+        }
+
+        .section-header {
+            color: #fff;
+            text-align: left;
+            padding: 10vh 0 0 0;
+            @include mediaMaxWidth($mobileWidth) {
+                padding: 5vh 0 0 0;
+            }
+        }
+
+        .advantage-item {
+            .advantage-title {
+                position: relative;
+                margin: 20px 0;
+                font-size: 30px;
+                font-family: $BebasNeueBold;
+                color: #fff;
+                line-height: 1.2;
+                text-align: left;
+
+                @include mediaMaxWidth($mobileWidth) {
+                    font-size: 20px;
+                }
+            }
+            .advantage-title:before {
+                display: inline-block;
+                text-align: center;
+                content: '1';
+                position: absolute;
+                top: 0;
+                left: -60px;
+                width: 35px;
+                height: 35px;
+                border: 1px solid #fff;
+                border-radius: 50%;
+
+                @include mediaMaxWidth($mobileWidth) {
+                    position: relative;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 5px;
+                }
+            }
+
+            .title-1:before {
+                content: '1';
+            }
+            .title-2:before {
+                content: '2';
+            }
+            .title-3:before {
+                content: '3';
+            }
+
+            .advantage-text {
+                margin: 10px 0;
+                font-size: 24px;
+                font-family: $MuseoSansLight;
+                color: #fff;
+                line-height: 1.2;
+                text-align: left;
+
+                @include mediaMaxWidth($mobileWidth) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+// end of advantages-section
+
+// start of tarif-section
+#tarif-section {
+    .section-header {
+        color: #000;
+    }
+
+    .tarif-title {
+        font-size: 20px;
+        font-family: $MuseoSansLight;
+        color: rgba(0, 0, 0, 0.702);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center;
+
+        @include mediaMaxWidth($mobileWidth) {
+            font-size: 12px;
+        }
+    }
+
+    .tarif-items-cont {
+        font-size: 0;
+        .tarif-item-cont {
+            display: inline-block;
+            padding: 0 25px;
+            width: calc(100% / 3);
+
+            @include mediaMaxWidth(1400px) {
+                width: 50%;
+            }
+            @include mediaMaxWidth(1000px) {
+                width: 100%;
+                padding: 0 5px;
+            }
+
+            .price-cont {
+                font-size: 0;
+
+                p {
+                    margin: 0;
+                }
+
+                .left-cont, .right-cont {
+                    display: inline-block;
+                    width: 50%;
+                }
+                .left-cont {
+                    text-align: right;
+                    padding-right: 5px;
+                    border-right: 1px solid #000;
+
+                    .price {
+                        font-size: 48px;
+                        font-family: $BebasNeueBold;
+                        color: rgb(0, 0, 0);
+                        text-transform: uppercase;
+                        line-height: 1.2;
+                        text-align: right;
+
+                        @include mediaMaxWidth($mobileWidth) {
+                            font-size: 36px;
+                        }
+                    }
+
+                    .currency {
+                        font-size: 14px;
+                        font-family: $MuseoSansBlack;
+                        color: rgb(0, 0, 0);
+                        text-transform: uppercase;
+                        line-height: 1.2;
+                        text-align: right;
+
+                        @include mediaMaxWidth($mobileWidth) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .right-cont {
+                    text-align: left;
+                    padding-left: 5px;
+
+                    .tarif-title {
+                        font-size: 24px;
+                        font-family: $MuseoSansLight;
+                        color: rgb(0, 0, 0);
+                        line-height: 1.2;
+                        text-align: left;
+
+                        @include mediaMaxWidth($mobileWidth) {
+                            font-size: 18px;
+                        }
+                    }
+                    .tarif-name {
+                        font-size: 34px;
+                        font-family: $MuseoSansLight;
+                        color: rgb(242, 197, 139);
+                        text-transform: uppercase;
+                        line-height: 1.2;
+                        text-align: left;
+
+                        @include mediaMaxWidth($mobileWidth) {
+                            font-size: 24px;
+                        }
+                    }
+
+                }
+
+            }
+
+            .tarif-list {
+                width: 100%;
+                padding: 20px 0;
+                li {
+                    display: block;
+                    height: 60px;
+                    margin: 1px 0;
+                    padding: 0 20px;
+                    //text-align: left;
+
+                    width: 100%;
+                    display: -webkit-flex;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+
+                    list-style: none;
+                    background-color: #f1f1f1;
+
+                    font-size: 12px;
+                    font-family: $MuseoSansBlack;
+                    color: rgb(0, 0, 0);
+                    text-transform: uppercase;
+                    line-height: 1.2;
+
+                    @include mediaMaxWidth(1600px) {
+                        height: 70px;
+                    }
+                }
+
+
+                @include mediaMaxWidth(1000px) {
+                    li.mob-hidden {
+                        display: none;
+                    }
+                }
+                @include mediaMaxWidth($mobileWidth) {
+                    li {
+                        font-size: 10px;
+                        padding: 0 10px;
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+// end of tarif-section
+
+// start of services-section
+#services-section {
+    padding-bottom: 50px;
+
+    @include mediaMaxWidth($mobileWidth) {
+        padding-bottom: 20px;
+    }
+
+    .container {
+        max-width: 1000px;
+    }
+    .section-header {
+        color: #000;
+    }
+    .services-items-cont {
+        font-size: 0;
+        .services-item {
+            display: inline-block;
+            float: left;
+            width: 25%;
+            padding: 10px;
+
+            @include mediaMaxWidth(1200px) {
+                width: 50%;
+            }
+            @include mediaMaxWidth($mobileWidth) {
+                width: 100%;
+            }
+
+            .service-icon {
+                img {
+                    width: 100%;
+                    max-width: 177px;
+
+                    @include mediaMaxWidth($mobileWidth) {
+                        max-width: 100px;
+                    }
+                }
+            }
+            .icon-text {
+                font-size: 24px;
+                font-family: $BebasNeueBold;
+                color: rgb(40, 46, 63);
+                text-transform: uppercase;
+                line-height: 1.2;
+
+                @include mediaMaxWidth($mobileWidth) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .mobile-hidden {
+        display: block;
+
+        @include mediaMaxWidth($mobileWidth) {
+            display: none;
+        }
+    }
+
+    .more-services-btn {
+        display: none;
+
+        @include mediaMaxWidth($mobileWidth) {
+            display: block;
+        }
+
+        img {
+
+        }
+    }
+    .icon-rotate {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+// end of services-section
+
+// start of achievments-section
+#achievments-section {
+    //background-color: $blueDarkColor;
+    background-image: url("../images/statistics-bg.jpg");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding: 80px 0;
+
+    @include mediaMaxWidth($mobileWidth) {
+        padding: 30px 0;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    .achievments-items-cont {
+        text-align: left;
+        .achievment-item {
+            display: inline-block;
+            vertical-align: top;
+            width: 20%;
+            min-height: 200px;
+            padding: 0 10px;
+            margin: 10px 0;
+            border-right: 2px solid #fff;
+
+            @include mediaMaxWidth(1200px) {
+                width: calc(100% / 3);
+                min-height: 160px;
+            }
+            @include mediaMaxWidth($mobileWidth) {
+                width: 50%;
+                border-right: none;
+            }
+
+            .achievment-counter {
+                margin: 10px;
+                font-size: 80px;
+                font-family: $BebasNeueBold;
+                color: #fff;
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 1.2;
+                text-align: center;
+
+                @include mediaMaxWidth(1400px) {
+                    font-size: 70px;
+                }
+                @include mediaMaxWidth(1200px) {
+                    font-size: 60px;
+                }
+                @include mediaMaxWidth($mobileWidth) {
+                    font-size: 48px;
+                }
+            }
+            .achievment-text {
+                margin: 10px;
+                font-size: 16px;
+                font-family: $MuseoSansLight;
+                color: rgb(255, 255, 255);
+                text-transform: uppercase;
+                line-height: 1.2;
+                text-align: center;
+
+                @include mediaMaxWidth($mobileWidth) {
+                    text-transform: lowercase;
+                }
+            }
+
+        }
+    }
+}
+// end of achievments-section
+
+// start of reviews-section
+#reviews-section {
+    background-image: url("../images/slide-reviews.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+
+    @include mediaMaxWidth($mobileWidth) {
+        padding: 25px 0;
+    }
+
+    //.reviews-slider-cont {
+    //    position: relative;
+    //    .arrow-left-btn, .arrow-right-btn {
+    //        display: inline-block;
+    //        vertical-align: top;
+    //        cursor: pointer;
+    //
+    //        position: absolute;
+    //        top: 50%;
+    //        -webkit-transform: translateY(-50%);
+    //        -moz-transform: translateY(-50%);
+    //        transform: translateY(-50%);
+    //    }
+    //    .arrow-left-btn {
+    //        left: -50px;
+    //
+    //        @include mediaMaxWidth($mobileWidth) {
+    //            left: 50px;
+    //        }
+    //    }
+    //    .arrow-right-btn {
+    //        right: -50px;
+    //
+    //        @include mediaMaxWidth($mobileWidth) {
+    //            right: 50px;
+    //        }
+    //    }
+    //
+    //    .reviews-slider {
+    //        display: inline-block;
+    //        max-width: 1200px;
+    //        width: 100%;
+    //        margin: auto;
+    //
+    //        @include mediaMaxWidth($mobileWidth) {
+    //            //width: 200px;
+    //        }
+    //
+    //        .item {
+    //            width: 100%;
+    //            .full-cont {
+    //                font-size: 0;
+    //                margin: 50px 0;
+    //                .left-cont {
+    //                    display: inline-block;
+    //                    width: 30%;
+    //                }
+    //                .right-cont {
+    //                    display: inline-block;
+    //                    width: 70%;
+    //                }
+    //            }
+    //
+    //            .review-img {
+    //                text-align: center;
+    //                img {
+    //                    display: inline-block;
+    //                    width: 100%;
+    //                    max-width: 200px;
+    //                    border-radius: 50%;
+    //                }
+    //            }
+    //            .review-info {
+    //                padding: 30px 50px;
+    //                background-color: #fff;
+    //                .review-text {
+    //                    font-size: 18px;
+    //                    font-family: $MuseoSansLight;
+    //                    color: rgb(0, 0, 0);
+    //                    line-height: 1.2;
+    //                    text-align: left;
+    //                    text-transform: uppercase;
+    //                }
+    //                .review-author {
+    //                    font-size: 16px;
+    //                    font-family: $MuseoSansLight;
+    //                    color: rgb(0, 0, 0);
+    //                    line-height: 1.2;
+    //                    text-align: left;
+    //                    text-transform: capitalize;
+    //                }
+    //            }
+    //
+    //            @include mediaMaxWidth($mobileWidth) {
+    //                .full-cont {
+    //                    .left-cont, .right-cont {
+    //                        width: 100%;
+    //                    }
+    //                    .left-cont {
+    //                        display: none;
+    //                    }
+    //                }
+    //
+    //                .review-info {
+    //                    padding: 10px;
+    //                }
+    //
+    //            }
+    //
+    //        }
+    //    }
+    //}
+}
+// end of reviews-section
+
+// start of partners-section
+#partners-section {
+    background-color: $blueDarkColor;
+    padding-bottom: 50px;
+
+    @include mediaMaxWidth($mobileWidth) {
+        padding-bottom: 25px;
+    }
+
+    .section-header {
+        color: #fff;
+    }
+
+    .partners-slider-cont {
+        position: relative;
+        max-width: 1200px;
+        width: 80%;
+        margin: auto;
+
+        .arrow-left-btn, .arrow-right-btn {
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            transform: translateY(-50%);
+
+            @include mediaMaxWidth($mobileWidth) {
+                -webkit-transform: translateY(-50%) scale(0.7);
+                -moz-transform: translateY(-50%) scale(0.7);
+                transform: translateY(-50%) scale(0.7);
+            }
+        }
+        .arrow-left-btn {
+            left: -50px;
+
+            @include mediaMaxWidth($mobileWidth) {
+                //left: 50px;
+            }
+        }
+        .arrow-right-btn {
+            right: -50px;
+
+            @include mediaMaxWidth($mobileWidth) {
+                //right: 50px;
+            }
+        }
+
+        .partners-slider {
+            display: inline-block;
+
+            @include mediaMaxWidth($mobileWidth) {
+                //width: 200px;
+            }
+
+            .item {
+                .image-cont {
+                    padding: 10px 30px;
+                    text-align: center;
+
+                    @include mediaMaxWidth($mobileWidth) {
+                        padding: 10px;
+                    }
+
+                    img {
+                        display: inline-block;
+                        width: 100%;
+                        max-width: 500px;
+                    }
+                }
+            }
+        }
+
+        .owl-dots {
+            padding-top: 20px;
+
+            @include mediaMaxWidth($mobileWidth) {
+                display: none;
+            }
+
+            .owl-dot {
+                //zoom: 2;
+            }
+            .owl-dot span {
+                width: 20px;
+                height: 20px;
+
+                position: relative;
+                background: transparent;
+                display: block;
+                border: 1px solid $yellowColor;
+                //padding: 2px;
+            }
+
+            .owl-dot.active span, .owl-dot:hover span {
+                //padding: 2px;
+                background: $yellowColor;
+            }
+        }
+    }
+}
+// end of partners-section
+
+// start of questions-section
+#questions-section {
+    background-image: url("../images/questions-bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+
+    @include mediaMaxWidth($mobileWidth) {
+        padding-bottom: 20px;
+    }
+
+
+    .section-header {
+        color: #000;
+    }
+}
+// end of contacts-section
+
+// start of questions-section
+#contacts-section {
+    padding: 50px 0;
+
+    @include mediaMaxWidth(1000px) {
+        padding: 25px 0;
+    }
+
+    .full-cont {
+        font-size: 0;
+        .left-cont, .right-cont, .middle-cont {
+            display: inline-block;
+            vertical-align: top;
+            padding: 10px 20px;
+            text-align: left;
+        }
+        .left-cont, .right-cont {
+            width: 30%;
+        }
+        .middle-cont {
+            width: 40%;
+        }
+        @include mediaMaxWidth(1000px) {
+            .left-cont, .right-cont, .middle-cont {
+                width: 100%;
+                padding: 10px 0;
+            }
+        }
+
+        @include mediaMaxWidth(1000px) {
+            .mobile-visible {
+                display: inline-block;
+            }
+            .desktop-visible {
+                display: none;
+            }
+        }
+        @include mediaMinWidth(1000px) {
+            .mobile-visible {
+                display: none;
+            }
+            .desktop-visible {
+                display: inline-block;
+            }
+        }
+    }
+
+    .contacts-header {
+        margin: 0;
+        padding-bottom: 20px;
+        font-size: 36px;
+        font-family: $BebasNeueBold;
+        color: rgb(0, 0, 0);
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    .contact-info, .contact-email, .address-info {
+        margin: 0;
+        font-size: 18px;
+        font-family: $MuseoSansLight;
+        color: rgb(0, 0, 0);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: left;
+    }
+    .contact-email, .work-time {
+        padding: 20px 0;
+    }
+
+    .address-info {
+        text-transform: none;
+    }
+
+    .work-time {
+        margin: 0;
+        font-size: 36px;
+        font-family: $BebasNeueBold;
+        color: rgb(0, 0, 0);
+        line-height: 1.2;
+        text-align: left;
+    }
+    .work-time:before {
+        content: url("../images/icon-clock.png");
+        padding-right: 10px;
+    }
+
+    .map {
+        pointer-events: none;
+        width: 100%;
+        height: 300px;
+    }
+}
+// end of contacts-section
+
+// start of order-form (general container)
+.order-form {
+    display: none;
+    //display: block;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(71, 71, 71, 0.702);
+    overflow: auto;
+
+    .form-wrapper {
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 800px;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: -50px;
+        right: 0;
+        cursor: pointer;
+        transition: all 0.4s;
+
+        @include mediaMaxHeight(550px) {
+            top: -20px;
+        }
+    }
+    .close-btn:hover {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    .form-header {
+        margin: 30px 0;
+        font-size: 36px;
+        font-family: $BebasNeueBold;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: center;
+
+        @include mediaMaxHeight(550px) {
+            margin: 15px 0;
+        }
+    }
+
+    .full-cont {
+        font-size: 0;
+        .left-cont, .right-cont {
+            display: inline-block;
+            width: 50%;
+
+            @include mediaMaxWidth($mobileWidth) {
+                width: 100%;
+            }
+        }
+        .left-cont {
+            padding-right: 1px;
+        }
+        .right-cont {
+            padding-left: 1px;
+        }
+
+        @include mediaMaxWidth($mobileWidth) {
+            .left-cont, .right-cont {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+    }
+
+    .text-field-cont {
+        text-align: left;
+
+        .text-field {
+            height: 150px;
+
+            @include mediaMaxHeight(550px) {
+                height: 120px;
+            }
+        }
+    }
+
+    .user-name, .user-contact, .text-field {
+        display: block;
+        width: 100%;
+        margin: 2px;
+        padding: 15px 25px;
+
+        font-size: 18px;
+        font-family: $MuseoSansLight;
+        color: rgb(0, 0, 0);
+        text-transform: none;
+        line-height: 1.2;
+        text-align: left;
+
+        @include mediaMaxHeight(550px) {
+            padding: 10px 15px;
+        }
+
+    }
+
+    .submit-btn {
+        border: none;
+        outline: none;
+        margin-top: 30px;
+
+        @include mediaMaxWidth(600px) {
+            margin-top: 15px;
+        }
+    }
+}
+
+input::-moz-placeholder,
+input::-webkit-input-placeholder,
+input:-ms-input-placeholder {
+    color: #9fb9c6;
+}
+
+
+// end of order-form (general container)
+

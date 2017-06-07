@@ -477,7 +477,7 @@ footer {
         @include mediaMaxWidth(1400px) {
             min-height: 160vh;
         }
-        @include mediaMaxWidth(1000px) {
+        @include mediaMaxWidth(1024px) {
             //background-position: center top;
             min-height: 100%;
             background-image: url("../images/slide-2-mob.jpg");
@@ -487,7 +487,7 @@ footer {
         .right-cont {
             margin-left: 50%;
 
-            @include mediaMaxWidth(1000px) {
+            @include mediaMaxWidth(1024px) {
                 margin-left: 0;
             }
         }
@@ -598,7 +598,7 @@ footer {
             @include mediaMaxWidth(1300px) {
                 width: 50%;
             }
-            @include mediaMaxWidth(1024px) {
+            @include mediaMaxWidth(1000px) {
                 width: 100%;
                 padding: 0 5px;
             }

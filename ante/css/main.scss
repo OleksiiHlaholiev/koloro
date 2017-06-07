@@ -468,8 +468,11 @@ footer {
         min-height: 100vh;
         height: 100%;
 
-        @include mediaMaxWidth(1600px) {
+        @include mediaMaxWidth(1900px) {
             min-height: 140vh;
+        }
+        @include mediaMaxWidth(1400px) {
+            min-height: 160vh;
         }
         @include mediaMaxWidth(1000px) {
             //background-position: center top;

@@ -55,7 +55,7 @@ $(function () {
         mobileViewWidth = 768,
         achievmentsSectionFirstScroll = true,
         achievmentCounterBusyFlag = false,
-        
+
         busyFlag = false;
 
     var topSection = document.querySelector("#top-section"),
@@ -337,6 +337,7 @@ $(function () {
 
     $(siteNavItems).on("click", activeSectionHandler);
 
+    // animate-scroll to all anchors on page
     $('a[href^="#"]').click(function(){
         var el = $(this).attr('href');
         $('body').animate({

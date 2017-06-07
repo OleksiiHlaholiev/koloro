@@ -352,9 +352,12 @@ footer {
   background-image: url("../images/slide-2.png");
   min-height: 100vh;
   height: 100%; }
-  @media all and (max-width: 1600px) {
+  @media all and (max-width: 1900px) {
     #advantages-section .advantages-bg-container {
       min-height: 140vh; } }
+  @media all and (max-width: 1400px) {
+    #advantages-section .advantages-bg-container {
+      min-height: 160vh; } }
   @media all and (max-width: 1000px) {
     #advantages-section .advantages-bg-container {
       min-height: 100%;

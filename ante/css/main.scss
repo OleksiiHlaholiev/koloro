@@ -227,7 +227,7 @@ footer {
     }
 }
 
-.callback-btn, .submit-btn {
+.gl-btn {
     display: block;
     margin: 20px auto;
     padding: 20px 5px;
@@ -252,7 +252,7 @@ footer {
         padding: 10px 5px;
     }
 }
-.callback-btn:hover, .submit-btn:hover {
+.gl-btn:hover {
     color: #fff;
     background-color: #aeaeae;
 }

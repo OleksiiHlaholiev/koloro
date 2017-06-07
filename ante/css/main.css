@@ -185,7 +185,7 @@ footer {
       font-size: 30px;
       padding: 7vh 0 2vh 0; } }
 
-.callback-btn, .submit-btn {
+.gl-btn {
   display: block;
   margin: 20px auto;
   padding: 20px 5px;
@@ -203,11 +203,11 @@ footer {
   -moz-transition: all 0.4s;
   transition: all 0.4s; }
   @media all and (max-width: 768px) {
-    .callback-btn, .submit-btn {
+    .gl-btn {
       font-size: 18px;
       padding: 10px 5px; } }
 
-.callback-btn:hover, .submit-btn:hover {
+.gl-btn:hover {
   color: #fff;
   background-color: #aeaeae; }
 

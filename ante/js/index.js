@@ -342,6 +342,12 @@ $(function () {
         var tempHours, tempMinutes, resultTimeStr;
 
         tempHours = tempDate.getUTCHours() + timeZone;
+        if(tempHours >= 24) {
+            tempHours = tempHours - 24;
+        } else if (tempHours < 0) {
+            tempHours = 24 + tempHours;
+        }
+
         if (tempHours < 10) {
             tempHours = "0" + tempHours;
         }
@@ -356,7 +362,9 @@ $(function () {
         return resultTimeStr;
     }
 
-    // calcTime(timeZones[countries[0]]);
+    // console.log(calcTime(-10));
+    // console.log(calcTime(18));
+    // console.log(calcTime(20));
 
     function updateTimeSlider() {
         var tempTimeStr;

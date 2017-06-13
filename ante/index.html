@@ -525,5 +525,25 @@
 
 <script src="js/index.js"></script>
 
+<script>
+    //    form-handler
+    $(".order-form").submit(function(event) { //устанавливаем событие отправки для формы
+        event.preventDefault();
+        var form_data = $(this).serialize(); //собераем все данные из формы
+        $.ajax({
+            type: "POST", //Метод отправки
+            url: "php/send.php", //путь до php фаила отправителя
+            data: form_data,
+            success: function () {
+                //код в этом блоке выполняется при успешной отправке сообщения
+                alert("Ваше сообщение отправлено!");
+            },
+            error: function () {
+                alert("Произошла ошибка при отправке...( Попробуйте еще раз!");
+            }
+        });
+    });
+</script>
+
 </body>
 </html>

@@ -199,6 +199,7 @@ footer {
   line-height: 1.2;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s; }

@@ -244,6 +244,7 @@ footer {
     line-height: 1.2;
     text-align: center;
     text-decoration: none;
+    cursor: pointer;
 
     @include transition($transitionTime);
 

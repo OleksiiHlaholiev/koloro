@@ -388,11 +388,12 @@ $(function () {
     setInterval(updateTimeSlider, 500);
 
 //    form-handler
-    $(".order-form").submit(function() { //устанавливаем событие отправки для формы
+    $(".order-form").submit(function(event) { //устанавливаем событие отправки для формы
+        event.preventDefault();
         var form_data = $(this).serialize(); //собераем все данные из формы
         $.ajax({
             type: "POST", //Метод отправки
-            url: "../php/send.php", //путь до php фаила отправителя
+            url: "php/send.php", //путь до php фаила отправителя
             data: form_data,
             success: function () {
                 //код в этом блоке выполняется при успешной отправке сообщения

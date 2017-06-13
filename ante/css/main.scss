@@ -978,7 +978,7 @@ footer {
                 position: relative;
                 background: transparent;
                 display: block;
-                border: 1px solid $yellowColor;
+                border: 2px solid $yellowColor;
                 //padding: 2px;
             }
 
@@ -1184,7 +1184,7 @@ footer {
     .text-field-cont {
         text-align: left;
 
-        .text-field {
+        .user-text {
             height: 150px;
 
             @include mediaMaxHeight(550px) {
@@ -1193,7 +1193,7 @@ footer {
         }
     }
 
-    .user-name, .user-contact, .text-field {
+    .user-name, .user-contact, .user-text {
         display: block;
         width: 100%;
         margin: 2px;

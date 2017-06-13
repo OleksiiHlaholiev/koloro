@@ -362,6 +362,7 @@ $(function () {
         return resultTimeStr;
     }
 
+    // ************** tests of function calcTime() **********************
     // console.log(calcTime(-10));
     // console.log(calcTime(18));
     // console.log(calcTime(20));
@@ -385,5 +386,19 @@ $(function () {
     updateTimeSlider();
 
     setInterval(updateTimeSlider, 500);
+
+//    form-handler
+    $(".order-form").submit(function() { //устанавливаем событие отправки для формы
+        var form_data = $(this).serialize(); //собераем все данные из формы
+        $.ajax({
+            type: "POST", //Метод отправки
+            url: "php/send.php", //путь до php фаила отправителя
+            data: form_data,
+            success: function () {
+                //код в этом блоке выполняется при успешной отправке сообщения
+                alert("Ваше сообщение отправлено!");
+            }
+        });
+    });
 
 });

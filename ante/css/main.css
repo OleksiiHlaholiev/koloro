@@ -702,7 +702,7 @@ footer {
         position: relative;
         background: transparent;
         display: block;
-        border: 1px solid #f2c58b; }
+        border: 2px solid #f2c58b; }
       #partners-section .partners-slider-cont .owl-dots .owl-dot.active span, #partners-section .partners-slider-cont .owl-dots .owl-dot:hover span {
         background: #f2c58b; }
 
@@ -837,12 +837,12 @@ footer {
         padding: 0; } }
   .order-form .text-field-cont {
     text-align: left; }
-    .order-form .text-field-cont .text-field {
+    .order-form .text-field-cont .user-text {
       height: 150px; }
       @media all and (max-height: 550px) {
-        .order-form .text-field-cont .text-field {
+        .order-form .text-field-cont .user-text {
           height: 120px; } }
-  .order-form .user-name, .order-form .user-contact, .order-form .text-field {
+  .order-form .user-name, .order-form .user-contact, .order-form .user-text {
     display: block;
     width: 100%;
     margin: 2px;
@@ -854,7 +854,7 @@ footer {
     line-height: 1.2;
     text-align: left; }
     @media all and (max-height: 550px) {
-      .order-form .user-name, .order-form .user-contact, .order-form .text-field {
+      .order-form .user-name, .order-form .user-contact, .order-form .user-text {
         padding: 10px 15px; } }
   .order-form .submit-btn {
     border: none;

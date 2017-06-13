@@ -5,7 +5,7 @@
         (isset($_POST['user-text'])&&$_POST['user-text']!="")
         ){ 
     //Проверка отправилось ли наше поля name и не пустые ли они
-        $to = 'oleksii.hlaholiev@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
+        $to = 'oleksii.hlaholiev@gmail.com, kozitskyi@koloro.ua, m.kozitskyi@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
         $subject = 'Обратный звонок с сайта landos.ante.com.ua'; //Загаловок сообщения
         $message = '
                 <html>
@@ -19,7 +19,7 @@
                     </body>
                 </html>'; //Текст нащего сообщения можно использовать HTML теги
         $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
-        $headers .= "From: Отправитель <landos.ante@.com.ua>\r\n"; //Наименование и почта отправителя
+        $headers .= "From: Отправитель <oleksii.hlaholiev@gmail.com>\r\n"; //Наименование и почта отправителя
         mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
     }
 ?>

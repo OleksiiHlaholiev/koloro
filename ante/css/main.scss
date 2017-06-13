@@ -882,6 +882,9 @@ footer {
             }
 
         }
+        .achievment-item:last-child {
+            border-right: none;
+        }
     }
 }
 // end of achievments-section

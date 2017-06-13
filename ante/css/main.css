@@ -648,6 +648,8 @@ footer {
         @media all and (max-width: 768px) {
           #achievments-section .achievments-items-cont .achievment-item .achievment-text {
             text-transform: lowercase; } }
+    #achievments-section .achievments-items-cont .achievment-item:last-child {
+      border-right: none; }
 
 #partners-section {
   background-color: #2b2f32;

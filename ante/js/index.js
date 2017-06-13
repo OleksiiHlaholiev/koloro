@@ -387,8 +387,9 @@ $(function () {
 
     setInterval(updateTimeSlider, 500);
 
+    var orderForm = document.querySelector(".order-form");
 //    form-handler
-    $(".order-form").submit(function(event) { //устанавливаем событие отправки для формы
+    $(orderForm).submit(function(event) { //устанавливаем событие отправки для формы
         event.preventDefault();
         var form_data = $(this).serialize(); //собераем все данные из формы
         $.ajax({
@@ -398,7 +399,8 @@ $(function () {
             success: function () {
                 //код в этом блоке выполняется при успешной отправке сообщения
                 alert("Ваше сообщение отправлено!");
-                $(".order-form").reset().fadeOut(400);
+                orderForm.reset();
+                $(orderForm).fadeOut(400);
             },
             error: function () {
                 alert("Произошла ошибка при отправке...( Попробуйте еще раз!");

@@ -284,8 +284,41 @@ footer {
         }
 
         .section-header {
+            font-size: 100px;
+
+            padding: 20vh 0 5vh 0;
+
+            @include mediaMaxWidth(1600px) {
+                font-size: 60px;
+            }
+            @include mediaMaxWidth(1200px) {
+                font-size: 48px;
+                padding: 10vh 0 5vh 0;
+            }
+            @include mediaMaxWidth($mobileWidth) {
+                font-size: 36px;
+                padding: 7vh 0 2vh 0;
+            }
+
             color: #fff;
             text-align: left;
+        }
+
+        .registration-title {
+            margin: 0;
+            margin-bottom: 30px;
+
+            font-size: 36px;
+            font-family: $BebasNeueBold;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            line-height: 1.2;
+            text-align: left;
+
+            @include mediaMaxWidth($mobileWidth) {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
         }
 
         .info-container {
@@ -347,7 +380,12 @@ footer {
             .owl-dots {
                 counter-reset: navCnt; //reset counter
 
+                margin-top: 40px;
                 padding-bottom: 10px;
+
+                @include mediaMaxHeight(600px) {
+                    margin-top: 10px;
+                }
 
                 .owl-dot {
                     //zoom: 2;
@@ -373,13 +411,13 @@ footer {
                     right: 0;
                     bottom: 0;
 
-                    font-size: 14px;
+                    font-size: 24px;
                     font-family: $BebasNeueBold;
                     color: #fff;
                     line-height: 1.2;
 
                     @include mediaMaxWidth($mobileWidth) {
-                        font-size: 10px;
+                        font-size: 14px;
                     }
                 }
 
@@ -929,14 +967,14 @@ footer {
             left: -50px;
 
             @include mediaMaxWidth($mobileWidth) {
-                //left: 50px;
+                left: -35px;
             }
         }
         .arrow-right-btn {
             right: -50px;
 
             @include mediaMaxWidth($mobileWidth) {
-                //right: 50px;
+                right: -35px;
             }
         }
 
@@ -1109,8 +1147,8 @@ footer {
 }
 // end of contacts-section
 
-// start of order-form (general container)
-.order-form {
+// start of ante-form (general container)
+.ante-form {
     display: none;
     //display: block;
     position: fixed;
@@ -1226,6 +1264,7 @@ footer {
         }
     }
 }
+// end of ante-form (general container)
 
 input::-moz-placeholder,
 input::-webkit-input-placeholder,
@@ -1233,6 +1272,50 @@ input:-ms-input-placeholder {
     color: #9fb9c6;
 }
 
+// start of success-form
+.success-form {
+    //display: block;
+    background-color: rgba(10, 10, 10, 0.8);
 
-// end of order-form (general container)
+    .form-header {
+        font-size: 80px;
+
+        @include mediaMaxWidth(1200px) {
+            font-size: 60px;
+        }
+        @include mediaMaxWidth(1000px) {
+            font-size: 40px;
+        }
+        @include mediaMaxWidth($mobileWidth) {
+            font-size: 30px;
+        }
+    }
+
+    .success-close-btn {
+        text-align: center;
+        cursor: pointer;
+
+        img {
+            @include mediaMaxWidth($mobileWidth) {
+                transform: scale(0.5);
+            }
+        }
+    }
+
+}
+// end of success-form
+
+@import "libs/scroll-mouse-down";
+
+.mouse {
+    position: fixed;
+    bottom: 105px;
+    right: 30px;
+    z-index: 5;
+
+    @include mediaMaxWidth($mobileWidth) {
+        display: none;
+    }
+}
+
 

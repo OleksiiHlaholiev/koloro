@@ -201,6 +201,38 @@ $(function () {
         $(".order-form").fadeOut(400);
     });
 
+    // success-form logic starts
+    $(".success-form .success-close-btn").on("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation(); // to avoid inherit click events
+        $(".success-form").fadeOut(400);
+        if(successFormTimer) {
+            clearTimeout(successFormTimer);
+        }
+    });
+
+    var successFormTimer;
+
+    function successFormShow() {
+        $(".success-form").fadeIn(400);
+
+        successFormTimer = setTimeout(function () {
+            $(".success-form").fadeOut(400);
+            clearTimeout(successFormTimer);
+        }, 3000);
+
+    }
+
+    // $(".submit-btn").on("click", function (event) {
+    //     // event.preventDefault();
+    //     // event.stopPropagation(); // to avoid inherit click events
+    //
+    //     successFormShow();
+    //
+    // });
+    // success-form logic ends
+
+
 
     // **************************************************************
 
@@ -398,8 +430,9 @@ $(function () {
             data: form_data,
             success: function () {
                 //код в этом блоке выполняется при успешной отправке сообщения
-                alert("Ваше сообщение отправлено!");
+                // alert("Ваше сообщение отправлено!");
                 orderForm.reset();
+                successFormShow();
                 $(orderForm).fadeOut(400);
             },
             error: function () {

@@ -4,9 +4,9 @@
         (isset($_POST['user-contact'])&&$_POST['user-contact']!="")&&
         (isset($_POST['user-text'])&&$_POST['user-text']!="")
         ){ 
-    //Проверка отправилось ли наше поля name и не пустые ли они
-        $to = 'oleksii.hlaholiev@gmail.com, kozitskyi@koloro.ua, m.kozitskyi@gmail.com'; //Почта получателя, через запятую можно указать сколько угодно адресов
-        $subject = 'Обратный звонок с сайта landos.ante.com.ua'; //Загаловок сообщения
+    // form validation: is sent and is not empty
+        $to = 'ante.sale7@gmail.com'; // email addresses
+        $subject = 'Обратный звонок с сайта ante.com.ua/ante-ooo'; // text subject
         $message = '
                 <html>
                     <head>
@@ -17,9 +17,9 @@
                         <p>Контакт: '.$_POST['user-contact'].'</p>
                         <p>Сообщение: '.$_POST['user-text'].'</p>                        
                     </body>
-                </html>'; //Текст нащего сообщения можно использовать HTML теги
-        $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
-        $headers .= "From: Отправитель <oleksii.hlaholiev@gmail.com>\r\n"; //Наименование и почта отправителя
-        mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
+                </html>'; // text to send, via HTML tag
+        $headers  = "Content-type: text/html; charset=utf-8 \r\n"; // mail coding
+        $headers .= "From: Заказ <ante.sale7@gmail.com>\r\n"; // sender's name and email
+        mail($to, $subject, $message, $headers); // send email via function -  mail
     }
 ?>

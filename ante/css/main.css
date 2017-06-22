@@ -180,6 +180,9 @@ footer {
   @media all and (max-width: 1200px) {
     .section-header {
       font-size: 42px; } }
+  @media all and (max-height: 800px) {
+    .section-header {
+      padding: 7vh 0 2vh 0; } }
   @media all and (max-width: 768px) {
     .section-header {
       font-size: 30px;
@@ -241,6 +244,9 @@ footer {
         #top-section .top-bg-container .section-header {
           font-size: 48px;
           padding: 10vh 0 5vh 0; } }
+      @media all and (max-height: 800px) {
+        #top-section .top-bg-container .section-header {
+          padding: 7vh 0 2vh 0; } }
       @media all and (max-width: 768px) {
         #top-section .top-bg-container .section-header {
           font-size: 36px;
@@ -1078,7 +1084,7 @@ input:-ms-input-placeholder {
 .mouse {
   position: fixed;
   bottom: 105px;
-  right: 30px;
+  right: 20px;
   z-index: 5; }
   @media all and (max-width: 768px) {
     .mouse {

@@ -223,13 +223,6 @@ $(function () {
 
     }
 
-    // $(".submit-btn").on("click", function (event) {
-    //     // event.preventDefault();
-    //     // event.stopPropagation(); // to avoid inherit click events
-    //
-    //     successFormShow();
-    //
-    // });
     // success-form logic ends
 
 
@@ -423,7 +416,7 @@ $(function () {
 //    form-handler
     $(orderForm).submit(function(event) { //устанавливаем событие отправки для формы
         event.preventDefault();
-        var form_data = $(this).serialize(); //собераем все данные из формы
+        var form_data = $(this).serialize(); //собираем все данные из формы
         $.ajax({
             type: "POST", //Метод отправки
             url: "php/send.php", //путь до php фаила отправителя

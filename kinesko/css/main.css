@@ -24,6 +24,89 @@
   src: url("../fonts/MuseoSansCyrl 900.otf"); }
 
 /*************************************************************/
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-google-hover, footer .social-links a .icon-google:hover {
+  background-image: url(../images/sprite.png);
+  background-position: -139px 0px;
+  width: 20px;
+  height: 27px; }
+
+.icon-google {
+  background-image: url(../images/sprite.png);
+  background-position: -139px -37px;
+  width: 20px;
+  height: 27px; }
+
+.icon-rss-hover, footer .social-links a .icon-rss:hover {
+  background-image: url(../images/sprite.png);
+  background-position: -89px -33px;
+  width: 27px;
+  height: 27px; }
+
+.icon-rss {
+  background-image: url(../images/sprite.png);
+  background-position: -44px -47px;
+  width: 27px;
+  height: 27px; }
+
+.icon-search-btn {
+  background-image: url(../images/sprite.png);
+  background-position: 0px 0px;
+  width: 35px;
+  height: 37px; }
+
+.icon-twitter-hover, footer .social-links a .icon-twitter:hover {
+  background-image: url(../images/sprite.png);
+  background-position: -45px 0px;
+  width: 34px;
+  height: 28px; }
+
+.icon-twitter {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -47px;
+  width: 34px;
+  height: 28px; }
+
+.icon-up-btn {
+  background-image: url(../images/sprite.png);
+  background-position: -89px 0px;
+  width: 40px;
+  height: 23px; }
+
+.icon-vk-hover, footer .social-links a .icon-vk:hover {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -85px;
+  width: 22px;
+  height: 26px; }
+
+.icon-vk {
+  background-image: url(../images/sprite.png);
+  background-position: -32px -85px;
+  width: 22px;
+  height: 26px; }
+
 @media all and (min-width: 1400px) {
   .container {
     width: 1300px; } }
@@ -102,7 +185,9 @@ html, body {
           transform: rotate(-10deg); }
 
 .icon {
-  display: inline-block; }
+  display: inline-block;
+  background-repeat: no-repeat;
+  transition: all 0.4s; }
 
 .section-header {
   margin: 20px 0;
@@ -145,7 +230,7 @@ header {
     width: 158px; }
 
 footer {
-  padding: 15px 0;
+  padding: 40px 0 15px 0;
   background-color: #000; }
   footer .footer-col {
     text-align: left; }
@@ -154,7 +239,13 @@ footer {
         text-align: center; }
         footer .footer-col .logo-cont {
           text-align: center; } }
+    footer .footer-col .logo-cont {
+      padding-bottom: 50px; }
+      @media all and (max-width: 992px) {
+        footer .footer-col .logo-cont {
+          padding-top: 50px; } }
     footer .footer-col .col-name {
+      margin-bottom: 30px;
       font-size: 30px;
       font-family: "BebasNeueBold", sans-serif;
       color: white;
@@ -165,6 +256,7 @@ footer {
     footer .footer-col .contact-info {
       padding-bottom: 25px; }
       footer .footer-col .contact-info p {
+        margin-bottom: 7px;
         font-size: 16px;
         font-family: "MuseoSansCyrl300", sans-serif;
         color: white;
@@ -184,15 +276,112 @@ footer {
     footer .footer-col .order-form-btn {
       width: 220px;
       font-size: 20px; }
-  footer .footer-text {
+      @media all and (min-width: 1200px) {
+        footer .footer-col .order-form-btn {
+          margin-top: 0; } }
+      @media all and (max-width: 992px) {
+        footer .footer-col .order-form-btn {
+          margin: 50px auto; } }
+  footer .social-links a {
+    display: inline-block;
+    padding-right: 10px; }
+  footer .copy-right {
     font-size: 12px;
     font-family: "MuseoSansCyrl300", sans-serif;
     color: white;
     line-height: 1.2;
     text-align: center; }
     @media all and (max-width: 768px) {
-      footer .footer-text {
+      footer .copy-right {
         font-size: 14px; } }
+
+.back-to-top, .search-btn {
+  width: 65px;
+  height: 55px;
+  text-align: center;
+  padding: 0;
+  outline: 0;
+  border: 1px solid transparent;
+  transition: all .4s;
+  background-color: #f4bd00; }
+  .back-to-top:hover, .search-btn:hover {
+    background-color: #000;
+    border: 1px solid #f4bd00; }
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  right: calc(10% - 65px);
+  bottom: 20px;
+  cursor: pointer; }
+  .back-to-top a {
+    display: inline-block; }
+    .back-to-top a .up-icon {
+      width: 40px;
+      height: 23px;
+      background-image: url("../images/general/up-icon.svg"); }
+  .back-to-top:hover a .up-icon {
+    background-image: url("../images/general/up-icon-hover.svg"); }
+
+.back-to-top-visible {
+  display: block; }
+
+.search-container {
+  position: fixed;
+  bottom: 85px;
+  z-index: 999;
+  right: calc(10% - 65px); }
+  @media all and (max-width: 600px) {
+    .search-container {
+      bottom: 70px; } }
+  .search-container .search-form {
+    font-size: 0; }
+    .search-container .search-form .input-container {
+      display: inline-block;
+      height: 55px;
+      width: 30vw;
+      transition: all 0.4s; }
+      @media all and (max-width: 1000px) {
+        .search-container .search-form .input-container {
+          width: 60vw; } }
+      @media all and (max-width: 600px) {
+        .search-container .search-form .input-container {
+          width: 80vw; }
+          .search-container .search-form .input-container input {
+            padding: 0 2px; } }
+      .search-container .search-form .input-container input {
+        display: none;
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        font-size: 20px;
+        font-family: "BebasNeueRegular", sans-serif;
+        color: #fff;
+        background-color: rgba(49, 49, 49, 0.85);
+        line-height: 1.2;
+        text-align: center;
+        border: 0;
+        outline: none;
+        caret-color: #f4bd00; }
+    .search-container .search-form .search-btn {
+      display: inline-block;
+      vertical-align: bottom;
+      position: relative;
+      top: 0;
+      cursor: pointer; }
+      .search-container .search-form .search-btn .search-icon {
+        width: 35px;
+        height: 37px;
+        background-image: url("../images/general/search-icon.svg"); }
+        .search-container .search-form .search-btn .search-icon:hover {
+          background-image: url("../images/general/search-icon-hover.svg"); }
+      .search-container .search-form .search-btn:hover .search-icon {
+        background-image: url("../images/general/search-icon-hover.svg"); }
+
+@media all and (max-width: 768px) {
+  .back-to-top, .search-container {
+    right: 20px; } }
 
 #index-page .main-top-container {
   position: relative;

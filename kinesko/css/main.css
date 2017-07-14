@@ -177,12 +177,18 @@ html, body {
           transform: skewX(-30deg); }
 
 .rotate-right {
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg); }
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg); }
 
 .rotate-left {
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg); }
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg); }
+
+.white-color {
+  color: #fff !important; }
+
+.black-color {
+  color: #000 !important; }
 
 .icon {
   display: inline-block;
@@ -384,133 +390,159 @@ footer {
   .back-to-top, .search-container {
     right: 20px; } }
 
-#index-page .main-top-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-image: url("../images/index/video-slide.jpg");
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed; }
-  #index-page .main-top-container .container {
-    height: 100%;
-    position: relative; }
-  #index-page .main-top-container .main-header {
-    position: absolute;
-    bottom: 15vh;
-    margin: 0;
-    z-index: 5;
-    font-size: 165px;
-    font-family: "BebasNeueBold", sans-serif;
-    color: white;
-    text-transform: uppercase;
-    line-height: 1.2;
-    text-align: left; }
-    @media all and (max-width: 1600px) {
-      #index-page .main-top-container .main-header {
-        font-size: 140px; } }
-    @media all and (max-width: 1400px) {
-      #index-page .main-top-container .main-header {
-        font-size: 120px; } }
-    @media all and (max-width: 1000px) {
-      #index-page .main-top-container .main-header {
-        font-size: 100px; } }
-    @media all and (max-width: 768px) {
-      #index-page .main-top-container .main-header {
-        position: relative;
-        bottom: 0;
-        padding-top: 15vh;
-        text-align: center; } }
-    @media all and (max-width: 600px) {
-      #index-page .main-top-container .main-header {
-        font-size: 50px; } }
-  #index-page .main-top-container .order-btns {
-    display: inline-block;
-    position: absolute;
-    bottom: 40%;
-    right: 0;
-    z-index: 5; }
-    @media all and (max-width: 768px) {
-      #index-page .main-top-container .order-btns {
-        position: relative;
-        width: 100%;
-        bottom: 0;
-        right: 0;
-        padding-top: 20px; } }
-    #index-page .main-top-container .order-btns .view-example-btn {
-      -webkit-animation-duration: 2s;
-      animation-duration: 2s; }
-
-#index-page .our-services {
-  position: relative;
+.triangle-right:before {
+  content: "";
+  position: absolute;
   z-index: 5;
-  margin-top: -20vh; }
-  #index-page .our-services .section-header {
-    padding-top: 20vh; }
-  #index-page .our-services .our-services-wrapper .service-item {
-    padding: 30px; }
-    #index-page .our-services .our-services-wrapper .service-item .icon-cont {
-      text-align: center; }
-      #index-page .our-services .our-services-wrapper .service-item .icon-cont .icon {
-        width: 100%;
-        max-width: 194px;
-        height: 165px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        transition: all 0.4s; }
-      #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-1-icon {
-        background-image: url("../images/index/service-1-icon.png"); }
-        #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-1-icon:hover {
-          background-image: url("../images/index/service-1-icon-hover.png"); }
-      #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-2-icon {
-        background-image: url("../images/index/service-2-icon.png"); }
-        #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-2-icon:hover {
-          background-image: url("../images/index/service-2-icon-hover.png"); }
-      #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-3-icon {
-        background-image: url("../images/index/service-3-icon.png"); }
-        #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-3-icon:hover {
-          background-image: url("../images/index/service-3-icon-hover.png"); }
-      #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-4-icon {
-        background-image: url("../images/index/service-4-icon.png"); }
-        #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-4-icon:hover {
-          background-image: url("../images/index/service-4-icon-hover.png"); }
-    #index-page .our-services .our-services-wrapper .service-item .service-item-title {
-      font-size: 32px;
+  width: 0;
+  height: 0;
+  top: -10vh;
+  left: 0;
+  border-bottom: 10vh solid #000;
+  border-left: 100vw solid transparent; }
+
+.triangle-left:before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  width: 0;
+  height: 0;
+  top: -10vh;
+  left: 0;
+  border-bottom: 10vh solid #fff;
+  border-right: 100vw solid transparent; }
+
+#index-page {
+  background-color: #000;
+  overflow: hidden; }
+  #index-page .main-top-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/index/video-slide.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed; }
+    #index-page .main-top-container .container {
+      height: 100%;
+      position: relative; }
+    #index-page .main-top-container .main-header {
+      position: absolute;
+      bottom: 15vh;
+      margin: 0;
+      z-index: 5;
+      font-size: 165px;
       font-family: "BebasNeueBold", sans-serif;
-      color: black;
+      color: white;
       text-transform: uppercase;
       line-height: 1.2;
       text-align: left; }
+      @media all and (max-width: 1600px) {
+        #index-page .main-top-container .main-header {
+          font-size: 140px; } }
+      @media all and (max-width: 1400px) {
+        #index-page .main-top-container .main-header {
+          font-size: 120px; } }
+      @media all and (max-width: 1000px) {
+        #index-page .main-top-container .main-header {
+          font-size: 100px; } }
       @media all and (max-width: 768px) {
-        #index-page .our-services .our-services-wrapper .service-item .service-item-title {
+        #index-page .main-top-container .main-header {
+          position: relative;
+          bottom: 0;
+          padding-top: 15vh;
           text-align: center; } }
-    #index-page .our-services .our-services-wrapper .service-item .inclined-line {
-      border-top: 2px solid #000;
-      -webkit-transform: rotate(-5deg);
-              transform: rotate(-5deg); }
-    #index-page .our-services .our-services-wrapper .service-item .service-item-list {
-      padding: 0;
-      padding-left: 20px;
-      margin: 0;
-      list-style-type: disc; }
-      #index-page .our-services .our-services-wrapper .service-item .service-item-list li {
-        color: #f4bd00;
-        font-size: 20px;
-        transition: all 0.4s; }
-        #index-page .our-services .our-services-wrapper .service-item .service-item-list li a {
-          font-size: 14px;
-          font-family: "MuseoSansCyrl300", sans-serif;
-          color: black;
-          text-transform: uppercase;
-          line-height: 2;
-          text-decoration: none;
+      @media all and (max-width: 600px) {
+        #index-page .main-top-container .main-header {
+          font-size: 50px; } }
+    #index-page .main-top-container .order-btns {
+      display: inline-block;
+      position: absolute;
+      bottom: 40%;
+      right: 0;
+      z-index: 5; }
+      @media all and (max-width: 768px) {
+        #index-page .main-top-container .order-btns {
+          position: relative;
+          width: 100%;
+          bottom: 0;
+          right: 0;
+          padding-top: 20px; } }
+      #index-page .main-top-container .order-btns .view-example-btn {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s; }
+  #index-page .our-services {
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 10vh; }
+    #index-page .our-services .our-services-wrapper .service-item {
+      padding: 30px; }
+      #index-page .our-services .our-services-wrapper .service-item .icon-cont {
+        text-align: center; }
+        #index-page .our-services .our-services-wrapper .service-item .icon-cont .icon {
+          width: 100%;
+          max-width: 194px;
+          height: 165px;
+          background-repeat: no-repeat;
+          background-size: contain;
           transition: all 0.4s; }
-          @media all and (max-width: 768px) {
-            #index-page .our-services .our-services-wrapper .service-item .service-item-list li a {
-              font-size: 18px; } }
-        #index-page .our-services .our-services-wrapper .service-item .service-item-list li:hover {
-          color: #000; }
-          #index-page .our-services .our-services-wrapper .service-item .service-item-list li:hover a {
-            color: #f4bd00;
-            text-decoration: underline; }
+        #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-1-icon {
+          background-image: url("../images/index/service-1-icon.png"); }
+          #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-1-icon:hover {
+            background-image: url("../images/index/service-1-icon-hover.png"); }
+        #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-2-icon {
+          background-image: url("../images/index/service-2-icon.png"); }
+          #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-2-icon:hover {
+            background-image: url("../images/index/service-2-icon-hover.png"); }
+        #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-3-icon {
+          background-image: url("../images/index/service-3-icon.png"); }
+          #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-3-icon:hover {
+            background-image: url("../images/index/service-3-icon-hover.png"); }
+        #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-4-icon {
+          background-image: url("../images/index/service-4-icon.png"); }
+          #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-4-icon:hover {
+            background-image: url("../images/index/service-4-icon-hover.png"); }
+      #index-page .our-services .our-services-wrapper .service-item .service-item-title {
+        font-size: 32px;
+        font-family: "BebasNeueBold", sans-serif;
+        color: black;
+        text-transform: uppercase;
+        line-height: 1.2;
+        text-align: left; }
+        @media all and (max-width: 768px) {
+          #index-page .our-services .our-services-wrapper .service-item .service-item-title {
+            text-align: center; } }
+      #index-page .our-services .our-services-wrapper .service-item .inclined-line {
+        border-top: 2px solid #000;
+        -webkit-transform: rotate(-5deg);
+                transform: rotate(-5deg); }
+      #index-page .our-services .our-services-wrapper .service-item .service-item-list {
+        padding: 0;
+        padding-left: 20px;
+        margin: 0;
+        list-style-type: disc; }
+        #index-page .our-services .our-services-wrapper .service-item .service-item-list li {
+          color: #f4bd00;
+          font-size: 20px;
+          transition: all 0.4s; }
+          #index-page .our-services .our-services-wrapper .service-item .service-item-list li a {
+            font-size: 14px;
+            font-family: "MuseoSansCyrl300", sans-serif;
+            color: black;
+            text-transform: uppercase;
+            line-height: 2;
+            text-decoration: none;
+            transition: all 0.4s; }
+            @media all and (max-width: 768px) {
+              #index-page .our-services .our-services-wrapper .service-item .service-item-list li a {
+                font-size: 18px; } }
+          #index-page .our-services .our-services-wrapper .service-item .service-item-list li:hover {
+            color: #000; }
+            #index-page .our-services .our-services-wrapper .service-item .service-item-list li:hover a {
+              color: #f4bd00;
+              text-decoration: underline; }
+  #index-page .portfolio {
+    background-color: #000;
+    position: relative;
+    padding-bottom: 10vh; }

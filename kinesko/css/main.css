@@ -107,10 +107,6 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 22px;
   height: 26px; }
 
-@media all and (min-width: 1400px) {
-  .container {
-    width: 1300px; } }
-
 * {
   box-sizing: border-box; }
 
@@ -118,16 +114,27 @@ html, body {
   padding: 0;
   margin: 0;
   width: 100%;
-  background-color: #fff; }
+  background-color: #fff;
+  overflow-x: hidden; }
 
-.dark-mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+.container {
   height: 100%;
-  background-color: rgba(60, 60, 60, 0.5);
-  z-index: 2; }
+  position: relative;
+  z-index: 5; }
+  @media all and (min-width: 1400px) {
+    .container {
+      width: 1300px; } }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.4s; }
+  a:hover {
+    color: #f4bd00;
+    text-decoration: none; }
+
+a[href^="mailto:"]:hover {
+  text-decoration: underline; }
 
 .gl-yellow-btn, .gl-transparent-btn {
   display: block;
@@ -190,6 +197,9 @@ html, body {
 .black-color {
   color: #000 !important; }
 
+.yellow-color {
+  color: #f4bd00 !important; }
+
 .icon {
   display: inline-block;
   background-repeat: no-repeat;
@@ -213,10 +223,33 @@ html, body {
     .section-header {
       font-size: 48px; } }
 
+.bg-cont {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: scroll; }
+
+.dark-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(60, 60, 60, 0.5);
+  z-index: 2; }
+
 .img-cont {
   text-align: center; }
   .img-cont img {
     max-width: 100%; }
+
+.two-img-cont .img-cont {
+  float: left;
+  width: 50%; }
+  .two-img-cont .img-cont img {
+    width: 100%; }
 
 .logo-cont {
   text-align: left; }
@@ -226,12 +259,59 @@ html, body {
     .logo-cont a img {
       width: 158px; }
 
+.read-more-btn {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 36px;
+  font-family: "BebasNeueBold", sans-serif;
+  color: #f4bd00;
+  text-decoration: underline;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: all 0.4s; }
+  .read-more-btn:hover {
+    color: #bbbaba; }
+
+.triangle-right:before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  width: 0;
+  height: 0;
+  top: -10vh;
+  left: 0;
+  border-bottom: 10vh solid #000;
+  border-left: 100vw solid transparent; }
+
+.triangle-left:before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  width: 0;
+  height: 0;
+  top: -10vh;
+  left: 0;
+  border-bottom: 10vh solid #fff;
+  border-right: 100vw solid transparent; }
+
+.triangle-top-left:before, .our-managers:before {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  border-top: 10vh solid #fff;
+  border-right: 100vw solid transparent; }
+
 header {
   position: fixed;
   z-index: 999;
   width: 100%;
   padding: 10px 0;
-  background-color: rgba(0, 0, 0, 0.85); }
+  background-color: rgba(0, 0, 0, 0.85);
+  text-align: center; }
   @media all and (min-width: 1400px) {
     header .container {
       max-width: 90%;
@@ -242,16 +322,26 @@ header {
   header .main-menu {
     display: inline-block;
     float: right; }
+    @media all and (max-width: 1450px) {
+      header .main-menu {
+        display: none;
+        float: none;
+        width: 90%;
+        margin: 0 auto; } }
     header .main-menu ul {
       margin: 0;
       padding: 0; }
       header .main-menu ul li {
         display: inline-block; }
+        @media all and (max-width: 1450px) {
+          header .main-menu ul li {
+            display: block; } }
       header .main-menu ul li:not(.nav-btn):not(.header-contacts) {
         border: 1px solid transparent;
         transition: all 0.4s; }
         header .main-menu ul li:not(.nav-btn):not(.header-contacts) a {
           display: inline-block;
+          width: 100%;
           padding: 15px 20px;
           font-size: 14px;
           font-family: "MuseoSansCyrl300", sans-serif;
@@ -262,6 +352,11 @@ header {
           text-decoration: none; }
         header .main-menu ul li:not(.nav-btn):not(.header-contacts) a.active {
           color: #f4bd00; }
+        @media all and (max-width: 1450px) {
+          header .main-menu ul li:not(.nav-btn):not(.header-contacts) {
+            border-color: #f4bd00; }
+            header .main-menu ul li:not(.nav-btn):not(.header-contacts) a {
+              font-family: "MuseoSansCyrl900", sans-serif; } }
         header .main-menu ul li:not(.nav-btn):not(.header-contacts):hover {
           border-color: #f4bd00; }
       header .main-menu ul .header-contacts span {
@@ -283,7 +378,84 @@ header {
         font-size: 20px;
         margin: 0 auto; }
 
+.our-materials {
+  position: relative;
+  background-color: #f6f6f6; }
+  .our-materials:before {
+    border-bottom-color: #f6f6f6; }
+  .our-materials .our-materials-header {
+    font-size: 48px;
+    font-family: "BebasNeueRegular", sans-serif;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: left; }
+  .our-materials .our-materials-cont .material-item .img-cont {
+    position: relative;
+    display: inline-block; }
+    .our-materials .our-materials-cont .material-item .img-cont:before {
+      content: "";
+      position: absolute;
+      z-index: 5;
+      width: 0;
+      height: 0;
+      top: 0;
+      left: 0;
+      border-top: 100px solid #f6f6f6;
+      border-right: 100px solid transparent; }
+
+.our-managers {
+  background-image: url("../images/general/kinesko-main-bg.jpg");
+  background-attachment: fixed;
+  padding-top: 10vh;
+  padding-bottom: 20vh; }
+  .our-managers:before {
+    border-top-color: #f6f6f6; }
+  .our-managers .dark-mask {
+    background-color: black;
+    opacity: 0.75; }
+  .our-managers .managers-cont {
+    margin: 50px 0; }
+    .our-managers .managers-cont .manager-item {
+      margin: 25px 0; }
+      .our-managers .managers-cont .manager-item .manager-photo {
+        text-align: right; }
+        .our-managers .managers-cont .manager-item .manager-photo img {
+          width: 178px;
+          max-width: 100%;
+          border-radius: 50%; }
+        @media all and (max-width: 992px) {
+          .our-managers .managers-cont .manager-item .manager-photo {
+            text-align: center; } }
+      .our-managers .managers-cont .manager-item .manager-contacts {
+        color: #fff;
+        text-align: center;
+        line-height: 1.2; }
+        .our-managers .managers-cont .manager-item .manager-contacts p {
+          margin: 0;
+          font-size: 20px;
+          font-family: "BebasNeueRegular", sans-serif;
+          text-transform: uppercase; }
+        .our-managers .managers-cont .manager-item .manager-contacts .manager-name {
+          font-size: 30px;
+          font-family: "BebasNeueBold", sans-serif;
+          color: #f4bd00; }
+        .our-managers .managers-cont .manager-item .manager-contacts .manager-post {
+          font-size: 17px;
+          margin-bottom: 25px; }
+        .our-managers .managers-cont .manager-item .manager-contacts .manager-phone {
+          font-family: "BebasNeueBold", sans-serif; }
+      @media all and (max-width: 992px) {
+        .our-managers .managers-cont .manager-item:nth-child(even) .manager-photo {
+          float: right; } }
+  .our-managers .footer-bg-rectangle {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+
 footer {
+  position: relative;
   padding: 40px 0 15px 0;
   background-color: #000; }
   footer .footer-col {
@@ -438,48 +610,17 @@ footer {
   .back-to-top, .search-container {
     right: 20px; } }
 
-.triangle-right:before {
-  content: "";
-  position: absolute;
-  z-index: 5;
-  width: 0;
-  height: 0;
-  top: -10vh;
-  left: 0;
-  border-bottom: 10vh solid #000;
-  border-left: 100vw solid transparent; }
-
-.triangle-left:before {
-  content: "";
-  position: absolute;
-  z-index: 5;
-  width: 0;
-  height: 0;
-  top: -10vh;
-  left: 0;
-  border-bottom: 10vh solid #fff;
-  border-right: 100vw solid transparent; }
-
 #index-page {
   background-color: #000;
   overflow: hidden; }
   #index-page .main-top-container {
-    position: relative;
-    width: 100%;
     height: 100vh;
-    background-image: url("../images/index/video-slide.jpg");
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
+    background-image: url("../images/general/kinesko-main-bg.jpg");
     background-attachment: fixed; }
-    #index-page .main-top-container .container {
-      height: 100%;
-      position: relative; }
     #index-page .main-top-container .main-header {
       position: absolute;
       bottom: 15vh;
       margin: 0;
-      z-index: 5;
       font-size: 165px;
       font-family: "BebasNeueBold", sans-serif;
       color: white;
@@ -508,8 +649,7 @@ footer {
       display: inline-block;
       position: absolute;
       bottom: 40%;
-      right: 0;
-      z-index: 5; }
+      right: 0; }
       @media all and (max-width: 768px) {
         #index-page .main-top-container .order-btns {
           position: relative;
@@ -598,3 +738,48 @@ footer {
     padding-bottom: 10vh; }
     #index-page .portfolio:before {
       border-bottom-color: #000; }
+  #index-page .photo-gallery {
+    position: relative;
+    padding: 20px 0;
+    background-color: #fff; }
+    #index-page .photo-gallery:before {
+      border-bottom-color: #fff; }
+    #index-page .photo-gallery .photo-gallery-cont .photo-cont {
+      display: inline-block;
+      width: calc(100% / 3);
+      float: left; }
+      #index-page .photo-gallery .photo-gallery-cont .photo-cont img {
+        padding: 1px; }
+      @media all and (max-width: 768px) {
+        #index-page .photo-gallery .photo-gallery-cont .photo-cont {
+          width: 100%; } }
+    #index-page .photo-gallery .photo-gallery-cont .img-cont img {
+      width: 100%; }
+  #index-page .about-us {
+    padding-bottom: 10vh;
+    background-color: #fff; }
+    #index-page .about-us .info-block-cont {
+      padding: 20px 0; }
+      #index-page .about-us .info-block-cont .title-cont .title {
+        padding-right: 100px;
+        margin-bottom: 30px;
+        font-size: 36px;
+        font-family: "BebasNeueBold", sans-serif;
+        color: black;
+        line-height: 1.2;
+        text-align: right; }
+        @media all and (max-width: 992px) {
+          #index-page .about-us .info-block-cont .title-cont .title {
+            padding-right: 0;
+            text-align: center; } }
+      #index-page .about-us .info-block-cont .text-cont {
+        font-size: 24px;
+        font-family: "MuseoSansCyrl900", sans-serif;
+        color: black;
+        line-height: 1.2;
+        text-align: left; }
+        @media all and (max-width: 992px) {
+          #index-page .about-us .info-block-cont .text-cont {
+            text-align: center; } }
+        #index-page .about-us .info-block-cont .text-cont .for-read-more {
+          display: none; }

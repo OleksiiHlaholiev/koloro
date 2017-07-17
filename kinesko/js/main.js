@@ -75,4 +75,10 @@ $(function () {
         }
     });
 
+    // read-more event handler
+    $(".read-more-btn").on("click", function () {
+        $(this.parentNode.querySelector(".for-read-more")).slideToggle();
+        $(this).toggleText("ЧИТАТЬ ДАЛЬШЕ...", "СКРЫТЬ");
+    });
+
 });

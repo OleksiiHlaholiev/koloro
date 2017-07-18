@@ -275,38 +275,44 @@ a[href^="mailto:"]:hover {
   .read-more-btn:hover {
     color: #bbbaba; }
 
-.triangle-right:before {
-  content: "";
-  position: absolute;
-  z-index: 5;
-  width: 0;
-  height: 0;
-  top: -10vh;
-  left: 0;
-  border-bottom: 10vh solid #000;
-  border-left: 100vw solid transparent; }
+.triangle-right {
+  position: relative; }
+  .triangle-right:before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    width: 0;
+    height: 0;
+    top: -10vh;
+    left: 0;
+    border-bottom: 10vh solid #000;
+    border-left: 100vw solid transparent; }
 
-.triangle-left:before {
-  content: "";
-  position: absolute;
-  z-index: 5;
-  width: 0;
-  height: 0;
-  top: -10vh;
-  left: 0;
-  border-bottom: 10vh solid #fff;
-  border-right: 100vw solid transparent; }
+.triangle-left {
+  position: relative; }
+  .triangle-left:before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    width: 0;
+    height: 0;
+    top: -10vh;
+    left: 0;
+    border-bottom: 10vh solid #fff;
+    border-right: 100vw solid transparent; }
 
-.triangle-top-left:before, .our-managers:before {
-  content: "";
-  position: absolute;
-  z-index: 5;
-  width: 0;
-  height: 0;
-  top: 0;
-  left: 0;
-  border-top: 10vh solid #fff;
-  border-right: 100vw solid transparent; }
+.triangle-top-left, .our-managers {
+  position: relative; }
+  .triangle-top-left:before, .our-managers:before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-top: 10vh solid #fff;
+    border-right: 100vw solid transparent; }
 
 header {
   position: fixed;
@@ -778,55 +784,70 @@ footer {
             #index-page .our-services .our-services-wrapper .service-item .service-item-list li:hover a {
               color: #f4bd00;
               text-decoration: underline; }
-  #index-page .portfolio-block {
+  #index-page .our-works {
     background-color: #000;
     position: relative;
     padding-bottom: 10vh; }
-    #index-page .portfolio-block:before {
+    #index-page .our-works:before {
       border-bottom-color: #000; }
-    #index-page .portfolio-block .portfolio-cont {
+    #index-page .our-works .portfolio-cont {
       margin-top: 30px;
       text-align: center;
       text-transform: uppercase;
       line-height: 1.2;
-      color: #fff; }
-      #index-page .portfolio-block .portfolio-cont .left-block, #index-page .portfolio-block .portfolio-cont .right-block {
-        display: inline-block;
-        float: left; }
-      #index-page .portfolio-block .portfolio-cont .left-block {
+      color: #fff;
+      display: table; }
+      @media all and (max-width: 1400px) {
+        #index-page .our-works .portfolio-cont {
+          display: block; } }
+      #index-page .our-works .portfolio-cont .left-block {
         width: 30%;
-        background-image: url("../images/general/portfolio-picture-all.jpg");
-        padding: 250px 0; }
-      #index-page .portfolio-block .portfolio-cont .right-block {
+        background-image: url("../images/general/portfolio-picture-all.jpg"); }
+        @media all and (max-width: 1400px) {
+          #index-page .our-works .portfolio-cont .left-block {
+            padding: 150px 0; } }
+      #index-page .our-works .portfolio-cont .right-block {
         width: 70%; }
-      #index-page .portfolio-block .portfolio-cont .block-header {
+      #index-page .our-works .portfolio-cont .left-block, #index-page .our-works .portfolio-cont .right-block {
+        display: table-cell;
+        vertical-align: middle; }
+        @media all and (max-width: 1400px) {
+          #index-page .our-works .portfolio-cont .left-block, #index-page .our-works .portfolio-cont .right-block {
+            width: 100%;
+            display: block; } }
+      #index-page .our-works .portfolio-cont .block-header {
         font-size: 120px;
         font-family: "BebasNeueBold", sans-serif;
         color: white; }
         @media all and (max-width: 1600px) {
-          #index-page .portfolio-block .portfolio-cont .block-header {
+          #index-page .our-works .portfolio-cont .block-header {
             font-size: 100px; } }
         @media all and (max-width: 1400px) {
-          #index-page .portfolio-block .portfolio-cont .block-header {
+          #index-page .our-works .portfolio-cont .block-header {
             font-size: 80px; } }
-      #index-page .portfolio-block .portfolio-cont .block-title {
+      #index-page .our-works .portfolio-cont .block-title {
         font-size: 48px;
         font-family: "BebasNeueBold", sans-serif;
         color: #f4bd00; }
-      #index-page .portfolio-block .portfolio-cont .view-portfolio-btn {
+      #index-page .our-works .portfolio-cont .view-portfolio-btn {
         width: 430px; }
-      #index-page .portfolio-block .portfolio-cont .porfolio-item-cont {
-        display: inline-block;
+      #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont {
         width: calc(100% / 3);
+        display: inline-block;
         float: left; }
-        #index-page .portfolio-block .portfolio-cont .porfolio-item-cont .porfolio-item {
+        @media all and (max-width: 768px) {
+          #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont {
+            float: none;
+            display: block;
+            width: 100%; } }
+        #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item {
           width: 100%;
           position: relative; }
-          #index-page .portfolio-block .portfolio-cont .porfolio-item-cont .porfolio-item .poster-img-cont img {
+          #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item .poster-img-cont img {
             width: 100%; }
-          #index-page .portfolio-block .portfolio-cont .porfolio-item-cont .porfolio-item:hover .hover-layer {
+          #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item:hover .hover-layer {
             opacity: 1; }
-          #index-page .portfolio-block .portfolio-cont .porfolio-item-cont .porfolio-item .hover-layer {
+          #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer {
             position: absolute;
             top: 0;
             left: 0;
@@ -839,35 +860,110 @@ footer {
             text-transform: uppercase;
             line-height: 1.2;
             text-align: center; }
-            #index-page .portfolio-block .portfolio-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-name {
+            @media all and (max-width: 768px) {
+              #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer {
+                position: relative;
+                opacity: 1; } }
+            #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-name {
               font-size: 36px;
               font-family: "BebasNeueBold", sans-serif;
               color: white; }
-              #index-page .portfolio-block .portfolio-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-name span {
+              #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-name span {
                 color: #f4bd00;
                 text-decoration: underline; }
-            #index-page .portfolio-block .portfolio-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-category {
+            #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-category {
               margin: 20px 0 30px 0;
               font-size: 24px;
               font-family: "BebasNeueRegular";
               color: #f4bd00; }
-              #index-page .portfolio-block .portfolio-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-category .link-to-category:hover {
+              #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-category .link-to-category:hover {
                 text-decoration: underline; }
-      #index-page .portfolio-block .portfolio-cont .order-cont {
+      #index-page .our-works .portfolio-cont .order-cont {
         display: inline-block;
         float: left;
         width: calc(200% / 3);
         padding: 50px 0;
         background-image: url("../images/general/portfolio-picture-zayavka.jpg"); }
-        #index-page .portfolio-block .portfolio-cont .order-cont .slogan {
+        @media all and (max-width: 768px) {
+          #index-page .our-works .portfolio-cont .order-cont {
+            float: none;
+            display: block;
+            width: 100%; } }
+        #index-page .our-works .portfolio-cont .order-cont .slogan {
           font-size: 25px;
           font-family: "MuseoSansCyrl300", sans-serif;
           color: white;
           text-transform: none; }
-    #index-page .portfolio-block .btn-cont {
+    #index-page .our-works .achievments-cont {
+      display: table;
+      background-color: #fff; }
+      #index-page .our-works .achievments-cont .achievment-item-cont {
+        width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 10vh 5%;
+        position: relative; }
+        @media all and (max-width: 992px) {
+          #index-page .our-works .achievments-cont .achievment-item-cont {
+            width: 100%;
+            display: block; } }
+        #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item {
+          display: table;
+          font-size: 30px;
+          font-family: "MuseoSansCyrl300", sans-serif;
+          line-height: 1.2; }
+          #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item .achievment-info {
+            text-align: left;
+            padding-left: 50px; }
+            #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item .achievment-info span {
+              font-family: "MuseoSansCyrl900", sans-serif; }
+          #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item .left-block, #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item .right-block {
+            width: 50%;
+            display: table-cell;
+            vertical-align: middle; }
+            @media all and (max-width: 1200px) {
+              #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item .left-block, #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item .right-block {
+                float: none;
+                display: block;
+                width: 100%; } }
+          #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item .img-cont {
+            padding: 50px; }
+        #index-page .our-works .achievments-cont .achievment-item-cont:nth-child(1) {
+          background-color: #fff;
+          color: #000; }
+          #index-page .our-works .achievments-cont .achievment-item-cont:nth-child(1):before {
+            content: "";
+            position: absolute;
+            z-index: 5;
+            width: 0;
+            height: 0;
+            top: -10vh;
+            left: 0;
+            border-bottom: 10vh solid #fff;
+            border-right: 100vw solid transparent; }
+        #index-page .our-works .achievments-cont .achievment-item-cont:nth-child(2) {
+          background-color: #010f29;
+          color: #fff; }
+          #index-page .our-works .achievments-cont .achievment-item-cont:nth-child(2):before {
+            content: "";
+            position: absolute;
+            z-index: 5;
+            width: 0;
+            height: 0;
+            top: -5vh;
+            left: 0;
+            border-bottom: 5vh solid #010f29;
+            border-right: 100vw solid transparent; }
+            @media all and (max-width: 992px) {
+              #index-page .our-works .achievments-cont .achievment-item-cont:nth-child(2):before {
+                top: -10vh;
+                left: 0;
+                border-bottom: 10vh solid #010f29;
+                border-left: 100vw solid transparent; } }
+    #index-page .our-works .btn-cont {
       background-color: #000;
       padding-top: 30px; }
-      #index-page .portfolio-block .btn-cont .your-project-btn {
+      #index-page .our-works .btn-cont .your-project-btn {
         width: 750px; }
   #index-page .photo-gallery {
     position: relative;

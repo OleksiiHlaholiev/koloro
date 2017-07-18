@@ -384,24 +384,64 @@ header {
   .our-materials:before {
     border-bottom-color: #f6f6f6; }
   .our-materials .our-materials-header {
+    margin-bottom: 50px;
     font-size: 48px;
     font-family: "BebasNeueRegular", sans-serif;
     text-transform: uppercase;
     line-height: 1.2;
     text-align: left; }
-  .our-materials .our-materials-cont .material-item .img-cont {
-    position: relative;
-    display: inline-block; }
-    .our-materials .our-materials-cont .material-item .img-cont:before {
-      content: "";
-      position: absolute;
-      z-index: 5;
-      width: 0;
-      height: 0;
-      top: 0;
-      left: 0;
-      border-top: 100px solid #f6f6f6;
-      border-right: 100px solid transparent; }
+    @media all and (max-width: 992px) {
+      .our-materials .our-materials-header {
+        margin: 10px 0; } }
+  .our-materials .our-materials-cont .material-item {
+    color: black;
+    line-height: 1.2;
+    text-align: left; }
+    @media all and (max-width: 992px) {
+      .our-materials .our-materials-cont .material-item {
+        margin: 50px 0; } }
+    .our-materials .our-materials-cont .material-item .img-cont {
+      position: relative;
+      display: inline-block;
+      transition: all 0.4s; }
+      .our-materials .our-materials-cont .material-item .img-cont .link-to-material {
+        display: inline-block;
+        width: 100%; }
+      .our-materials .our-materials-cont .material-item .img-cont:before {
+        content: "";
+        position: absolute;
+        z-index: 5;
+        width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+        border-top: 100px solid #f6f6f6;
+        border-right: 100px solid transparent; }
+      .our-materials .our-materials-cont .material-item .img-cont:hover {
+        opacity: 0.5; }
+    .our-materials .our-materials-cont .material-item .material-info {
+      margin-top: 15px;
+      font-size: 15px;
+      font-family: "BebasNeueBold", sans-serif;
+      text-transform: uppercase; }
+      .our-materials .our-materials-cont .material-item .material-info .material-author {
+        margin-left: 25px;
+        color: #8c8c8c; }
+    .our-materials .our-materials-cont .material-item .material-title {
+      font-size: 22px;
+      font-family: "MuseoSansCyrl900", sans-serif;
+      text-transform: uppercase; }
+    .our-materials .our-materials-cont .material-item .material-text {
+      margin: 20px 0;
+      font-size: 15px;
+      font-family: "MuseoSansCyrl300", sans-serif; }
+    .our-materials .our-materials-cont .material-item .material-category-link {
+      font-size: 22px;
+      font-family: "BebasNeueBold", sans-serif;
+      color: #f4bd00;
+      text-transform: uppercase; }
+      .our-materials .our-materials-cont .material-item .material-category-link:hover {
+        text-decoration: underline; }
 
 .our-managers {
   background-image: url("../images/general/kinesko-main-bg.jpg");
@@ -693,6 +733,9 @@ footer {
           background-image: url("../images/index/service-4-icon.png"); }
           #index-page .our-services .our-services-wrapper .service-item .icon-cont .service-4-icon:hover {
             background-image: url("../images/index/service-4-icon-hover.png"); }
+      #index-page .our-services .our-services-wrapper .service-item .link-to-service {
+        display: inline-block;
+        width: 100%; }
       #index-page .our-services .our-services-wrapper .service-item .service-item-title {
         font-size: 32px;
         font-family: "BebasNeueBold", sans-serif;

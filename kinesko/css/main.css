@@ -117,6 +117,13 @@ html, body {
   background-color: #fff;
   overflow-x: hidden; }
 
+.gl-container {
+  width: 80%;
+  margin: 0 auto; }
+  @media all and (min-width: 768px) {
+    .gl-container {
+      width: 90%; } }
+
 .container {
   height: 100%;
   position: relative;
@@ -153,6 +160,9 @@ a[href^="mailto:"]:hover {
   @media all and (max-width: 768px) {
     .gl-yellow-btn, .gl-transparent-btn {
       font-size: 26px; } }
+  @media all and (max-width: 600px) {
+    .gl-yellow-btn, .gl-transparent-btn {
+      font-size: 24px; } }
   @media all and (max-height: 600px) {
     .gl-yellow-btn, .gl-transparent-btn {
       padding: 10px; } }
@@ -322,9 +332,6 @@ header {
   background-color: transparent;
   text-align: center;
   transition: all 0.4s; }
-  @media all and (max-width: 1100px) {
-    header {
-      background-color: #000; } }
   header .gl-container {
     width: 90%;
     max-width: 1500px;
@@ -515,6 +522,9 @@ header {
 
 .header-darkness {
   background-color: rgba(0, 0, 0, 0.85); }
+
+.header-black {
+  background-color: #000; }
 
 .our-materials {
   position: relative;
@@ -935,6 +945,9 @@ footer {
         @media all and (max-width: 1400px) {
           #index-page .our-works .portfolio-cont .left-block {
             padding: 150px 0; } }
+        @media all and (max-width: 800px) {
+          #index-page .our-works .portfolio-cont .left-block {
+            padding: 50px 0; } }
       #index-page .our-works .portfolio-cont .right-block {
         width: 70%; }
       #index-page .our-works .portfolio-cont .left-block, #index-page .our-works .portfolio-cont .right-block {
@@ -954,10 +967,19 @@ footer {
         @media all and (max-width: 1400px) {
           #index-page .our-works .portfolio-cont .block-header {
             font-size: 80px; } }
+        @media all and (max-width: 768px) {
+          #index-page .our-works .portfolio-cont .block-header {
+            font-size: 72px; } }
+        @media all and (max-width: 500px) {
+          #index-page .our-works .portfolio-cont .block-header {
+            font-size: 64px; } }
       #index-page .our-works .portfolio-cont .block-title {
         font-size: 48px;
         font-family: "BebasNeueBold", sans-serif;
         color: #f4bd00; }
+        @media all and (max-width: 768px) {
+          #index-page .our-works .portfolio-cont .block-title {
+            font-size: 30px; } }
       #index-page .our-works .portfolio-cont .view-portfolio-btn {
         width: 430px; }
       #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont {
@@ -1013,6 +1035,9 @@ footer {
         width: calc(200% / 3);
         padding: 15vh 0;
         background-image: url("../images/general/portfolio-picture-zayavka.jpg"); }
+        @media all and (max-width: 1200px) {
+          #index-page .our-works .portfolio-cont .order-cont {
+            padding: 10vh 0; } }
         @media all and (max-width: 768px) {
           #index-page .our-works .portfolio-cont .order-cont {
             float: none;
@@ -1044,6 +1069,9 @@ footer {
           #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item .achievment-info {
             text-align: left;
             padding-left: 50px; }
+            @media all and (max-width: 768px) {
+              #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item .achievment-info {
+                padding-left: 0; } }
             #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item .achievment-info span {
               font-family: "MuseoSansCyrl900", sans-serif; }
           #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item .left-block, #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item .right-block {
@@ -1057,6 +1085,11 @@ footer {
                 width: 100%; } }
           #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item .img-cont {
             padding: 50px; }
+          #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item .canvas-cont {
+            text-align: center; }
+            #index-page .our-works .achievments-cont .achievment-item-cont .achievment-item .canvas-cont .circle-diagram {
+              width: 320px;
+              height: 320px; }
         #index-page .our-works .achievments-cont .achievment-item-cont:nth-child(1) {
           background-color: #fff;
           color: #000; }

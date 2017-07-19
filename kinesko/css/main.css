@@ -436,6 +436,9 @@ header {
         @media all and (max-width: 600px) {
           header .main-menu ul .header-contacts {
             padding: 10px 0; } }
+        @media all and (max-height: 550px) {
+          header .main-menu ul .header-contacts {
+            display: none; } }
         header .main-menu ul .header-contacts span {
           font-size: 18px;
           line-height: 1.2;

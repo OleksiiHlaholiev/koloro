@@ -6,8 +6,12 @@
     <link rel="icon" type="image/png" href="images/general/kinesko-favicon.png">
     <link rel="stylesheet" href="css/libs/bootstrap.min.css"> <!-- bootstrap  -->
     <link rel="stylesheet" href="css/libs/animate.min.css"> <!-- animate.css -->
+    <!--<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css"> &lt;!&ndash; font-awesome &ndash;&gt;-->
     <link rel="stylesheet" href="css/main.css"> <!-- main CSS  -->
     <title>Kinesko - контакты</title>
+    <!-- OwlCarousel -->
+    <link rel="stylesheet" href="css/libs/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/libs/owl.theme.default.min.css">
 </head>
 <body>
 <!-- start of header -->
@@ -131,12 +135,8 @@
     <div class="maps-container">
         <p class="maska"></p>
 
-        <div class="map-skew-righ">
-            <div class="map-skew-lef">
-                <div id="kiev-map" class="kinesko-map animated kiev active"></div>
-                <div id="moscow-map" class="kinesko-map animated moscow"></div>
-            </div>
-        </div>
+        <div id="kiev-map" class="kinesko-map animated kiev active"></div>
+        <div id="moscow-map" class="kinesko-map animated moscow"></div>
 
         <div class="contacts-cont">
             <div class="page-head">
@@ -151,7 +151,39 @@
                 <p>Москва</p>
             </div>
         </div>
+
+        <div class="slider-btn-cont">
+            <!--<i class="fa fa-chevron-left" aria-hidden="true"></i>-->
+            <!--<i class="fa fa-chevron-right" aria-hidden="true"></i>-->
+            <span class="arrow-left-btn">
+                <i class="icon icon-arrow-left-white"></i>
+            </span>
+            <span class="arrow-right-btn">
+                <i class="icon icon-arrow-right-white"></i>
+            </span>
+        </div>
+
+        <!-- photo slider starts -->
+        <div class="contacts-slider-cont map-skew-right">
+            <!--<div class="dark-mask"></div>-->
+            <div id="kiev-slider" class="contacts-slider owl-carousel owl-theme map-skew-left">
+                <div class="item slider-item">
+                    <div class="bg-cont" style="background-image: url('images/contacts/photo-office.jpg')"></div>
+                    <!--<img src="images/contacts/photo-office.jpg" alt="photo-image">-->
+                </div>
+                <div class="item slider-item">
+                    <div class="bg-cont" style="background-image: url('images/contacts/photo-office.jpg')"></div>
+                    <!--<img src="images/contacts/photo-office.jpg" alt="photo-image">-->
+                </div>
+                <div class="item slider-item">
+                    <div class="bg-cont" style="background-image: url('images/contacts/photo-office.jpg')"></div>
+                    <!--<img src="images/contacts/photo-office.jpg" alt="photo-image">-->
+                </div>
+            </div>
+        </div>
+        <!-- photo slider ends -->
     </div>
+
 
     <!-- start of write-us-letter -->
     <div class="write-us-letter triangle-left">
@@ -362,6 +394,9 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxp0_tlV4Dc7H80AVmFWO4yEVoeQckEpI"></script>
 <!-- black Google maps, via API, ends-->
+
+<!-- OwlCarousel -->
+<script src="js/libs/owl.carousel.min.js"></script>
 
 <script src="js/contacts.js"></script>
 </body>

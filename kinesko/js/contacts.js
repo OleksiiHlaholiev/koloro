@@ -381,45 +381,34 @@ window.addEventListener('load', function() {
     //
     // });
     //
-    //
-    // var contactsSlider = $('.contacts-slider');
-    //
-    // $(contactsSlider).owlCarousel({
-    //     loop:true,
-    //     margin:10,
-    //     nav:false,
-    //
-    //     autoplay:false,
-    //     smartSpeed:1000, //Время движения слайда
-    //     autoplayTimeout:4000, //Время смены слайда
-    //     autoplayHoverPause:false,
-    //
-    //     responsive:{
-    //         0:{
-    //             items:1
-    //         },
-    //         800:{
-    //             items:1
-    //         },
-    //         1200:{
-    //             items:1
-    //         }
-    //     },
-    //
-    //     onInitialized: function (event) {
-    //         // alert("Hello!");
-    //         // $('#preloader').fadeOut(10);
-    //     }
-    // });
-    //
-    // // Go to the next item
-    // $('.contacts-slider-cont .arrow-left-btn').click(function() {
-    //     $(contactsSlider).trigger('prev.owl.carousel');
-    // });
-    // // Go to the previous item
-    // $('.contacts-slider-cont .arrow-right-btn').click(function() {
-    //     $(contactsSlider).trigger('next.owl.carousel');
-    // });
+
+    var contactsSlider = $('.contacts-slider');
+
+    $(contactsSlider).owlCarousel({
+        loop:true,
+        margin:1,
+        nav:false,
+        items: 1,
+
+        autoplay:false,
+        smartSpeed:1000, //Время движения слайда
+        autoplayTimeout:4000, //Время смены слайда
+        autoplayHoverPause:false,
+
+        onInitialized: function (event) {
+            // alert("Hello!");
+            // $('#preloader').fadeOut(10);
+        }
+    });
+
+    // Go to the next item
+    $('.slider-btn-cont .arrow-left-btn').click(function() {
+        $(contactsSlider).trigger('prev.owl.carousel');
+    });
+    // Go to the previous item
+    $('.slider-btn-cont .arrow-right-btn').click(function() {
+        $(contactsSlider).trigger('next.owl.carousel');
+    });
 
 
 

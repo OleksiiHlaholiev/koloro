@@ -53,6 +53,18 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 73px;
   height: 45px; }
 
+.icon-arrow-left-white {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -102px;
+  width: 26px;
+  height: 43px; }
+
+.icon-arrow-right-white {
+  background-image: url(../images/sprite.png);
+  background-position: -132px 0px;
+  width: 26px;
+  height: 43px; }
+
 .icon-cross-yellow {
   background-image: url(../images/sprite.png);
   background-position: -83px 0px;
@@ -61,25 +73,25 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-google-hover, footer .social-links a .icon-google:hover {
   background-image: url(../images/sprite.png);
-  background-position: -176px -37px;
+  background-position: -132px -53px;
   width: 20px;
   height: 27px; }
 
 .icon-google {
   background-image: url(../images/sprite.png);
-  background-position: -176px 0px;
+  background-position: -168px -109px;
   width: 20px;
   height: 27px; }
 
 .icon-rss-hover, footer .social-links a .icon-rss:hover {
   background-image: url(../images/sprite.png);
-  background-position: -132px -38px;
+  background-position: -89px -55px;
   width: 27px;
   height: 27px; }
 
 .icon-rss {
   background-image: url(../images/sprite.png);
-  background-position: -89px -55px;
+  background-position: -168px 0px;
   width: 27px;
   height: 27px; }
 
@@ -91,31 +103,31 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 
 .icon-twitter-hover, footer .social-links a .icon-twitter:hover {
   background-image: url(../images/sprite.png);
-  background-position: -45px -55px;
+  background-position: -36px -102px;
   width: 34px;
   height: 28px; }
 
 .icon-twitter {
   background-image: url(../images/sprite.png);
-  background-position: -132px 0px;
+  background-position: -45px -55px;
   width: 34px;
   height: 28px; }
 
 .icon-up-btn {
   background-image: url(../images/sprite.png);
-  background-position: 0px -102px;
+  background-position: -80px -102px;
   width: 40px;
   height: 23px; }
 
 .icon-vk-hover, footer .social-links a .icon-vk:hover {
   background-image: url(../images/sprite.png);
-  background-position: 0px -135px;
+  background-position: -168px -37px;
   width: 22px;
   height: 26px; }
 
 .icon-vk {
   background-image: url(../images/sprite.png);
-  background-position: -32px -135px;
+  background-position: -168px -73px;
   width: 22px;
   height: 26px; }
 
@@ -259,6 +271,7 @@ a[href^="mailto:"]:hover {
 .bg-cont {
   position: relative;
   width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -1240,17 +1253,20 @@ footer {
     position: relative;
     width: 100%;
     height: 100%; }
+    #contacts-page .maps-container .map-skew-right, #contacts-page .maps-container .map-skew-left {
+      -webkit-transform-origin: left bottom;
+              transform-origin: left bottom; }
     #contacts-page .maps-container .map-skew-right {
       overflow: hidden;
-      -webkit-transform: skewX(-45deg);
-              transform: skewX(-45deg); }
+      -webkit-transform: skewX(-60deg);
+              transform: skewX(-60deg); }
     #contacts-page .maps-container .map-skew-left {
-      -webkit-transform: skewX(45deg);
-              transform: skewX(45deg); }
+      -webkit-transform: skewX(60deg);
+              transform: skewX(60deg); }
     #contacts-page .maps-container .kinesko-map {
       display: none;
       width: 100%;
-      height: 970px; }
+      height: 950px; }
       @media all and (max-width: 992px) {
         #contacts-page .maps-container .kinesko-map {
           height: 70vh; } }
@@ -1292,11 +1308,14 @@ footer {
     position: absolute;
     z-index: 5;
     top: 20vh;
-    right: 10%;
+    right: 20%;
     width: 500px;
     max-width: 100%;
     background-color: #000;
     color: #fff; }
+    @media all and (max-width: 1400px) {
+      #contacts-page .fly-block {
+        right: 10%; } }
     @media all and (max-width: 992px) {
       #contacts-page .fly-block {
         position: relative;
@@ -1397,6 +1416,73 @@ footer {
               float: none;
               display: block;
               width: 100%; } }
+  #contacts-page .slider-btn-cont {
+    position: absolute;
+    z-index: 5;
+    bottom: 30%;
+    left: 60%;
+    display: inline-block; }
+    #contacts-page .slider-btn-cont .icon {
+      margin: 50px;
+      cursor: pointer; }
+    @media all and (max-width: 992px) {
+      #contacts-page .slider-btn-cont {
+        display: none; } }
+  #contacts-page .contacts-slider-cont {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    left: 50%;
+    bottom: 0; }
+    @media all and (max-width: 992px) {
+      #contacts-page .contacts-slider-cont {
+        display: none; } }
+    #contacts-page .contacts-slider-cont .arrow-left-btn, #contacts-page .contacts-slider-cont .arrow-right-btn {
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      position: absolute;
+      z-index: 5;
+      top: 50%;
+      -webkit-transform: translateY(-50%) scale(0.7);
+      transform: translateY(-50%) scale(0.7); }
+      @media all and (min-width: 767px) {
+        #contacts-page .contacts-slider-cont .arrow-left-btn, #contacts-page .contacts-slider-cont .arrow-right-btn {
+          display: none; } }
+    #contacts-page .contacts-slider-cont .arrow-left-btn {
+      left: 5px; }
+    #contacts-page .contacts-slider-cont .arrow-right-btn {
+      right: 5px; }
+    #contacts-page .contacts-slider-cont .contacts-slider {
+      position: relative; }
+      #contacts-page .contacts-slider-cont .contacts-slider .item {
+        width: 100%;
+        height: 70vh; }
+        #contacts-page .contacts-slider-cont .contacts-slider .item .bg-cont {
+          background-position: left bottom; }
+        #contacts-page .contacts-slider-cont .contacts-slider .item img {
+          width: 100%; }
+      #contacts-page .contacts-slider-cont .contacts-slider .owl-dots {
+        display: inline-block;
+        margin-bottom: 100px;
+        position: absolute;
+        z-index: 10;
+        left: 25%;
+        bottom: 0; }
+        @media screen and (max-width: 768px) {
+          #contacts-page .contacts-slider-cont .contacts-slider .owl-dots {
+            display: none; } }
+        #contacts-page .contacts-slider-cont .contacts-slider .owl-dots .owl-dot {
+          zoom: 1; }
+        #contacts-page .contacts-slider-cont .contacts-slider .owl-dots .owl-dot span {
+          width: 15px;
+          height: 15px;
+          position: relative;
+          background: transparent;
+          display: block;
+          border: 1px solid white; }
+        #contacts-page .contacts-slider-cont .contacts-slider .owl-dots .owl-dot.active span, #contacts-page .contacts-slider-cont .contacts-slider .owl-dots .owl-dot:hover span {
+          background: white; }
   #contacts-page .write-us-letter {
     background-color: #fff; }
     #contacts-page .write-us-letter .container {

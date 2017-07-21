@@ -54,7 +54,7 @@ $(function () {
 
     var tempScrollTop,
         currentScrollTop = 0,
-        referTopPoint = 300,
+        referTopPoint = 80,
         distanceTop;
 
 

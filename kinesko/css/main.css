@@ -1437,22 +1437,6 @@ footer {
     @media all and (max-width: 992px) {
       #contacts-page .contacts-slider-cont {
         display: none; } }
-    #contacts-page .contacts-slider-cont .arrow-left-btn, #contacts-page .contacts-slider-cont .arrow-right-btn {
-      display: inline-block;
-      vertical-align: top;
-      cursor: pointer;
-      position: absolute;
-      z-index: 5;
-      top: 50%;
-      -webkit-transform: translateY(-50%) scale(0.7);
-      transform: translateY(-50%) scale(0.7); }
-      @media all and (min-width: 767px) {
-        #contacts-page .contacts-slider-cont .arrow-left-btn, #contacts-page .contacts-slider-cont .arrow-right-btn {
-          display: none; } }
-    #contacts-page .contacts-slider-cont .arrow-left-btn {
-      left: 5px; }
-    #contacts-page .contacts-slider-cont .arrow-right-btn {
-      right: 5px; }
     #contacts-page .contacts-slider-cont .contacts-slider {
       position: relative; }
       #contacts-page .contacts-slider-cont .contacts-slider .item {

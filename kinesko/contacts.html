@@ -157,18 +157,19 @@
     <div class="write-us-letter triangle-left">
         <div class="container">
             <div class="write-btn-cont">
-                <a href="/" class="skew-right gl-transparent-btn write-btn">
-                    <span class="skew-left">написать нам письмо</span>
-                </a>
+                <div class="write-btn-inner animated">
+                    <a href="/" class="skew-right gl-transparent-btn write-btn">
+                        <span class="skew-left">написать нам письмо</span>
+                    </a>
+                </div>
             </div>
 
             <!-- start of order-form -->
-            <form class="write-us-form">
+            <form class="write-us-form animated">
                 <div class="form-wrapper">
 
                     <div class="close-btn">
-                        <i class="icon icon-close-btn"></i>
-                        <i class="icon icon-close-btn-hover"></i>
+                        <i class="icon icon-cross-yellow"></i>
                     </div>
 
                     <h2 class="form-header">Расскажите нам о своем проекте</h2>
@@ -190,8 +191,11 @@
 
                     <input type="text" name="user-text" required="required" class="user-text"
                            placeholder="Сопроводительный текст *" tabindex="3">
+                    </a>
 
-                    <input type="submit" value="Отправить" class="submit-btn gl-yellow-btn" tabindex="4">
+                    <button type="submit" class="skew-right gl-transparent-btn submit-btn">
+                        <span class="skew-left">Отправить</span>
+                    </button>
 
                 </div>
             </form>

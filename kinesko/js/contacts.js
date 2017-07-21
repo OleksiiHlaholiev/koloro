@@ -425,6 +425,41 @@ window.addEventListener('load', function() {
 
     initMap(); // initial call
 
+    var writeBtnInner = $(".write-btn-cont .write-btn-inner"),
+        writeBtn = $(".write-btn-cont .write-btn"),
+        writeUsForm = $(".write-us-form"),
+        closeFormBtn = $(".write-us-form .close-btn");
+
+    $(writeBtn).on("click", function(event) {
+        event.preventDefault();
+
+        $(writeBtnInner).removeClass("flipInX").addClass("flipOutX").fadeOut();
+        $(writeUsForm).removeClass("flipOutX").addClass("visible flipInX");
+    });
+
+    $(closeFormBtn).on("click", function(event) {
+        event.preventDefault();
+
+        $(writeBtnInner).removeClass("flipOutX").addClass("flipInX").fadeIn();
+        $(writeUsForm).removeClass("visible flipInX").addClass("flipOutX");
+    });
+
+
+    // *****************    EVENT HANDLERS    *******************
+    function resizeWindowHandler(event) {
+        if (window.innerWidth < 768) {
+            $(writeBtnInner).removeClass("flipInX flipOutX");
+            $(writeUsForm).removeClass("flipInX flipOutX");
+        } else {
+
+        }
+    }
+
+    // ***************** REGISTER EVENT HANDLERS *******************
+
+    window.addEventListener('resize', resizeWindowHandler);
+
+
 
 
 

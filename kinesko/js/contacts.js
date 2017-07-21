@@ -356,7 +356,7 @@ window.addEventListener('load', function() {
         $(".maska").css("z-index", "-1");
     });
     $("div:not('#YMapsID')").on("click", function (e) {
-        e.stopPropagation();
+        // e.stopPropagation();
         $(".maska").css("z-index", "2");
     });
     // end of turn on\off map zoom

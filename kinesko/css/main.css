@@ -1332,7 +1332,7 @@ footer {
         display: inline-block;
         width: 50%;
         padding: 12px 10px 12px 10px;
-        background-color: #000;
+        background-color: #262626;
         color: #898989;
         font-size: 30px;
         font-family: "BebasNeueBold", sans-serif;
@@ -1340,7 +1340,7 @@ footer {
         text-align: center;
         cursor: pointer; }
       #contacts-page .fly-block .contacts-menu li.active {
-        background-color: #262626;
+        background-color: #000;
         color: #fff; }
     #contacts-page .fly-block .close-contacts-btn {
       position: absolute;

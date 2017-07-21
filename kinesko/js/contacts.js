@@ -314,42 +314,44 @@ function calcRoute(start, end) {
 
 window.addEventListener('load', function() {
 
-    // var kineskoMaps = $('.maps-container .kinesko-map');
-    // var contactsMenuItems = $('.contacts-menu li');
-    // var tabPanel = $('.tab-panel');
-    // var tabPanes = $('.tab-panel .tab-pane');
-    // var closeContactsBtns = $('.fly-block .close-contacts-btn');
-    //
-    // $(contactsMenuItems).click(function (e) {
-    //     e.preventDefault();
-    //
-    //     if (!$(this).hasClass("active")) {
-    //         $(contactsMenuItems).removeClass("active");
-    //         $(this).addClass("active");
-    //
-    //         $(koloroMaps).toggleClass("active");
-    //         $(tabPanes).toggleClass("active");
-    //
-    //         $(tabPanel).slideDown();
-    //         $(closeContactsBtns).children().addClass("icon-cross-yellow");
-    //         $(closeContactsBtns).children().removeClass("icon-arrow-down-yellow");
-    //
-    //         initMap();
-    //     } else {
-    //         $(tabPanel).slideDown();
-    //         $(closeContactsBtns).children().addClass("icon-cross-yellow");
-    //         $(closeContactsBtns).children().removeClass("icon-arrow-down-yellow");
-    //     }
-    //
-    // });
-    //
-    // // contacts on map logic starts
-    // $(closeContactsBtns).click(function() {
-    //     $(tabPanel).slideToggle();
-    //     $(this).children().toggleClass("icon-cross-yellow icon-arrow-down-yellow");
-    // });
-    // // contacts on map logic ends
-    //
+    var kineskoMaps = $('.maps-container .kinesko-map'),
+        cityNames = $('.contacts-cont .city-name p'),
+        contactsMenuItems = $('.contacts-menu li'),
+        tabPanel = $('.tab-panel'),
+        tabPanes = $('.tab-panel .tab-pane'),
+        closeContactsBtns = $('.fly-block .close-contacts-btn');
+
+    $(contactsMenuItems).click(function (e) {
+        e.preventDefault();
+
+        if (!$(this).hasClass("active")) {
+            $(contactsMenuItems).removeClass("active");
+            $(this).addClass("active");
+
+            $(kineskoMaps).toggleClass("active");
+            $(tabPanes).toggleClass("active");
+            $(cityNames).toggleClass("active");
+
+            $(tabPanel).slideDown();
+            $(closeContactsBtns).children().addClass("icon-cross-yellow");
+            $(closeContactsBtns).children().removeClass("icon-arrow-down-yellow");
+
+            initMap();
+        } else {
+            $(tabPanel).slideDown();
+            $(closeContactsBtns).children().addClass("icon-cross-yellow");
+            $(closeContactsBtns).children().removeClass("icon-arrow-down-yellow");
+        }
+
+    });
+
+    // contacts on map logic starts
+    $(closeContactsBtns).click(function() {
+        $(tabPanel).slideToggle();
+        $(this).children().toggleClass("icon-cross-yellow icon-arrow-down-yellow");
+    });
+    // contacts on map logic ends
+
     // start of turn on\off map zoom
     $(".maska").on("click", function (e) {
         e.stopPropagation();
@@ -360,27 +362,27 @@ window.addEventListener('load', function() {
         $(".maska").css("z-index", "2");
     });
     // end of turn on\off map zoom
-    //
-    //
-    // $(".route-btn").on("click", function (event) {
-    //     event.preventDefault();
-    //
-    //     if (isGeolocationActive) {
-    //         if($(".tab-panel .kiev").hasClass("active")) {
-    //             directionsDisplay.setMap(kievMap);
-    //             calcRoute(userCurrentPos, myLatLngKiev);
-    //         } else if($(".tab-panel .moscow").hasClass("active")) {
-    //             directionsDisplay.setMap(moscowMap);
-    //             calcRoute(userCurrentPos, myLatLngMoscow);
-    //         }
-    //         $(tabPanel).slideUp();
-    //         $(closeContactsBtns).children().toggleClass("icon-cross-yellow icon-arrow-down-yellow");
-    //     } else {
-    //         alert("Please, enable access to your geo-location! Then reload the page!!!");
-    //     }
-    //
-    // });
-    //
+
+
+    $(".route-btn").on("click", function (event) {
+        event.preventDefault();
+
+        if (isGeolocationActive) {
+            if($(".tab-panel .kiev").hasClass("active")) {
+                directionsDisplay.setMap(kievMap);
+                calcRoute(userCurrentPos, myLatLngKiev);
+            } else if($(".tab-panel .moscow").hasClass("active")) {
+                directionsDisplay.setMap(moscowMap);
+                calcRoute(userCurrentPos, myLatLngMoscow);
+            }
+            $(tabPanel).slideUp();
+            $(closeContactsBtns).children().toggleClass("icon-cross-yellow icon-arrow-down-yellow");
+        } else {
+            alert("Please, enable access to your geo-location! Then reload the page!!!");
+        }
+
+    });
+
 
     var contactsSlider = $('.contacts-slider');
 

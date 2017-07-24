@@ -59,6 +59,7 @@ $(function () {
 
 
     // ***************************************************
+    scrollMenuHandler();
     resizeWindowHandler(); // initial call!!!
     // ***************************************************
 
@@ -104,11 +105,7 @@ $(function () {
         }
     }
 
-    // ***************** REGISTER EVENT HANDLERS *******************
-
-    window.addEventListener('resize', resizeWindowHandler);
-
-    $(window).scroll(function(){
+    function scrollMenuHandler() {
         currentScrollTop = window.pageYOffset;
         distanceTop = html.scrollTop || body && body.scrollTop || 0;
         distanceTop -= html.clientTop; // в IE7- <html> смещён относительно (0,0)
@@ -123,8 +120,12 @@ $(function () {
         // console.log("currentScrollTop", currentScrollTop);
 
         tempScrollTop = currentScrollTop;
+    }
 
-    });
+    // ***************** REGISTER EVENT HANDLERS *******************
+
+    window.addEventListener('resize', resizeWindowHandler);
+    window.addEventListener('scroll', scrollMenuHandler);
 
     // **************************************************
 

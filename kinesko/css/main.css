@@ -844,6 +844,155 @@ footer {
   .back-to-top, .search-container {
     right: 20px; } }
 
+.info-block-cont {
+  padding: 20px 0; }
+  .info-block-cont .title-cont .title {
+    padding-right: 100px;
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-family: "BebasNeueBold", sans-serif;
+    color: black;
+    line-height: 1.2;
+    text-align: right; }
+    @media all and (max-width: 992px) {
+      .info-block-cont .title-cont .title {
+        padding-right: 0;
+        text-align: center; } }
+    @media all and (max-width: 768px) {
+      .info-block-cont .title-cont .title {
+        font-size: 30px; } }
+  .info-block-cont .text-cont {
+    font-size: 24px;
+    font-family: "MuseoSansCyrl300", sans-serif;
+    color: black;
+    line-height: 1.2;
+    text-align: left; }
+    @media all and (max-width: 992px) {
+      .info-block-cont .text-cont {
+        text-align: center; } }
+    @media all and (max-width: 768px) {
+      .info-block-cont .text-cont {
+        font-size: 20px; } }
+    .info-block-cont .text-cont p span {
+      font-family: "MuseoSansCyrl900", sans-serif; }
+    .info-block-cont .text-cont .for-read-more {
+      display: none; }
+
+.porfolio-items-cont .porfolio-item-cont {
+  width: calc(100% / 4);
+  display: inline-block;
+  float: left; }
+  @media all and (max-width: 768px) {
+    .porfolio-items-cont .porfolio-item-cont {
+      float: none;
+      display: block;
+      width: 100%; } }
+  .porfolio-items-cont .porfolio-item-cont .porfolio-item {
+    width: 100%;
+    position: relative; }
+    .porfolio-items-cont .porfolio-item-cont .porfolio-item .poster-img-cont img {
+      width: 100%; }
+    .porfolio-items-cont .porfolio-item-cont .porfolio-item:hover .hover-layer {
+      opacity: 1; }
+    .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      padding-top: 10%;
+      opacity: 0;
+      transition: all 0.8s;
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: center; }
+      @media all and (max-width: 768px) {
+        .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer {
+          position: relative;
+          opacity: 1; } }
+      .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-name {
+        font-size: 36px;
+        font-family: "BebasNeueBold", sans-serif;
+        color: white; }
+        .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-name span {
+          color: #f4bd00;
+          text-decoration: underline; }
+      .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-category {
+        margin: 20px 0 30px 0;
+        font-size: 24px;
+        font-family: "BebasNeueRegular";
+        color: #f4bd00; }
+        .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-category .link-to-category:hover {
+          text-decoration: underline; }
+
+.portfolio-block-small .porfolio-items-cont {
+  display: table;
+  width: 100%; }
+  .portfolio-block-small .porfolio-items-cont .left-block {
+    width: 60%; }
+    .portfolio-block-small .porfolio-items-cont .left-block .porfolio-item-cont {
+      width: calc(100% / 3); }
+  .portfolio-block-small .porfolio-items-cont .right-block {
+    width: 40%;
+    height: 100%;
+    background-image: url("../images/general/portfolio-picture-zayavka.jpg"); }
+    .portfolio-block-small .porfolio-items-cont .right-block .view-cont {
+      width: 100%;
+      padding: 50px 0; }
+      .portfolio-block-small .porfolio-items-cont .right-block .view-cont .view-portfolio-btn {
+        width: 520px; }
+  .portfolio-block-small .porfolio-items-cont .left-block, .portfolio-block-small .porfolio-items-cont .right-block {
+    display: table-cell;
+    vertical-align: middle; }
+  @media all and (max-width: 1200px) {
+    .portfolio-block-small .porfolio-items-cont {
+      display: block; }
+      .portfolio-block-small .porfolio-items-cont .left-block, .portfolio-block-small .porfolio-items-cont .right-block {
+        display: block;
+        width: 100%; }
+      .portfolio-block-small .porfolio-items-cont .left-block .porfolio-item-cont {
+        float: left; }
+      .portfolio-block-small .porfolio-items-cont .right-block .view-cont {
+        padding: 100px 0; } }
+  @media all and (max-width: 768px) {
+    .portfolio-block-small .porfolio-items-cont .left-block .porfolio-item-cont {
+      width: 100%; } }
+
+.portfolio-block-small .order-cont {
+  padding-top: 50px; }
+
+.main-top-container .page-head {
+  padding-top: 10vh;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left; }
+  .main-top-container .page-head .bread-crumbs {
+    font-size: 30px;
+    font-family: "BebasNeueRegular", sans-serif; }
+    .main-top-container .page-head .bread-crumbs a:after {
+      content: '/';
+      padding-left: 10px; }
+    .main-top-container .page-head .bread-crumbs span.active {
+      color: #f4bd00;
+      padding-left: 10px; }
+  .main-top-container .page-head .page-title {
+    margin: 20px 0;
+    line-height: 1.0;
+    font-size: 100px;
+    font-family: "BebasNeueBold", sans-serif; }
+  @media all and (max-width: 768px) {
+    .main-top-container .page-head {
+      padding-top: 15vh; }
+      .main-top-container .page-head .bread-crumbs {
+        display: none;
+        font-size: 24px; }
+      .main-top-container .page-head .page-title {
+        text-align: center;
+        font-size: 60px; } }
+
 #index-page {
   background-color: #000;
   overflow: hidden; }
@@ -1037,44 +1186,6 @@ footer {
             float: none;
             display: block;
             width: 100%; } }
-        #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item {
-          width: 100%;
-          position: relative; }
-          #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item .poster-img-cont img {
-            width: 100%; }
-          #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item:hover .hover-layer {
-            opacity: 1; }
-          #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.75);
-            padding-top: 10%;
-            opacity: 0;
-            transition: all 0.8s;
-            text-transform: uppercase;
-            line-height: 1.2;
-            text-align: center; }
-            @media all and (max-width: 768px) {
-              #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer {
-                position: relative;
-                opacity: 1; } }
-            #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-name {
-              font-size: 36px;
-              font-family: "BebasNeueBold", sans-serif;
-              color: white; }
-              #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-name span {
-                color: #f4bd00;
-                text-decoration: underline; }
-            #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-category {
-              margin: 20px 0 30px 0;
-              font-size: 24px;
-              font-family: "BebasNeueRegular";
-              color: #f4bd00; }
-              #index-page .our-works .portfolio-cont .porfolio-items-cont .porfolio-item-cont .porfolio-item .hover-layer .portfolio-category .link-to-category:hover {
-                text-decoration: underline; }
       #index-page .our-works .portfolio-cont .order-cont {
         display: inline-block;
         float: left;
@@ -1193,51 +1304,81 @@ footer {
   #index-page .about-us {
     padding-bottom: 10vh;
     background-color: #fff; }
-    #index-page .about-us .info-block-cont {
-      padding: 20px 0; }
-      #index-page .about-us .info-block-cont .title-cont .title {
-        padding-right: 100px;
-        margin-bottom: 30px;
-        font-size: 36px;
-        font-family: "BebasNeueBold", sans-serif;
-        color: black;
-        line-height: 1.2;
-        text-align: right; }
-        @media all and (max-width: 992px) {
-          #index-page .about-us .info-block-cont .title-cont .title {
-            padding-right: 0;
-            text-align: center; } }
-      #index-page .about-us .info-block-cont .text-cont {
-        font-size: 24px;
-        font-family: "MuseoSansCyrl900", sans-serif;
-        color: black;
-        line-height: 1.2;
-        text-align: left; }
-        @media all and (max-width: 992px) {
-          #index-page .about-us .info-block-cont .text-cont {
-            text-align: center; } }
-        #index-page .about-us .info-block-cont .text-cont .for-read-more {
-          display: none; }
+    #index-page .about-us .info-block-cont .title-cont .title {
+      color: black; }
+    #index-page .about-us .info-block-cont .text-cont {
+      color: black; }
 
-.page-head {
-  color: white;
-  text-transform: uppercase;
-  line-height: 1.2;
-  text-align: left; }
-  .page-head .bread-crumbs {
-    font-size: 30px;
-    font-family: "BebasNeueRegular", sans-serif; }
-    .page-head .bread-crumbs a:after {
-      content: '/';
-      padding-left: 10px; }
-    .page-head .bread-crumbs span.active {
-      color: #f4bd00;
-      padding-left: 10px; }
-  .page-head .page-title {
-    margin: 20px 0;
-    line-height: 1.0;
-    font-size: 100px;
-    font-family: "BebasNeueBold", sans-serif; }
+#company-page .main-top-container {
+  height: 90vh;
+  background-image: url("../images/company/company-main-picture.jpg");
+  background-attachment: fixed; }
+  @media all and (max-width: 768px) {
+    #company-page .main-top-container {
+      height: 80vh; } }
+
+#company-page .our-hobbies {
+  padding-bottom: 10vh;
+  background-color: #000; }
+  #company-page .our-hobbies .info-block-cont .title-cont .title {
+    color: #fff; }
+  #company-page .our-hobbies .info-block-cont .text-cont {
+    color: #fff; }
+  #company-page .our-hobbies .hobby-icons-cont {
+    text-align: center; }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont {
+      display: inline-block;
+      padding: 7px; }
+      #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont .hobby-item {
+        position: relative; }
+        #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont .hobby-item .icon {
+          width: 120px;
+          height: 120px;
+          cursor: pointer; }
+        #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont .hobby-item .icon-hover {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: all 0.4s; }
+        #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont .hobby-item:hover .icon-hover {
+          opacity: 1; }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(1) .hobby-item .icon {
+      background-image: url("../images/company/icon hobby 1.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(1) .hobby-item .icon-hover {
+      background-image: url("../images/company/icon hobby 1 hover.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(2) .hobby-item .icon {
+      background-image: url("../images/company/icon hobby 2.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(2) .hobby-item .icon-hover {
+      background-image: url("../images/company/icon hobby 2 hover.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(3) .hobby-item .icon {
+      background-image: url("../images/company/icon hobby 3.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(3) .hobby-item .icon-hover {
+      background-image: url("../images/company/icon hobby 3 hover.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(4) .hobby-item .icon {
+      background-image: url("../images/company/icon hobby 4.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(4) .hobby-item .icon-hover {
+      background-image: url("../images/company/icon hobby 4 hover.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(5) .hobby-item .icon {
+      background-image: url("../images/company/icon hobby 5.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(5) .hobby-item .icon-hover {
+      background-image: url("../images/company/icon hobby 5 hover.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(6) .hobby-item .icon {
+      background-image: url("../images/company/icon hobby 6.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(6) .hobby-item .icon-hover {
+      background-image: url("../images/company/icon hobby 6 hover.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(7) .hobby-item .icon {
+      background-image: url("../images/company/icon hobby 7.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(7) .hobby-item .icon-hover {
+      background-image: url("../images/company/icon hobby 7 hover.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(8) .hobby-item .icon {
+      background-image: url("../images/company/icon hobby 8.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(8) .hobby-item .icon-hover {
+      background-image: url("../images/company/icon hobby 8 hover.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(9) .hobby-item .icon {
+      background-image: url("../images/company/icon hobby 9.svg"); }
+    #company-page .our-hobbies .hobby-icons-cont .hobby-item-cont:nth-child(9) .hobby-item .icon-hover {
+      background-image: url("../images/company/icon hobby 9 hover.svg"); }
 
 .plashka {
   background: linear-gradient(black, transparent);
@@ -1283,25 +1424,27 @@ footer {
       top: 0; }
     #contacts-page .maps-container .maska-hidden {
       z-index: -1; }
-  #contacts-page .contacts-cont {
+  #contacts-page .main-top-container {
     position: absolute;
     top: 15vh;
     left: 15%;
     height: auto;
     z-index: 5; }
     @media all and (max-width: 1200px) {
-      #contacts-page .contacts-cont {
+      #contacts-page .main-top-container {
         left: 5%; } }
     @media all and (max-width: 992px) {
-      #contacts-page .contacts-cont {
+      #contacts-page .main-top-container {
         display: none; } }
-    #contacts-page .contacts-cont .city-name {
+    #contacts-page .main-top-container .page-head {
+      padding-top: 0; }
+    #contacts-page .main-top-container .city-name {
       font-size: 48px;
       font-family: "BebasNeueBold", sans-serif;
       color: #f4bd00; }
-      #contacts-page .contacts-cont .city-name p {
+      #contacts-page .main-top-container .city-name p {
         display: none; }
-      #contacts-page .contacts-cont .city-name p.active {
+      #contacts-page .main-top-container .city-name p.active {
         display: block; }
   #contacts-page .fly-block {
     display: inline-block;

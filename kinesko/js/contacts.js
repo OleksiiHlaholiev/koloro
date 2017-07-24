@@ -315,7 +315,7 @@ function calcRoute(start, end) {
 window.addEventListener('load', function() {
 
     var kineskoMaps = $('.maps-container .kinesko-map'),
-        cityNames = $('.contacts-cont .city-name p'),
+        cityNames = $('.main-top-container .city-name p'),
         contactsMenuItems = $('.contacts-menu li'),
         tabPanel = $('.tab-panel'),
         tabPanes = $('.tab-panel .tab-pane'),

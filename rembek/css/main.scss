@@ -12,11 +12,11 @@ $brownColor: #45221f;
 
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 html, body {
-    padding: 0;
-    margin: 0;
     width: 100%;
     background-color: #fefefe;
 }
@@ -314,7 +314,7 @@ footer {
 }
 .gl-btn:hover {
     color: #fff;
-    background-color: #aeaeae;
+    background-color: $brownColor;
 }
 
 // start of top-section
@@ -353,8 +353,41 @@ footer {
 }
 // end of top-section
 
+.image-cont {
+    text-align: center;
+    img {
+        max-width: 100%;
+    }
+}
+
+
+.info-text {
+    font-size: 40px;
+    font-family: $PFDinTextCompProRegular;
+    color: $brownColor;
+    //font-variant: small-caps;
+    line-height: 1.2;
+    text-align: center;
+}
+
+
+.green-text {
+    color: $greenDarkColor;
+}
+
+.brown-text {
+    color: $brownColor;
+}
+
 // start of cycles-section
 #cycles-section {
+    padding: 10vh 0;
+    background-color: $greenLightColor;
+
+    .cycles-container {
+
+    }
+
     .packages-bg {
         background-image: url("../images/packages-bg.jpg");
     }

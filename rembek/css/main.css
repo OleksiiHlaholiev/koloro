@@ -12,11 +12,11 @@
   src: url("../fonts/PFDinTextCompPro-Medium.otf"); }
 /*************************************************************/
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
 
 html, body {
-  padding: 0;
-  margin: 0;
   width: 100%;
   background-color: #fefefe; }
 
@@ -257,8 +257,29 @@ footer {
         color: white;
         line-height: 1.2; }
 
-#cycles-section .packages-bg {
-  background-image: url("../images/packages-bg.jpg"); }
+.image-cont {
+  text-align: center; }
+  .image-cont img {
+    max-width: 100%; }
+
+.info-text {
+  font-size: 40px;
+  font-family: "PFDinTextCompProRegular", sans-serif;
+  color: #45221f;
+  line-height: 1.2;
+  text-align: center; }
+
+.green-text {
+  color: #008842; }
+
+.brown-text {
+  color: #45221f; }
+
+#cycles-section {
+  padding: 10vh 0;
+  background-color: #dffabb; }
+  #cycles-section .packages-bg {
+    background-image: url("../images/packages-bg.jpg"); }
 
 .rembek-form {
   display: none;

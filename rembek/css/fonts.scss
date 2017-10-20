@@ -1,0 +1,17 @@
+/* ---------------------- FONTS ------------------------------*/
+/*font-family: 'Montserrat', sans-serif;*/
+@font-face {
+    font-family: "PFDinTextCompProRegular";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/PFDinTextCompPro-Regular.ttf"); }
+$PFDinTextCompProRegular: "PFDinTextCompProRegular", sans-serif;
+
+@font-face {
+    font-family: "PFDinTextCompProMedium";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/PFDinTextCompPro-Medium.otf"); }
+$PFDinTextCompProMedium: "PFDinTextCompProMedium", sans-serif;
+
+/*************************************************************/

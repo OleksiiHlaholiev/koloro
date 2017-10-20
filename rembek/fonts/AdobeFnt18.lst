@@ -1,0 +1,76 @@
+%!Adobe-FontList 1.18
+%Locale:0x419
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:PFDINTextCompPro-Medium
+FamilyName:PF DIN Text Comp Pro
+StyleName:Medium
+FullName:PF DIN Text Compressed Pro Medium
+MenuName:PF DIN Text Comp Pro Med
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:D:\работа\rembek\13.10\Font\pf-din-text-compressed-pro-medium-59d49605a2e84.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:188099
+FileModTime:1507104274
+WeightClass:500
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,PF DIN Text Compressed Pro Medium
+NameArray:0,Win,1,PF DIN Text Comp Pro Med
+NameArray:0,Win,16,PF DIN Text Comp Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PFDinTextCompPro-Regular
+FamilyName:PF Din Text Comp Pro
+StyleName:Regular
+FullName:PFDinTextCompPro-Regular
+MenuName:PF Din Text Comp Pro
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:D:\работа\rembek\13.10\Font\PFDinTextCompPro-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:443684
+FileModTime:1507104032
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,PFDinTextCompPro-Regular
+NameArray:0,Win,1,PF Din Text Comp Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PFStampsPro-Solid
+FamilyName:PF Stamps Pro
+StyleName:Solid
+FullName:PFStampsPro-Solid
+MenuName:PF Stamps Pro Solid
+StyleBits:0
+FamilyNameNative:PF Stamps Pro
+StyleNameNative:Solid
+FullNameNative:PF Stamps Pro Solid
+WritingScript:Cyrillic
+OutlineFileName:D:\работа\rembek\13.10\Font\PFStampsPro-Solid.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:83192
+FileModTime:1189119036
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,PFStampsPro-Solid
+NameArray:0,Win,1,PF Stamps Pro Solid
+NameArray:0,Win,16,PF Stamps Pro
+%EndFont
+

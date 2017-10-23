@@ -1,5 +1,4 @@
 /* ---------------------- FONTS ------------------------------*/
-/*font-family: 'Montserrat', sans-serif;*/
 @font-face {
   font-family: "PFDinTextCompProRegular";
   font-weight: normal;
@@ -9,7 +8,7 @@
   font-family: "PFDinTextCompProMedium";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/PFDinTextCompPro-Medium.otf"); }
+  src: url("../fonts/PFDinTextCompPro-Medium.ttf"); }
 /*************************************************************/
 * {
   box-sizing: border-box;
@@ -70,6 +69,9 @@ html, body {
   flex-direction: row; }
   .full-cont .left-cont, .full-cont .right-cont {
     width: 50%; }
+  @media all and (max-width: 992px) {
+    .full-cont .left-cont, .full-cont .right-cont {
+      width: 100%; } }
 
 .menu-hidden {
   top: -120px; }
@@ -191,7 +193,7 @@ footer {
   line-height: 1.2;
   text-align: center;
   margin: 0;
-  padding: 10vh 0 5vh 0;
+  padding: 0 0 5vh 0;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s; }
@@ -237,25 +239,26 @@ footer {
   color: #fff;
   background-color: #45221f; }
 
-#top-section {
+#our-product-section {
   position: relative; }
-  #top-section .top-bg-container {
+  #our-product-section .top-bg-container {
     background-position: center bottom;
     background-attachment: fixed;
     background-image: url("../images/main-bg.jpg"); }
-    #top-section .top-bg-container .main-container {
+    #our-product-section .top-bg-container .main-container {
       height: 100%;
       padding-top: 110px; }
-      #top-section .top-bg-container .main-container .full-cont {
+      #our-product-section .top-bg-container .main-container .full-cont {
         height: 100%;
         align-items: center; }
-    #top-section .top-bg-container .info-cont {
+    #our-product-section .top-bg-container .info-cont {
       max-width: 700px; }
-      #top-section .top-bg-container .info-cont .main-header {
+      #our-product-section .top-bg-container .info-cont .main-header {
         font-size: 50px;
         font-family: "PFDinTextCompProMedium", sans-serif;
         color: white;
-        line-height: 1.2; }
+        line-height: 1.2;
+        padding-bottom: 20px; }
 
 .image-cont {
   text-align: center; }
@@ -267,7 +270,8 @@ footer {
   font-family: "PFDinTextCompProRegular", sans-serif;
   color: #45221f;
   line-height: 1.2;
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 20px; }
 
 .green-text {
   color: #008842; }
@@ -276,10 +280,76 @@ footer {
   color: #45221f; }
 
 #cycles-section {
-  padding: 10vh 0;
   background-color: #dffabb; }
+  #cycles-section .cycles-container {
+    padding: 10vh 0; }
+    #cycles-section .cycles-container .info-cont {
+      width: 80%;
+      margin: 0 auto; }
+      @media all and (max-width: 992px) {
+        #cycles-section .cycles-container .info-cont {
+          width: 100%; } }
+    #cycles-section .cycles-container .strawberry-img {
+      padding-top: 5vh; }
   #cycles-section .packages-bg {
     background-image: url("../images/packages-bg.jpg"); }
+
+.rembek-icon-text {
+  padding-top: 7vh;
+  font-size: 40px;
+  font-family: "PFDinTextCompProMedium", sans-serif;
+  color: #008842;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center; }
+
+#advantages-section {
+  padding: 10vh 0; }
+  #advantages-section .advantages-items-cont {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
+    #advantages-section .advantages-items-cont .advantage-item {
+      width: 25%;
+      padding: 0 40px; }
+      @media all and (max-width: 1200px) {
+        #advantages-section .advantages-items-cont .advantage-item {
+          width: 50%;
+          padding-bottom: 5vh; } }
+      @media all and (max-width: 768px) {
+        #advantages-section .advantages-items-cont .advantage-item {
+          width: 100%; } }
+      #advantages-section .advantages-items-cont .advantage-item .advantage-icon {
+        transition: 0.4s; }
+        #advantages-section .advantages-items-cont .advantage-item .advantage-icon img {
+          max-width: 100%; }
+        #advantages-section .advantages-items-cont .advantage-item .advantage-icon:hover {
+          transform: scale(1.1); }
+
+#application-section {
+  padding: 10vh 0;
+  background-color: #dffabb; }
+  #application-section .application-items-cont {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
+    #application-section .application-items-cont .application-item {
+      width: calc(100% / 3);
+      padding: 0 40px; }
+      @media all and (max-width: 1200px) {
+        #application-section .application-items-cont .application-item {
+          width: 100%;
+          padding-bottom: 5vh; } }
+      #application-section .application-items-cont .application-item .application-icon {
+        transition: 0.4s; }
+        #application-section .application-items-cont .application-item .application-icon img {
+          max-width: 100%; }
+        #application-section .application-items-cont .application-item .application-icon:hover {
+          transform: scale(1.1); }
 
 .rembek-form {
   display: none;

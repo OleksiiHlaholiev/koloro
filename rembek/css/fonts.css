@@ -1,5 +1,4 @@
 /* ---------------------- FONTS ------------------------------*/
-/*font-family: 'Montserrat', sans-serif;*/
 @font-face {
   font-family: "PFDinTextCompProRegular";
   font-weight: normal;
@@ -9,7 +8,7 @@
   font-family: "PFDinTextCompProMedium";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/PFDinTextCompPro-Medium.otf"); }
+  src: url("../fonts/PFDinTextCompPro-Medium.ttf"); }
 /*************************************************************/
 
 /*# sourceMappingURL=fonts.css.map */

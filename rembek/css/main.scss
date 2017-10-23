@@ -3,6 +3,7 @@
 
 $mobileWidth: 768px;
 $transitionTime: 0.4s;
+$sectionPadding: 10vh;
 
 $yellowColor: #ffed00;
 $greenLightColor: #dffabb;
@@ -80,11 +81,10 @@ html, body {
        width: 50%;
     }
 
-    .left-cont {
-
-    }
-    .right-cont {
-
+    @include mediaMaxWidth(992px) {
+        .left-cont, .right-cont {
+            width: 100%;
+        }
     }
 }
 
@@ -266,7 +266,7 @@ footer {
     text-align: center;
 
     margin: 0;
-    padding: 10vh 0 5vh 0;
+    padding: 0 0 5vh 0;
 
     @include transition($transitionTime);
 
@@ -317,8 +317,8 @@ footer {
     background-color: $brownColor;
 }
 
-// start of top-section
-#top-section {
+// start of our-product-section
+#our-product-section {
     position: relative;
 
 
@@ -346,12 +346,13 @@ footer {
                 font-family: $PFDinTextCompProMedium;
                 color: rgb(255, 255, 255);
                 line-height: 1.2;
+                padding-bottom: 20px;
                 //letter-spacing: 0.7px;
             }
         }
     }
 }
-// end of top-section
+// end of our-product-section
 
 .image-cont {
     text-align: center;
@@ -368,6 +369,7 @@ footer {
     //font-variant: small-caps;
     line-height: 1.2;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 
@@ -381,11 +383,22 @@ footer {
 
 // start of cycles-section
 #cycles-section {
-    padding: 10vh 0;
     background-color: $greenLightColor;
 
     .cycles-container {
+        padding: $sectionPadding 0;
 
+        .info-cont {
+            width: 80%;
+            margin: 0 auto;
+
+            @include mediaMaxWidth(992px) {
+                width: 100%;
+            }
+        }
+        .strawberry-img {
+            padding-top: 5vh;
+        }
     }
 
     .packages-bg {
@@ -393,6 +406,97 @@ footer {
     }
 }
 // end of cycles-section
+
+.rembek-icon-text {
+    padding-top: 7vh;
+    font-size: 40px;
+    font-family: $PFDinTextCompProMedium;
+    color: $greenDarkColor;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+}
+
+// start of advantages-section
+#advantages-section {
+    padding: $sectionPadding 0;
+
+    .advantages-items-cont {
+        padding: 20px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .advantage-item {
+            width: 25%;
+            //max-width: 280px;
+            padding: 0 40px;
+
+            @include mediaMaxWidth(1200px) {
+                width: 50%;
+
+                padding-bottom: 5vh;
+            }
+            @include mediaMaxWidth($mobileWidth) {
+                width: 100%;
+            }
+
+            .advantage-icon {
+                transition: $transitionTime;
+
+                img {
+                    //width: 100%;
+                    max-width: 100%;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+// end of advantages-section
+
+// start of application-section
+#application-section {
+    padding: $sectionPadding 0;
+    background-color: $greenLightColor;
+
+    .application-items-cont {
+        padding: 20px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .application-item {
+            width: calc(100% / 3);
+            padding: 0 40px;
+
+            @include mediaMaxWidth(1200px) {
+                width: 100%;
+                padding-bottom: 5vh;
+            }
+
+            .application-icon {
+                transition: $transitionTime;
+
+                img {
+                    //width: 100%;
+                    max-width: 100%;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+}
+// end of application-section
 
 // start of rembek-form (general container)
 .rembek-form {

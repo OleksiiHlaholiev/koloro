@@ -353,7 +353,7 @@ footer {
     position: fixed;
     z-index: 999;
     //right: 20px;
-    right: calc(7% - 65px);
+    right: 50px;
     bottom: 20px;
 
     a {
@@ -672,7 +672,7 @@ footer {
 // start of call-to-action-section
 #call-to-action-section {
     .vegetables-bg {
-        height: 75vh;
+        min-height: 75vh;
         background-image: url("../images/vegetables-bg.jpg");
 
         display: flex;
@@ -692,7 +692,12 @@ footer {
                 }
             }
             .result-text {
+                text-transform: uppercase;
                 font-size: 60px;
+
+                @include mediaMaxWidth($mobileWidth) {
+                    font-size: 36px;
+                }
             }
         }
     }
@@ -952,6 +957,7 @@ input:-ms-input-placeholder {
 
 .order-form {
     //display: block;
+    background-image: url("../images/success-bg.png");
     .container {
         background-color: #d7d7d7;
     }

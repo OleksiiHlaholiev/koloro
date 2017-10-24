@@ -7,7 +7,7 @@
 var html = document.documentElement,
     body = document.body;
 
-var tempScrollTop, currentScrollTop = 0, referTopPoint = 300, distanceTop;
+var tempScrollTop, currentScrollTop = 0, referTopPoint = 200, distanceTop;
 
 
 $(window).scroll(function(){

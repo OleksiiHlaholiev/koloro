@@ -250,7 +250,7 @@ footer {
   transform: translateY(150%);
   position: fixed;
   z-index: 999;
-  right: calc(7% - 65px);
+  right: 50px;
   bottom: 20px; }
   .back-to-top a {
     display: inline-block; }
@@ -467,7 +467,7 @@ footer {
           transform: scale(1.1); }
 
 #call-to-action-section .vegetables-bg {
-  height: 75vh;
+  min-height: 75vh;
   background-image: url("../images/vegetables-bg.jpg");
   display: flex;
   flex-direction: column;
@@ -479,7 +479,11 @@ footer {
     text-transform: uppercase;
     color: #ffed00; }
   #call-to-action-section .vegetables-bg .info-cont .result-text {
+    text-transform: uppercase;
     font-size: 60px; }
+    @media all and (max-width: 768px) {
+      #call-to-action-section .vegetables-bg .info-cont .result-text {
+        font-size: 36px; } }
 
 #contact-us-section {
   padding: 10vh 0;
@@ -655,8 +659,10 @@ input::-webkit-input-placeholder,
 input:-ms-input-placeholder {
   color: #00b3ff; }
 
-.order-form .container {
-  background-color: #d7d7d7; }
+.order-form {
+  background-image: url("../images/success-bg.png"); }
+  .order-form .container {
+    background-color: #d7d7d7; }
 
 .success-form {
   background-image: url("../images/success-bg.png"); }

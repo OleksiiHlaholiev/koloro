@@ -68,6 +68,107 @@ function backToTop() {
 
 backToTop();
 
+
+//------------   START OF GLOBAL VARIABLES AND FUNCTIONS   -------------
+var successFormTimer,
+    rembekForms = $(".rembek-form");
+
+function rembekFormShow(rembekForm) {
+    $(rembekForm).addClass("active").fadeIn(400);
+    $("html, body").addClass("scroll-lock");
+}
+
+function rembekFormHide(rembekForm) {
+    $(rembekForm).removeClass("active").fadeOut(400);
+
+    if(!$("header").hasClass("active")) {
+        // check if the header is not active - avoid dual deactivation of body scroll
+        $("html, body").removeClass("scroll-lock");
+    }
+}
+
+function successFormShow() {
+    var timeToShow = 7000;
+    rembekFormShow(".success-form");
+
+    successFormTimer = setTimeout(function () {
+        rembekFormHide(".success-form");
+        clearTimeout(successFormTimer);
+    }, timeToShow);
+}
+//------------   end OF GLOBAL VARIABLES AND FUNCTIONS   -------------
+
+// start of order-form logic
+$(function () {
+    var orderForm = document.querySelector(".order-form");
+
+    $(".order-form-btn").on("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation(); // to avoid inherit click events
+        rembekFormShow(orderForm);
+    });
+
+    $(".order-form .close-btn").on("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation(); // to avoid inherit click events
+        rembekFormHide(orderForm);
+    });
+
+    // form-handler
+    $(orderForm).submit(function(event) { //устанавливаем событие отправки для формы
+        event.preventDefault();
+        var form_data = $(this).serialize(); //собераем все данные из формы
+        $.ajax({
+            type: "POST", //Метод отправки
+            url: "php/send.php", //путь до php фаила отправителя
+            data: form_data,
+            success: function () {
+                //код в этом блоке выполняется при успешной отправке сообщения
+                // alert("Ваше сообщение отправлено!");
+                orderForm.reset();
+                rembekFormHide(orderForm);
+                successFormShow();
+            },
+            error: function () {
+                // alert("Произошла ошибка при отправке...( Попробуйте еще раз!");
+            //    test DEL
+
+                orderForm.reset();
+                rembekFormHide(orderForm);
+                successFormShow();
+            }
+        });
+    });
+
+    function modalClose (e) {
+        if ( e.keyCode === 27 ) {
+            // close forms on ESC
+            if($(orderForm).hasClass("active")) {
+                rembekFormHide(orderForm);
+            }
+        }
+    }
+
+    document.addEventListener('keydown', modalClose);
+    
+    $("body").click(function(event) {
+        // if($(rembekForms).hasClass("active")) {
+        //     alert("YES!");
+        // }
+        if(!$(event.target).closest($(".container")).length &&
+            $(rembekForms).hasClass("active")) {
+            event.preventDefault();
+            rembekFormHide(rembekForms);
+        }
+    });
+    
+});
+// end of order-form logic
+
+
+
+
+
 $(function () {
 
     // ******************** GLOBAL VARIABLES ****************************
@@ -94,53 +195,15 @@ $(function () {
     // ***************************************************
 
     $(".menu-mob-btn").on("click", function () {
-        $(".menu-cont .site-nav").slideToggle(500);
+        $(".menu-cont .site-nav").toggleClass("active").slideToggle(500);
     });
-
-    // .order-form-btn
-    $(".callback-btn").on("click", function (event) {
-        event.preventDefault();
-        event.stopPropagation(); // to avoid inherit click events
-        $(".order-form").fadeIn(400);
-    });
-
-    $(".order-form .close-btn").on("click", function (event) {
-        event.preventDefault();
-        event.stopPropagation(); // to avoid inherit click events
-        $(".order-form").fadeOut(400);
-    });
-
-    // success-form logic starts
-    $(".success-form .success-close-btn").on("click", function (event) {
-        event.preventDefault();
-        event.stopPropagation(); // to avoid inherit click events
-        $(".success-form").fadeOut(400);
-        if(successFormTimer) {
-            clearTimeout(successFormTimer);
-        }
-    });
-
-    var successFormTimer;
-
-    function successFormShow() {
-        $(".success-form").fadeIn(400);
-
-        successFormTimer = setTimeout(function () {
-            $(".success-form").fadeOut(400);
-            clearTimeout(successFormTimer);
-        }, 3000);
-
-    }
-
-    // success-form logic ends
-
-
+    
 
     // **************************************************************
 
     function activeSectionHandler(event){
         event.preventDefault();
-        if (window.innerWidth < mobileViewWidth) {
+        if (window.innerWidth < 1350) {
             $(siteNav).slideUp("fast");
         }
     }
@@ -229,31 +292,7 @@ $(function () {
         return false;
     });
 
-    // $(logoBtn).on("click", logoButtonHandler);
-
     // ************************************************************************************
-
-
-    var orderForm = document.querySelector(".order-form");
-//    form-handler
-    $(orderForm).submit(function(event) { //устанавливаем событие отправки для формы
-        event.preventDefault();
-        var form_data = $(this).serialize(); //собераем все данные из формы
-        $.ajax({
-            type: "POST", //Метод отправки
-            url: "php/send.php", //путь до php фаила отправителя
-            data: form_data,
-            success: function () {
-                //код в этом блоке выполняется при успешной отправке сообщения
-                // alert("Ваше сообщение отправлено!");
-                orderForm.reset();
-                successFormShow();
-                $(orderForm).fadeOut(400);
-            },
-            error: function () {
-                alert("Произошла ошибка при отправке...( Попробуйте еще раз!");
-            }
-        });
-    });
-
+    
 });
+

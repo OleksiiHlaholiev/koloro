@@ -28,7 +28,11 @@
 
 html, body {
   width: 100%;
-  background-color: #fefefe; }
+  background-color: #fff;
+  overflow-x: hidden; }
+
+.scroll-lock {
+  overflow-y: hidden; }
 
 .container {
   position: relative;
@@ -110,23 +114,34 @@ header {
     vertical-align: top;
     width: 210px;
     text-align: left; }
+    @media all and (max-width: 1350px) {
+      header .logo-cont {
+        width: 150px; } }
     header .logo-cont a {
       display: inline-block;
       height: 110px; }
       header .logo-cont a img {
         padding: 20px 0 15px 0;
         max-width: 100%; }
+      @media all and (max-width: 1350px) {
+        header .logo-cont a {
+          height: auto; }
+          header .logo-cont a img {
+            padding: 10px 0; } }
   header .menu-cont, header .menu-mob-btn-cont {
     display: inline-block;
     vertical-align: top;
     width: calc(100% - 210px);
     text-align: right; }
+    @media all and (max-width: 1350px) {
+      header .menu-cont, header .menu-mob-btn-cont {
+        width: calc(100% - 150px); } }
   header .menu-mob-btn-cont {
     display: none; }
     header .menu-mob-btn-cont .menu-mob-btn {
       display: inline-block;
       width: 50px;
-      margin: 25px 10px 15px 10px;
+      margin: 20px 10px 10px 10px;
       cursor: pointer; }
       header .menu-mob-btn-cont .menu-mob-btn div {
         width: 100%;
@@ -162,6 +177,12 @@ header {
             header .menu-cont .site-nav .nav-list li a {
               padding-left: 15px;
               padding-right: 15px; } }
+          @media all and (max-width: 1350px) {
+            header .menu-cont .site-nav .nav-list li a {
+              padding: 40px 15px; } }
+          @media all and (max-width: 768px) {
+            header .menu-cont .site-nav .nav-list li a {
+              padding: 15px 10px; } }
         header .menu-cont .site-nav .nav-list li a:hover, header .menu-cont .site-nav .nav-list li .active {
           color: #008842; }
       header .menu-cont .site-nav .nav-list .tel-info {
@@ -274,7 +295,7 @@ footer {
 .gl-btn {
   display: block;
   margin: 20px auto;
-  padding: 20px 5px;
+  padding: 15px 5px;
   width: 300px;
   max-width: 95%;
   font-size: 36px;
@@ -568,16 +589,17 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(71, 71, 71, 0.702);
+  background-color: rgba(64, 64, 64, 0.702);
   overflow: auto; }
   .rembek-form .form-wrapper {
     min-height: 100vh; }
   .rembek-form .container {
+    margin: 0;
     max-width: 800px; }
   .rembek-form .close-btn {
     position: absolute;
-    top: -50px;
-    right: 0;
+    top: 30px;
+    right: 30px;
     cursor: pointer;
     transition: all 0.4s; }
     @media all and (max-height: 550px) {
@@ -588,56 +610,42 @@ footer {
     transform: rotate(180deg); }
   .rembek-form .form-header {
     margin: 30px 0;
-    font-size: 36px;
+    font-size: 48px;
     font-family: "PFDinTextCompProMedium", sans-serif;
-    color: white;
-    text-transform: uppercase;
+    color: #382020;
+    text-transform: none;
     line-height: 1.2;
     text-align: center; }
     @media all and (max-height: 550px) {
       .rembek-form .form-header {
+        font-size: 32px;
         margin: 15px 0; } }
-  .rembek-form .full-cont {
-    font-size: 0; }
-    .rembek-form .full-cont .left-cont, .rembek-form .full-cont .right-cont {
-      display: inline-block;
-      width: 50%; }
-      @media all and (max-width: 768px) {
-        .rembek-form .full-cont .left-cont, .rembek-form .full-cont .right-cont {
-          width: 100%; } }
-    .rembek-form .full-cont .left-cont {
-      padding-right: 1px; }
-    .rembek-form .full-cont .right-cont {
-      padding-left: 1px; }
-    @media all and (max-width: 768px) {
-      .rembek-form .full-cont .left-cont, .rembek-form .full-cont .right-cont {
-        width: 100%;
-        padding: 0; } }
-  .rembek-form .text-field-cont {
-    text-align: left; }
-    .rembek-form .text-field-cont .user-text {
-      height: 150px; }
-      @media all and (max-height: 550px) {
-        .rembek-form .text-field-cont .user-text {
-          height: 120px; } }
-  .rembek-form .user-name, .rembek-form .user-contact, .rembek-form .user-text {
-    display: block;
-    width: 100%;
-    margin: 2px;
-    padding: 15px 25px;
-    font-size: 18px;
-    font-family: "PFDinTextCompProRegular", sans-serif;
-    color: black;
-    text-transform: none;
-    line-height: 1.2;
-    text-align: left; }
-    @media all and (max-height: 550px) {
-      .rembek-form .user-name, .rembek-form .user-contact, .rembek-form .user-text {
-        padding: 10px 15px; } }
+  .rembek-form .input-cont {
+    margin: 20px 10px; }
+    .rembek-form .input-cont input {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      padding: 15px 25px;
+      font-size: 36px;
+      font-family: "PFDinTextCompProMedium", sans-serif;
+      color: #45221f;
+      background-color: #fff;
+      text-transform: none;
+      line-height: 1.2;
+      text-align: center;
+      border: none;
+      outline: 0;
+      border-radius: 30px; }
+      @media all and (max-height: 550px), (max-width: 768px) {
+        .rembek-form .input-cont input {
+          font-size: 30px;
+          padding: 5px 15px; } }
   .rembek-form .submit-btn {
     border: none;
     outline: none;
-    margin-top: 30px; }
+    margin-top: 30px;
+    margin-bottom: 50px; }
     @media all and (max-width: 600px) {
       .rembek-form .submit-btn {
         margin-top: 15px; } }
@@ -645,12 +653,17 @@ footer {
 input::-moz-placeholder,
 input::-webkit-input-placeholder,
 input:-ms-input-placeholder {
-  color: #9fb9c6; }
+  color: #00b3ff; }
+
+.order-form .container {
+  background-color: #d7d7d7; }
 
 .success-form {
-  background-color: rgba(10, 10, 10, 0.8); }
+  background-image: url("../images/success-bg.png"); }
   .success-form .form-header {
-    font-size: 80px; }
+    font-size: 72px;
+    font-family: "PFDinTextCompProRegular", sans-serif;
+    color: #fff; }
     @media all and (max-width: 1200px) {
       .success-form .form-header {
         font-size: 60px; } }

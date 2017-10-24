@@ -21,7 +21,13 @@ $redColor: #aa201a;
 
 html, body {
     width: 100%;
-    background-color: #fefefe;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.scroll-lock {
+    overflow-y: hidden;
+    //position: fixed;
 }
 
 .container {
@@ -124,6 +130,10 @@ header {
         width: 210px;
         text-align: left;
 
+        @include mediaMaxWidth(1350px) {
+            width: 150px;
+        }
+
         a {
             display: inline-block;
             height: 110px;
@@ -135,6 +145,14 @@ header {
                     //height: 80px;
                 }
             }
+
+            @include mediaMaxWidth(1350px) {
+                height: auto;
+
+                img {
+                    padding: 10px 0;
+                }
+            }
         }
     }
 
@@ -143,6 +161,10 @@ header {
         vertical-align: top;
         width: calc(100% - 210px);
         text-align: right;
+
+        @include mediaMaxWidth(1350px) {
+            width: calc(100% - 150px);
+        }
     }
 
     .menu-mob-btn-cont {
@@ -150,7 +172,7 @@ header {
         .menu-mob-btn {
             display: inline-block;
             width: 50px;
-            margin: 25px 10px 15px 10px;
+            margin: 20px 10px 10px 10px;
             cursor: pointer;
 
             div {
@@ -198,6 +220,12 @@ header {
                         @include mediaMaxWidth(1600px) {
                             padding-left: 15px;
                             padding-right: 15px;
+                        }
+                        @include mediaMaxWidth(1350px) {
+                            padding: 40px 15px;
+                        }
+                        @include mediaMaxWidth($mobileWidth) {
+                            padding: 15px 10px;
                         }
                     }
                     a:hover, .active {
@@ -382,7 +410,7 @@ footer {
 .gl-btn {
     display: block;
     margin: 20px auto;
-    padding: 20px 5px;
+    padding: 15px 5px;
     width: 300px;
     max-width: 95%;
 
@@ -831,7 +859,7 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(71, 71, 71, 0.702);
+    background-color: rgba(64, 64, 64, 0.702);
     overflow: auto;
 
     .form-wrapper {
@@ -839,13 +867,14 @@ footer {
     }
 
     .container {
+        margin: 0;
         max-width: 800px;
     }
 
     .close-btn {
         position: absolute;
-        top: -50px;
-        right: 0;
+        top: 30px;
+        right: 30px;
         cursor: pointer;
         transition: all 0.4s;
 
@@ -860,79 +889,53 @@ footer {
 
     .form-header {
         margin: 30px 0;
-        font-size: 36px;
+        font-size: 48px;
         font-family: $PFDinTextCompProMedium;
-        color: rgb(255, 255, 255);
-        text-transform: uppercase;
+        color: rgb(56, 32, 32);
+        text-transform: none;
         line-height: 1.2;
         text-align: center;
 
+
         @include mediaMaxHeight(550px) {
+            font-size: 32px;
             margin: 15px 0;
         }
     }
 
-    .full-cont {
-        font-size: 0;
-        .left-cont, .right-cont {
-            display: inline-block;
-            width: 50%;
+    .input-cont {
+        margin: 20px 10px;
 
-            @include mediaMaxWidth($mobileWidth) {
-                width: 100%;
+        input {
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            padding: 15px 25px;
+
+            font-size: 36px;
+            font-family: $PFDinTextCompProMedium;
+            color: $brownColor;
+            background-color: #fff;
+            text-transform: none;
+            line-height: 1.2;
+            text-align: center;
+
+            border: none;
+            outline: 0;
+            border-radius: 30px;
+
+            @media all and (max-height: 550px), (max-width: $mobileWidth) {
+                font-size: 30px;
+                padding: 5px 15px;
             }
         }
-        .left-cont {
-            padding-right: 1px;
-        }
-        .right-cont {
-            padding-left: 1px;
-        }
-
-        @include mediaMaxWidth($mobileWidth) {
-            .left-cont, .right-cont {
-                width: 100%;
-                padding: 0;
-            }
-        }
-
-    }
-
-    .text-field-cont {
-        text-align: left;
-
-        .user-text {
-            height: 150px;
-
-            @include mediaMaxHeight(550px) {
-                height: 120px;
-            }
-        }
-    }
-
-    .user-name, .user-contact, .user-text {
-        display: block;
-        width: 100%;
-        margin: 2px;
-        padding: 15px 25px;
-
-        font-size: 18px;
-        font-family: $PFDinTextCompProRegular;
-        color: rgb(0, 0, 0);
-        text-transform: none;
-        line-height: 1.2;
-        text-align: left;
-
-        @include mediaMaxHeight(550px) {
-            padding: 10px 15px;
-        }
-
     }
 
     .submit-btn {
         border: none;
         outline: none;
         margin-top: 30px;
+        margin-bottom: 50px;
 
         @include mediaMaxWidth(600px) {
             margin-top: 15px;
@@ -944,16 +947,25 @@ footer {
 input::-moz-placeholder,
 input::-webkit-input-placeholder,
 input:-ms-input-placeholder {
-    color: #9fb9c6;
+    color: #00b3ff;
+}
+
+.order-form {
+    //display: block;
+    .container {
+        background-color: #d7d7d7;
+    }
 }
 
 // start of success-form
 .success-form {
     //display: block;
-    background-color: rgba(10, 10, 10, 0.8);
+    background-image: url("../images/success-bg.png");
 
     .form-header {
-        font-size: 80px;
+        font-size: 72px;
+        font-family: $PFDinTextCompProRegular;
+        color: #fff;
 
         @include mediaMaxWidth(1200px) {
             font-size: 60px;

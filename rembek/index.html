@@ -10,6 +10,7 @@
     <!-- OwlCarousel -->
     <link rel="stylesheet" href="css/libs/owl.carousel.min.css">
     <link rel="stylesheet" href="css/libs/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/libs/animate.min.css">
 
     <!--OWN Style Sheet -->
     <link rel="stylesheet" href="css/main.css">
@@ -78,7 +79,7 @@
     <div class="container cycles-container">
         <div class="full-cont">
             <div class="left-cont">
-                <div class="image-cont">
+                <div class="image-cont cycles-composite-img">
                     <img src="images/cycles-composite.png" alt="cycles-composite-image">
                 </div>
             </div>
@@ -281,6 +282,35 @@
 </section>
 <!-- end of our-contacts-section -->
 
+<!-- start of reviews-section -->
+<section id="reviews-section">
+    <div class="container">
+        <h2 class="section-header">Задайте свой вопрос</h2>
+
+        <div class="comments-container">
+            <div id="hypercomments_widget"></div>
+            <script type="text/javascript">
+                _hcwp = window._hcwp || [];
+                _hcwp.push({widget: "Stream", widget_id: 73852, hc_disable: 1});
+                (function () {
+                    if ("HC_LOAD_INIT" in window)return;
+                    HC_LOAD_INIT = true;
+                    var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+                    var hcc = document.createElement("script");
+                    hcc.type = "text/javascript";
+                    hcc.async = true;
+                    hcc.src = ("https:" == document.location.protocol ? "https" : "https") + "://w.hypercomments.com/widget/hc/73852/" + lang + "/widget.js";
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(hcc, s.nextSibling);
+                })();
+            </script>
+            <a href="https://hypercomments.com" class="hc-link" title="comments widget">comments powered by
+                HyperComments</a>
+            </p>
+        </div>
+    </div>
+</section>
+<!-- end of reviews-section -->
 
 <footer>
     <div class="container">
@@ -289,6 +319,16 @@
         </p>
     </div>
 </footer>
+
+<!-- start of back-to-top-btn -->
+<button class="back-to-top">
+    <a href="#">
+        <div class="up-icon">
+            <i class="icon icon-up"></i>
+        </div>
+    </a>
+</button>
+<!-- end of back-to-top-btn -->
 
 <!-- start of order-form -->
 <form class="rembek-form order-form">
@@ -339,7 +379,7 @@
 <!-- OwlCarousel -->
 <script src="js/libs/owl.carousel.min.js"></script>
 
-<!--<script src="js/index.js"></script>-->
+<script src="js/index.js"></script>
 
 
 </body>

@@ -10,6 +10,17 @@
   font-style: normal;
   src: url("../fonts/PFDinTextCompPro-Medium.ttf"); }
 /*************************************************************/
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 0.4s; }
+
+.icon-up {
+  background-image: url("../images/up-icon.svg");
+  width: 40px;
+  height: 23px; }
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -78,10 +89,10 @@ a {
       width: 100%; } }
 
 .menu-hidden {
-  top: -120px; }
+  transform: translateY(-100%); }
 
 .menu-visible {
-  top: 0; }
+  transform: translateY(0); }
 
 header {
   position: fixed;
@@ -162,7 +173,15 @@ header {
           color: #008842; }
         header .menu-cont .site-nav .nav-list .tel-info .contact-info a:before {
           padding-right: 10px;
-          content: url("../images/icon-tel.png"); }
+          content: url("../images/icon-tel.png");
+          animation: tel-tada 5s infinite; }
+@keyframes tel-tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1); } }
   @media all and (max-width: 1350px) {
     header .menu-cont {
       display: block;
@@ -188,7 +207,44 @@ footer {
     text-transform: none;
     line-height: 1.2;
     text-align: center; }
+    @media all and (max-width: 768px) {
+      footer .footer-text {
+        font-size: 24px; } }
 
+.back-to-top {
+  text-align: center;
+  padding: 0;
+  outline: 0;
+  border: none;
+  transition: all .4s;
+  background-color: #aa201a;
+  cursor: pointer; }
+  .back-to-top:hover {
+    background-color: #008842; }
+
+.back-to-top {
+  width: 65px;
+  height: 65px;
+  opacity: 0;
+  transform: translateY(150%);
+  position: fixed;
+  z-index: 999;
+  right: calc(7% - 65px);
+  bottom: 20px; }
+  .back-to-top a {
+    display: inline-block; }
+    .back-to-top a .up-icon {
+      position: relative; }
+
+.back-to-top-visible {
+  transform: translateY(0);
+  opacity: 1; }
+
+@media all and (max-width: 768px) {
+  .back-to-top {
+    width: 50px;
+    height: 50px;
+    right: 20px; } }
 .section-header {
   font-size: 60px;
   font-family: "PFDinTextCompProMedium", sans-serif;
@@ -212,7 +268,7 @@ footer {
       padding: 7vh 0 2vh 0; } }
   @media all and (max-width: 768px) {
     .section-header {
-      font-size: 30px;
+      font-size: 36px;
       padding: 7vh 0 2vh 0; } }
 
 .gl-btn {
@@ -221,7 +277,7 @@ footer {
   padding: 20px 5px;
   width: 300px;
   max-width: 95%;
-  font-size: 30px;
+  font-size: 36px;
   font-family: "PFDinTextCompProMedium", sans-serif;
   color: #008842;
   background-color: #ffed00;
@@ -236,7 +292,7 @@ footer {
   transition: all 0.4s; }
   @media all and (max-width: 768px) {
     .gl-btn {
-      font-size: 18px;
+      font-size: 24px;
       padding: 10px 5px; } }
 
 .gl-btn:hover {
@@ -263,6 +319,9 @@ footer {
         color: white;
         line-height: 1.2;
         padding-bottom: 20px; }
+        @media all and (max-width: 768px) {
+          #our-product-section .top-bg-container .info-cont .main-header {
+            font-size: 36px; } }
 
 .image-cont {
   text-align: center; }
@@ -276,6 +335,9 @@ footer {
   line-height: 1.2;
   text-align: center;
   padding-bottom: 20px; }
+  @media all and (max-width: 768px) {
+    .info-text {
+      font-size: 32px; } }
 
 .white-text {
   color: #fff; }
@@ -293,12 +355,25 @@ footer {
   background-color: #dffabb; }
   #cycles-section .cycles-container {
     padding: 10vh 0; }
+    @media all and (max-width: 768px) {
+      #cycles-section .cycles-container {
+        padding: 5vh 0; } }
     #cycles-section .cycles-container .info-cont {
       width: 80%;
       margin: 0 auto; }
       @media all and (max-width: 992px) {
         #cycles-section .cycles-container .info-cont {
           width: 100%; } }
+    @media all and (min-width: 992px) {
+      #cycles-section .cycles-container .cycles-composite-img img {
+        animation: circle-rotation 20s infinite; } }
+@keyframes circle-rotation {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  50%, 100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
     #cycles-section .cycles-container .strawberry-img {
       padding-top: 5vh; }
   #cycles-section .packages-bg {
@@ -312,9 +387,15 @@ footer {
   text-transform: uppercase;
   line-height: 1.2;
   text-align: center; }
+  @media all and (max-width: 768px) {
+    .rembek-icon-text {
+      font-size: 32px; } }
 
 #advantages-section {
   padding: 10vh 0; }
+  @media all and (max-width: 768px) {
+    #advantages-section {
+      padding: 5vh 0; } }
   #advantages-section .advantages-items-cont {
     padding: 20px 0;
     display: flex;
@@ -331,15 +412,20 @@ footer {
       @media all and (max-width: 768px) {
         #advantages-section .advantages-items-cont .advantage-item {
           width: 100%; } }
-      #advantages-section .advantages-items-cont .advantage-item .advantage-icon img {
-        max-width: 100%;
-        transition: 0.4s; }
-        #advantages-section .advantages-items-cont .advantage-item .advantage-icon img:hover {
-          transform: scale(1.1); }
+      #advantages-section .advantages-items-cont .advantage-item .advantage-icon {
+        min-height: 220px; }
+        #advantages-section .advantages-items-cont .advantage-item .advantage-icon img {
+          max-width: 100%;
+          transition: 0.4s; }
+          #advantages-section .advantages-items-cont .advantage-item .advantage-icon img:hover {
+            transform: scale(1.1); }
 
 #application-section {
   padding: 10vh 0;
   background-color: #dffabb; }
+  @media all and (max-width: 768px) {
+    #application-section {
+      padding: 5vh 0; } }
   #application-section .application-items-cont {
     padding: 20px 0;
     display: flex;
@@ -377,6 +463,9 @@ footer {
 #contact-us-section {
   padding: 10vh 0;
   background-color: #dffabb; }
+  @media all and (max-width: 768px) {
+    #contact-us-section {
+      padding: 5vh 0; } }
   #contact-us-section .managers-items-cont {
     display: flex;
     flex-direction: row;
@@ -408,8 +497,14 @@ footer {
           line-height: 1.2;
           text-align: center;
           margin-bottom: 5px; }
+          @media all and (max-width: 768px) {
+            #contact-us-section .managers-items-cont .manager-item .manager-contacts p {
+              font-size: 32px; } }
         #contact-us-section .managers-items-cont .manager-item .manager-contacts .manager-name {
           font-size: 48px; }
+          @media all and (max-width: 768px) {
+            #contact-us-section .managers-items-cont .manager-item .manager-contacts .manager-name {
+              font-size: 36px; } }
         #contact-us-section .managers-items-cont .manager-item .manager-contacts .manager-post {
           text-transform: lowercase;
           margin-bottom: 10px; }
@@ -422,6 +517,9 @@ footer {
   background-color: #dffabb; }
   #our-contacts-section .full-cont .rembek-contacts-cont {
     padding: 10vh 0; }
+    @media all and (max-width: 768px) {
+      #our-contacts-section .full-cont .rembek-contacts-cont {
+        padding: 5vh 0; } }
     #our-contacts-section .full-cont .rembek-contacts-cont .contacts-info-wrapper {
       display: flex;
       flex-wrap: wrap;
@@ -440,6 +538,9 @@ footer {
           font-family: "PFDinTextCompProMedium", sans-serif;
           color: #008842;
           line-height: 1.2; }
+          @media all and (max-width: 768px) {
+            #our-contacts-section .full-cont .rembek-contacts-cont .contacts-info-wrapper .contact-info-cont p {
+              font-size: 32px; } }
         #our-contacts-section .full-cont .rembek-contacts-cont .contacts-info-wrapper .contact-info-cont .contact-info-title {
           text-transform: uppercase; }
       #our-contacts-section .full-cont .rembek-contacts-cont .contacts-info-wrapper .address-cont {
@@ -453,6 +554,12 @@ footer {
       width: 100%;
       min-height: 60vh;
       height: 100%; }
+
+#reviews-section {
+  padding: 10vh 0; }
+  @media all and (max-width: 768px) {
+    #reviews-section {
+      padding: 5vh 0; } }
 
 .rembek-form {
   display: none;

@@ -1,5 +1,6 @@
 @import "fonts";
 @import "mixins";
+@import "icons";
 
 $mobileWidth: 768px;
 $transitionTime: 0.4s;
@@ -9,6 +10,7 @@ $yellowColor: #ffed00;
 $greenLightColor: #dffabb;
 $greenDarkColor: #008842;
 $brownColor: #45221f;
+$redColor: #aa201a;
 
 
 * {
@@ -94,10 +96,12 @@ a {
 }
 
 .menu-hidden {
-    top: -120px;
+    transform: translateY(-100%);
+    //top: -120px;
 }
 .menu-visible {
-    top: 0;
+    //top: 0;
+    transform: translateY(0);
 }
 
 header {
@@ -214,6 +218,35 @@ header {
                     .contact-info a:before {
                         padding-right: 10px;
                         content: url("../images/icon-tel.png");
+
+                        animation: tel-tada 5s infinite;
+                    }
+
+                    @keyframes tel-tada {
+                        from {
+                            -webkit-transform: scale3d(1, 1, 1);
+                            transform: scale3d(1, 1, 1);
+                        }
+
+                        //10%, 20% {
+                        //    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+                        //    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+                        //}
+                        //
+                        //30%, 50%, 70%, 90% {
+                        //    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+                        //    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+                        //}
+                        //
+                        //40%, 60%, 80% {
+                        //    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+                        //    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+                        //}
+
+                        to {
+                            -webkit-transform: scale3d(1, 1, 1);
+                            transform: scale3d(1, 1, 1);
+                        }
                     }
                 }
 
@@ -259,8 +292,64 @@ footer {
         text-transform: none;
         line-height: 1.2;
         text-align: center;
+
+        @include mediaMaxWidth($mobileWidth) {
+            font-size: 24px;
+        }
     }
 }
+
+// start of back-to-top-btn
+.back-to-top {
+    text-align: center;
+    padding: 0;
+    outline: 0;
+    border: none;
+    //border: 1px solid transparent;
+    transition: all .4s;
+
+    background-color: $redColor;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $greenDarkColor;
+    }
+}
+
+.back-to-top {
+    //display: none;
+    width: 65px;
+    height: 65px;
+    opacity: 0;
+    transform: translateY(150%);
+    position: fixed;
+    z-index: 999;
+    //right: 20px;
+    right: calc(7% - 65px);
+    bottom: 20px;
+
+    a {
+        display: inline-block;
+
+        .up-icon {
+            position: relative;
+        }
+    }
+}
+
+.back-to-top-visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@include mediaMaxWidth($mobileWidth) {
+    .back-to-top {
+        width: 50px;
+        height: 50px;
+        right: 20px;
+    }
+}
+// end of back-to-top-btn
 
 .section-header {
     font-size: 60px;
@@ -285,7 +374,7 @@ footer {
         padding: 7vh 0 2vh 0;
     }
     @include mediaMaxWidth($mobileWidth) {
-        font-size: 30px;
+        font-size: 36px;
         padding: 7vh 0 2vh 0;
     }
 }
@@ -297,7 +386,7 @@ footer {
     width: 300px;
     max-width: 95%;
 
-    font-size: 30px;
+    font-size: 36px;
     font-family: $PFDinTextCompProMedium;
 
     color: $greenDarkColor;
@@ -313,7 +402,7 @@ footer {
     @include transition($transitionTime);
 
     @include mediaMaxWidth($mobileWidth) {
-        font-size: 18px;
+        font-size: 24px;
         padding: 10px 5px;
     }
 }
@@ -353,6 +442,10 @@ footer {
                 line-height: 1.2;
                 padding-bottom: 20px;
                 //letter-spacing: 0.7px;
+
+                @include mediaMaxWidth($mobileWidth) {
+                    font-size: 36px;
+                }
             }
         }
     }
@@ -375,6 +468,10 @@ footer {
     line-height: 1.2;
     text-align: center;
     padding-bottom: 20px;
+
+    @include mediaMaxWidth($mobileWidth) {
+        font-size: 32px;
+    }
 }
 
 .white-text {
@@ -397,6 +494,10 @@ footer {
     .cycles-container {
         padding: $sectionPadding 0;
 
+        @include mediaMaxWidth($mobileWidth) {
+            padding: $sectionPadding/2 0;
+        }
+
         .info-cont {
             width: 80%;
             margin: 0 auto;
@@ -405,6 +506,26 @@ footer {
                 width: 100%;
             }
         }
+
+        .cycles-composite-img {
+            img {
+                @include mediaMinWidth(992px) {
+                    animation: circle-rotation 20s infinite;
+                }
+            }
+
+            @keyframes circle-rotation {
+                0% {
+                    -webkit-transform: rotate(0);
+                    transform: rotate(0);
+                }
+                50%, 100% {
+                    -webkit-transform: rotate(360deg);
+                    transform: rotate(360deg)
+                }
+            }
+        }
+
         .strawberry-img {
             padding-top: 5vh;
         }
@@ -424,11 +545,19 @@ footer {
     text-transform: uppercase;
     line-height: 1.2;
     text-align: center;
+
+    @include mediaMaxWidth($mobileWidth) {
+        font-size: 32px;
+    }
 }
 
 // start of advantages-section
 #advantages-section {
     padding: $sectionPadding 0;
+
+    @include mediaMaxWidth($mobileWidth) {
+        padding: $sectionPadding/2 0;
+    }
 
     .advantages-items-cont {
         padding: 20px 0;
@@ -452,6 +581,7 @@ footer {
             }
 
             .advantage-icon {
+                min-height: 220px;
 
                 img {
                     //width: 100%;
@@ -472,6 +602,10 @@ footer {
 #application-section {
     padding: $sectionPadding 0;
     background-color: $greenLightColor;
+
+    @include mediaMaxWidth($mobileWidth) {
+        padding: $sectionPadding/2 0;
+    }
 
     .application-items-cont {
         padding: 20px 0;
@@ -542,6 +676,10 @@ footer {
     padding: $sectionPadding 0;
     background-color: $greenLightColor;
 
+    @include mediaMaxWidth($mobileWidth) {
+        padding: $sectionPadding/2 0;
+    }
+
     .managers-items-cont {
         display: flex;
         flex-direction: row;
@@ -581,9 +719,17 @@ footer {
                     line-height: 1.2;
                     text-align: center;
                     margin-bottom: 5px;
+
+                    @include mediaMaxWidth($mobileWidth) {
+                        font-size: 32px;
+                    }
                 }
                 .manager-name {
                     font-size: 48px;
+
+                    @include mediaMaxWidth($mobileWidth) {
+                        font-size: 36px;
+                    }
                 }
                 .manager-post {
                     text-transform: lowercase;
@@ -611,6 +757,10 @@ footer {
         .rembek-contacts-cont {
             padding: $sectionPadding 0;
 
+            @include mediaMaxWidth($mobileWidth) {
+                padding: $sectionPadding/2 0;
+            }
+
             .contacts-info-wrapper {
                 display: flex;
                 flex-wrap: wrap;
@@ -632,6 +782,10 @@ footer {
                         font-family: $PFDinTextCompProMedium;
                         color: $greenDarkColor;
                         line-height: 1.2;
+
+                        @include mediaMaxWidth($mobileWidth) {
+                            font-size: 32px;
+                        }
                     }
                     .contact-info-title {
                         text-transform: uppercase;
@@ -657,6 +811,16 @@ footer {
     }
 }
 // end of our-contacts-section
+
+// start of reviews-section
+#reviews-section {
+    padding: $sectionPadding 0;
+
+    @include mediaMaxWidth($mobileWidth) {
+        padding: $sectionPadding/2 0;
+    }
+}
+// end of reviews-section
 
 // start of rembek-form (general container)
 .rembek-form {

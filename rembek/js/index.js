@@ -47,27 +47,45 @@ function showMenu(){
     }
 }
 
+//кнопка скролла вверх
+function backToTop() {
+    $(window).scroll(function () {
+        var bo = $(document).scrollTop();
+        var time_to_show = 600;	//$("#indeficator_toshow").offset().top;
+
+        if (bo >= time_to_show) {
+            $(".back-to-top").addClass("back-to-top-visible");
+        }
+        else {
+            $(".back-to-top").removeClass("back-to-top-visible");
+        }
+    });
+    $(".back-to-top").click(function (e) {
+        e.preventDefault();
+        $("html, body").animate({scrollTop: 0}, 1100);
+    });
+}
+
+backToTop();
+
 $(function () {
 
     // ******************** GLOBAL VARIABLES ****************************
     var scrollPreviousPosition = 0,
         isMobileViewFlag = true,
         mobileViewWidth = 768,
-        achievmentsSectionFirstScroll = true,
-        achievmentCounterBusyFlag = false,
 
         busyFlag = false;
 
-    var topSection = document.querySelector("#top-section"),
-        header = document.querySelector("header"),
-        logoBtn = header.querySelector(".logo-cont a"),
+    var header = document.querySelector("header"),
         siteNav = document.querySelector(".menu-cont .site-nav"),
         siteNavItems = siteNav.querySelectorAll(".nav-list li a"),
-        tarifSection = document.querySelector("#tarif-section"),
-        servicesSection = document.querySelector("#services-section"),
-        contactsSection = document.querySelector("#contacts-section"),
-        achievmentsSection = document.querySelector("#achievments-section"),
-        achievmentCounters = achievmentsSection.querySelectorAll(".achievment-counter");
+
+        ourProductSection = document.querySelector("#our-product-section"),
+        cyclesSection = document.querySelector("#cycles-section"),
+        advantagesSection = document.querySelector("#advantages-section"),
+        applicationSection = document.querySelector("#application-section"),
+        reviewsSection = document.querySelector("#reviews-section");
 
 
     // ***************************************************
@@ -78,114 +96,6 @@ $(function () {
     $(".menu-mob-btn").on("click", function () {
         $(".menu-cont .site-nav").slideToggle(500);
     });
-
-    $(".registration-slider").owlCarousel({
-        loop:true,
-        margin:0,
-        items:1,
-        nav:false,
-        autoplay:false,
-
-        smartSpeed:1000, //Время движения слайда
-        autoplayTimeout:4000, //Время смены слайда
-        autoplayHoverPause:false
-
-    });
-
-    var timeSlider = $(".time-slider");
-
-    $(timeSlider).owlCarousel({
-        loop:true,
-        margin:0,
-        items:1,
-        nav:false,
-        autoplay:false,
-
-        smartSpeed:1000, //Время движения слайда
-        autoplayTimeout:5000, //Время смены слайда
-        autoplayHoverPause:false
-
-    });
-
-    // Go to the next item
-    $('.time-slider-cont .arrow-left-btn').click(function() {
-        $(timeSlider).trigger('prev.owl.carousel');
-    });
-    // Go to the previous item
-    $('.time-slider-cont .arrow-right-btn').click(function() {
-        // With optional speed parameter
-        // Parameters has to be in square bracket '[]'
-        // $(timeSlider).trigger('next.owl.carousel', [300]);
-        $(timeSlider).trigger('next.owl.carousel');
-    });
-
-    var  partnersSlider = $(".partners-slider");
-
-    $(partnersSlider).owlCarousel({
-        loop:true,
-        margin:5,
-        items:3,
-        nav:false,
-        autoplay:true,
-
-        smartSpeed:1000, //Время движения слайда
-        autoplayTimeout:5000, //Время смены слайда
-        autoplayHoverPause:false,
-
-        responsive:{
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            1200:{
-                items:3
-            }
-        }
-    });
-
-    // Go to the next item
-    $('.partners-slider-cont .arrow-left-btn').click(function() {
-        $(partnersSlider).trigger('prev.owl.carousel');
-    });
-    // Go to the previous item
-    $('.partners-slider-cont .arrow-right-btn').click(function() {
-        $(partnersSlider).trigger('next.owl.carousel');
-    });
-
-
-    // ****************************************************************
-    // Disable scroll zooming and bind back the click event
-    function onMapMouseleaveHandler() {
-        this.addEventListener('click', onMapClickHandler);
-        this.removeEventListener('mouseleave', onMapMouseleaveHandler);
-        this.querySelector('iframe').style.pointerEvents = "none";
-    }
-
-    function onMapClickHandler() {
-
-        // Disable the click handler until the user leaves the map area
-        this.removeEventListener('click', onMapClickHandler);
-
-        // Enable scrolling zoom
-        this.querySelector('.map').style.pointerEvents = "auto";
-
-        // Handle the mouse leave event
-        this.addEventListener('mouseleave', onMapMouseleaveHandler);
-    }
-
-    // ****************************************************************
-    var mapCont = document.querySelector("#contacts-section .map-cont");
-    // Enable map zooming with mouse scroll when the user clicks the map
-    mapCont.addEventListener('click', onMapClickHandler);
-    // ****************************************************************
-
-    $(".more-services-btn").on("click", function (event) {
-        $(this).toggleClass("icon-rotate");
-        $(".services-items-cont.mobile-hidden").slideToggle(400);
-    });
-
 
     // .order-form-btn
     $(".callback-btn").on("click", function (event) {
@@ -235,52 +145,16 @@ $(function () {
         }
     }
 
-    function achievmentItemCounterHandler() {
-
-        if (achievmentCounterBusyFlag == false) {
-            achievmentCounterBusyFlag = true;
-
-            var step = 30,
-                timeStep = 100,
-                countFuncTimer = [];
-
-            for (var i = 0; i < achievmentCounters.length; i++) {
-                (function (i) {
-                    var deltaCount = +achievmentCounters[i].dataset.achievmentCounter / step;
-                    var localCount = 0;
-                    achievmentCounters[i].innerText = "0";
-                    countFuncTimer[i] = setInterval(
-                        function () {
-                            if (localCount + deltaCount >= +achievmentCounters[i].dataset.achievmentCounter) {
-                                localCount = +achievmentCounters[i].dataset.achievmentCounter;
-                                clearInterval(countFuncTimer[i]);
-                                achievmentCounterBusyFlag = false;
-                            } else {
-                                localCount += deltaCount;
-                            }
-                            localCount = Math.round(localCount);
-                            // teamGalleryItemCounters[i].innerText = String(localCount);
-                            achievmentCounters[i].innerText = localCount.toLocaleString();
-                        },
-                        timeStep
-                    );
-                })(i)
-            }
-        }
-    }
-
     function resizeWindowHandler(event) {
         if (window.innerWidth < mobileViewWidth) {
             isMobileViewFlag = true;
-
-            $(siteNav).css("display", "none");
         } else {
             isMobileViewFlag = false;
+        }
 
-            if (achievmentsSectionFirstScroll) {
-                $(achievmentCounters).text("0");
-            }
-
+        if (window.innerWidth < 1350) {
+            $(siteNav).css("display", "none");
+        } else {
             $(siteNav).css("display", "block");
         }
     }
@@ -300,31 +174,41 @@ $(function () {
             (document.body.scrollTop + tempOffset) :
             (document.documentElement.scrollTop + tempOffset);
 
-        if ( (currentPosition > tarifSection.offsetTop) &&
-            (currentPosition < tarifSection.offsetTop + tarifSection.offsetHeight) ) {
+
+        if ( (currentPosition > ourProductSection.offsetTop) &&
+            (currentPosition < ourProductSection.offsetTop + ourProductSection.offsetHeight) ) {
             prevActiveItem.classList.remove("active");
             siteNavItems[0].classList.add("active");
-        } else if ( (currentPosition > servicesSection.offsetTop) &&
-            (currentPosition < servicesSection.offsetTop + servicesSection.offsetHeight) ) {
+        } else if ( (currentPosition > cyclesSection.offsetTop) &&
+            (currentPosition < cyclesSection.offsetTop + cyclesSection.offsetHeight) ) {
             prevActiveItem.classList.remove("active");
             siteNavItems[1].classList.add("active");
-        } else if ( (currentPosition > contactsSection.offsetTop) &&
-            (currentPosition < contactsSection.offsetTop + contactsSection.offsetHeight) ) {
+        } else if ( (currentPosition > advantagesSection.offsetTop) &&
+            (currentPosition < advantagesSection.offsetTop + advantagesSection.offsetHeight) ) {
             prevActiveItem.classList.remove("active");
             siteNavItems[2].classList.add("active");
         }
-
-        if (!isMobileViewFlag) {
-            if ( (currentPosition > achievmentsSection.offsetTop) &&
-                (currentPosition < (achievmentsSection.offsetTop + achievmentsSection.clientHeight)) ) {
-
-                if (achievmentsSectionFirstScroll) {
-                    achievmentsSectionFirstScroll = false;
-
-                    achievmentItemCounterHandler();
-                }
-            }
+        else if ( (currentPosition > applicationSection.offsetTop) &&
+            (currentPosition < applicationSection.offsetTop + applicationSection.offsetHeight) ) {
+            prevActiveItem.classList.remove("active");
+            siteNavItems[3].classList.add("active");
         }
+        else if ( (currentPosition > reviewsSection.offsetTop) &&
+            (currentPosition < reviewsSection.offsetTop + reviewsSection.offsetHeight) ) {
+            prevActiveItem.classList.remove("active");
+            siteNavItems[4].classList.add("active");
+        }
+
+        // if (!isMobileViewFlag) {
+        //     if ( (currentPosition > achievmentsSection.offsetTop) &&
+        //         (currentPosition < (achievmentsSection.offsetTop + achievmentsSection.clientHeight)) ) {
+        //
+        //         if (achievmentsSectionFirstScroll) {
+        //             achievmentsSectionFirstScroll = false;
+        //
+        //         }
+        //     }
+        // }
 
         scrollPreviousPosition = currentPosition;
 
@@ -349,67 +233,6 @@ $(function () {
 
     // ************************************************************************************
 
-    var countries = ["kiev", "paris", "newYork", "tokio", "london", "dubai"];
-    var timeZones = {
-        kiev: +3,
-        paris: +2,
-        newYork: -4,
-        tokio: +9,
-        london: +1,
-        dubai: +4
-    };
-
-    var sliderTimes = $(".time-slider .item .time");
-
-    function calcTime(timeZone) {
-        var tempDate = new Date();
-        var tempHours, tempMinutes, resultTimeStr;
-
-        tempHours = tempDate.getUTCHours() + timeZone;
-        if(tempHours >= 24) {
-            tempHours = tempHours - 24;
-        } else if (tempHours < 0) {
-            tempHours = 24 + tempHours;
-        }
-
-        if (tempHours < 10) {
-            tempHours = "0" + tempHours;
-        }
-        tempMinutes = tempDate.getUTCMinutes();
-        if (tempMinutes < 10) {
-            tempMinutes = "0" + tempMinutes;
-        }
-
-        resultTimeStr = tempHours + " : "  + tempMinutes;
-        // console.log(resultTimeStr);
-
-        return resultTimeStr;
-    }
-
-    // ************** tests of function calcTime() **********************
-    // console.log(calcTime(-10));
-    // console.log(calcTime(18));
-    // console.log(calcTime(20));
-
-    function updateTimeSlider() {
-        var tempTimeStr;
-
-        // for (var i = 0; i < sliderTimes.length; i++) {
-        //     tempTimeStr = calcTime(timeZones[countries[i]]);
-        //     $(sliderTimes[i]).text(tempTimeStr);
-        // }
-
-        $(".time-slider .kiev .time").text(calcTime(timeZones.kiev));
-        $(".time-slider .paris .time").text(calcTime(timeZones.paris));
-        $(".time-slider .newYork .time").text(calcTime(timeZones.newYork));
-        $(".time-slider .tokio .time").text(calcTime(timeZones.tokio));
-        $(".time-slider .london .time").text(calcTime(timeZones.london));
-        $(".time-slider .dubai .time").text(calcTime(timeZones.dubai));
-    }
-
-    updateTimeSlider();
-
-    setInterval(updateTimeSlider, 500);
 
     var orderForm = document.querySelector(".order-form");
 //    form-handler

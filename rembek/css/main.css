@@ -194,15 +194,7 @@ header {
           color: #008842; }
         header .menu-cont .site-nav .nav-list .tel-info .contact-info a:before {
           padding-right: 10px;
-          content: url("../images/icon-tel.png");
-          animation: tel-tada 5s infinite; }
-@keyframes tel-tada {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1); }
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1); } }
+          content: url("../images/icon-tel.png"); }
   @media all and (max-width: 1350px) {
     header .menu-cont {
       display: block;
@@ -348,6 +340,7 @@ footer {
 .image-cont {
   text-align: center; }
   .image-cont img {
+    transition: 0.4s;
     max-width: 100%; }
 
 .info-text {
@@ -398,6 +391,8 @@ footer {
     transform: rotate(360deg); } }
     #cycles-section .cycles-container .strawberry-img {
       padding-top: 5vh; }
+      #cycles-section .cycles-container .strawberry-img img:hover {
+        transform: scale(1.1); }
   #cycles-section .packages-bg {
     background-image: url("../images/packages-bg.jpg"); }
 

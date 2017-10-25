@@ -348,6 +348,7 @@ footer {
     //display: none;
     width: 65px;
     height: 65px;
+    border-radius: 50%;
     opacity: 0;
     transform: translateY(150%);
     position: fixed;
@@ -538,7 +539,7 @@ footer {
         .cycles-composite-img {
             img {
                 @include mediaMinWidth(992px) {
-                    animation: circle-rotation 20s infinite;
+                    animation: circle-rotation 30s infinite;
                 }
             }
 

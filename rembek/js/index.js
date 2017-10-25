@@ -130,12 +130,7 @@ $(function () {
                 successFormShow();
             },
             error: function () {
-                // alert("Произошла ошибка при отправке...( Попробуйте еще раз!");
-            //    test DEL
-
-                orderForm.reset();
-                rembekFormHide(orderForm);
-                successFormShow();
+                alert("Произошла ошибка при отправке...( Попробуйте еще раз!");
             }
         });
     });
@@ -288,7 +283,7 @@ $(function () {
     $('a[href^="#"]').click(function(){
         var el = $(this).attr('href');
         $('html, body').animate({
-            scrollTop: $(el).offset().top}, 1000);
+            scrollTop: $(el).offset().top - $("header .logo-cont").height()}, 1000);
         return false;
     });
 

@@ -1,12 +1,13 @@
 <?php
     if(
         (isset($_POST['user-name'])&&$_POST['user-name']!="") &&
-        (isset($_POST['user-contact'])&&$_POST['user-contact']!="")&&
-        (isset($_POST['user-text'])&&$_POST['user-text']!="")
+        (isset($_POST['user-tel'])&&$_POST['user-tel']!="")&&
+        (isset($_POST['user-email'])&&$_POST['user-email']!="")
         ){ 
     // form validation: is sent and is not empty
-        $to = 'ante.sale7@gmail.com, gema@koloro.ua'; // email addresses
-        $subject = 'Обратный звонок с сайта ante.com.ua/ante-flp'; // text subject
+        $to = 'oleksii.hlaholiev@gmail.com'; // email addresses
+        //        agromag4722@mail.ru
+        $subject = 'Обратный звонок с сайта RemBek'; // text subject
         $message = '
                 <html>
                     <head>
@@ -14,12 +15,12 @@
                     </head>
                     <body>
                         <p>Имя: '.$_POST['user-name'].'</p>
-                        <p>Контакт: '.$_POST['user-contact'].'</p>
-                        <p>Сообщение: '.$_POST['user-text'].'</p>                        
+                        <p>Телефон: '.$_POST['user-tel'].'</p>
+                        <p>E-mail: '.$_POST['user-email'].'</p>                        
                     </body>
                 </html>'; // text to send, via HTML tag
         $headers  = "Content-type: text/html; charset=utf-8 \r\n"; // mail coding
-        $headers .= "From: Заказ <ante.sale7@gmail.com>\r\n"; // sender's name and email
+        $headers .= "From: Заказ <oleksii.hlaholiev@gmail.com>\r\n"; // sender's name and email
         mail($to, $subject, $message, $headers); // send email via function -  mail
     }
 ?>

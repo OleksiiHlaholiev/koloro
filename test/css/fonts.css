@@ -1,0 +1,32 @@
+/* ---------------------- FONTS ------------------------------*/
+@font-face {
+  font-family: "BebasNeueBold";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/BebasNeueBold.otf"); }
+
+@font-face {
+  font-family: "BebasNeueRegular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/BebasNeueRegular.otf"); }
+
+@font-face {
+  font-family: "ProximaNovaRegular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/ProximaNovaRegular.otf"); }
+
+@font-face {
+  font-family: "ProximaNovaBold";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/ProximaNovaBold.otf"); }
+
+@font-face {
+  font-family: "ProximaNovaExtrabold";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/ProximaNovaExtrabold.otf"); }
+
+/*************************************************************/

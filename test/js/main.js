@@ -77,7 +77,7 @@ $(function () {
     // distanceTop = html.scrollTop || body && body.scrollTop || 0;
     // distanceTop -= html.clientTop; // в IE7- <html> смещён относительно (0,0)
 
-    var pagesList = ["index", "service", "portfolio", "blog", "company", "contacts"];
+    var pagesList = ["index", "company", "portfolio", "contacts"];
 
 
     // ***************************************************

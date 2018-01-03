@@ -793,7 +793,7 @@ footer {
   #index-page .our-services .services-underlining {
     width: 55%; }
   #index-page .our-services .services-items-cont {
-    padding-bottom: 5vh;
+    padding-bottom: 10vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -849,6 +849,7 @@ footer {
           cursor: pointer;
           display: inline-block;
           padding: 20px 25px;
+          min-width: 160px;
           font-size: 30px;
           font-family: "BebasNeueBold", sans-serif;
           color: #000;
@@ -871,10 +872,10 @@ footer {
           #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li svg {
             position: absolute;
             z-index: 0;
-            top: 0;
+            top: -5%;
             left: 0;
             width: 100%;
-            height: 100%;
+            height: 110%;
             transition: all 0.4s; }
         #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item {
           color: #ffc700; }

@@ -855,7 +855,11 @@ footer {
           text-transform: uppercase;
           line-height: 1.2;
           text-align: center;
+          white-space: nowrap;
           transition: all 0.4s; }
+          @media all and (max-width: 1600px) {
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li {
+              font-size: 26px; } }
           @media all and (max-width: 768px) {
             #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li {
               font-size: 22px; } }

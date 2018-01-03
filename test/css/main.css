@@ -805,7 +805,7 @@ footer {
         flex-wrap: wrap; }
     #index-page .our-services .services-items-cont .service-item-cont {
       width: 25%;
-      padding: 0 3vw; }
+      padding: 0 1vw; }
       @media all and (max-width: 1400px) {
         #index-page .our-services .services-items-cont .service-item-cont {
           width: 50%;
@@ -848,7 +848,7 @@ footer {
           position: relative;
           cursor: pointer;
           display: inline-block;
-          padding: 20px 25px;
+          padding: 20px 40px;
           min-width: 160px;
           font-size: 30px;
           font-family: "BebasNeueBold", sans-serif;

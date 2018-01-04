@@ -896,6 +896,9 @@ footer {
 
 .our-works {
   padding: 15vh 0 10vh 0; }
+  @media all and (max-width: 768px) {
+    .our-works {
+      padding: 7vh 0 5vh 0; } }
   .our-works .section-header {
     margin-top: 0; }
   .our-works .our-works-cont {
@@ -908,10 +911,18 @@ footer {
       width: 30%; }
     .our-works .our-works-cont .right-cont {
       width: 70%;
-      padding-left: 10vw; }
+      padding-left: 5vw; }
+    @media all and (max-width: 992px) {
+      .our-works .our-works-cont .left-cont, .our-works .our-works-cont .right-cont {
+        width: 100%;
+        padding-left: 0; } }
     .our-works .our-works-cont .portfolio-menu ul {
       list-style: none;
       text-align: right; }
+      @media all and (max-width: 992px) {
+        .our-works .our-works-cont .portfolio-menu ul {
+          text-align: center;
+          margin: 5vh 0; } }
       .our-works .our-works-cont .portfolio-menu ul li {
         display: block; }
         .our-works .our-works-cont .portfolio-menu ul li a {
@@ -920,10 +931,18 @@ footer {
           color: black;
           text-transform: uppercase;
           line-height: 3.333; }
+        @media all and (max-width: 992px) {
+          .our-works .our-works-cont .portfolio-menu ul li {
+            display: inline-block; }
+            .our-works .our-works-cont .portfolio-menu ul li a {
+              font-size: 24px;
+              line-height: 1.2; } }
     .our-works .our-works-cont .portolio-items-cont {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
@@ -932,7 +951,8 @@ footer {
           -ms-flex-pack: justify;
               justify-content: space-between; }
       .our-works .our-works-cont .portolio-items-cont .portfolio-items-column {
-        width: 30%;
+        width: calc(100% / 3);
+        padding: 15px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -940,30 +960,68 @@ footer {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; }
+        @media all and (max-width: 1400px) {
+          .our-works .our-works-cont .portolio-items-cont .portfolio-items-column {
+            width: 50%; }
+            .our-works .our-works-cont .portolio-items-cont .portfolio-items-column:last-child {
+              display: none;
+              width: 100%;
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap;
+              -webkit-box-orient: horizontal;
+              -webkit-box-direction: normal;
+                  -ms-flex-direction: row;
+                      flex-direction: row;
+              -webkit-box-pack: justify;
+                  -ms-flex-pack: justify;
+                      justify-content: space-between; }
+              .our-works .our-works-cont .portolio-items-cont .portfolio-items-column:last-child .portfolio-item {
+                width: 50%; } }
+        @media all and (max-width: 768px) {
+          .our-works .our-works-cont .portolio-items-cont .portfolio-items-column {
+            width: 100%;
+            padding: 0;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center; }
+            .our-works .our-works-cont .portolio-items-cont .portfolio-items-column:last-child {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-pack: center;
+                  -ms-flex-pack: center;
+                      justify-content: center; }
+              .our-works .our-works-cont .portolio-items-cont .portfolio-items-column:last-child .portfolio-item {
+                width: auto; } }
       .our-works .our-works-cont .portolio-items-cont .portfolio-item {
-        padding: 15px 0; }
+        margin: 15px 0; }
         .our-works .our-works-cont .portolio-items-cont .portfolio-item a {
           display: inline-block;
           position: relative; }
           .our-works .our-works-cont .portolio-items-cont .portfolio-item a:hover .portfolio-blot-hover {
-            height: 100%; }
+            opacity: 1; }
         .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-blot-hover {
           position: absolute;
-          bottom: 0;
+          bottom: 10%;
           left: -10%;
           width: 120%;
-          height: 0;
+          height: 100%;
+          opacity: 0;
           transition: all 0.6s; }
+          .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-blot-hover g, .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-blot-hover path {
+            fill: currentColor; }
         .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-info {
           position: absolute;
-          bottom: 0;
+          bottom: 5%;
           left: 0;
           width: 100%; }
           .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-info .portfolio-blot {
             position: absolute;
-            top: 0;
+            bottom: 0;
             left: -5%;
             width: 110%; }
+            .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-info .portfolio-blot g, .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-info .portfolio-blot path {
+              fill: currentColor; }
           .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-info .portfolio-name {
             position: relative;
             z-index: 1;
@@ -973,7 +1031,11 @@ footer {
             color: #3c3c3c;
             text-transform: uppercase;
             line-height: 1.2;
-            text-align: center; }
+            text-align: center;
+            letter-spacing: 0.75px; }
+            @media all and (max-width: 1600px) {
+              .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-info .portfolio-name {
+                font-size: 20px; } }
             .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-info .portfolio-name span {
               color: inherit;
               font: inherit;

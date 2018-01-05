@@ -193,7 +193,7 @@ $(function () {
         $(this).toggleClass("menu-btn-active");
         // $("header .main-menu").toggleClass("show-menu");
         $("header .main-menu").slideToggle();
-        $("header").toggleClass("header-black");
+        $("header").toggleClass("header-black header-white");
         $("html, body").toggleClass("scroll-lock");
         // $(".mask").toggleClass("darknes_active");
         //

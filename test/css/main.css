@@ -372,14 +372,14 @@ header.header-white {
   header.header-white .menu-btn-cont .menu-btn svg g, header.header-white .menu-btn-cont .menu-btn svg path {
     fill: #000; }
 
-header.header-black {
+header.header-transparent {
   background-color: transparent;
   color: #fff; }
-  header.header-black .logo-cont .logo-white {
+  header.header-transparent .logo-cont .logo-white {
     display: block; }
-  header.header-black .logo-cont .logo-black {
+  header.header-transparent .logo-cont .logo-black {
     display: none; }
-  header.header-black .menu-btn-cont .menu-btn svg g, header.header-black .menu-btn-cont .menu-btn svg path {
+  header.header-transparent .menu-btn-cont .menu-btn svg g, header.header-transparent .menu-btn-cont .menu-btn svg path {
     fill: #fff; }
 
 header.header-small {
@@ -387,6 +387,7 @@ header.header-small {
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: transparent;
   color: #000; }
   header.header-small .logo-cont {
     width: 160px; }
@@ -409,6 +410,17 @@ header.header-small {
         color: #ce9700; }
       header.header-small .main-menu ul .header-contacts span {
         font-size: 24px; }
+
+header.header-black {
+  background-image: none;
+  background-color: #000;
+  color: #fff; }
+  header.header-black .logo-cont .logo-white {
+    display: block; }
+  header.header-black .logo-cont .logo-black {
+    display: none; }
+  header.header-black .menu-btn-cont .menu-btn svg g, header.header-black .menu-btn-cont .menu-btn svg path {
+    fill: #fff; }
 
 header {
   position: fixed;
@@ -621,7 +633,7 @@ header {
 .header-darkness {
   background-color: rgba(0, 0, 0, 0.85); }
 
-.header-black {
+.header-transparent {
   background-color: #000; }
 
 footer {

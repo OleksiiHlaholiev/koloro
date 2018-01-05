@@ -110,32 +110,6 @@ $(function () {
 
     }
 
-    function hideMenu (){
-        if (distanceTop > referTopPoint){
-            // if ($(header).hasClass("header-hidden")){
-            //     $(header).removeClass("header-visible");
-            // }
-            // else {
-            //     $(header).addClass("header-hidden");
-            // }
-        }
-    }
-
-    function showMenu(){
-        if (distanceTop > referTopPoint){
-            // if( !($(header).hasClass("header-visible")) ){
-            //     $(header).addClass("header-visible");
-            //     $("header").addClass("header-darkness");
-            // }
-        }
-        else {
-            // $("header").removeClass("header-darkness");
-            // setTimeout(function(){
-            //     $("header").removeClass("header-hidden header-visible");
-            // }, 100);
-        }
-    }
-
     // *******************************         END OF FUNCTIONS       ************************************
 
 
@@ -166,15 +140,6 @@ $(function () {
             }
         }
 
-        // if (tempScrollTop < currentScrollTop ){ //scroll down
-        //     hideMenu();
-        // }
-        // else if (tempScrollTop > currentScrollTop ){//scroll top
-        //     showMenu();
-        //     // default_style();
-        // }
-        // console.log("currentScrollTop", currentScrollTop);
-
         tempScrollTop = currentScrollTop;
     }
 
@@ -193,7 +158,8 @@ $(function () {
         $(this).toggleClass("menu-btn-active");
         // $("header .main-menu").toggleClass("show-menu");
         $("header .main-menu").slideToggle();
-        $("header").toggleClass("header-black header-white");
+        $("header").toggleClass("header-black");
+
         $("html, body").toggleClass("scroll-lock");
         // $(".mask").toggleClass("darknes_active");
         //

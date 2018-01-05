@@ -1,5 +1,5 @@
 /**
- * Created by glalex on 05.01.2018.
+ * Created by glalex on 12.07.2017.
  */
 
 "use strict";
@@ -67,20 +67,18 @@ $(function () {
 
     var mainMenu = $("header .main-menu"),
         mainMenuItems = $("header .main-menu .menu-item"),
-        header = $("header"),
-        headerMenuBtn = $("header .menu-btn"),
-        headerMenuBtnState = 0;
+        header = $("header");
 
     var tempScrollTop = 0,
         currentScrollTop = 0,
         referTopPoint = 80,
-        distanceTop,
-        firstPageLoadFlag = true;
+        distanceTop;
 
     // distanceTop = html.scrollTop || body && body.scrollTop || 0;
     // distanceTop -= html.clientTop; // в IE7- <html> смещён относительно (0,0)
 
     var pagesList = ["index", "company", "portfolio", "contacts"];
+
 
     // ***************************************************
     determineActivePage();
@@ -91,7 +89,7 @@ $(function () {
 
 
     // **************************       FUNCTIONS       ***************************************************
-
+    
     function determineActivePage() {
         var currentLocation = window.location.href,
             status = false;
@@ -119,40 +117,17 @@ $(function () {
 
     function resizeWindowHandler(event) {
         if (window.innerWidth < 1101) {
-            // $(mainMenu).css("display", "none");
-            headerMenuOff();
+            $(mainMenu).css("display", "none");
         } else {
             $(mainMenu).css("display", "inline-block");
         }
-
-        if (window.innerWidth < mobileViewWidth) {
-            referTopPoint = 40;
-        } else {
-            referTopPoint = 80;
-        }
     }
 
-    function scrollMenuHandler(event) {
+    function scrollMenuHandler() {
         distanceTop = html.scrollTop || body && body.scrollTop || 0;
         distanceTop -= html.clientTop; // в IE7- <html> смещён относительно (0,0)
-        currentScrollTop = window.pageYOffset;
 
-        // if (!firstPageLoadFlag) {
-        //     // check if mobile header is not active (not opened list)
-        //     if( !$(header).hasClass("active")) {
-        //         if (currentScrollTop > tempScrollTop) {//scroll down
-        //             hideMenu();
-        //         }
-        //         else if (currentScrollTop < tempScrollTop) {//scroll top
-        //             showMenu();
-        //             // default_style();
-        //         }
-        //     }
-        // }
-        // else {
-        //     firstPageLoadFlag = false;
-        //     showMenu();
-        // }
+        currentScrollTop = window.pageYOffset;
 
         if (distanceTop > referTopPoint) {
             if( !($(header).hasClass("header-small")) ) {
@@ -165,7 +140,6 @@ $(function () {
             }
         }
 
-        // console.log("currentScrollTop", currentScrollTop);
         tempScrollTop = currentScrollTop;
     }
 
@@ -179,32 +153,16 @@ $(function () {
     // add target="_blank" for all anchors
     // $("a:not(.menu-item)").attr("target", "_blank");
 
-    function headerMenuOn() {
-        $(headerMenuBtn).addClass("menu-btn-active");
-        $(mainMenu).slideDown();
-        $(header).addClass("active");
-        $(header).addClass("header-black");
-        $("html, body").addClass("scroll-lock");
-    }
-
-    function headerMenuOff() {
-        $(headerMenuBtn).removeClass("menu-btn-active");
-        $(mainMenu).slideUp();
-        $(header).removeClass("active");
-        $(header).removeClass("header-black");
-        $("html, body").removeClass("scroll-lock");
-    }
-
     // start of mobile-menu show/hide
-    $(headerMenuBtn).on("click", function () {
+    $("header .menu-btn").on("click", function () {
+        $(this).toggleClass("menu-btn-active");
+        // $("header .main-menu").toggleClass("show-menu");
+        $("header .main-menu").slideToggle();
+        $("header").toggleClass("header-black active");
 
-        if (headerMenuBtnState) {
-            headerMenuBtnState = 0;
-            headerMenuOff();
-        } else {
-            headerMenuBtnState = 1;
-            headerMenuOn();
-        }
+        $("html, body").toggleClass("scroll-lock");
+        // $(".mask").toggleClass("darknes_active");
+        //
     });
     // end of mobile-menu show/hide
 
@@ -224,23 +182,9 @@ $(function () {
             // searchBtnStatus = 0;
         }
         event.stopPropagation();
-    });
 
-    // start of checkboxes tests
-    // $(".checkbox-item input").on("change", function () {
-    //     // if ( $(this).attr("checked")) {
-    //     //     $(this).removeAttr("checked");
-    //     // }
-    //     // else {
-    //     //     $(this).attr("checked", "checked")
-    //     // }
-    //
-    //     console.log($(this).prop("checked"));
-    //
-    //     // console.log($(this).checked);
-    //     // console.log( $(this).attr("checked") );
-    // });
-    // end of checkboxes tests
+        // $(searchContainerInput).toggleClass("active").fadeToggle();
+    });
 
     function searchFormClose (e) {
         if ( e.keyCode === 27 ) {
@@ -274,56 +218,41 @@ $(function () {
 
     // *************************************************************
 
-    // start of material-img-preview logic
-
-    var materialImgPreview = $("#material-img-preview"),
-        materialImgs = $(".material-img"),
-        fullImg = $("#material-img-preview .full-img"),
-        imgSrc;
-
-    $(materialImgs).on("click", function () {
-        imgSrc = $(this).attr("src");
-
-        $(fullImg[0]).attr("src", imgSrc);
-        $(materialImgPreview).addClass("active").fadeIn(400);
-        $("html, body").addClass("scroll-lock");
-    });
-
-    // close img-preview
-    $(materialImgPreview).on("click", function () {
-        $(this).removeClass("active").fadeOut(400);
-        $("html, body").removeClass("scroll-lock");
-    });
-
-    $(document).on('keydown', imgPreviewClose);
-
-    function imgPreviewClose (e) {
-        if ( e.keyCode === 27 ) {
-            // close search-field on ESC
-            if($(materialImgPreview).hasClass("active")) {
-                $(materialImgPreview).removeClass("active").fadeOut(400);
-                $("html, body").removeClass("scroll-lock");
-            }
-        }
-    }
-
-    // end of material-img-preview logic
-
     // ANIMATION BLOCK
     if (!isMobileViewFlag) {
         // ****************************************************************************
         // *************    GENERAL ANIMATIONS FOR ALL PORTFOLIO-MATERIAL/SERVICE-MATERIAL PAGES    *************
 
+        $('.material-wrapper .text-block-cont .info-left .block-title, ' +
+            '.material-wrapper .two-img-cont .img-cont:first-child img').addClass("transparent").viewportChecker({
+            classToAdd: 'animated fadeInLeft',
+            classToRemove: 'transparent',
+            offset: 0,
+            delay: 1000
+        });
 
+        $('.material-wrapper .text-block-cont .info-right, ' +
+            '.material-wrapper .two-img-cont .img-cont:last-child img').addClass("transparent").viewportChecker({
+            classToAdd: 'animated fadeInRight',
+            classToRemove: 'transparent',
+            offset: 100,
+            delay: 1000
+        });
+        $('.material-wrapper .img-cont, .material-wrapper .video-cont').addClass("transparent").viewportChecker({
+            classToAdd: 'animated fadeIn',
+            classToRemove: 'transparent',
+            offset: 100,
+            delay: 1000
+        });
     }
 
 });
 
-;(function gl() {
-    var parentElem = document.querySelector("footer");
-    var glDiv = document.createElement('div');
-
-    glDiv.style = "display: none; padding: 20px; font-family: sans-serif; font-size: 14px; color: #fff; background-color: #000; text-align: center";
-    glDiv.innerHTML = "<p style='font: inherit; margin: 10px'>Front-End part is made by Glalex, 2018.</p><p style='font: inherit; margin: 10px'>GitHub: <a href='https://github.com/OleksiiHlaholiev'>https://github.com/OleksiiHlaholiev</a></p><p style='font: inherit; margin: 10px'>e-mail: oleksii.hlaholiev@gmail.com</p>";
-    parentElem.appendChild(glDiv);
-})();
+// test
+// function f1(a, b) {
+//     console.log(a, b);
+// }
+//
+// var f2 = f1.bind(null, 'foo');
+//
+// f2("bar", "baz");

@@ -1,0 +1,101 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-arrow-down-yellow {
+  background-image: url(../images/sprite.png);
+  background-position: 0px 0px;
+  width: 73px;
+  height: 45px; }
+
+.icon-arrow-left-white {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -102px;
+  width: 26px;
+  height: 43px; }
+
+.icon-arrow-right-white {
+  background-image: url(../images/sprite.png);
+  background-position: -132px 0px;
+  width: 26px;
+  height: 43px; }
+
+.icon-cross-yellow {
+  background-image: url(../images/sprite.png);
+  background-position: -83px 0px;
+  width: 39px;
+  height: 39px; }
+
+.icon-google-hover {
+  background-image: url(../images/sprite.png);
+  background-position: -132px -53px;
+  width: 20px;
+  height: 27px; }
+
+.icon-google {
+  background-image: url(../images/sprite.png);
+  background-position: -168px -109px;
+  width: 20px;
+  height: 27px; }
+
+.icon-rss-hover {
+  background-image: url(../images/sprite.png);
+  background-position: -89px -55px;
+  width: 27px;
+  height: 27px; }
+
+.icon-rss {
+  background-image: url(../images/sprite.png);
+  background-position: -168px 0px;
+  width: 27px;
+  height: 27px; }
+
+.icon-search-btn {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -55px;
+  width: 35px;
+  height: 37px; }
+
+.icon-twitter-hover {
+  background-image: url(../images/sprite.png);
+  background-position: -36px -102px;
+  width: 34px;
+  height: 28px; }
+
+.icon-twitter {
+  background-image: url(../images/sprite.png);
+  background-position: -45px -55px;
+  width: 34px;
+  height: 28px; }
+
+.icon-up-btn {
+  background-image: url(../images/sprite.png);
+  background-position: -80px -102px;
+  width: 40px;
+  height: 23px; }
+
+.icon-vk-hover {
+  background-image: url(../images/sprite.png);
+  background-position: -168px -37px;
+  width: 22px;
+  height: 26px; }
+
+.icon-vk {
+  background-image: url(../images/sprite.png);
+  background-position: -168px -73px;
+  width: 22px;
+  height: 26px; }

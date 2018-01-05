@@ -399,6 +399,9 @@ header.header-small {
       fill: #000; }
   header.header-small .main-menu {
     width: calc(100% - 160px); }
+    @media all and (max-width: 1100px) {
+      header.header-small .main-menu {
+        width: 90%; } }
     header.header-small .main-menu ul .header-contacts {
       top: 20%; }
       header.header-small .main-menu ul .header-contacts .yellow-color {
@@ -499,7 +502,8 @@ header {
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
               -ms-flex-direction: column;
-                  flex-direction: column; } }
+                  flex-direction: column;
+          width: 100%; } }
       header .main-menu ul li {
         display: inline-block; }
         @media all and (max-width: 1100px) {

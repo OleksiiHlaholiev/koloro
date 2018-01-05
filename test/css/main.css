@@ -183,8 +183,8 @@ html, body {
 .container {
   position: relative;
   z-index: 5;
-  width: 80%;
-  max-width: 1590px;
+  width: 90%;
+  max-width: 1725px;
   margin: 0 auto; }
   @media all and (max-width: 768px) {
     .container {
@@ -431,11 +431,6 @@ header {
   padding: 10px 0;
   text-align: center;
   transition: all 0.4s; }
-  header .container {
-    width: 90%; }
-    @media all and (min-width: 1800px) {
-      header .container {
-        max-width: 1725px; } }
   header .logo-cont {
     display: inline-block;
     float: left;
@@ -549,7 +544,7 @@ header {
           display: inline-block;
           width: 100%;
           padding: 15px 15px;
-          font-size: 15px;
+          font-size: 16px;
           font-family: "ProximaNovaBold", sans-serif;
           line-height: 1.2;
           text-align: center;
@@ -766,8 +761,8 @@ footer {
   line-height: 1.2;
   text-align: left; }
   .main-top-container .page-head .bread-crumbs {
-    font-size: 30px;
-    font-family: "BebasNeueRegular", sans-serif; }
+    font-size: 24px;
+    font-family: "ProximaNovaExtrabold", sans-serif; }
     .main-top-container .page-head .bread-crumbs a:after {
       content: '/';
       padding-left: 20px; }
@@ -792,11 +787,14 @@ footer {
     font-size: 100px;
     font-family: "BebasNeueBold", sans-serif; }
   @media all and (max-width: 768px) {
+    .main-top-container .page-head .bread-crumbs {
+      font-size: 20px; } }
+  @media all and (max-width: 768px) {
     .main-top-container .page-head {
       padding-top: 100px;
       text-align: center; }
       .main-top-container .page-head .bread-crumbs {
-        font-size: 24px; }
+        font-size: 14px; }
       .main-top-container .page-head .page-title {
         font-size: 60px; } }
 
@@ -808,6 +806,8 @@ footer {
   @media all and (max-width: 768px) {
     #index-page .main-top-container {
       padding-top: 20vh; } }
+  #index-page .main-top-container .container {
+    max-width: 1590px; }
   #index-page .main-top-container .main-header {
     font-size: 130px;
     font-family: "BebasNeueRegular", sans-serif;
@@ -1028,6 +1028,10 @@ footer {
             #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item:hover svg {
               fill: #000; }
 
+.more-portfolio-btn {
+  width: 460px;
+  padding: 30px 10px; }
+
 .our-works {
   padding: 15vh 0 10vh 0; }
   @media all and (max-width: 768px) {
@@ -1057,9 +1061,6 @@ footer {
       .our-works .our-works-cont .left-cont, .our-works .our-works-cont .right-cont {
         width: 100%;
         padding-left: 0; } }
-    .our-works .our-works-cont .more-portfolio-btn {
-      width: 460px;
-      padding: 30px 10px; }
     .our-works .our-works-cont .portfolio-menu ul {
       list-style: none;
       text-align: right; }
@@ -1235,6 +1236,77 @@ footer {
   @media all and (max-width: 768px) {
     #portfolio-page .our-works {
       padding-top: 5vh; } }
+
+.info-block-cont {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .info-block-cont .title-cont, .info-block-cont .text-cont {
+    width: 50%;
+    padding: 0 15px; }
+    @media all and (max-width: 992px) {
+      .info-block-cont .title-cont, .info-block-cont .text-cont {
+        width: 100%; } }
+  .info-block-cont .text-cont {
+    font-size: 22px;
+    font-family: "ProximaNovaRegular", sans-serif;
+    color: black;
+    line-height: 1.2;
+    text-align: left; }
+    @media all and (max-width: 992px) {
+      .info-block-cont .text-cont {
+        text-align: center; } }
+    @media all and (max-width: 768px) {
+      .info-block-cont .text-cont {
+        font-size: 22px; } }
+    .info-block-cont .text-cont p {
+      margin-bottom: 30px; }
+      .info-block-cont .text-cont p span {
+        font-family: "ProximaNovaExtrabold", sans-serif; }
+      .info-block-cont .text-cont p .yellow-color {
+        color: #ce9700; }
+
+#company-page .our-team {
+  margin-top: -10vh;
+  padding-bottom: 5vh; }
+  @media all and (max-width: 768px) {
+    #company-page .our-team {
+      margin-top: 0; } }
+  #company-page .our-team .container {
+    max-width: 1360px; }
+  @media all and (max-width: 768px) {
+    #company-page .our-team .team-img-cont .team-img {
+      display: none; } }
+  #company-page .our-team .team-img-cont .team-member .member-photo img {
+    max-width: 100%; }
+  #company-page .our-team .team-img-cont .team-member .member-info {
+    margin: 25px 0;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center; }
+    #company-page .our-team .team-img-cont .team-member .member-info p {
+      margin: 10px 0; }
+    #company-page .our-team .team-img-cont .team-member .member-info .name {
+      font-size: 30px;
+      font-family: "BebasNeueBold", sans-serif;
+      color: black; }
+    #company-page .our-team .team-img-cont .team-member .member-info .position {
+      font-size: 16px;
+      font-family: "ProximaNovaRegular", sans-serif;
+      color: #8d8d8d; }
+  #company-page .our-team .section-header {
+    padding: 0 0 10px 0; }
+  #company-page .our-team .services-underlining {
+    width: 50%; }
+  #company-page .our-team .info-block-cont {
+    padding-top: 10vh; }
 
 .white-color {
   color: #fff; }

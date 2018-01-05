@@ -384,7 +384,7 @@ header.header-black {
 
 header.header-small {
   background-image: url("../images/general/svg/small-header-background.svg");
-  background-position: center center;
+  background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
   color: #000; }
@@ -413,9 +413,9 @@ header.header-small {
 header {
   position: fixed;
   top: 0;
-  left: 0;
+  left: -1%;
   z-index: 1000;
-  width: 100%;
+  width: 102%;
   padding: 10px 0;
   text-align: center;
   transition: all 0.4s; }
@@ -546,6 +546,8 @@ header {
           @media all and (max-width: 1450px) {
             header .main-menu ul li.menu-item a {
               padding: 15px 10px; } }
+          header .main-menu ul li.menu-item a:hover {
+            color: inherit; }
         header .main-menu ul li.menu-item.active:before {
           opacity: 1; }
         header .main-menu ul li.menu-item.active a {

@@ -384,6 +384,7 @@ header.header-black {
 
 header.header-small {
   background-image: url("../images/general/svg/small-header-background.svg");
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #000; }
@@ -735,6 +736,7 @@ footer {
   footer .copy-right {
     padding: 60px 0 30px 0;
     background-image: url("../images/general/svg/footer-down-border.svg");
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover; }
     footer .copy-right p {
@@ -750,6 +752,9 @@ footer {
   min-height: 100vh;
   padding-top: 15vh;
   padding-bottom: 10vh; }
+  @media all and (max-width: 768px) {
+    #index-page .main-top-container {
+      padding-top: 20vh; } }
   #index-page .main-top-container .main-header {
     font-size: 130px;
     font-family: "BebasNeueRegular", sans-serif;
@@ -878,6 +883,9 @@ footer {
       @media all and (max-width: 1000px) {
         #index-page .our-services .services-items-cont .service-item-cont {
           width: 100%; } }
+      @media all and (max-width: 768px) {
+        #index-page .our-services .services-items-cont .service-item-cont {
+          padding: 0 5vw; } }
       #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
         width: 100%;
         max-width: 350px;

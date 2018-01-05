@@ -409,8 +409,6 @@ header.header-small {
         color: #ce9700; }
       header.header-small .main-menu ul .header-contacts span {
         font-size: 24px; }
-    header.header-small .main-menu li.menu-item.active a {
-      color: #ce9700; }
 
 header {
   position: fixed;

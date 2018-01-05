@@ -430,7 +430,7 @@ header {
   width: 102%;
   padding: 10px 0;
   text-align: center;
-  transition: all 0.4s; }
+  transition: background 2s; }
   header .logo-cont {
     display: inline-block;
     float: left;

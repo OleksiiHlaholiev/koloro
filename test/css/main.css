@@ -278,7 +278,7 @@ a[href^="mailto:"]:hover {
   transition: all 0.4s; }
 
 .section-header {
-  margin: 20px 0;
+  padding: 20px 0;
   font-size: 100px;
   font-family: "BebasNeueBold", sans-serif;
   color: black;
@@ -632,7 +632,7 @@ footer {
     width: 110%;
     max-width: 110%;
     left: -5%;
-    bottom: 99%; }
+    bottom: 100%; }
   footer .footer-cont {
     padding: 10vh 0;
     display: -webkit-box;
@@ -859,7 +859,7 @@ footer {
     width: 110%;
     max-width: 110%;
     left: -5%;
-    bottom: 99%; }
+    bottom: 100%; }
   #index-page .our-services .services-underlining {
     width: 55%; }
   #index-page .our-services .services-items-cont {

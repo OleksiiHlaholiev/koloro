@@ -639,7 +639,7 @@ footer {
     width: 110%;
     max-width: 110%;
     left: -5%;
-    bottom: 100%; }
+    bottom: calc(100% - 1px); }
   footer .footer-cont {
     padding: 10vh 0;
     display: -webkit-box;
@@ -912,7 +912,7 @@ footer {
     width: 110%;
     max-width: 110%;
     left: -5%;
-    bottom: 100%; }
+    bottom: calc(100% - 1px); }
   #index-page .our-services .services-underlining {
     width: 55%; }
   #index-page .our-services .services-items-cont {

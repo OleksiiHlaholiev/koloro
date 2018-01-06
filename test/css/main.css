@@ -1389,7 +1389,7 @@ footer {
               transform: translateY(-100%); }
     #company-page .our-team .team-img-cont .member-2 .member-photo {
       top: 32%;
-      right: -5%; }
+      right: -2.5%; }
     #company-page .our-team .team-img-cont .member-2 .member-info {
       top: 24%;
       right: -5%;
@@ -1416,7 +1416,7 @@ footer {
       left: 0; }
     #company-page .our-team .team-img-cont .member-5 .member-info {
       top: 24%;
-      left: -5%;
+      left: -2.5%;
       -webkit-transform: translateY(-100%);
               transform: translateY(-100%); }
   #company-page .our-team .section-header {

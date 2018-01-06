@@ -1425,6 +1425,13 @@ footer {
   #company-page .our-team .info-block-cont {
     padding-top: 10vh; }
 
+#contacts-page .main-top-container {
+  background-color: #000; }
+  #contacts-page .main-top-container .page-head {
+    color: #fff; }
+    #contacts-page .main-top-container .page-head .bread-crumbs span.active {
+      color: #000; }
+
 .white-color {
   color: #fff; }
 

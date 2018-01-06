@@ -73,7 +73,7 @@ $(function () {
 
     var tempScrollTop = 0,
         currentScrollTop = 0,
-        referTopPoint = 80,
+        referTopPoint = 40,
         distanceTop,
         firstPageLoadFlag = true;
 
@@ -126,9 +126,9 @@ $(function () {
         }
 
         if (window.innerWidth < mobileViewWidth) {
-            referTopPoint = 40;
+            referTopPoint = 20;
         } else {
-            referTopPoint = 80;
+            referTopPoint = 40;
         }
     }
 

@@ -1349,6 +1349,12 @@ footer {
       transition: all 0.4s; }
       #company-page .our-team .team-img-cont .team-member .member-photo img {
         max-width: 100%; }
+        @media all and (max-width: 1400px) {
+          #company-page .our-team .team-img-cont .team-member .member-photo img {
+            width: 220px; } }
+        @media all and (max-width: 1000px) {
+          #company-page .our-team .team-img-cont .team-member .member-photo img {
+            width: auto; } }
     #company-page .our-team .team-img-cont .team-member .member-info {
       text-transform: uppercase;
       line-height: 1.2;

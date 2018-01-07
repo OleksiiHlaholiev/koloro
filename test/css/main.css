@@ -204,6 +204,11 @@ a:focus, a:visited, a:active {
 a[href^="mailto:"]:hover {
   text-decoration: underline; }
 
+button {
+  background-color: transparent;
+  border: none;
+  outline: 0; }
+
 .gl-yellow-btn, .gl-transparent-btn {
   position: relative;
   display: block;
@@ -824,7 +829,8 @@ footer {
   visibility: visible; }
 
 .main-top-container {
-  padding-top: 160px; }
+  padding-top: 160px;
+  position: relative; }
   @media all and (max-width: 768px) {
     .main-top-container {
       padding-top: 100px; } }
@@ -1455,7 +1461,8 @@ footer {
     padding-top: 10vh; }
 
 #contacts-page .main-top-container {
-  padding-bottom: 10vh;
+  padding-bottom: 15vh;
+  min-height: 100vh;
   background-color: #000; }
   #contacts-page .main-top-container .page-head {
     color: #fff; }
@@ -1563,6 +1570,135 @@ footer {
         #contacts-page .main-top-container .contacts-cont .left-cont, #contacts-page .main-top-container .contacts-cont .right-cont {
           width: 100%; } }
 
+#contacts-page .contacts-forms {
+  padding: 80px 0;
+  position: relative; }
+  #contacts-page .contacts-forms .contacts-border {
+    position: absolute;
+    width: 110%;
+    max-width: 110%;
+    left: -5%;
+    bottom: calc(100% - 1px); }
+  #contacts-page .contacts-forms .contact-form .form-cont {
+    max-width: 945px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.2;
+    /* Firefox 19+ */
+    /* Firefox 18- */ }
+    #contacts-page .contacts-forms .contact-form .form-cont .form-header {
+      font-size: 80px;
+      font-family: "BebasNeueBold", sans-serif;
+      color: #000;
+      text-transform: uppercase; }
+    #contacts-page .contacts-forms .contact-form .form-cont .user-input {
+      display: block;
+      width: 100%;
+      padding: 20px 20px;
+      font-size: 18px;
+      font-family: "ProximaNovaRegular", sans-serif;
+      color: black; }
+    #contacts-page .contacts-forms .contact-form .form-cont ::-webkit-input-placeholder {
+      color: #bcc4d0; }
+    #contacts-page .contacts-forms .contact-form .form-cont ::-moz-placeholder {
+      color: #bcc4d0; }
+    #contacts-page .contacts-forms .contact-form .form-cont :-moz-placeholder {
+      color: #bcc4d0; }
+    #contacts-page .contacts-forms .contact-form .form-cont :-ms-input-placeholder {
+      color: #bcc4d0; }
+    #contacts-page .contacts-forms .contact-form .form-cont .inputs-cont {
+      padding: 30px 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      #contacts-page .contacts-forms .contact-form .form-cont .inputs-cont .input-col {
+        width: 30%;
+        position: relative; }
+        @media all and (max-width: 768px) {
+          #contacts-page .contacts-forms .contact-form .form-cont .inputs-cont .input-col {
+            width: 100%; } }
+        #contacts-page .contacts-forms .contact-form .form-cont .inputs-cont .input-col:before {
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          content: url("../images/contacts/svg/contacts-form-field.svg"); }
+    #contacts-page .contacts-forms .contact-form .form-cont .text-field-cont {
+      position: relative;
+      z-index: 1; }
+      #contacts-page .contacts-forms .contact-form .form-cont .text-field-cont:before {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+        content: url("../images/contacts/svg/contacts-form-field-big.svg"); }
+        @media all and (max-width: 768px) {
+          #contacts-page .contacts-forms .contact-form .form-cont .text-field-cont:before {
+            content: url("../images/contacts/svg/contacts-form-field-big-mobile.svg"); } }
+      #contacts-page .contacts-forms .contact-form .form-cont .text-field-cont textarea {
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        resize: none;
+        background-color: transparent; }
+
+/*custom file upload*/
+.add-file-cont {
+  position: relative;
+  text-align: right;
+  margin: 15px 0; }
+  @media all and (max-height: 600px) {
+    .add-file-cont {
+      display: none; } }
+  .add-file-cont .inputfile {
+    display: none; }
+  .add-file-cont .inputfile + label {
+    max-width: 80%;
+    font-size: 20px;
+    font-family: "ProximaNovaExtrabold", sans-serif;
+    color: #000;
+    background-color: transparent;
+    text-decoration: none;
+    transition: all 0.4s;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    height: 27px;
+    line-height: 27px; }
+  .add-file-cont .no-js .inputfile + label {
+    display: none; }
+  .add-file-cont .inputfile:focus + label,
+  .add-file-cont .inputfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px; }
+  .add-file-cont .inputfile + label * {
+    /* pointer-events: none; */
+    /* in case of FastClick lib use */ }
+  .add-file-cont .inputfile-1 + label {
+    color: #fff; }
+  .add-file-cont .inputfile-2 + label {
+    color: #000; }
+  .add-file-cont .inputfile:focus + label,
+  .add-file-cont .inputfile-.has-focus + label,
+  .add-file-cont .inputfile + label:hover {
+    color: #ffc700; }
+
+/*cusom file upload over */
 .white-color {
   color: #fff; }
 

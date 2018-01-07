@@ -436,7 +436,8 @@ header {
     display: inline-block;
     float: left;
     transition: all 0.4s;
-    width: 320px; }
+    width: 320px;
+    padding-bottom: 15px; }
     @media all and (max-width: 768px) {
       header .logo-cont {
         width: 200px; } }
@@ -600,19 +601,23 @@ header {
               font-size: 30px; } }
         header .main-menu ul .header-contacts .tel {
           font-family: "BebasNeueBold", sans-serif; }
-      @media all and (max-width: 1100px) {
-        header .main-menu ul .nav-btn {
-          -webkit-box-ordinal-group: 2;
-              -ms-flex-order: 1;
-                  order: 1; } }
-      header .main-menu ul .nav-btn .callback-form-btn {
-        width: 220px;
-        font-size: 20px;
-        margin: 0 auto;
-        padding: 0; }
+      header .main-menu ul .nav-btn {
+        position: relative;
+        top: 5px; }
         @media all and (max-width: 1100px) {
-          header .main-menu ul .nav-btn .callback-form-btn {
-            margin-top: 10px; } }
+          header .main-menu ul .nav-btn {
+            -webkit-box-ordinal-group: 2;
+                -ms-flex-order: 1;
+                    order: 1;
+            padding: 10px 0; } }
+        header .main-menu ul .nav-btn .callback-form-btn {
+          width: 220px;
+          font-size: 20px;
+          margin: 0 auto;
+          padding: 0; }
+          @media all and (max-width: 1100px) {
+            header .main-menu ul .nav-btn .callback-form-btn {
+              margin-top: 10px; } }
   header .show-menu {
     height: 100vh;
     display: block;

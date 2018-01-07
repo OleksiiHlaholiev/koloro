@@ -1571,7 +1571,8 @@ footer {
           width: 100%; } }
 
 #contacts-page .contacts-forms {
-  padding: 80px 0;
+  padding-top: 5vh;
+  padding-bottom: 8vh;
   position: relative; }
   #contacts-page .contacts-forms .contacts-border {
     position: absolute;
@@ -1591,6 +1592,9 @@ footer {
       font-family: "BebasNeueBold", sans-serif;
       color: #000;
       text-transform: uppercase; }
+      @media all and (max-width: 768px) {
+        #contacts-page .contacts-forms .contact-form .form-cont .form-header {
+          font-size: 48px; } }
     #contacts-page .contacts-forms .contact-form .form-cont .user-input {
       display: block;
       width: 100%;
@@ -1680,6 +1684,15 @@ footer {
     overflow: hidden;
     height: 27px;
     line-height: 27px; }
+    .add-file-cont .inputfile + label span {
+      display: inline-block;
+      vertical-align: top; }
+    .add-file-cont .inputfile + label .plus-icon {
+      display: inline-block;
+      width: 25px;
+      margin-right: 10px; }
+      .add-file-cont .inputfile + label .plus-icon g, .add-file-cont .inputfile + label .plus-icon path {
+        fill: #ffc700; }
   .add-file-cont .no-js .inputfile + label {
     display: none; }
   .add-file-cont .inputfile:focus + label,

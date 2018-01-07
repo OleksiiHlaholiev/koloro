@@ -406,7 +406,7 @@ header.header-small {
       header.header-small .main-menu {
         width: 90%; } }
     header.header-small .main-menu ul .header-contacts {
-      top: 20%; }
+      top: 15px; }
       header.header-small .main-menu ul .header-contacts .yellow-color {
         color: #ce9700; }
       header.header-small .main-menu ul .header-contacts span {
@@ -568,7 +568,7 @@ header {
           opacity: 1; }
       header .main-menu ul .header-contacts {
         position: absolute;
-        top: 40%;
+        top: 40px;
         left: 2vw;
         padding-right: 10px; }
         @media all and (max-width: 1300px) {
@@ -578,7 +578,7 @@ header {
           header .main-menu ul .header-contacts {
             display: block;
             padding: 15px 0 25px 0;
-            position: relative;
+            position: static;
             left: 0;
             -webkit-box-ordinal-group: 3;
                 -ms-flex-order: 2;
@@ -586,16 +586,19 @@ header {
         @media all and (max-width: 600px) {
           header .main-menu ul .header-contacts {
             padding: 10px 0; } }
-        @media all and (max-height: 550px) {
+        @media all and (max-height: 550px) and (max-width: 1000px) {
           header .main-menu ul .header-contacts {
             display: none; } }
         header .main-menu ul .header-contacts span {
           font-size: 48px;
           line-height: 1.2;
           text-transform: uppercase; }
-          @media all and (max-width: 1400px) {
+          @media all and (max-width: 1450px) {
             header .main-menu ul .header-contacts span {
-              font-size: 22px; } }
+              font-size: 36px; } }
+          @media all and (max-width: 1350px) {
+            header .main-menu ul .header-contacts span {
+              font-size: 30px; } }
           @media all and (max-width: 1100px) {
             header .main-menu ul .header-contacts span {
               font-size: 30px; } }

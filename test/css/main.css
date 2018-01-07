@@ -631,6 +631,21 @@ header {
 .header-transparent {
   background-color: #000; }
 
+.fomdih-contact {
+  font-size: 60px;
+  font-family: "ProximaNovaExtrabold", sans-serif;
+  color: #fff;
+  line-height: 1.5;
+  text-align: center; }
+  .fomdih-contact span {
+    color: #ffc700; }
+  @media all and (max-width: 1600px) {
+    .fomdih-contact {
+      font-size: 42px; } }
+  @media all and (max-width: 1200px) {
+    .fomdih-contact {
+      font-size: 30px; } }
+
 footer {
   position: relative;
   background-color: #000; }
@@ -682,20 +697,6 @@ footer {
         @media all and (max-width: 1200px) {
           footer .footer-cont .cta-col .cta-small {
             font-size: 30px; } }
-    footer .footer-cont .contacts-col p {
-      font-size: 60px;
-      font-family: "ProximaNovaExtrabold", sans-serif;
-      color: #fff;
-      line-height: 1.5;
-      text-align: center; }
-      footer .footer-cont .contacts-col p span {
-        color: #ffc700; }
-      @media all and (max-width: 1600px) {
-        footer .footer-cont .contacts-col p {
-          font-size: 42px; } }
-      @media all and (max-width: 1200px) {
-        footer .footer-cont .contacts-col p {
-          font-size: 30px; } }
     footer .footer-cont .contacts-col .social-icons-cont {
       padding-top: 5vh;
       display: -webkit-box;
@@ -798,7 +799,7 @@ footer {
   visibility: visible; }
 
 .main-top-container {
-  padding-top: 140px; }
+  padding-top: 160px; }
   @media all and (max-width: 768px) {
     .main-top-container {
       padding-top: 100px; } }
@@ -1426,11 +1427,113 @@ footer {
     padding-top: 10vh; }
 
 #contacts-page .main-top-container {
+  padding-bottom: 10vh;
   background-color: #000; }
   #contacts-page .main-top-container .page-head {
     color: #fff; }
     #contacts-page .main-top-container .page-head .bread-crumbs span.active {
       color: #000; }
+  #contacts-page .main-top-container .mix-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+    @media all and (max-width: 1200px) {
+      #contacts-page .main-top-container .mix-cont {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+        #contacts-page .main-top-container .mix-cont .page-head, #contacts-page .main-top-container .mix-cont .cta-col {
+          width: 100%; } }
+    #contacts-page .main-top-container .mix-cont .cta-col {
+      text-align: right;
+      text-transform: uppercase;
+      line-height: 1.2; }
+      @media all and (max-width: 1200px) {
+        #contacts-page .main-top-container .mix-cont .cta-col {
+          text-align: center; } }
+      #contacts-page .main-top-container .mix-cont .cta-col .cta-big {
+        padding-bottom: 10px;
+        font-size: 90px;
+        font-family: "ProximaNovaExtrabold", sans-serif;
+        color: white; }
+        @media all and (max-width: 1700px) {
+          #contacts-page .main-top-container .mix-cont .cta-col .cta-big {
+            font-size: 78px; } }
+        @media all and (max-width: 1400px) {
+          #contacts-page .main-top-container .mix-cont .cta-col .cta-big {
+            font-size: 60px; } }
+        @media all and (max-width: 1200px) {
+          #contacts-page .main-top-container .mix-cont .cta-col .cta-big {
+            font-size: 70px; } }
+        @media all and (max-width: 768px) {
+          #contacts-page .main-top-container .mix-cont .cta-col .cta-big {
+            font-size: 36px; } }
+      #contacts-page .main-top-container .mix-cont .cta-col .cta-small {
+        padding-bottom: 10px;
+        font-size: 72px;
+        font-family: "BebasNeueRegular", sans-serif;
+        color: #ffc700; }
+        @media all and (max-width: 1700px) {
+          #contacts-page .main-top-container .mix-cont .cta-col .cta-small {
+            font-size: 64px; } }
+        @media all and (max-width: 1400px) {
+          #contacts-page .main-top-container .mix-cont .cta-col .cta-small {
+            font-size: 50px; } }
+        @media all and (max-width: 1200px) {
+          #contacts-page .main-top-container .mix-cont .cta-col .cta-small {
+            font-size: 60px; } }
+        @media all and (max-width: 768px) {
+          #contacts-page .main-top-container .mix-cont .cta-col .cta-small {
+            font-size: 28px; } }
+  #contacts-page .main-top-container .contacts-cont {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    #contacts-page .main-top-container .contacts-cont .img-cont {
+      padding: 7vh 0; }
+      @media all and (max-width: 768px) {
+        #contacts-page .main-top-container .contacts-cont .img-cont {
+          padding: 3vh 0; } }
+      #contacts-page .main-top-container .contacts-cont .img-cont img {
+        width: 370px;
+        max-width: 70%; }
+    #contacts-page .main-top-container .contacts-cont .left-cont, #contacts-page .main-top-container .contacts-cont .right-cont {
+      width: 50%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      @media all and (max-width: 768px) {
+        #contacts-page .main-top-container .contacts-cont .left-cont, #contacts-page .main-top-container .contacts-cont .right-cont {
+          width: 100%; } }
 
 .white-color {
   color: #fff; }

@@ -369,7 +369,7 @@ span {
   clear: both; }
 
 header.header-white {
-  background-color: white;
+  background-color: transparent;
   color: #000; }
   header.header-white .logo-cont .logo-white {
     display: none; }
@@ -833,7 +833,7 @@ footer {
   position: relative; }
   @media all and (max-width: 768px) {
     .main-top-container {
-      padding-top: 100px; } }
+      padding-top: 120px; } }
   .main-top-container .page-head {
     color: #000;
     text-transform: uppercase;
@@ -856,8 +856,7 @@ footer {
           position: absolute;
           top: 0;
           left: 0;
-          width: 100%;
-          height: 100%; }
+          width: 100%; }
           .main-top-container .page-head .bread-crumbs span.active svg g, .main-top-container .page-head .bread-crumbs span.active svg path {
             fill: #ffc700; }
     .main-top-container .page-head .page-title {

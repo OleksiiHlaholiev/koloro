@@ -856,7 +856,9 @@ footer {
           position: absolute;
           top: 0;
           left: 0;
-          width: 100%; }
+          width: 100%;
+          -webkit-transform: translateY(-25%);
+                  transform: translateY(-25%); }
           .main-top-container .page-head .bread-crumbs span.active svg g, .main-top-container .page-head .bread-crumbs span.active svg path {
             fill: #ffc700; }
     .main-top-container .page-head .page-title {
@@ -1592,15 +1594,25 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
-    #contacts-page .contacts-forms .tab-panel .form-header-cont {
-      max-width: 60%; }
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    #contacts-page .contacts-forms .tab-panel .form-headers-cont {
+      width: calc(100% - 260px); }
+      @media all and (max-width: 768px) {
+        #contacts-page .contacts-forms .tab-panel .form-headers-cont {
+          width: calc(100% - 100px); } }
     #contacts-page .contacts-forms .tab-panel .form-switch {
-      text-align: right; }
+      text-align: right;
+      width: 260px; }
+      @media all and (max-width: 768px) {
+        #contacts-page .contacts-forms .tab-panel .form-switch {
+          width: 100px; } }
       #contacts-page .contacts-forms .tab-panel .form-switch li {
         position: relative;
         display: inline-block;
@@ -1639,15 +1651,23 @@ footer {
           opacity: 1; }
     #contacts-page .contacts-forms .tab-panel .form-header {
       display: none;
-      font-size: 80px;
-      font-family: "BebasNeueBold", sans-serif;
+      font-family: "BebasNeueRegular", sans-serif;
       color: #000;
       text-transform: uppercase; }
       #contacts-page .contacts-forms .tab-panel .form-header.active {
         display: block; }
+      #contacts-page .contacts-forms .tab-panel .form-header span {
+        font-family: "BebasNeueBold", sans-serif; }
+    #contacts-page .contacts-forms .tab-panel .form-header.request-header {
+      font-size: 80px; }
       @media all and (max-width: 768px) {
-        #contacts-page .contacts-forms .tab-panel .form-header {
+        #contacts-page .contacts-forms .tab-panel .form-header.request-header {
           font-size: 48px; } }
+    #contacts-page .contacts-forms .tab-panel .form-header.tender-header {
+      font-size: 60px; }
+      @media all and (max-width: 768px) {
+        #contacts-page .contacts-forms .tab-panel .form-header.tender-header {
+          font-size: 36px; } }
   #contacts-page .contacts-forms .contact-form {
     display: none; }
     #contacts-page .contacts-forms .contact-form.active {

@@ -1,3 +1,5 @@
+"use strict";
+
 /*
 	By Osvaldas Valutis, www.osvaldas.info
 	Available for use under the MIT License
@@ -38,3 +40,17 @@
     var r = e.querySelectorAll("html")[0];
     r.className = r.className.replace(/(^|\s)no-js(\s|$)/, "$1js$2")
 })(document, window, 0);
+
+$(function () {
+    var formHeaders = $(".form-headers-cont .form-header"),
+        contactForms = $(".contacts-forms .contact-form"),
+        formSwitchItems = $(".form-switch li");
+
+    $(formSwitchItems).on("click", function () {
+        if (!$(this).hasClass("active")) {
+            $(formSwitchItems).toggleClass("active");
+            $(formHeaders).toggleClass("active");
+            $(contactForms).toggleClass("active");
+        }
+    })
+});

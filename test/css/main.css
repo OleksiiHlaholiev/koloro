@@ -180,17 +180,20 @@ html, body {
     .gl-container {
       width: 90%; } }
 
-.container, .middle-container {
+.container, .middle-container, .medium-container {
   position: relative;
   z-index: 5;
   width: 90%;
   margin: 0 auto; }
   @media all and (max-width: 768px) {
-    .container, .middle-container {
+    .container, .middle-container, .medium-container {
       width: 95%; } }
 
 .container {
   max-width: 1725px; }
+
+.medium-container {
+  max-width: 1400px; }
 
 .middle-container {
   max-width: 945px; }
@@ -1354,7 +1357,8 @@ footer {
     color: white;
     text-transform: uppercase;
     line-height: 1.2;
-    text-align: center; }
+    text-align: center;
+    letter-spacing: 1px; }
     @media all and (max-width: 1200px) {
       #portfolio-material .main-top-container .material-header-cont .material-header {
         font-size: 24px; } }
@@ -1376,26 +1380,47 @@ footer {
       font: inherit;
       color: #00e5b9;
       font-family: "ProximaNovaExtrabold", sans-serif; }
+  #portfolio-material .portfolio-material-cont h2, #portfolio-material .portfolio-material-cont h3, #portfolio-material .portfolio-material-cont h4, #portfolio-material .portfolio-material-cont h5, #portfolio-material .portfolio-material-cont h6 {
+    letter-spacing: 1px; }
   #portfolio-material .portfolio-material-cont h2 {
-    padding-bottom: 4vh;
+    padding-bottom: 5vh;
     font-size: 100px;
     font-family: "BebasNeueBold", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px; }
+    text-transform: uppercase; }
     @media all and (max-width: 768px) {
       #portfolio-material .portfolio-material-cont h2 {
         font-size: 48px; } }
   #portfolio-material .portfolio-material-cont h3 {
-    padding-bottom: 3vh;
+    padding-bottom: 4vh;
     font-size: 60px;
-    font-family: "ProximaNovaExtrabold", sans-serif;
-    letter-spacing: 1px; }
+    font-family: "ProximaNovaExtrabold", sans-serif; }
     @media all and (max-width: 768px) {
       #portfolio-material .portfolio-material-cont h3 {
+        font-size: 30px; } }
+  #portfolio-material .portfolio-material-cont h4 {
+    padding-bottom: 3vh;
+    font-size: 48px;
+    font-family: "ProximaNovaExtrabold", sans-serif; }
+    @media all and (max-width: 768px) {
+      #portfolio-material .portfolio-material-cont h4 {
         font-size: 30px; } }
   #portfolio-material .portfolio-material-cont .img-cont {
     padding-top: 2vh;
     padding-bottom: 5vh; }
+  #portfolio-material .portfolio-material-cont .two-img-cont h3 {
+    padding-bottom: 5vh;
+    font-size: 48px; }
+    @media all and (max-width: 768px) {
+      #portfolio-material .portfolio-material-cont .two-img-cont h3 {
+        font-size: 30px; } }
+  #portfolio-material .portfolio-material-cont .two-img-cont h4 {
+    padding-bottom: 4vh;
+    font-size: 24px; }
+    @media all and (max-width: 768px) {
+      #portfolio-material .portfolio-material-cont .two-img-cont h4 {
+        font-size: 18px; } }
+  #portfolio-material .portfolio-material-cont .two-img-cont .img-cont {
+    padding: 15px; }
 
 #portfolio-material .portfolio-cta-cont {
   padding-bottom: 10vh; }

@@ -261,17 +261,17 @@ button {
     width: 100%;
     top: 0;
     left: 0; }
-    .gl-yellow-btn svg g, .gl-yellow-btn svg path, .gl-transparent-btn svg g, .gl-transparent-btn svg path {
+    .gl-yellow-btn svg path, .gl-transparent-btn svg path {
       transition: all 0.4s; }
 
 .gl-yellow-btn {
   color: black; }
-  .gl-yellow-btn g, .gl-yellow-btn path {
+  .gl-yellow-btn path {
     fill: #ffc700; }
 
 .gl-yellow-btn:hover {
   color: #ffc700; }
-  .gl-yellow-btn:hover g, .gl-yellow-btn:hover path {
+  .gl-yellow-btn:hover path {
     fill: #000; }
 
 .gl-transparent-btn {
@@ -395,7 +395,7 @@ header.header-white {
     display: none; }
   header.header-white .logo-cont .logo-black {
     display: block; }
-  header.header-white .menu-btn-cont .menu-btn svg g, header.header-white .menu-btn-cont .menu-btn svg path {
+  header.header-white .menu-btn-cont .menu-btn svg path {
     fill: #000; }
 
 header.header-transparent {
@@ -405,7 +405,7 @@ header.header-transparent {
     display: block; }
   header.header-transparent .logo-cont .logo-black {
     display: none; }
-  header.header-transparent .menu-btn-cont .menu-btn svg g, header.header-transparent .menu-btn-cont .menu-btn svg path {
+  header.header-transparent .menu-btn-cont .menu-btn svg path {
     fill: #fff; }
 
 header.header-small {
@@ -423,7 +423,7 @@ header.header-small {
       display: block; }
   header.header-small .menu-btn-cont {
     width: calc(100% - 160px); }
-    header.header-small .menu-btn-cont .menu-btn svg g, header.header-small .menu-btn-cont .menu-btn svg path {
+    header.header-small .menu-btn-cont .menu-btn svg path {
       fill: #000; }
   header.header-small .main-menu {
     width: calc(100% - 160px); }
@@ -445,7 +445,7 @@ header.header-black {
     display: block; }
   header.header-black .logo-cont .logo-black {
     display: none; }
-  header.header-black .menu-btn-cont .menu-btn svg g, header.header-black .menu-btn-cont .menu-btn svg path {
+  header.header-black .menu-btn-cont .menu-btn svg path {
     fill: #fff; }
 
 header {
@@ -492,6 +492,8 @@ header {
         display: block; }
       header .menu-btn-cont .menu-btn .menu-close {
         display: none; }
+      header .menu-btn-cont .menu-btn svg path {
+        transition: all 0.4s; }
     header .menu-btn-cont .menu-btn-active {
       cursor: pointer; }
       header .menu-btn-cont .menu-btn-active .menu-hamburger {
@@ -500,6 +502,8 @@ header {
         display: block; }
     header .menu-btn-cont .menu-btn:hover {
       text-decoration: none; }
+      header .menu-btn-cont .menu-btn:hover svg path {
+        fill: #ffc700; }
   header .main-menu {
     display: inline-block;
     float: right;
@@ -879,7 +883,7 @@ footer {
           width: 100%;
           -webkit-transform: translateY(-25%);
                   transform: translateY(-25%); }
-          .main-top-container .page-head .bread-crumbs span.active svg g, .main-top-container .page-head .bread-crumbs span.active svg path {
+          .main-top-container .page-head .bread-crumbs span.active svg path {
             fill: #ffc700; }
     .main-top-container .page-head .page-title {
       margin: 20px 0;
@@ -1107,23 +1111,24 @@ footer {
             top: -5%;
             left: 0;
             width: 100%;
-            height: 110%;
-            transition: all 0.4s; }
+            height: 110%; }
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li svg path {
+              transition: all 0.4s; }
         #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item {
           color: #ffc700; }
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item svg {
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item svg path {
             fill: #000; }
           #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item:hover {
             color: #000; }
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item:hover svg {
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item:hover svg path {
               fill: #ffc700; }
         #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item {
           color: #000; }
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item svg {
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item svg path {
             fill: #ffc700; }
           #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item:hover {
             color: #ffc700; }
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item:hover svg {
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item:hover svg path {
               fill: #000; }
 
 .more-portfolio-btn {
@@ -1291,7 +1296,7 @@ footer {
           height: 100%;
           opacity: 0;
           transition: all 0.6s; }
-          .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-blot-hover g, .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-blot-hover path {
+          .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-blot-hover path {
             fill: currentColor; }
         .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-info {
           position: absolute;
@@ -1303,7 +1308,7 @@ footer {
             bottom: 0;
             left: -5%;
             width: 110%; }
-            .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-info .portfolio-blot g, .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-info .portfolio-blot path {
+            .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-info .portfolio-blot path {
               fill: currentColor; }
           .our-works .our-works-cont .portolio-items-cont .portfolio-item .portfolio-info .portfolio-name {
             position: absolute;
@@ -1344,7 +1349,7 @@ footer {
       padding-left: 15px; }
     #portfolio-material .main-top-container .page-head .bread-crumbs span.active {
       color: #000; }
-      #portfolio-material .main-top-container .page-head .bread-crumbs span.active svg g, #portfolio-material .main-top-container .page-head .bread-crumbs span.active svg path {
+      #portfolio-material .main-top-container .page-head .bread-crumbs span.active svg path {
         fill: #00e5b9; }
   #portfolio-material .main-top-container .material-header-cont .material-logo-cont {
     margin-top: 15vh;
@@ -1421,6 +1426,8 @@ footer {
         font-size: 18px; } }
   #portfolio-material .portfolio-material-cont .two-img-cont .img-cont {
     padding: 15px; }
+    #portfolio-material .portfolio-material-cont .two-img-cont .img-cont img {
+      max-width: 90%; }
 
 #portfolio-material .portfolio-cta-cont {
   padding-bottom: 10vh; }
@@ -1884,7 +1891,7 @@ footer {
       display: inline-block;
       width: 25px;
       margin-right: 10px; }
-      .add-file-cont .inputfile + label .plus-icon g, .add-file-cont .inputfile + label .plus-icon path {
+      .add-file-cont .inputfile + label .plus-icon path {
         transition: all 0.4s;
         fill: #ffc700; }
   .add-file-cont .no-js .inputfile + label {
@@ -1904,10 +1911,8 @@ footer {
   .add-file-cont .inputfile-.has-focus + label,
   .add-file-cont .inputfile + label:hover {
     color: #ffc700; }
-    .add-file-cont .inputfile:focus + label .plus-icon g, .add-file-cont .inputfile:focus + label .plus-icon path,
-    .add-file-cont .inputfile-.has-focus + label .plus-icon g,
+    .add-file-cont .inputfile:focus + label .plus-icon path,
     .add-file-cont .inputfile-.has-focus + label .plus-icon path,
-    .add-file-cont .inputfile + label:hover .plus-icon g,
     .add-file-cont .inputfile + label:hover .plus-icon path {
       fill: #000; }
 

@@ -10,6 +10,36 @@
     <link rel="stylesheet" href="css/main.css"> <!-- main CSS  -->
     <title>FOMDIH - материал портфолио</title>
 
+    <!-- start of special inner styles on this page -->
+    <!-- bread-crumbs styles and order-form-btn styles -->
+    <!-- this is "API" which allows user to change colors on this elements via ADMIN PANEL -->
+    <!-- TO DO for SANYA: insert selected by user colors into down properties, in HEX format or rgb/rgba -->
+    <style>
+        #portfolio-material .main-top-container .page-head {
+            color: #fff;
+        }
+        #portfolio-material .main-top-container .page-head .bread-crumbs span.active {
+            color: #000;
+        }
+        #portfolio-material .main-top-container .page-head .bread-crumbs span.active svg path {
+            fill: #00e5b9;
+        }
+
+        #portfolio-material .gl-yellow-btn {
+            color: #000;
+        }
+        #portfolio-material .gl-yellow-btn path {
+            fill: #fff;
+        }
+
+        #portfolio-material .gl-yellow-btn:hover {
+            color: #fff;
+        }
+        #portfolio-material .gl-yellow-btn:hover path {
+            fill: #000;
+        }
+    </style>
+    <!-- end of special inner styles on this page -->
 </head>
 <body>
 <!-- start of header -->
@@ -304,7 +334,6 @@
         </div>
     </div>
 
-    <!-- TO DO: INSERT TWO-IMG-CONT -->
     <div class="two-img-cont">
         <div class="img-cont">
             <img src="images/portfolio-material/image-10.jpg" alt="portfolio-img">

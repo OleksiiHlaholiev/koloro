@@ -180,15 +180,20 @@ html, body {
     .gl-container {
       width: 90%; } }
 
-.container {
+.container, .middle-container {
   position: relative;
   z-index: 5;
   width: 90%;
-  max-width: 1725px;
   margin: 0 auto; }
   @media all and (max-width: 768px) {
-    .container {
+    .container, .middle-container {
       width: 95%; } }
+
+.container {
+  max-width: 1725px; }
+
+.middle-container {
+  max-width: 945px; }
 
 a {
   color: inherit;
@@ -322,20 +327,32 @@ img {
   max-width: 100%; }
 
 .img-cont {
+  font-size: 0;
   text-align: center;
   overflow: hidden; }
   .img-cont img {
     max-width: 100%; }
 
-.two-img-cont .img-cont {
-  float: left;
-  width: 50%; }
-  @media all and (max-width: 768px) {
-    .two-img-cont .img-cont {
-      float: none;
-      width: 100%; } }
-  .two-img-cont .img-cont img {
-    width: 100%; }
+.two-img-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .two-img-cont .img-cont {
+    width: 50%; }
+    @media all and (max-width: 768px) {
+      .two-img-cont .img-cont {
+        width: 100%; } }
+    .two-img-cont .img-cont img {
+      max-width: 100%; }
 
 .logo-cont {
   text-align: left; }
@@ -1314,6 +1331,74 @@ footer {
   @media all and (max-width: 768px) {
     #portfolio-page .our-works {
       padding-top: 5vh; } }
+
+#portfolio-material .main-top-container {
+  height: 100vh;
+  background-image: url("../images/portfolio-material/image-banner.jpg"); }
+  #portfolio-material .main-top-container .page-head {
+    color: #fff; }
+    #portfolio-material .main-top-container .page-head .bread-crumbs a:nth-child(2) {
+      padding-left: 15px; }
+    #portfolio-material .main-top-container .page-head .bread-crumbs span.active {
+      color: #000; }
+      #portfolio-material .main-top-container .page-head .bread-crumbs span.active svg g, #portfolio-material .main-top-container .page-head .bread-crumbs span.active svg path {
+        fill: #00e5b9; }
+  #portfolio-material .main-top-container .material-header-cont .material-logo-cont {
+    margin-top: 15vh;
+    margin-bottom: 8vh; }
+    #portfolio-material .main-top-container .material-header-cont .material-logo-cont img {
+      max-width: 1000px; }
+  #portfolio-material .main-top-container .material-header-cont .material-header {
+    font-size: 48px;
+    font-family: "ProximaNovaBold", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center; }
+    @media all and (max-width: 1200px) {
+      #portfolio-material .main-top-container .material-header-cont .material-header {
+        font-size: 24px; } }
+    @media all and (max-width: 768px) {
+      #portfolio-material .main-top-container .material-header-cont .material-header {
+        font-size: 22px; } }
+
+#portfolio-material .portfolio-material-cont {
+  padding-top: 8vh;
+  padding-bottom: 5vh; }
+  #portfolio-material .portfolio-material-cont p {
+    font-size: 22px;
+    font-family: "ProximaNovaRegular", sans-serif;
+    color: inherit;
+    line-height: 1.636;
+    letter-spacing: 1.5px;
+    padding-bottom: 3vh; }
+    #portfolio-material .portfolio-material-cont p strong, #portfolio-material .portfolio-material-cont p span {
+      font: inherit;
+      color: #00e5b9;
+      font-family: "ProximaNovaExtrabold", sans-serif; }
+  #portfolio-material .portfolio-material-cont h2 {
+    padding-bottom: 4vh;
+    font-size: 100px;
+    font-family: "BebasNeueBold", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+    @media all and (max-width: 768px) {
+      #portfolio-material .portfolio-material-cont h2 {
+        font-size: 48px; } }
+  #portfolio-material .portfolio-material-cont h3 {
+    padding-bottom: 3vh;
+    font-size: 60px;
+    font-family: "ProximaNovaExtrabold", sans-serif;
+    letter-spacing: 1px; }
+    @media all and (max-width: 768px) {
+      #portfolio-material .portfolio-material-cont h3 {
+        font-size: 30px; } }
+  #portfolio-material .portfolio-material-cont .img-cont {
+    padding-top: 2vh;
+    padding-bottom: 5vh; }
+
+#portfolio-material .portfolio-cta-cont {
+  padding-bottom: 10vh; }
 
 .info-block-cont {
   padding: 20px 0;

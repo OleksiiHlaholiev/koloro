@@ -61,10 +61,6 @@ $(function () {
     var html = document.documentElement,
         body = document.body;
 
-    var searchBtnStatus = 0,
-        searchContainerInput = $(".search-container .input-container input")[0],
-        searchBtn = $(".search-container .search-btn")[0];
-
     var mainMenu = $("header .main-menu"),
         mainMenuItems = $("header .main-menu .menu-item"),
         header = $("header"),
@@ -208,24 +204,6 @@ $(function () {
     });
     // end of mobile-menu show/hide
 
-    $(searchBtn).on("click", function (event) {
-        if (!searchBtnStatus) {
-            event.preventDefault();
-            // searchContainerInput.setAttribute("autofocus", "autofocus");
-            $(searchContainerInput).addClass("active").fadeIn(400);
-            searchBtnStatus = 1;
-        }
-        else {
-            if(searchContainerInput.value.length) {
-                event.preventDefault();
-                location.href = "/search-result.html";
-                // console.log(location.href);
-            }
-            // searchBtnStatus = 0;
-        }
-        event.stopPropagation();
-    });
-
     // start of checkboxes tests
     // $(".checkbox-item input").on("change", function () {
     //     // if ( $(this).attr("checked")) {
@@ -241,30 +219,6 @@ $(function () {
     //     // console.log( $(this).attr("checked") );
     // });
     // end of checkboxes tests
-
-    function searchFormClose (e) {
-        if ( e.keyCode === 27 ) {
-            // close search-field on ESC
-            if($(searchContainerInput).hasClass("active")) {
-                $(searchContainerInput).removeClass("active").fadeOut(400);
-                searchBtnStatus = 0;
-            }
-        }
-    }
-
-    document.addEventListener('keydown', searchFormClose);
-
-    $("body").click(function(event) {
-        if(!$(event.target).closest(searchContainerInput).length &&
-            $(searchContainerInput).hasClass("active")) {
-            if (searchBtnStatus) {
-                event.preventDefault();
-                $(searchContainerInput).removeClass("active").fadeOut(400);
-                // searchContainerInput.removeAttribute("autofocus");
-                searchBtnStatus = 0;
-            }
-        }
-    });
 
     // read-more event handler
     $(".read-more-btn").on("click", function () {

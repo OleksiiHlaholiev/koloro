@@ -268,6 +268,12 @@ $(function () {
         // ****************************************************************************
         // *************    GENERAL ANIMATIONS FOR ALL PORTFOLIO-MATERIAL/SERVICE-MATERIAL PAGES    *************
 
+        $('.portfolio-items-cont .portfolio-item').addClass("transparent").viewportChecker({
+            classToAdd: 'animated fadeInUp',
+            classToRemove: 'transparent',
+            offset: '10%',
+            repeat: false
+        });
 
     }
 

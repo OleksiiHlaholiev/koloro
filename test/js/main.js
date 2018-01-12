@@ -266,10 +266,36 @@ $(function () {
     // ANIMATION BLOCK
     if (!isMobileViewFlag) {
         // ****************************************************************************
-        // *************    GENERAL ANIMATIONS FOR ALL PORTFOLIO-MATERIAL/SERVICE-MATERIAL PAGES    *************
+        // *************    GENERAL ANIMATIONS FOR ALL PAGES    *************
 
-        $('.portfolio-items-cont .portfolio-item').addClass("invisible").viewportChecker({
+        $('.our-works .portfolio-items-cont .portfolio-item').addClass("invisible").viewportChecker({
             classToAdd: 'animated fadeInUp',
+            classToRemove: 'visible',
+            offset: '10%',
+            repeat: false
+        });
+
+        $('.more-portfolio-btn').addClass("invisible").viewportChecker({
+            classToAdd: 'animated fadeInUp',
+            classToRemove: 'visible',
+            offset: '10%',
+            repeat: false
+        });
+
+
+
+        $('.footer-cont .cta-col .cta-big, ' +
+            '.footer-cont .cta-col .cta-small, ' +
+            '.footer-cont .cta-col .order-form-btn').addClass("invisible").viewportChecker({
+            classToAdd: 'animated fadeInLeft',
+            classToRemove: 'visible',
+            offset: '10%',
+            repeat: false
+        });
+
+        $('.footer-cont .contacts-col .fomdih-contact, ' +
+            '.footer-cont .social-icons-cont').addClass("invisible").viewportChecker({
+            classToAdd: 'animated fadeInRight',
             classToRemove: 'visible',
             offset: '10%',
             repeat: false

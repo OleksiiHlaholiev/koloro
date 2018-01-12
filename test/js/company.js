@@ -33,4 +33,23 @@ $(function () {
         turnPhotoOff(this);
     });
 
+    if (!isMobileViewFlag) {
+        // ****************************************************************************
+        // *************    ANIMATIONS FOR THIS PAGE    *************
+
+        $('.info-block-cont .title-cont .section-header, .info-block-cont .title-cont .img-cont').addClass("invisible").viewportChecker({
+            classToAdd: 'animated fadeInLeft',
+            classToRemove: 'visible',
+            offset: '10%',
+            repeat: false
+        });
+        $('.info-block-cont .text-cont p').addClass("invisible").viewportChecker({
+            classToAdd: 'animated fadeInRight',
+            classToRemove: 'visible',
+            offset: '10%',
+            repeat: false
+        });
+
+    }
+
 });

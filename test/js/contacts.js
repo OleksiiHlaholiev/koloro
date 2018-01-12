@@ -28,7 +28,7 @@ $(function () {
             classToRemove: 'visible',
             offset: '10%',
             invertBottomOffset: true,
-            repeat: true
+            repeat: false
         });
 
         $('.main-top-container .left-cont .img-cont, .main-top-container .left-cont .fomdih-contact').addClass("invisible").viewportChecker({
@@ -36,7 +36,7 @@ $(function () {
             classToRemove: 'visible',
             offset: '10%',
             invertBottomOffset: true,
-            repeat: true
+            repeat: false
         });
 
         $('.main-top-container .right-cont .img-cont, .main-top-container .right-cont .fomdih-contact').addClass("invisible").viewportChecker({
@@ -44,7 +44,7 @@ $(function () {
             classToRemove: 'visible',
             offset: '10%',
             invertBottomOffset: true,
-            repeat: true
+            repeat: false
         });
 
         $('.contacts-forms .form-headers-cont .form-header').addClass("invisible").viewportChecker({
@@ -52,7 +52,7 @@ $(function () {
             classToRemove: 'visible',
             offset: '10%',
             invertBottomOffset: true,
-            repeat: true
+            repeat: false
         });
 
         $('.contacts-forms .contact-form').addClass("invisible").viewportChecker({
@@ -60,7 +60,7 @@ $(function () {
             classToRemove: 'visible',
             offset: '10%',
             invertBottomOffset: true,
-            repeat: true
+            repeat: false
         });
 
 

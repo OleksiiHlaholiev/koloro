@@ -2206,7 +2206,8 @@ footer {
 
 .sticky {
   position: fixed;
-  z-index: 101; }
+  z-index: 101;
+  margin-top: 100px; }
 
 .stop {
   position: relative;

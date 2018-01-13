@@ -246,8 +246,7 @@ $(function () {
         });
     }
 
-    // start of SPI jena
-
+    // start of SPI jena FROM http://sticky01.blogspot.ru/2013/09/5.html
     (function(){
         var a = document.querySelector('.our-works .left-cont .portfolio-menu'), b = null, P = 0;
         window.addEventListener('scroll', Ascroll, false);
@@ -293,7 +292,7 @@ $(function () {
         }
     })()
 
-    // end of SPI jena
+    // end of SPI jena FROM http://sticky01.blogspot.ru/2013/09/5.html
 
 });
 

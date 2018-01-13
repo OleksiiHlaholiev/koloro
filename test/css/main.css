@@ -1322,7 +1322,7 @@ footer {
       @media all and (max-width: 992px) {
         .our-works .our-works-cont .portfolio-items-cont .portfolio-items-column {
           width: 100%;
-          padding: 0;
+          padding: 0 15px;
           -webkit-box-align: center;
               -ms-flex-align: center;
                   align-items: center; }
@@ -2014,6 +2014,9 @@ footer {
         left: 20%;
         -webkit-transform: rotateY(180deg);
                 transform: rotateY(180deg); } }
+    @media all and (max-width: 600px) {
+      .fomdih-form .icon.arrow-form-order {
+        left: 5%; } }
     .fomdih-form .icon.arrow-form-order svg {
       width: 100px; }
       @media all and (max-width: 1200px) {

@@ -107,21 +107,15 @@ $(function () {
             fomdihFormShow(orderForm);
         }
         else {
-            // var dstElem = $("header .main-menu ul .menu-our-works a");
-            // temp = $(dstElem).attr("href");
-            // $(dstElem).attr("href", temp + "#formOpen");
-            // $(dstElem).triggerHandler("click");
-
             // window.location.hash = "formOpen";
             // window.location.pathname = "portfolio.html";
 
             window.location.href = "portfolio.html" + "#formOpen";
         }
 
-
     });
 
-    if (window.location.hash == "#formOpen") {
+    if (window.location.hash === "#formOpen") {
         $(".order-form-btn")[0].click();
     }
 

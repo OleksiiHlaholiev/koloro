@@ -56,9 +56,11 @@
         <div class="container">
             <div class="full-cont">
                 <div class="left-cont">
-                    <h1 class="main-header">Мы <span class="yellow-color">креативное</span> агентство</h1>
+                    <h1 class="main-header wow fadeInLeft" data-wow-delay="0s">Мы <span
+                            class="yellow-color">креативное</span> агентство</h1>
                     <div class="img-cont">
-                        <img class="creative-agency-underlining" src="images/index/svg/creative-agency-underlining.svg" alt="creative-agency-underlining">
+                        <img class="creative-agency-underlining" src="images/index/svg/creative-agency-underlining.svg"
+                             alt="creative-agency-underlining">
                     </div>
 
                     <div class="illustrations-cont">
@@ -77,13 +79,12 @@
                     <div class="lamp-cont">
                         <img src="images/index/svg/fomdih-lamp.svg">
                     </div>
-                    <p class="lamp-text">
-                        <span class="size-80">Без</span>
-                        <span class="yellow-color">пафоса</span><span>,</span>
-                        <span class="yellow-color">лжи</span>
-                        <span class="light-font">и</span>
-                        <span class="yellow-color">халтуры</span>
-                    </p>
+                    <div class="lamp-text">
+                        <p class="size-80 wow fadeInRight" data-wow-delay="0.2s">Без</p>
+                        <p class="wow fadeInRight" data-wow-delay="0.2s"><span class="yellow-color">пафоса</span>,</p>
+                        <p class="yellow-color wow fadeInRight" data-wow-delay="0.3s">лжи</p>
+                        <p class="wow fadeInRight" data-wow-delay="0.4s"><span class="light-font">и </span><span class="yellow-color">халтуры</span></p>
+                    </div>
                 </div>
             </div>
             <p class="main-text">
@@ -101,7 +102,8 @@
         <div class="container">
             <h2 class="section-header">Собственно, чем мы занимаемся</h2>
             <div class="img-cont">
-                <img class="services-underlining" src="images/general/svg/services-underlining.svg" alt="services-underlining">
+                <img class="services-underlining" src="images/general/svg/services-underlining.svg"
+                     alt="services-underlining">
             </div>
         </div>
 
@@ -283,7 +285,8 @@
                 <div class="left-cont">
                     <h2 class="section-header">Наши работы</h2>
                     <div class="img-cont">
-                        <img class="services-underlining" src="images/general/svg/services-underlining.svg" alt="services-underlining">
+                        <img class="services-underlining" src="images/general/svg/services-underlining.svg"
+                             alt="services-underlining">
                     </div>
 
                     <nav class="portfolio-menu">
@@ -663,7 +666,22 @@
 <script src="js/fomdih-forms.js"></script>
 <!-- end of scripts for all pages -->
 
-<!-- scriots only this on page -->
+scriots only this on page
+
+<script src="js/libs/wow.min.js"></script>
+<script>
+    var wow = new WOW(
+        {
+            boxClass: 'wow',      // default
+            animateClass: 'animated', // default
+            offset: 0,          // default
+            mobile: false,       //
+            live: true        // default
+        }
+    );
+    wow.init();
+</script>
+
 <script src="js/index.js"></script>
 <!-- only this page -->
 

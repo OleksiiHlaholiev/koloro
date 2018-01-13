@@ -1280,6 +1280,8 @@ footer {
       content: url("../images/portfolio/svg/underlining-web-design.svg"); }
     .our-works .our-works-cont .portfolio-menu ul li.category-4 a:after {
       content: url("../images/portfolio/svg/underlining-ux-ui.svg"); }
+  .our-works .our-works-cont .more-portfolio-cont {
+    display: none; }
   .our-works .our-works-cont .portfolio-items-cont {
     display: -webkit-box;
     display: -ms-flexbox;

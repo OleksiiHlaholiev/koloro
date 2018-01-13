@@ -211,16 +211,30 @@ $(function () {
 
     // *************************************************************
 
+    var portfolioBtnCnt = 0;
+    $(".our-works .more-portfolio-btn").click(function (event) {
+        event.preventDefault();
+        // $(this.querySelector("span")).toggleText("больше работ", "меньше работ");
+        var morePortfolioConts = $(".our-works .more-portfolio-cont");
+
+        if (portfolioBtnCnt < morePortfolioConts.length) {
+            $(morePortfolioConts[portfolioBtnCnt]).slideDown().find(".portfolio-item").addClass("animated fadeInUp");
+            portfolioBtnCnt++;
+        }
+
+    });
+
+
 
     // ANIMATION BLOCK
     if (!isMobileViewFlag) {
         // ****************************************************************************
         // *************    GENERAL ANIMATIONS FOR ALL PAGES    *************
 
-        // $('.our-works .portfolio-items-cont .portfolio-item').addClass("invisible").viewportChecker({
+        // $('.our-works .more-portfolio-cont .portfolio-item').addClass("invisible").viewportChecker({
         //     classToAdd: 'animated fadeInUp',
         //     classToRemove: 'visible',
-        //     offset: '10%',
+        //     offset: '-50%',
         //     repeat: false
         // });
 

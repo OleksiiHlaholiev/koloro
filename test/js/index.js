@@ -13,8 +13,7 @@ $(function () {
             repeat: false
         });
 
-        $('.main-top-container .right-cont .lamp-cont, ' +
-            '.main-top-container .right-cont .lamp-text').addClass("invisible").viewportChecker({
+        $('.main-top-container .right-cont .lamp-text').addClass("invisible").viewportChecker({
             classToAdd: 'animated fadeInRight',
             classToRemove: 'visible',
             offset: '10%',

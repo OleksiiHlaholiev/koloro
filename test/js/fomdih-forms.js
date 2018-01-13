@@ -102,13 +102,13 @@ $(function () {
 
             temp2 = formHeader[0].offsetHeight;
             if (formHeader[0].offsetHeight != 0) {
+                // magic number - is not magic, this is padding from mobile mark-up
                 temp2 += 15;
             }
-            console.log(formHeader);
-            console.log("temp2 = " + temp2);
+            // console.log(formHeader);
+            // console.log("temp2 = " + temp2);
 
             temp = temp1 - temp2;
-
             goDistance =  temp - (window.innerHeight * 7 / 100);
 
             $('html, body').animate({scrollTop: goDistance}, 1000);

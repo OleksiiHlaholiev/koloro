@@ -588,7 +588,8 @@ header {
           text-decoration: none; }
           @media all and (max-width: 1450px) {
             header .main-menu ul li.menu-item a {
-              padding: 15px 10px; } }
+              padding: 15px 10px;
+              font-size: 15px; } }
           header .main-menu ul li.menu-item a:hover {
             color: inherit; }
         header .main-menu ul li.menu-item.active:before {
@@ -894,16 +895,19 @@ footer {
     .main-top-container .page-head .page-title {
       margin: 20px 0;
       line-height: 1.0;
-      font-size: 100px;
+      font-size: 120px;
       font-family: "BebasNeueBold", sans-serif; }
-    @media all and (max-width: 992px) {
-      .main-top-container .page-head .bread-crumbs {
-        display: none;
-        font-size: 20px; } }
+    @media all and (max-width: 1600px) {
+      .main-top-container .page-head {
+        font-size: 100px; } }
+    @media all and (max-width: 1200px) {
+      .main-top-container .page-head {
+        font-size: 80px; } }
     @media all and (max-width: 992px) {
       .main-top-container .page-head {
         text-align: center; }
         .main-top-container .page-head .bread-crumbs {
+          display: none;
           font-size: 14px; }
         .main-top-container .page-head .page-title {
           font-size: 60px; } }
@@ -919,7 +923,7 @@ footer {
   #index-page .main-top-container .container {
     max-width: 1590px; }
   #index-page .main-top-container .main-header {
-    font-size: 130px;
+    font-size: 120px;
     font-family: "BebasNeueRegular", sans-serif;
     color: white;
     text-transform: uppercase;
@@ -927,6 +931,9 @@ footer {
     #index-page .main-top-container .main-header span {
       font: inherit;
       font-family: "BebasNeueBold", sans-serif; }
+    @media all and (max-width: 1600px) {
+      #index-page .main-top-container .main-header {
+        font-size: 100px; } }
     @media all and (max-width: 1400px) {
       #index-page .main-top-container .main-header {
         font-size: 90px; } }
@@ -1076,97 +1083,95 @@ footer {
       @media all and (max-width: 992px) {
         #index-page .our-services .services-items-cont .service-item-cont {
           padding: 0 5vw; } }
-      #index-page .our-services .services-items-cont .service-item-cont .service-item {
-        max-width: 350px;
-        margin: 0 auto; }
-        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
-          width: 300px;
-          padding-top: 300px;
-          margin: 0 auto;
-          background-position: center center;
-          background-size: contain;
-          background-repeat: no-repeat; }
+      #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
+        width: 300px;
+        padding-top: 300px;
+        margin: 0 auto;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat; }
+        @media all and (max-width: 1400px) {
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
+            margin: 2vh auto;
+            max-width: 350px; } }
+        @media all and (max-width: 1000px) {
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
+            padding-top: 300px; } }
+        @media all and (max-width: 500px) {
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
+            max-width: 200px;
+            padding-top: 200px; } }
+      #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info {
+        line-height: 1.2;
+        text-align: center;
+        color: black; }
+        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-header {
+          font-size: 80px;
+          font-family: "BebasNeueBold", sans-serif;
+          text-transform: uppercase; }
           @media all and (max-width: 1400px) {
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
-              margin: 2vh auto; } }
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-header {
+              font-size: 80px; } }
           @media all and (max-width: 1000px) {
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
-              padding-top: 300px; } }
-          @media all and (max-width: 500px) {
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
-              max-width: 200px;
-              padding-top: 200px; } }
-        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info {
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-header {
+              font-size: 60px; } }
+        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-cta {
+          font-size: 24px;
+          font-family: "ProximaNovaBold", sans-serif; }
+      #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list {
+        padding: 20px 0;
+        list-style: none;
+        text-align: center; }
+        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li {
+          position: relative;
+          cursor: pointer;
+          display: inline-block;
+          padding: 20px 40px;
+          min-width: 160px;
+          font-size: 30px;
+          font-family: "BebasNeueBold", sans-serif;
+          color: #000;
+          text-transform: uppercase;
           line-height: 1.2;
           text-align: center;
-          color: black; }
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-header {
-            font-size: 80px;
-            font-family: "BebasNeueBold", sans-serif;
-            text-transform: uppercase; }
-            @media all and (max-width: 1400px) {
-              #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-header {
-                font-size: 80px; } }
-            @media all and (max-width: 1000px) {
-              #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-header {
-                font-size: 60px; } }
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-cta {
-            font-size: 24px;
-            font-family: "ProximaNovaBold", sans-serif; }
-        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list {
-          padding: 20px 0;
-          list-style: none;
-          text-align: center; }
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li {
+          white-space: nowrap;
+          transition: all 0.4s; }
+          @media all and (max-width: 1600px) {
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li {
+              font-size: 26px; } }
+          @media all and (max-width: 992px) {
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li {
+              font-size: 22px; } }
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li span {
             position: relative;
-            cursor: pointer;
-            display: inline-block;
-            padding: 20px 40px;
-            min-width: 160px;
-            font-size: 30px;
-            font-family: "BebasNeueBold", sans-serif;
-            color: #000;
-            text-transform: uppercase;
-            line-height: 1.2;
-            text-align: center;
-            white-space: nowrap;
-            transition: all 0.4s; }
-            @media all and (max-width: 1600px) {
-              #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li {
-                font-size: 26px; } }
-            @media all and (max-width: 992px) {
-              #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li {
-                font-size: 22px; } }
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li span {
-              position: relative;
-              z-index: 1;
-              font: inherit;
-              color: inherit; }
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li svg {
-              position: absolute;
-              z-index: 0;
-              top: -5%;
-              left: 0;
-              width: 100%;
-              height: 110%; }
-              #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li svg path {
-                transition: all 0.4s; }
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item {
-            color: #ffc700; }
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item svg path {
-              fill: #000; }
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item:hover {
-              color: #000; }
-              #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item:hover svg path {
-                fill: #ffc700; }
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item {
+            z-index: 1;
+            font: inherit;
+            color: inherit; }
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li svg {
+            position: absolute;
+            z-index: 0;
+            top: -5%;
+            left: 0;
+            width: 100%;
+            height: 110%; }
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li svg path {
+              transition: all 0.4s; }
+        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item {
+          color: #ffc700; }
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item svg path {
+            fill: #000; }
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item:hover {
             color: #000; }
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item svg path {
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item:hover svg path {
               fill: #ffc700; }
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item:hover {
-              color: #ffc700; }
-              #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item:hover svg path {
-                fill: #000; }
+        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item {
+          color: #000; }
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item svg path {
+            fill: #ffc700; }
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item:hover {
+            color: #ffc700; }
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item:hover svg path {
+              fill: #000; }
 
 .more-portfolio-btn {
   width: 460px;

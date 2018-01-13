@@ -1270,15 +1270,15 @@ footer {
               height: 35px; } }
       .our-works .our-works-cont .portfolio-menu ul li.active a:before, .our-works .our-works-cont .portfolio-menu ul li.active a:after, .our-works .our-works-cont .portfolio-menu ul li a:hover:before, .our-works .our-works-cont .portfolio-menu ul li a:hover:after {
         opacity: 1; }
-    .our-works .our-works-cont .portfolio-menu ul li.all-works a:after {
+    .our-works .our-works-cont .portfolio-menu ul li.category-0 a:after {
       content: url("../images/portfolio/svg/underlining-all-works.svg"); }
-    .our-works .our-works-cont .portfolio-menu ul li.brand-design a:after {
+    .our-works .our-works-cont .portfolio-menu ul li.category-1 a:after {
       content: url("../images/portfolio/svg/underlining-brand-design.svg"); }
-    .our-works .our-works-cont .portfolio-menu ul li.package-design a:after {
+    .our-works .our-works-cont .portfolio-menu ul li.category-2 a:after {
       content: url("../images/portfolio/svg/underlining-packaging-design.svg"); }
-    .our-works .our-works-cont .portfolio-menu ul li.web-design a:after {
+    .our-works .our-works-cont .portfolio-menu ul li.category-3 a:after {
       content: url("../images/portfolio/svg/underlining-web-design.svg"); }
-    .our-works .our-works-cont .portfolio-menu ul li.ui-ux-design a:after {
+    .our-works .our-works-cont .portfolio-menu ul li.category-4 a:after {
       content: url("../images/portfolio/svg/underlining-ux-ui.svg"); }
   .our-works .our-works-cont .portfolio-items-cont {
     display: -webkit-box;
@@ -2086,7 +2086,9 @@ footer {
         width: calc(70% - 5vw); } }
     @media all and (max-width: 992px) {
       .order-form .form-top-cont {
-        width: 100%; } }
+        max-width: 750px;
+        width: 100%;
+        margin: 0 auto; } }
     .order-form .form-top-cont .desktop-hidden {
       display: none; }
     .order-form .form-top-cont .desktop-visible {
@@ -2154,6 +2156,7 @@ footer {
             font-size: 26px; } }
   .order-form .form-cont {
     width: calc((70% - 5vw) * 2 / 3);
+    min-width: 750px;
     margin-left: auto;
     padding-left: 25px;
     padding-right: 15px;
@@ -2164,6 +2167,10 @@ footer {
         max-width: 750px;
         margin-right: 0;
         padding-left: 0; } }
+    @media all and (max-width: 992px) {
+      .order-form .form-cont {
+        min-width: auto;
+        padding: 0 15px; } }
     @media all and (max-width: 992px) {
       .order-form .form-cont {
         width: 100%;

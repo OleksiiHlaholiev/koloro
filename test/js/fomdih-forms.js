@@ -82,6 +82,7 @@ $(function () {
 
         var elem = $("#our-works .our-works-cont .right-cont"),
             formCard = $(".order-form .form-card"),
+            formHeader = $(".order-form .form-header.desktop-hidden"),
             temp, temp1, temp2, goDistance;
 
         if (elem.length != 0) {
@@ -91,25 +92,28 @@ $(function () {
                 $("header .menu-btn").click();
             }
 
+            fomdihFormShow(orderForm);
+
             temp1 = $(elem).offset().top;
             console.log("temp1 = " + temp1);
 
-            temp2 = $(formCard).offset().top;
-            console.log(formCard);
+            // temp2 = formCard[0].offsetTop;
+            // console.log(formCard);
+
+            temp2 = formHeader[0].offsetHeight;
+            if (formHeader[0].offsetHeight != 0) {
+                temp2 += 15;
+            }
+            console.log(formHeader);
             console.log("temp2 = " + temp2);
 
-            temp = temp1;
+            temp = temp1 - temp2;
 
             goDistance =  temp - (window.innerHeight * 7 / 100);
 
             $('html, body').animate({scrollTop: goDistance}, 1000);
-
-            fomdihFormShow(orderForm);
         }
         else {
-            // window.location.hash = "formOpen";
-            // window.location.pathname = "portfolio.html";
-
             window.location.href = "portfolio.html" + "#formOpen";
         }
 

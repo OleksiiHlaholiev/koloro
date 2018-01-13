@@ -463,7 +463,7 @@ header {
     transition: all 0.4s;
     width: 320px;
     padding-bottom: 15px; }
-    @media all and (max-width: 992px) {
+    @media all and (max-width: 1300px) {
       header .logo-cont {
         width: 200px; } }
     header .logo-cont a {
@@ -477,7 +477,7 @@ header {
         display: inline-block;
         width: calc(100% - 320px);
         text-align: right; } }
-    @media all and (max-width: 992px) {
+    @media all and (max-width: 1300px) {
       header .menu-btn-cont {
         width: calc(100% - 200px); } }
     header .menu-btn-cont .menu-btn {
@@ -512,6 +512,9 @@ header {
     width: calc(100% - 320px);
     text-align: right;
     transition: width 0.4s; }
+    @media all and (max-width: 1300px) {
+      header .main-menu {
+        width: calc(100% - 200px); } }
     @media all and (max-width: 1100px) {
       header .main-menu {
         display: none;
@@ -604,7 +607,8 @@ header {
         padding-right: 10px; }
         @media all and (max-width: 1300px) {
           header .main-menu ul .header-contacts {
-            display: none; } }
+            top: 20px;
+            left: 1.5vw; } }
         @media all and (max-width: 1100px) {
           header .main-menu ul .header-contacts {
             display: block;
@@ -627,6 +631,9 @@ header {
           @media all and (max-width: 1350px) {
             header .main-menu ul .header-contacts span {
               font-size: 30px; } }
+          @media all and (max-width: 1250px) {
+            header .main-menu ul .header-contacts span {
+              font-size: 24px; } }
           @media all and (max-width: 1100px) {
             header .main-menu ul .header-contacts span {
               font-size: 30px; } }
@@ -903,11 +910,12 @@ footer {
 
 #index-page .main-top-container {
   background-image: url("../images/index/picture-banner.jpg");
-  min-height: 100vh;
-  padding-bottom: 10vh; }
+  min-height: 70vh;
+  padding-bottom: 15vh; }
   @media all and (max-width: 992px) {
     #index-page .main-top-container {
-      background-image: url("../images/index/picture-banner-mobile.jpg"); } }
+      background-image: url("../images/index/picture-banner-mobile.jpg");
+      padding-bottom: 5vh; } }
   #index-page .main-top-container .container {
     max-width: 1590px; }
   #index-page .main-top-container .main-header {
@@ -922,7 +930,10 @@ footer {
     @media all and (max-width: 1400px) {
       #index-page .main-top-container .main-header {
         font-size: 90px; } }
-    @media all and (max-width: 992px) {
+    @media all and (max-width: 1000px) {
+      #index-page .main-top-container .main-header {
+        font-size: 60px; } }
+    @media all and (max-width: 600px) {
       #index-page .main-top-container .main-header {
         font-size: 48px; } }
   #index-page .main-top-container .creative-agency-underlining {
@@ -1065,94 +1076,97 @@ footer {
       @media all and (max-width: 992px) {
         #index-page .our-services .services-items-cont .service-item-cont {
           padding: 0 5vw; } }
-      #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
-        width: 100%;
-        padding-top: 100%;
-        margin: 0 auto;
-        background-position: center center;
-        background-size: contain;
-        background-repeat: no-repeat; }
-        @media all and (max-width: 1400px) {
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
-            margin: 2vh auto; } }
-        @media all and (max-width: 1000px) {
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
-            padding-top: 350px; } }
-        @media all and (max-width: 500px) {
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
-            max-width: 200px;
-            padding-top: 200px; } }
-      #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info {
-        line-height: 1.2;
-        text-align: center;
-        color: black; }
-        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-header {
-          font-size: 80px;
-          font-family: "BebasNeueBold", sans-serif;
-          text-transform: uppercase; }
+      #index-page .our-services .services-items-cont .service-item-cont .service-item {
+        max-width: 350px;
+        margin: 0 auto; }
+        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
+          width: 300px;
+          padding-top: 300px;
+          margin: 0 auto;
+          background-position: center center;
+          background-size: contain;
+          background-repeat: no-repeat; }
           @media all and (max-width: 1400px) {
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-header {
-              font-size: 80px; } }
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
+              margin: 2vh auto; } }
           @media all and (max-width: 1000px) {
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-header {
-              font-size: 60px; } }
-        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-cta {
-          font-size: 24px;
-          font-family: "ProximaNovaBold", sans-serif; }
-      #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list {
-        padding: 20px 0;
-        list-style: none;
-        text-align: center; }
-        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li {
-          position: relative;
-          cursor: pointer;
-          display: inline-block;
-          padding: 20px 40px;
-          min-width: 160px;
-          font-size: 30px;
-          font-family: "BebasNeueBold", sans-serif;
-          color: #000;
-          text-transform: uppercase;
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
+              padding-top: 300px; } }
+          @media all and (max-width: 500px) {
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
+              max-width: 200px;
+              padding-top: 200px; } }
+        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info {
           line-height: 1.2;
           text-align: center;
-          white-space: nowrap;
-          transition: all 0.4s; }
-          @media all and (max-width: 1600px) {
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li {
-              font-size: 26px; } }
-          @media all and (max-width: 992px) {
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li {
-              font-size: 22px; } }
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li span {
+          color: black; }
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-header {
+            font-size: 80px;
+            font-family: "BebasNeueBold", sans-serif;
+            text-transform: uppercase; }
+            @media all and (max-width: 1400px) {
+              #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-header {
+                font-size: 80px; } }
+            @media all and (max-width: 1000px) {
+              #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-header {
+                font-size: 60px; } }
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info .service-cta {
+            font-size: 24px;
+            font-family: "ProximaNovaBold", sans-serif; }
+        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list {
+          padding: 20px 0;
+          list-style: none;
+          text-align: center; }
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li {
             position: relative;
-            z-index: 1;
-            font: inherit;
-            color: inherit; }
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li svg {
-            position: absolute;
-            z-index: 0;
-            top: -5%;
-            left: 0;
-            width: 100%;
-            height: 110%; }
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li svg path {
-              transition: all 0.4s; }
-        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item {
-          color: #ffc700; }
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item svg path {
-            fill: #000; }
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item:hover {
-            color: #000; }
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item:hover svg path {
-              fill: #ffc700; }
-        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item {
-          color: #000; }
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item svg path {
-            fill: #ffc700; }
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item:hover {
+            cursor: pointer;
+            display: inline-block;
+            padding: 20px 40px;
+            min-width: 160px;
+            font-size: 30px;
+            font-family: "BebasNeueBold", sans-serif;
+            color: #000;
+            text-transform: uppercase;
+            line-height: 1.2;
+            text-align: center;
+            white-space: nowrap;
+            transition: all 0.4s; }
+            @media all and (max-width: 1600px) {
+              #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li {
+                font-size: 26px; } }
+            @media all and (max-width: 992px) {
+              #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li {
+                font-size: 22px; } }
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li span {
+              position: relative;
+              z-index: 1;
+              font: inherit;
+              color: inherit; }
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li svg {
+              position: absolute;
+              z-index: 0;
+              top: -5%;
+              left: 0;
+              width: 100%;
+              height: 110%; }
+              #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li svg path {
+                transition: all 0.4s; }
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item {
             color: #ffc700; }
-            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item:hover svg path {
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item svg path {
               fill: #000; }
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item:hover {
+              color: #000; }
+              #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.black-item:hover svg path {
+                fill: #ffc700; }
+          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item {
+            color: #000; }
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item svg path {
+              fill: #ffc700; }
+            #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item:hover {
+              color: #ffc700; }
+              #index-page .our-services .services-items-cont .service-item-cont .service-item .service-list li.yellow-item:hover svg path {
+                fill: #000; }
 
 .more-portfolio-btn {
   width: 460px;

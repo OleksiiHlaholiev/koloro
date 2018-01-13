@@ -925,6 +925,8 @@ footer {
     @media all and (max-width: 992px) {
       #index-page .main-top-container .main-header {
         font-size: 48px; } }
+  #index-page .main-top-container .creative-agency-underlining {
+    margin: 15px 0; }
   #index-page .main-top-container .full-cont {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -938,6 +940,7 @@ footer {
     #index-page .main-top-container .full-cont .left-cont {
       width: 75%; }
     #index-page .main-top-container .full-cont .right-cont {
+      position: relative;
       width: 25%;
       text-align: left;
       padding-left: 30px; }
@@ -949,6 +952,15 @@ footer {
       #index-page .main-top-container .full-cont .left-cont, #index-page .main-top-container .full-cont .right-cont {
         width: 100%;
         text-align: center; } }
+    #index-page .main-top-container .full-cont .desktop-hidden {
+      display: none; }
+    #index-page .main-top-container .full-cont .desktop-visible {
+      display: block; }
+    @media all and (max-width: 992px) {
+      #index-page .main-top-container .full-cont .desktop-hidden {
+        display: block; }
+      #index-page .main-top-container .full-cont .desktop-visible {
+        display: none; } }
   #index-page .main-top-container .illustrations-cont {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -966,15 +978,26 @@ footer {
         #index-page .main-top-container .illustrations-cont .img-cont {
           width: 100%; } }
       #index-page .main-top-container .illustrations-cont .img-cont img {
-        width: 100%; }
+        max-width: 80%;
+        width: 300px; }
   #index-page .main-top-container .lamp-cont {
     padding-left: 30px; }
     @media all and (max-width: 1400px) {
       #index-page .main-top-container .lamp-cont {
         padding-left: 0; } }
+    @media all and (max-width: 992px) {
+      #index-page .main-top-container .lamp-cont {
+        position: absolute;
+        right: 0;
+        top: 0;
+        -webkit-transform: translateY(-150%);
+                transform: translateY(-150%); } }
     #index-page .main-top-container .lamp-cont img {
       width: 80%;
       max-width: 160px; }
+      @media all and (max-width: 992px) {
+        #index-page .main-top-container .lamp-cont img {
+          max-width: 60px; } }
   #index-page .main-top-container .lamp-text {
     font-size: 60px;
     font-family: "ProximaNovaExtrabold", sans-serif;

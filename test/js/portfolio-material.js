@@ -20,20 +20,6 @@ $(function () {
             repeat: false
         });
 
-        // $('.portfolio-material-cont p').addClass("invisible").viewportChecker({
-        //     classToAdd: 'animated fadeInUp',
-        //     classToRemove: 'visible',
-        //     offset: '10%',
-        //     repeat: false
-        // });
-        //
-        // $('.portfolio-material-cont h2, .portfolio-material-cont h3').addClass("invisible").viewportChecker({
-        //     classToAdd: 'animated fadeInDown',
-        //     classToRemove: 'visible',
-        //     offset: '10%',
-        //     repeat: false
-        // });
-
         $('.portfolio-material-cont .order-form-btn').addClass("invisible").viewportChecker({
             classToAdd: 'animated fadeInUp',
             classToRemove: 'visible',

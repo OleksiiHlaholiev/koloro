@@ -133,23 +133,6 @@ $(function () {
         distanceTop -= html.clientTop; // в IE7- <html> смещён относительно (0,0)
         currentScrollTop = window.pageYOffset;
 
-        // if (!firstPageLoadFlag) {
-        //     // check if mobile header is not active (not opened list)
-        //     if( !$(header).hasClass("active")) {
-        //         if (currentScrollTop > tempScrollTop) {//scroll down
-        //             hideMenu();
-        //         }
-        //         else if (currentScrollTop < tempScrollTop) {//scroll top
-        //             showMenu();
-        //             // default_style();
-        //         }
-        //     }
-        // }
-        // else {
-        //     firstPageLoadFlag = false;
-        //     showMenu();
-        // }
-
         if (distanceTop > referTopPoint) {
             if( !($(header).hasClass("header-small")) ) {
                 ($(header).addClass("header-small"))
@@ -228,40 +211,6 @@ $(function () {
 
     // *************************************************************
 
-    // start of material-img-preview logic
-
-    var materialImgPreview = $("#material-img-preview"),
-        materialImgs = $(".material-img"),
-        fullImg = $("#material-img-preview .full-img"),
-        imgSrc;
-
-    $(materialImgs).on("click", function () {
-        imgSrc = $(this).attr("src");
-
-        $(fullImg[0]).attr("src", imgSrc);
-        $(materialImgPreview).addClass("active").fadeIn(400);
-        $("html, body").addClass("scroll-lock");
-    });
-
-    // close img-preview
-    $(materialImgPreview).on("click", function () {
-        $(this).removeClass("active").fadeOut(400);
-        $("html, body").removeClass("scroll-lock");
-    });
-
-    $(document).on('keydown', imgPreviewClose);
-
-    function imgPreviewClose (e) {
-        if ( e.keyCode === 27 ) {
-            // close search-field on ESC
-            if($(materialImgPreview).hasClass("active")) {
-                $(materialImgPreview).removeClass("active").fadeOut(400);
-                $("html, body").removeClass("scroll-lock");
-            }
-        }
-    }
-
-    // end of material-img-preview logic
 
     // ANIMATION BLOCK
     if (!isMobileViewFlag) {

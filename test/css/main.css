@@ -1151,7 +1151,8 @@ footer {
       padding-left: 0; } }
 
 .portfolio-item {
-  margin: 15px 0; }
+  margin: 15px 0;
+  font-size: 0; }
   .portfolio-item a {
     display: inline-block;
     position: relative; }
@@ -2061,103 +2062,103 @@ footer {
   .fomdih-form .submit-btn {
     width: 360px; }
 
-.order-form .form-top-cont {
-  width: calc((70% - 5vw) * 2 / 3);
-  margin-left: auto;
-  margin-right: calc((70% - 5vw) / 3); }
-  @media all and (max-width: 1400px) {
-    .order-form .form-top-cont {
-      margin-right: 0;
-      width: calc(70% - 5vw); } }
-  @media all and (max-width: 992px) {
-    .order-form .form-top-cont {
-      width: 100%; } }
-  .order-form .form-top-cont .mobile-hidden {
-    display: none; }
-  .order-form .form-top-cont .mobile-visible {
-    display: block; }
-  @media all and (max-width: 992px) {
-    .order-form .form-top-cont .mobile-hidden {
+.order-form {
+  padding-top: 7vh; }
+  .order-form .form-top-cont {
+    width: calc((70% - 5vw) * 2 / 3);
+    margin-left: auto;
+    margin-right: calc((70% - 5vw) / 3); }
+    @media all and (max-width: 1400px) {
+      .order-form .form-top-cont {
+        margin-right: 0;
+        width: calc(70% - 5vw); } }
+    @media all and (max-width: 992px) {
+      .order-form .form-top-cont {
+        width: 100%; } }
+    .order-form .form-top-cont .desktop-hidden {
+      display: none; }
+    .order-form .form-top-cont .desktop-visible {
       display: block; }
-    .order-form .form-top-cont .mobile-visible {
-      display: none; } }
-  .order-form .form-top-cont .form-cols-cont {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    .order-form .form-top-cont .form-cols-cont .form-col {
-      position: relative;
-      width: calc(100% / 2);
-      padding: 15px; }
-      @media all and (max-width: 992px) {
-        .order-form .form-top-cont .form-cols-cont .form-col {
-          width: 100%; } }
-    .order-form .form-top-cont .form-cols-cont .form-col.cta-col {
+    @media all and (max-width: 992px) {
+      .order-form .form-top-cont .desktop-hidden {
+        display: block; }
+      .order-form .form-top-cont .desktop-visible {
+        display: none; } }
+    .order-form .form-top-cont .form-cols-cont {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
+      -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+          -ms-flex-direction: row;
+              flex-direction: row;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      text-align: right; }
-      @media all and (max-width: 992px) {
-        .order-form .form-top-cont .form-cols-cont .form-col.cta-col {
-          -webkit-box-orient: horizontal;
-          -webkit-box-direction: normal;
-              -ms-flex-direction: row;
-                  flex-direction: row;
-          -ms-flex-wrap: nowrap;
-              flex-wrap: nowrap; } }
-  .order-form .form-top-cont .portfolio-item.form-card {
-    width: 100%;
-    margin: 0;
-    text-align: center; }
-    .order-form .form-top-cont .portfolio-item.form-card .portfolio-blot-hover {
-      bottom: 35%;
-      left: 0;
+          flex-wrap: wrap; }
+      .order-form .form-top-cont .form-cols-cont .form-col {
+        position: relative;
+        width: calc(100% / 2);
+        padding: 15px; }
+        @media all and (max-width: 992px) {
+          .order-form .form-top-cont .form-cols-cont .form-col {
+            width: 100%; } }
+      .order-form .form-top-cont .form-cols-cont .form-col.cta-col {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        text-align: right; }
+        @media all and (max-width: 992px) {
+          .order-form .form-top-cont .form-cols-cont .form-col.cta-col {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap; } }
+    .order-form .form-top-cont .portfolio-item.form-card {
       width: 100%;
-      height: 50%;
-      opacity: 1; }
-    .order-form .form-top-cont .portfolio-item.form-card .portfolio-name {
-      font-size: 36px; }
-      @media all and (max-width: 1400px) {
-        .order-form .form-top-cont .portfolio-item.form-card .portfolio-name {
-          font-size: 30px; } }
-      @media all and (max-width: 992px) {
-        .order-form .form-top-cont .portfolio-item.form-card .portfolio-name {
-          font-size: 26px; } }
-
-.order-form .form-cont {
-  width: calc((70% - 5vw) * 2 / 3);
-  margin-left: auto;
-  padding-left: 25px;
-  padding-right: 15px;
-  margin-right: calc((70% - 5vw) / 3); }
-  @media all and (max-width: 1400px) {
-    .order-form .form-cont {
-      width: calc(70% - 5vw);
-      max-width: 750px;
-      margin-right: 0;
-      padding-left: 0; } }
-  @media all and (max-width: 992px) {
-    .order-form .form-cont {
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto; } }
-  .order-form .form-cont .inputs-cont {
-    padding-top: 10px; }
+      text-align: center; }
+      .order-form .form-top-cont .portfolio-item.form-card .portfolio-blot-hover {
+        bottom: 35%;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        opacity: 1; }
+      .order-form .form-top-cont .portfolio-item.form-card .portfolio-name {
+        font-size: 36px; }
+        @media all and (max-width: 1400px) {
+          .order-form .form-top-cont .portfolio-item.form-card .portfolio-name {
+            font-size: 30px; } }
+        @media all and (max-width: 992px) {
+          .order-form .form-top-cont .portfolio-item.form-card .portfolio-name {
+            font-size: 26px; } }
+  .order-form .form-cont {
+    width: calc((70% - 5vw) * 2 / 3);
+    margin-left: auto;
+    padding-left: 25px;
+    padding-right: 15px;
+    margin-right: calc((70% - 5vw) / 3); }
+    @media all and (max-width: 1400px) {
+      .order-form .form-cont {
+        width: calc(70% - 5vw);
+        max-width: 750px;
+        margin-right: 0;
+        padding-left: 0; } }
+    @media all and (max-width: 992px) {
+      .order-form .form-cont {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto; } }
+    .order-form .form-cont .inputs-cont {
+      padding-top: 10px; }
 
 .white-color {
   color: #fff; }

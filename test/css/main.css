@@ -2204,6 +2204,14 @@ footer {
 .visible {
   opacity: 1; }
 
+.sticky {
+  position: fixed;
+  z-index: 101; }
+
+.stop {
+  position: relative;
+  z-index: 101; }
+
 .animated {
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s; }

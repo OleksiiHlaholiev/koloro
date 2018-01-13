@@ -108,7 +108,7 @@ $(function () {
         }
         else {
             window.location.hash = "formOpen";
-            window.location.pathname = "/portfolio.html";
+            window.location.pathname = "portfolio.html";
         }
 
 

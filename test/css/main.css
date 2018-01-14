@@ -919,7 +919,7 @@ footer {
   @media all and (max-width: 992px) {
     #index-page .main-top-container {
       background-image: url("../images/index/picture-banner-mobile.jpg");
-      padding-bottom: 5vh; } }
+      padding-bottom: 7vh; } }
   #index-page .main-top-container .container {
     max-width: 1590px; }
   #index-page .main-top-container .main-header {
@@ -996,10 +996,11 @@ footer {
         #index-page .main-top-container .illustrations-cont .img-cont {
           width: 100%; } }
       #index-page .main-top-container .illustrations-cont .img-cont img {
-        max-width: 80%;
-        width: 300px; }
+        max-width: 90%;
+        width: 360px; }
   #index-page .main-top-container .lamp-cont {
-    padding-left: 30px; }
+    padding-left: 30px;
+    padding-bottom: 15px; }
     @media all and (max-width: 1400px) {
       #index-page .main-top-container .lamp-cont {
         padding-left: 0; } }
@@ -1022,11 +1023,17 @@ footer {
     color: white;
     text-transform: uppercase;
     line-height: 1.2; }
+    @media all and (max-width: 1700px) {
+      #index-page .main-top-container .lamp-text {
+        font-size: 50px; } }
     @media all and (max-width: 1400px) {
       #index-page .main-top-container .lamp-text {
         font-size: 36px; } }
     #index-page .main-top-container .lamp-text .size-80 {
       font-size: 80px; }
+      @media all and (max-width: 1700px) {
+        #index-page .main-top-container .lamp-text .size-80 {
+          font-size: 70px; } }
       @media all and (max-width: 1400px) {
         #index-page .main-top-container .lamp-text .size-80 {
           font-size: 48px; } }
@@ -1084,23 +1091,14 @@ footer {
         #index-page .our-services .services-items-cont .service-item-cont {
           padding: 0 5vw; } }
       #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
-        width: 300px;
-        padding-top: 300px;
-        margin: 0 auto;
-        background-position: center center;
-        background-size: contain;
-        background-repeat: no-repeat; }
-        @media all and (max-width: 1400px) {
+        text-align: center;
+        padding: 30px 30px; }
+        #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont img {
+          width: 320px;
+          max-width: 100%; }
+        @media all and (max-width: 992px) {
           #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
-            margin: 2vh auto;
-            max-width: 350px; } }
-        @media all and (max-width: 1000px) {
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
-            padding-top: 300px; } }
-        @media all and (max-width: 500px) {
-          #index-page .our-services .services-items-cont .service-item-cont .service-item .service-img-cont {
-            max-width: 200px;
-            padding-top: 200px; } }
+            padding: 20px 20px; } }
       #index-page .our-services .services-items-cont .service-item-cont .service-item .service-info {
         line-height: 1.2;
         text-align: center;
@@ -1317,11 +1315,11 @@ footer {
     .our-works .our-works-cont .portfolio-menu ul li.category-1 a:after {
       content: url("../images/portfolio/svg/underlining-brand-design.svg"); }
     .our-works .our-works-cont .portfolio-menu ul li.category-2 a:after {
-      content: url("../images/portfolio/svg/underlining-packaging-design.svg"); }
+      content: url("../images/portfolio/svg/underlining-video.svg"); }
     .our-works .our-works-cont .portfolio-menu ul li.category-3 a:after {
-      content: url("../images/portfolio/svg/underlining-web-design.svg"); }
+      content: url("../images/portfolio/svg/underlining-sites.svg"); }
     .our-works .our-works-cont .portfolio-menu ul li.category-4 a:after {
-      content: url("../images/portfolio/svg/underlining-ux-ui.svg"); }
+      content: url("../images/portfolio/svg/underlining-digital-marketing.svg"); }
   .our-works .our-works-cont .more-portfolio-cont {
     display: none; }
   .our-works .our-works-cont .portfolio-items-cont {

@@ -44,17 +44,6 @@ jQuery.fn.extend({
 // start of: determine is it mobile screen
 var mobileViewWidth = 1000,
     isMobileViewFlag = true;
-
-function resizeWindowHandler(event) {
-    if (window.innerWidth < mobileViewWidth) {
-        isMobileViewFlag = true;
-    } else {
-        isMobileViewFlag = false;
-    }
-}
-
-resizeWindowHandler(); // initial call
-window.addEventListener('resize', resizeWindowHandler);
 // end of: determine is it mobile screen
 
 $(function () {
@@ -114,6 +103,14 @@ $(function () {
     // *****************    EVENT HANDLERS    *******************
 
     function resizeWindowHandler(event) {
+        // start of: determine is it mobile screen
+        if (window.innerWidth < mobileViewWidth) {
+            isMobileViewFlag = true;
+        } else {
+            isMobileViewFlag = false;
+        }
+        // end of: determine is it mobile screen
+
         if (window.innerWidth < 1101) {
             // $(mainMenu).css("display", "none");
             headerMenuOff();

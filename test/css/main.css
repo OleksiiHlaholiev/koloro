@@ -448,6 +448,10 @@ header.header-black {
   header.header-black .menu-btn-cont .menu-btn svg path {
     fill: #fff; }
 
+header.active {
+  bottom: 0;
+  overflow-y: auto; }
+
 header {
   position: fixed;
   top: 0;
@@ -520,7 +524,6 @@ header {
         display: none;
         float: none;
         width: 90%;
-        height: 100vh;
         margin: 0 auto; } }
     header .main-menu ul {
       display: -webkit-box;

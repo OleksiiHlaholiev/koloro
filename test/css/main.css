@@ -1701,13 +1701,13 @@ footer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-    @media all and (max-width: 1000px) {
+    @media all and (max-width: 700px) {
       .form-cont .inputs-cont {
         padding: 15px 0; } }
     .form-cont .inputs-cont .input-col {
       width: 30%;
       position: relative; }
-      @media all and (max-width: 1000px) {
+      @media all and (max-width: 700px) {
         .form-cont .inputs-cont .input-col {
           width: 100%; } }
       .form-cont .inputs-cont .input-col:before {
@@ -1726,7 +1726,7 @@ footer {
       bottom: 0;
       left: 0;
       content: url("../images/general/svg/field-form-big.svg"); }
-      @media all and (max-width: 1000px) {
+      @media all and (max-width: 700px) {
         .form-cont .text-field-cont:before {
           content: url("../images/general/svg/field-form-order-big-mobile.svg"); } }
     .form-cont .text-field-cont textarea {

@@ -42,7 +42,7 @@ jQuery.fn.extend({
 });
 
 // start of: determine is it mobile screen
-var mobileViewWidth = 768,
+var mobileViewWidth = 1000,
     isMobileViewFlag = true;
 
 function resizeWindowHandler(event) {
@@ -249,10 +249,12 @@ $(function () {
     // start of SPI jena FROM http://sticky01.blogspot.ru/2013/09/5.html
     (function(){
         var a = document.querySelector('.our-works .left-cont .portfolio-menu'), b = null, P = 0;
+        var morePortfolioBtn = document.querySelector(".our-works .more-portfolio-btn");
+        // console.log(morePortfolioBtn.getBoundingClientRect());
         window.addEventListener('scroll', Ascroll, false);
         document.body.addEventListener('scroll', Ascroll, false);
         function Ascroll() {
-            if (window.innerWidth >= 992) {
+            if (window.innerWidth >= mobileViewWidth) {
                 if (b == null) {
                     var Sa = getComputedStyle(a, ''), s = '';
                     for (var i = 0; i < Sa.length; i++) {
@@ -272,7 +274,7 @@ $(function () {
                     a.style.border = '0';
                 }
                 var Ra = a.getBoundingClientRect(),
-                    R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('.our-works-cont .right-cont').getBoundingClientRect().bottom);  // селектор блока, при достижении нижнего края которого нужно открепить прилипающий элемент
+                    R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('.our-works-cont .right-cont').getBoundingClientRect().bottom + 1.2 * morePortfolioBtn.getBoundingClientRect().height);  // селектор блока, при достижении нижнего края которого нужно открепить прилипающий элемент
                 if ((Ra.top - P) <= 0) {
                     if ((Ra.top - P) <= R) {
                         b.className = 'stop';

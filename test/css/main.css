@@ -2324,6 +2324,9 @@ footer {
 #page-404 .main-top-container {
   min-height: 100vh;
   padding-bottom: 5vh; }
+  @media all and (max-width: 900px) {
+    #page-404 .main-top-container {
+      padding-bottom: 2vh; } }
   #page-404 .main-top-container .page-head {
     text-align: center; }
     #page-404 .main-top-container .page-head .page-title {
@@ -2331,7 +2334,7 @@ footer {
       @media all and (max-width: 1400px) {
         #page-404 .main-top-container .page-head .page-title {
           font-size: 100px; } }
-      @media all and (max-width: 800px) {
+      @media all and (max-width: 700px) {
         #page-404 .main-top-container .page-head .page-title {
           font-size: 48px; } }
       #page-404 .main-top-container .page-head .page-title span {
@@ -2343,7 +2346,7 @@ footer {
         @media all and (max-width: 1400px) {
           #page-404 .main-top-container .page-head .page-title span {
             padding: 30px; } }
-        @media all and (max-width: 800px) {
+        @media all and (max-width: 900px) {
           #page-404 .main-top-container .page-head .page-title span {
             padding: 15px; } }
   #page-404 .main-top-container .full-cont {
@@ -2384,7 +2387,7 @@ footer {
       @media all and (max-width: 1400px) {
         #page-404 .main-top-container .text-cont-404 .first-text {
           font-size: 80px; } }
-      @media all and (max-width: 800px) {
+      @media all and (max-width: 700px) {
         #page-404 .main-top-container .text-cont-404 .first-text {
           font-size: 36px; } }
     #page-404 .main-top-container .text-cont-404 .second-text {
@@ -2394,7 +2397,7 @@ footer {
       @media all and (max-width: 1400px) {
         #page-404 .main-top-container .text-cont-404 .second-text {
           font-size: 24px; } }
-      @media all and (max-width: 800px) {
+      @media all and (max-width: 700px) {
         #page-404 .main-top-container .text-cont-404 .second-text {
           font-size: 16px; } }
       #page-404 .main-top-container .text-cont-404 .second-text span, #page-404 .main-top-container .text-cont-404 .second-text a {

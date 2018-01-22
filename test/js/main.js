@@ -6,12 +6,12 @@
 
 
 //кнопка скролла вверх
-function backToTop() {
+;(function backToTop() {
     $(window).scroll(function () {
-        var bo = $(document).scrollTop();
-        var time_to_show = 600;	//$("#indeficator_toshow").offset().top;
+        var curScrollPos = $(document).scrollTop();
+        var refScrollPos = window.innerHeight;
 
-        if (bo >= time_to_show) {
+        if (curScrollPos >= refScrollPos) {
             $(".back-to-top").addClass("back-to-top-visible");
         }
         else {
@@ -22,9 +22,7 @@ function backToTop() {
         e.preventDefault();
         $("html, body").animate({scrollTop: 0}, 1100);
     });
-}
-
-backToTop();
+})();
 
 // toggleText
 jQuery.fn.extend({
@@ -184,22 +182,6 @@ $(function () {
     });
     // end of mobile-menu show/hide
 
-    // start of checkboxes tests
-    // $(".checkbox-item input").on("change", function () {
-    //     // if ( $(this).attr("checked")) {
-    //     //     $(this).removeAttr("checked");
-    //     // }
-    //     // else {
-    //     //     $(this).attr("checked", "checked")
-    //     // }
-    //
-    //     console.log($(this).prop("checked"));
-    //
-    //     // console.log($(this).checked);
-    //     // console.log( $(this).attr("checked") );
-    // });
-    // end of checkboxes tests
-
     // read-more event handler
     $(".read-more-btn").on("click", function () {
         $(this.parentNode.querySelector(".for-read-more")).slideToggle();
@@ -207,21 +189,6 @@ $(function () {
     });
 
     // *************************************************************
-
-    var portfolioBtnCnt = 0;
-    $(".our-works .more-portfolio-btn").click(function (event) {
-        event.preventDefault();
-        // $(this.querySelector("span")).toggleText("больше работ", "меньше работ");
-        var morePortfolioConts = $(".our-works .more-portfolio-cont");
-
-        if (portfolioBtnCnt < morePortfolioConts.length) {
-            $(morePortfolioConts[portfolioBtnCnt]).slideDown().find(".portfolio-item").addClass("animated fadeInUp");
-            portfolioBtnCnt++;
-        }
-
-    });
-
-
 
     // ANIMATION BLOCK
     if (!isMobileViewFlag) {
@@ -234,65 +201,6 @@ $(function () {
         //     offset: '-50%',
         //     repeat: false
         // });
-
-        $('.more-portfolio-btn').addClass("invisible").viewportChecker({
-            classToAdd: 'animated fadeInUp',
-            classToRemove: 'visible',
-            offset: '10%',
-            repeat: false
-        });
-    }
-
-    // turn on this script only on pages with portfolio block (our-works)
-    if ($("#our-works").length != 0) {
-        // start of SPI jena FROM http://sticky01.blogspot.ru/2013/09/5.html
-        (function(){
-            var a = document.querySelector('.our-works .left-cont .portfolio-menu'), b = null, P = 0;
-            var morePortfolioBtn = document.querySelector(".our-works .more-portfolio-btn");
-            // console.log(morePortfolioBtn.getBoundingClientRect());
-            window.addEventListener('scroll', Ascroll, false);
-            document.body.addEventListener('scroll', Ascroll, false);
-            function Ascroll() {
-                if (window.innerWidth >= mobileViewWidth) {
-                    if (b == null) {
-                        var Sa = getComputedStyle(a, ''), s = '';
-                        for (var i = 0; i < Sa.length; i++) {
-                            if (Sa[i].indexOf('overflow') == 0 || Sa[i].indexOf('padding') == 0 || Sa[i].indexOf('border') == 0 || Sa[i].indexOf('outline') == 0 || Sa[i].indexOf('box-shadow') == 0 || Sa[i].indexOf('background') == 0) {
-                                s += Sa[i] + ': ' +Sa.getPropertyValue(Sa[i]) + '; '
-                            }
-                        }
-                        b = document.createElement('div');
-                        b.style.cssText = s + ' box-sizing: border-box; width: ' + a.offsetWidth + 'px;';
-                        a.insertBefore(b, a.firstChild);
-                        var l = a.childNodes.length;
-                        for (var i = 1; i < l; i++) {
-                            b.appendChild(a.childNodes[1]);
-                        }
-                        a.style.height = b.getBoundingClientRect().height + 'px';
-                        a.style.padding = '0';
-                        a.style.border = '0';
-                    }
-                    var Ra = a.getBoundingClientRect(),
-                        R = Math.round(Ra.top + b.getBoundingClientRect().height - document.querySelector('.our-works-cont .right-cont').getBoundingClientRect().bottom + 1.2 * morePortfolioBtn.getBoundingClientRect().height);  // селектор блока, при достижении нижнего края которого нужно открепить прилипающий элемент
-                    if ((Ra.top - P) <= 0) {
-                        if ((Ra.top - P) <= R) {
-                            b.className = 'stop';
-                            b.style.top = - R +'px';
-                        } else {
-                            b.className = 'sticky';
-                            b.style.top = P + 'px';
-                        }
-                    } else {
-                        b.className = '';
-                        b.style.top = '';
-                    }
-                    window.addEventListener('resize', function() {
-                        a.children[0].style.width = getComputedStyle(a, '').width
-                    }, false);
-                }
-            }
-        })()
-        // end of SPI jena FROM http://sticky01.blogspot.ru/2013/09/5.html
     }
 
 });

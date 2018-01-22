@@ -56,9 +56,6 @@ function fomdihFormHide(fomdihForm) {
         // check if the header is not active - avoid dual deactivation of body scroll
         $("html, body").removeClass("scroll-lock");
     }
-
-    // $("html, body").removeClass("html-body-scroll-lock");
-    // $("body").removeClass("body-scroll-lock");
 }
 
 function successFormShow() {
@@ -132,15 +129,17 @@ $(function () {
     // form-handler
 
     $(orderForm).ajaxForm({
+        // "/api/order-store"
         url: "/api/order-store", // путь к обработчику
         type: "POST", //Метод отправки
         success: function () {
             //код в этом блоке выполняется при успешной отправке сообщения
             // alert("Ваше сообщение отправлено!");
             orderForm.reset();
-            $(".order-form .add-file-cont label span").text("Добавить файл");
-            successFormShow();
+            $(orderForm).find(".add-file-cont label span").text("Добавить файл");
+            // successFormShow();
             fomdihFormHide(orderForm);
+            successFormShow();
         },
         error: function () {
             alert("Произошла ошибка при отправке...( Попробуйте еще раз!");
@@ -160,6 +159,36 @@ $(function () {
 });
 // end of order-form logic
 
+// start of contactForms logic
+$(function () {
+    var contactForms = $("#contacts-page .contact-form");
+
+    function contactFormLogic(formElem) {
+        $(formElem).ajaxForm({
+            url: "/api/order-store", // путь к обработчику
+            type: "POST", //Метод отправки
+            success: function () {
+                //код в этом блоке выполняется при успешной отправке сообщения
+                // alert("Ваше сообщение отправлено!");
+                // console.log(formElem);
+                formElem.reset();
+                $(formElem).find(".add-file-cont label span").text("Добавить файл");
+                successFormShow();
+            },
+            error: function () {
+                alert("Произошла ошибка при отправке...( Попробуйте еще раз!");
+                // console.log(formElem);
+            }
+        });
+    }
+
+    $(contactForms).each(function () {
+        contactFormLogic(this);
+    })
+});
+// end of contactForms logic
+
+
 // ************************************************************************************************************ //
 
 // ************************************************************************************************************ //
@@ -168,7 +197,7 @@ $(function () {
 $(function () {
     var successForm = document.querySelector(".success-form");
 
-    $(".success-form .success-close-btn, .success-form .close-btn").on("click", function (event) {
+    $(".success-form .success-close-btn").on("click", function (event) {
         event.preventDefault();
         event.stopPropagation(); // to avoid inherit click events
         fomdihFormHide(successForm);

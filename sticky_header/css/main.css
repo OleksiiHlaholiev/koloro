@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  font-weight: normal;
+  font-size: 0; }
+
+body, html {
+  width: 100%;
+  font-size: 0; }
+
+.img-cont {
+  font-size: 0; }
+  .img-cont img {
+    width: 100%; }
+
+header {
+  font-size: 60px;
+  font-family: "Segoe UI Semibold", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.0;
+  padding: 20px 0;
+  color: #fff;
+  background-color: #0ae89e; }
+  @media all and (max-width: 992px) {
+    header {
+      font-size: 30px; } }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; }
+
+/*# sourceMappingURL=main.css.map */

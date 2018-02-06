@@ -35,4 +35,10 @@ header {
   left: 0;
   width: 100%; }
 
+.sticky + .after-header-section {
+  padding-top: 100px; }
+  @media all and (max-width: 992px) {
+    .sticky + .after-header-section {
+      font-size: 70px; } }
+
 /*# sourceMappingURL=main.css.map */

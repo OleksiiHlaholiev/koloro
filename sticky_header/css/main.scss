@@ -45,6 +45,10 @@ header {
     width: 100%;
 }
 
-//.sticky + .after-header-section {
-//    padding-top: 100px;
-//}
+.sticky + .after-header-section {
+    padding-top: 100px;
+
+    @media all and (max-width: 992px) {
+        font-size: 70px;
+    }
+}

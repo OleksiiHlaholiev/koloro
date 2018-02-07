@@ -24,7 +24,9 @@ header {
   line-height: 1.0;
   padding: 20px 0;
   color: #fff;
-  background-color: #0ae89e; }
+  background-color: #0ae89e;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0); }
   @media all and (max-width: 992px) {
     header {
       font-size: 30px; } }

@@ -10,10 +10,10 @@ window.addEventListener('load', function() {
     function scrollWindowHandler() {
         if (window.pageYOffset >= beforeHeaderSection.clientHeight) {
             stickyHeader.classList.add("sticky");
-            afterHeaderSection.style.paddingTop = stickyHeader.clientHeight + "px";
+            afterHeaderSection.style.top = stickyHeader.clientHeight + "px";
         } else {
             stickyHeader.classList.remove("sticky");
-            afterHeaderSection.style.paddingTop = "0";
+            afterHeaderSection.style.top = "0";
         }
     }
     
